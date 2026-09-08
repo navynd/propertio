@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production builds
+dist/
+**/dist/
+build/
+**/build/
+
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Secrets and dumps
+*.pem
+devmolumulk.mongo.dump/
+pf_password&stuff.txt
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS generated files
+.DS_Store
+**/.DS_Store
+Thumbs.db

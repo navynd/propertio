@@ -1,0 +1,141 @@
+/* —— Lifestyle tab —— */
+.pf-communities-detail__lifestyle-section {
+    margin-bottom: 50px;
+}
+
+.pf-communities-detail__lifestyle-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.pf-communities-detail__lifestyle-heading {
+    margin: 0 0 16px;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.25;
+}
+
+.pf-communities-detail__lifestyle-intro {
+    margin-bottom: 28px;
+}
+
+.pf-communities-detail__lifestyle-intro-p {
+    margin: 0 0 14px;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #222;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.pf-communities-detail__lifestyle-tabs-wrap {
+    margin: 0px -30px 0px -30px;
+    border-bottom: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+}
+
+.pf-communities-detail__lifestyle-tabs-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: clamp(10px, 2vw, 28px);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    padding-bottom: 0;
+}
+
+.pf-communities-detail__lifestyle-tab {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 17px 30px;
+    border: none;
+
+    background: transparent;
+    font-family: Medium, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover:not(.pf-communities-detail__lifestyle-tab--active) {
+        color: #374151;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #EA3934;
+        outline-offset: 2px;
+    }
+}
+
+.pf-communities-detail__lifestyle-tab--active {
+    color: #EA3934;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary, #EA3934);
+    box-shadow: 0 0px 0px 0 var(--primary, #EA3934);
+}
+
+.pf-communities-detail__lifestyle-panel {
+    min-height: 120px;
+    margin-top: 30px;
+}
+
+.pf-communities-detail__lifestyle-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pf-communities-detail__lifestyle-list-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-family: Medium, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #222;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.pf-communities-detail__lifestyle-list-bullet {
+    flex-shrink: 0;
+    color: #6b7280;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.pf-communities-detail__lifestyle-list-name {
+    font-family: Medium, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .pf-communities-detail__lifestyle-card {
+        padding: 16px;
+    }
+
+    .pf-communities-detail__lifestyle-tabs-wrap {
+        margin: 0px -16px 0px -16px;
+    }
+}

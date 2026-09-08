@@ -1,0 +1,66 @@
+const { Router } = require('express');
+const router = Router();
+
+const authRoutes = require('./authRoutes');
+const masterDataRoutes = require('./masterDataRoutes');
+const usersRoutes = require('./usersRoutes');
+const agentsRoutes = require('./agentsRoutes');
+const agenciesRoutes = require('./agenciesRoutes');
+const developersRoutes = require('./developersRoutes');
+const propertiesRoutes = require('./propertiesRoutes');
+const reportsRoutes = require('./reportsRoutes');
+const projectsRoutes = require('./projectsRoutes');
+const blogsRoutes = require('./blogsRoutes');
+const legalRoutes = require('./legalRoutes');
+const aboutRoutes = require('./aboutRoutes');
+const contactRoutes = require('./contactRoutes');
+const teamRoutes = require('./teamRoutes');
+const testimonialRoutes = require('./testimonialRoutes');
+const bannerRoutes = require('./bannerRoutes');
+const sitemapRoutes = require('./sitemapRoutes');
+const dashboardRoutes = require('./dashboardRoutes');
+
+// Auth routes 
+router.use('/auth', authRoutes);
+
+// Master data (lookup + job titles + amenities CRUD)
+router.use('/master-data', masterDataRoutes);
+
+router.use('/users', usersRoutes);
+
+router.use('/agents', agentsRoutes);
+
+router.use('/agency', agenciesRoutes);
+
+router.use('/developers', developersRoutes);
+
+router.use('/properties', propertiesRoutes);
+
+router.use('/reports', reportsRoutes);
+
+router.use('/projects', projectsRoutes);
+
+router.use('/cms/blogs', blogsRoutes);
+
+router.use('/cms/legal', legalRoutes);
+
+router.use('/cms/about', aboutRoutes);
+
+router.use('/cms/contact', contactRoutes);
+
+router.use('/cms/team', teamRoutes);
+
+router.use('/cms/testimonials', testimonialRoutes);
+
+router.use('/cms/banners', bannerRoutes);
+
+router.use('/cms/sitemap', sitemapRoutes);
+
+router.use('/dashboard', dashboardRoutes);
+
+const systemSettingsRoutes = require('./systemSettingsRoutes');
+router.use('/system-settings', systemSettingsRoutes);
+
+module.exports = router;
+
+

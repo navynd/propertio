@@ -1,0 +1,223 @@
+// Price Insights — CommunitiesPrice.tsx
+
+.pf-communities-price {
+    background: #fff;
+    border-radius: 14px;
+    padding: 13px 30px 30px 30px;
+    margin-bottom: 50px;
+}
+
+.pf-communities-price__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 34px;
+}
+
+.pf-communities-price__title {
+    margin: 0;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.2;
+}
+
+.pf-communities-price__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.pf-communities-price__body {
+    display: flex;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.pf-communities-price__chart-col {
+    flex: 1 1 64%;
+    min-width: 0;
+}
+
+.pf-communities-price__chart-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+    margin-bottom: 12px;
+}
+
+.pf-communities-price__chart-head-title {
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.pf-communities-price__chart-head-sub {
+    font-size: 14px;
+    font-weight: 400;
+    color: #707070;
+    font-family: Regular, sans-serif;
+}
+
+.pf-communities-price__chart-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.pf-communities-price__y-label {
+    font-family: Medium, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+}
+
+.pf-communities-price__timeframe {
+    flex-shrink: 0;
+
+    .pf-agent-Service__select-btn {
+        min-width: 140px;
+    }
+}
+
+.pf-communities-price__chart-inner {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.pf-communities-price__averages {
+    flex: 0 0 30%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #eee;
+    padding-left: 24px;
+}
+
+.pf-communities-price__averages-title {
+    margin: 0 0 30px;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.pf-communities-price__averages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.pf-communities-price__averages-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.pf-communities-price__averages-label {
+    color: #222;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pf-communities-price__averages-value {
+    font-family: Medium, sans-serif;
+    font-weight: 700;
+    color: #222;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.pf-communities-price__averages-note {
+    margin: 16px 0 0;
+    font-weight: 400;
+    font-family: Regular, sans-serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #707070;
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    .pf-communities-price__body {
+        flex-direction: column;
+    }
+
+    .pf-communities-price__averages {
+        flex: none;
+        max-width: none;
+        border-left: none;
+        border-top: 1px solid #eee;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .pf-communities-price__averages-note {
+        text-align: left;
+    }
+}
+
+/* ApexCharts custom HTML tooltip (appended to document) */
+.pf-communities-price__chart-tooltip {
+    padding: 12px 14px;
+    min-width: 200px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    font-family: Regular, sans-serif;
+}
+
+.pf-communities-price__chart-tooltip-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.pf-communities-price__chart-tooltip-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #333;
+}
+
+.pf-communities-price__chart-tooltip-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: #e53935;
+}
+
+.pf-communities-price__chart-tooltip-label {
+    line-height: 1.35;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .pf-communities-price {
+        padding: 16px;
+    }
+}

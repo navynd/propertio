@@ -1,0 +1,48 @@
+# Node modules
+node_modules/
+
+# Build output (Vite)
+dist/
+build/
+
+# Local environment variables (ignore all .env files)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Vite caches and local files
+.vite/
+*.vite
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+
+# Editor folders and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS
+.DS_Store
+
+# Linux swap files
+*~
+
+# Windows
+Thumbs.db
+
+# Temporary/system files
+*.log
+*.tmp
+
+# Optional: lockfiles you don't want (most projects should keep lockfile)
+# package-lock.json
+# yarn.lock

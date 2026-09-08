@@ -1,0 +1,784 @@
+.pf-communities-detail {
+    background: #ffffff;
+    padding: 24px 0 0px;
+    margin-bottom: 100px;
+}
+
+.pf-communities-detail__breadcrumb {
+    margin-bottom: 20px;
+
+    .pf-search-listing__breadcrumbs {
+        width: auto;
+    }
+}
+
+.pf-communities-detail__hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px 24px;
+    margin-bottom: 24px;
+}
+
+.pf-communities-detail__hero-main {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+.pf-communities-detail__title {
+    margin: 0 0 10px;
+    font-family: Medium, sans-serif;
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 700;
+    color: #111;
+    line-height: 1.15;
+}
+
+.pf-communities-detail__rating-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 12px;
+}
+
+.pf-communities-detail__rating-text {
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    color: #707070;
+}
+
+.pf-communities-detail__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    flex: 1 1 240px;
+    max-width: 100%;
+}
+
+.pf-communities-detail__tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(34, 34, 34, 0.14);
+    background: #fff;
+    font-family: Regular, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.pf-communities-detail__carousel {
+    position: relative;
+    width: 100%;
+}
+
+.pf-communities-detail__carousel-track {
+    display: grid;
+    /* Side panels narrower, center image wider */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: 4px;
+    width: 100%;
+}
+
+/* One image per view (matches JS breakpoint max-width: 767px) */
+.pf-communities-detail__carousel-track--single {
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.pf-communities-detail__carousel-slide {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #e8e8e8;
+    height: 380px;
+}
+
+.pf-communities-detail__carousel-slide--center {
+    min-height: 240px;
+}
+
+.pf-communities-detail__carousel-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.pf-communities-detail__carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+.pf-communities-detail__carousel-btn--prev {
+    left: 0px;
+}
+
+.pf-communities-detail__carousel-btn--next {
+    right: 0px;
+}
+
+/* —— Section tabs (About, Location, …) —— */
+.pf-communities-detail__tabs-nav {
+    margin-top: 28px;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+
+.pf-communities-detail__tabs-stick {
+    background: #fff;
+    z-index: 35;
+}
+
+.pf-communities-detail__tabs-stick.is-fixed {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pf-communities-detail__tabs-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    column-gap: clamp(12px, 2.5vw, 36px);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.pf-communities-detail__tab {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 20px 30px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    background: transparent;
+    font-family: Regular, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #222;
+    line-height: 1.2;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover:not(.pf-communities-detail__tab--active) {
+        color: #444;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #0832AE;
+        outline-offset: 2px;
+    }
+}
+
+.pf-communities-detail__tab--active {
+    color: #0832AE;
+    font-weight: 600;
+    border-bottom-color: #0832AE;
+}
+
+@media (min-width: 1024px) {
+    .pf-communities-detail__tabs-scroll {
+        column-gap: 8px;
+    }
+}
+
+/* —— About + Key highlights (About tab) —— */
+.pf-communities-detail__about-section {
+    background: #f2f2f2;
+    border-radius: 0;
+}
+
+.pf-communities-detail__about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.pf-communities-detail__about-card,
+.pf-communities-detail__highlights-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.pf-communities-detail__card-title {
+    margin: 0 0 16px;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.25;
+}
+
+.pf-communities-detail__about-p {
+    margin: 0 0 14px;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #222;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.pf-communities-detail__about-body {
+    position: relative;
+    max-height: 158px;
+    overflow: hidden;
+    margin-bottom: 14px;
+
+    &--expanded {
+        max-height: none;
+        overflow: visible;
+        margin-bottom: 12px;
+    }
+}
+
+.pf-communities-detail__about-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 88px;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.65) 40%,
+            #ffffff 92%);
+    pointer-events: none;
+}
+
+.pf-communities-detail__read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: Medium, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0832ae;
+    cursor: pointer;
+
+
+    &:focus-visible {
+        outline: 2px solid #0832ae;
+        outline-offset: 2px;
+    }
+}
+
+.pf-communities-detail__read-more-icon {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+
+    &--up {
+        transform: rotate(180deg);
+    }
+}
+
+.pf-communities-detail__highlights-list {
+    margin: 0;
+    padding: 0 0 0 18px;
+    list-style: disc;
+}
+
+.pf-communities-detail__highlights-item {
+    margin: 0 0 8px;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #222;
+
+    &::marker {
+        color: #222;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* —— Location & Transportation tab —— */
+.pf-communities-detail__location-section {
+    margin: 0px 0px 50px 0px;
+    background: #f2f2f2;
+}
+
+.pf-communities-detail__location-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+    align-items: stretch;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.pf-communities-detail__location-map {
+    position: relative;
+    min-height: 380px;
+    background: #dde7ef;
+}
+
+.pf-communities-detail__location-map-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+}
+
+.pf-communities-detail__location-map-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    text-align: center;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    background: #e8eef5;
+
+    code {
+        font-size: 12px;
+        padding: 2px 6px;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+    }
+}
+
+.pf-communities-detail__see-full-map {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    font-family: Regular, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+    cursor: pointer;
+    transition: background 0.15s ease;
+
+    &:hover {
+        background: #fff;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #0832ae;
+        outline-offset: 2px;
+    }
+}
+
+.pf-communities-detail__location-panel {
+    padding: 24px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+}
+
+.pf-communities-detail__location-title {
+    margin: 0 0 16px;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.3;
+}
+
+.pf-communities-detail__loc-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    margin-bottom: 18px;
+}
+
+.pf-communities-detail__loc-chip {
+    flex: 0 0 auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(34, 34, 34, 0.18);
+    background: #fff;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+
+    &:hover:not(.pf-communities-detail__loc-chip--active) {
+        border-color: rgba(34, 34, 34, 0.35);
+    }
+
+    &--active {
+        background: #222;
+        border-color: #222;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #0832ae;
+        outline-offset: 2px;
+    }
+}
+
+.pf-communities-detail__location-p {
+    margin: 0 0 12px;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #222;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.pf-communities-detail__location-body {
+    position: relative;
+    max-height: 148px;
+    overflow: hidden;
+    margin-bottom: 14px;
+
+    &--expanded {
+        max-height: none;
+        overflow: visible;
+        margin-bottom: 12px;
+    }
+}
+
+.pf-communities-detail__location-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 72px;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.75) 45%,
+            #ffffff 90%);
+    pointer-events: none;
+}
+
+.pf-communities-detail__read-more--dark {
+    color: #222;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Medium, sans-serif;
+
+    &:hover {
+        color: #222;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #222;
+        outline-offset: 2px;
+    }
+}
+
+/* —— Properties tab: location carousel —— */
+.pf-communities-detail__props-loc {
+    padding: 0px 0px 50px 0px;
+    background: #f4f4f4;
+}
+
+.pf-communities-detail__props-loc-title {
+    margin: 0 0 20px;
+    text-align: center;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.25;
+}
+
+.pf-communities-detail__props-loc-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.pf-communities-detail__props-loc-toggle {
+    padding: 15px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+
+    &--active {
+        background: #222;
+        border-color: #222;
+        color: #fff;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #0832ae;
+        outline-offset: 2px;
+    }
+}
+
+.pf-communities-detail__props-loc-carousel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.pf-communities-detail__props-loc-arrow {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    &:focus-visible {
+        outline: 2px solid #0832ae;
+        outline-offset: 2px;
+    }
+}
+
+.pf-communities-detail__props-loc-track {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.pf-communities-detail__props-loc-track--single {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.pf-communities-detail__props-loc-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    height: 250px;
+
+}
+
+.pf-communities-detail__props-loc-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pf-communities-detail__props-loc-card-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.25) 45%,
+            transparent 72%);
+    pointer-events: none;
+}
+
+.pf-communities-detail__props-loc-card-meta {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 1;
+}
+
+.pf-communities-detail__props-loc-card-title {
+    display: block;
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    font-family: Medium, sans-serif !important;
+    margin-bottom: 6px !important;
+    line-height: 1.25 !important;
+}
+
+.pf-communities-detail__props-loc-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pf-communities-detail__props-loc-card-rating-text {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Medium, sans-serif;
+}
+
+.pf-communities-detail__props-loc-card-rating-count {
+    margin-left: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.pf-communities-detail__props-loc-cta-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.pf-communities-detail__props-loc-cta {
+    min-width: min(100%, 320px);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: #fff;
+    font-family: Medium, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+
+    &:hover {
+        filter: brightness(0.95);
+    }
+
+    &:focus-visible {
+        outline: 2px solid #b91c1c;
+        outline-offset: 2px;
+    }
+}
+
+@media (max-width: 991px) {
+    .pf-communities-detail__about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pf-communities-detail__location-card {
+        grid-template-columns: 1fr;
+    }
+
+    .pf-communities-detail__location-map {
+        min-height: 280px;
+    }
+
+    .pf-communities-detail__location-map-canvas {
+        min-height: 280px;
+    }
+
+    .pf-communities-detail__props-loc-track:not(.pf-communities-detail__props-loc-track--single) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+
+    .pf-communities-detail__carousel-slide,
+    .pf-communities-detail__carousel-slide--center {
+        height: 280px;
+        object-fit: cover;
+    }
+
+    .pf-communities-detail__carousel-img {
+        max-height: 280px;
+    }
+
+    .pf-communities-detail__tags {
+        justify-content: flex-start;
+    }
+
+    .pf-communities-detail__props-loc-card {
+        height: 340px;
+    }
+
+    .pf-communities-detail__tabs-nav {
+        margin-top: 16px;
+    }
+
+    .pf-communities-detail__about-card,
+    .pf-communities-detail__highlights-card {
+        padding: 16px;
+    }
+
+    .pf-communities-detail__location-panel {
+        padding: 16px;
+    }
+}

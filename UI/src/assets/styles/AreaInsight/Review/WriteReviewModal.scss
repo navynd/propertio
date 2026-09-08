@@ -1,0 +1,320 @@
+.write-review-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 16px;
+}
+
+.write-review-modal {
+    background: #fff;
+    width: 100%;
+    max-width: 920px;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+}
+
+.write-review-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px 16px 0 16px;
+    flex-shrink: 0;
+}
+
+.write-review-modal-close-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(34, 34, 34, 0.1);
+    background: #fff;
+    padding: 0;
+
+    &:hover {
+        background: #f9fafb;
+    }
+}
+
+.write-review-modal-content {
+    overflow-y: auto;
+    flex: 1;
+    padding: 0 28px 8px;
+    min-height: 0;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+    }
+
+    scrollbar-width: thin;
+}
+
+.write-review-modal-title {
+    font-size: 20px !important;
+    font-family: Medium, sans-serif !important;
+    font-weight: 700 !important;
+    color: #111 !important;
+    text-align: center !important;
+    margin: 0 0 22px !important;
+    width: 100%;
+}
+
+/* Light gray wrapper + two columns */
+.write-review-modal-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 20px;
+    background: #f3f4f6;
+    border-radius: 14px;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.write-review-modal-ratings-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    align-self: start;
+}
+
+.write-review-modal-ratings-heading {
+    margin: 0 0 14px;
+    font-family: Medium, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.write-review-modal-ratings-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.write-review-modal-rating-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ececec;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.write-review-modal-rating-label {
+    font-family: Regular, sans-serif;
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.35;
+    flex: 1;
+    min-width: 0;
+    padding-right: 8px;
+}
+
+.write-review-modal-form-side {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 44px 44px 44px 20px;
+}
+
+.write-review-modal-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.write-review-modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &--block {
+        gap: 8px;
+        position: relative;
+    }
+}
+
+.write-review-modal-label {
+    font-family: Medium, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+
+    &--sr {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+}
+
+.write-review-modal-section-label {
+    font-family: Medium, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.write-review-modal-input,
+.write-review-modal-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    background: #fff;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    outline: none;
+    transition: border-color 0.15s ease;
+
+    &::placeholder {
+        color: #707070;
+        font-family: Regular, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    &:focus {
+        border-color: rgba(234, 57, 52, 0.45);
+    }
+}
+
+.write-review-modal-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.write-review-modal-cert {
+    margin: 0 0 14px;
+    text-align: center;
+    font-family: Regular, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6b7280;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.write-review-modal-terms {
+    margin: 0 auto 8px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start !important;
+
+    .MuiFormControlLabel-label {
+        margin-top: 7px;
+    }
+}
+
+.write-review-modal-terms-text {
+    font-family: Regular, sans-serif;
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.write-review-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 0 0 16px 16px;
+    padding: 12px 28px 24px;
+    flex-shrink: 0;
+    background: #fff;
+}
+
+.write-review-modal-result-btn {
+    margin-top: 0 !important;
+    width: 385px;
+    height: 48px;
+    border-radius: 12px !important;
+    font-family: Medium, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    background: #EA3934 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    text-transform: none !important;
+}
+
+@media (max-width: 767px) {
+    .write-review-modal-overlay {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .write-review-modal {
+        max-width: 100%;
+        max-height: 94vh;
+        border-radius: 20px 20px 0 0;
+        animation: writeReviewSlideUp 0.3s ease;
+    }
+
+    .write-review-modal-content {
+        padding: 0 18px 8px;
+    }
+
+    .write-review-modal-panel {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .write-review-modal-form-side {
+        padding: 0px;
+    }
+
+    .write-review-modal-field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .write-review-modal-footer {
+        padding: 12px 18px 20px;
+    }
+
+    @keyframes writeReviewSlideUp {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+}

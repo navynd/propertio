@@ -1,0 +1,574 @@
+// Dropdown (matches AgentandAgency / AllCommunities Service dropdown)
+.pf-agent-Service__custom-select {
+    flex: auto;
+}
+
+.pf-agent-Service__name {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: Regular, sans-serif !important;
+    color: #707070 !important;
+}
+
+.pf-agent-Service__name.selected {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    font-family: Regular, sans-serif !important;
+    color: #222 !important;
+}
+
+.pf-agent-Service__select-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgba(34, 34, 34, 0.1);
+    background: #fff;
+}
+
+.pf-agent-Service__dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 4;
+    max-height: 200px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.pf-agent-Service__dropdown-item {
+    padding: 9px 10px;
+    font-size: 13px;
+    font-family: Medium, sans-serif !important;
+    color: #222;
+    cursor: pointer;
+
+    &.active {
+        background: #ea3934;
+        color: #fff;
+    }
+}
+
+/* Towers & compounds – Area Insights */
+.pf-tower-compound {
+    background: #FFF;
+    // min-height: 100vh;
+    padding: 24px 0 0px;
+    margin-bottom: 100px;
+}
+
+.pf-tower-compound__breadcrumb {
+    margin-bottom: 20px;
+
+    .pf-search-listing__breadcrumbs {
+        width: auto;
+    }
+}
+
+.pf-tower-compound__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.pf-tower-compound__header-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.pf-tower-compound__title {
+    margin: 0 0 10px;
+    font-family: Medium, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.15;
+}
+
+.pf-tower-compound__subtitle {
+    margin: 0;
+    font-family: Regular, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #707070;
+    line-height: 1.55;
+    max-width: 520px;
+}
+
+.pf-tower-compound__header-location {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pf-tower-compound__location-label {
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    color: #707070;
+    white-space: nowrap;
+}
+
+.pf-tower-compound__location-select {
+    width: 220px;
+    min-width: 200px;
+}
+
+.pf-tower-compound__hero {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 350px;
+    background-color: #0f2744;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 48px 24px 56px;
+}
+
+.pf-tower-compound__hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.pf-tower-compound__hero-wave {
+    position: absolute;
+    left: 50%;
+    bottom: -18%;
+    transform: translateX(-50%);
+    width: 140%;
+    // height: 55%;
+    border-radius: 50%;
+    // background: radial-gradient(ellipse 55% 45% at 50% 0%,
+    //         rgba(100, 160, 230, 0.35) 0%,
+    //         transparent 72%);
+    pointer-events: none;
+}
+
+.pf-tower-compound__hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+}
+
+.pf-tower-compound__hero-title {
+    margin: 0;
+    font-family: Medium, sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.pf-tower-compound__search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    padding: 6px 6px 6px 14px;
+    gap: 8px;
+}
+
+.pf-tower-compound__search-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: #999;
+
+    path {
+        fill: #999;
+    }
+}
+
+.pf-tower-compound__search-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-family: Regular, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #222;
+    background: transparent;
+    padding: 12px 8px;
+
+    &::placeholder {
+        color: #a8a8a8;
+    }
+}
+
+.pf-tower-compound__search-btn {
+    flex-shrink: 0;
+    height: 44px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 10px;
+    background: #ea3934;
+    color: #fff;
+    font-family: Medium, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+        background: #d6322d;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+@media (max-width: 767px) {
+    .pf-tower-compound__title {
+        font-size: 28px;
+    }
+
+    .pf-tower-compound__subtitle {
+        font-size: 15px;
+    }
+
+    .pf-tower-compound__header-location {
+        width: 100%;
+    }
+
+    .pf-tower-compound__location-select {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+    }
+
+    .pf-tower-compound__hero {
+        min-height: 200px;
+        padding: 36px 16px 44px;
+    }
+
+    .pf-tower-compound__search-bar {
+        max-width: 100%;
+        padding: 4px 4px 4px 10px;
+    }
+
+    .pf-tower-compound__search-input {
+        font-size: 14px;
+        padding: 10px 6px;
+    }
+
+    .pf-tower-compound__search-btn {
+        padding: 0 14px;
+        font-size: 13px;
+        height: 40px;
+    }
+}
+
+/* Most Popular Areas – tabs + panel + carousel */
+.pf-tower-compound__areas {
+    margin-top: 40px;
+}
+
+.pf-tower-compound__areas-stack {
+    margin-top: 40px;
+}
+
+.pf-tower-compound__tabs-stick {
+    background: #fff;
+    z-index: 35;
+}
+
+.pf-tower-compound__tabs-stick.is-fixed {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pf-tower-compound__areas-tabs {
+    display: flex;
+    align-items: flex-end;
+    gap: 28px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e8e8e8;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.pf-tower-compound__areas-tab {
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    padding: 20px 30px;
+    font-family: Regular, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #222;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.2s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 3px;
+        background: transparent;
+        border-radius: 2px 2px 0 0;
+    }
+
+    &:hover {
+        color: #555;
+    }
+
+    &.is-active {
+        color: #0832AE;
+        font-weight: 600;
+        font-family: Medium, sans-serif;
+
+        &::after {
+            background: #0832AE;
+        }
+    }
+}
+
+.pf-tower-compound__areas-panel {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(34, 34, 34, 0.06);
+    padding: 30px;
+}
+
+.pf-tower-compound__areas-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pf-tower-compound__areas-panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.pf-tower-compound__areas-panel-title {
+    margin: 0 0 8px;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.pf-tower-compound__areas-panel-subtitle {
+    margin: 0;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    line-height: 1.5;
+    max-width: 560px;
+}
+
+.pf-tower-compound__areas-arrows {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    flex-shrink: 0;
+}
+
+.pf-tower-compound__areas-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+
+    &:hover:not(:disabled) {
+        background: #f7f7f7;
+        border-color: none;
+    }
+
+    &:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+    }
+}
+
+.pf-tower-compound__areas-carousel {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 6px;
+    margin: 0 -4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.pf-tower-compound__area-card {
+    position: relative;
+    flex: 0 0 calc(25% - 14px);
+    min-width: 220px;
+    max-width: 280px;
+    height: 280px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.pf-tower-compound__area-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pf-tower-compound__area-card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    background: #fff;
+    color: #222;
+    font-family: Medium, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pf-tower-compound__area-card-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 35%,
+            rgba(0, 0, 0, 0.55) 70%,
+            rgba(0, 0, 0, 0.82) 100%);
+    pointer-events: none;
+}
+
+.pf-tower-compound__area-card-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 16px 16px 18px;
+}
+
+.pf-tower-compound__area-card-title {
+    margin: 0 0 8px;
+    font-family: Medium, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.pf-tower-compound__area-card-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.pf-tower-compound__area-card-rating-text {
+    font-family: Medium, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.35;
+}
+
+@media (max-width: 991px) {
+    .pf-tower-compound__area-card {
+        flex: 0 0 calc(33.333% - 12px);
+        min-width: 200px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pf-tower-compound__areas-panel {
+        padding: 20px 16px 18px;
+    }
+
+    .pf-tower-compound__areas-panel-head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pf-tower-compound__areas-arrows {
+        justify-content: flex-end;
+    }
+
+    .pf-tower-compound__area-card {
+        flex: 0 0 78%;
+        min-width: 240px;
+        max-width: none;
+        height: 240px;
+    }
+
+    .pf-tower-compound__areas-tabs {
+        gap: 18px;
+    }
+
+    .pf-tower-compound__areas-tab {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,196 @@
+.upfront-costs-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.upfront-costs-modal {
+    background: #fff;
+    width: 600px;
+    max-width: calc(100vw - 24px);
+    max-height: 90vh;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.upfront-costs-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 18px 18px 0px;
+}
+
+.upfront-costs-modal__close {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(34, 34, 34, 0.10);
+    background: #fff;
+}
+
+.upfront-costs-modal__title {
+    text-align: center;
+    font-family: Medium, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin: 0 !important;
+    padding: 0px 48px 40px;
+}
+
+.upfront-costs-modal__content {
+    padding: 0px 50px 50px 50px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
+}
+
+.upfront-costs-modal__panel {
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 50px;
+}
+
+.upfront-costs-modal__card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 4px 4px 4px;
+}
+
+.upfront-costs-modal__card--calc {
+    padding: 0px;
+    background-color: #FFF;
+}
+
+.upfront-costs-modal__list--calc {
+    background-color: #FFF;
+}
+
+.upfront-costs-modal__card+.upfront-costs-modal__card {
+    margin-top: 12px;
+}
+
+.calc-title {
+    padding-top: 30px;
+}
+
+.upfront-costs-modal__card-title {
+    text-align: center;
+    font-family: Medium, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin: 0 0 22px !important;
+}
+
+.upfront-costs-modal__list {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.upfront-costs-modal__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0px 30px;
+}
+
+.upfront-costs-modal__row--pill1 {
+    border-radius: 10px;
+    background-color: #FFF;
+    padding: 20px 32px;
+    margin-bottom: 10px;
+}
+
+.upfront-costs-modal__row--pill {
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.upfront-costs-modal__row--list {
+    padding: 20px 30px;
+    background-color: #F5F5F5;
+    border-top: 1px solid rgba(34, 34, 34, 0.06);
+}
+
+.upfront-costs-modal__row--list-calc {
+    padding: 20px 30px;
+    border-top: 1px solid rgba(34, 34, 34, 0.06);
+}
+
+.upfront-costs-modal__row-label {
+    font-family: Regular, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    color: #222 !important;
+}
+
+.upfront-costs-modal__row-value {
+    font-family: SemiBold, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    white-space: nowrap;
+}
+
+.upfront-costs-modal__total {
+    padding: 18px 10px 0;
+    text-align: center;
+}
+
+.upfront-costs-modal__total-label {
+    font-family: Regular, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #222 !important;
+    margin: 0 !important;
+}
+
+.upfront-costs-modal__total-value {
+    font-family: Medium, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 500 !important;
+    color: #EA3934 !important;
+    margin: 6px 0 0 !important;
+}
+
+@media (max-width: 767px) {
+    .upfront-costs-modal-overlay {
+        align-items: flex-end;
+    }
+
+    .upfront-costs-modal {
+        width: 100%;
+        max-width: 100%;
+        height: 90%;
+        border-radius: 20px 20px 0 0;
+        animation: upfrontSlideUp 0.3s ease;
+    }
+
+    @keyframes upfrontSlideUp {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+}

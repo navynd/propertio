@@ -1,0 +1,302 @@
+.morefilter-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.morefilter-modal {
+    background: #fff;
+    width: 650px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.morefilter-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px 20px 0px 0px;
+}
+
+.morefilter-modal-close-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    background: var(--White, #FFF);
+}
+
+
+.morefilter-modal-content {
+    // inner scrollable content
+    overflow-y: auto;
+    flex: 1;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.morefilter-modal-title {
+    font-size: 20px !important;
+    font-family: Regular, sans-serif !important;
+    font-weight: 700 !important;
+    color: #222;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+}
+
+/* Top toggles */
+.morefilter-section--toggles {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    border-bottom: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    background: var(--lightbg, #F5F5F5);
+}
+
+.morefilter-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 50px;
+    cursor: pointer;
+}
+
+.morefilter-toggle-switch {
+    width: 36px;
+    height: 20px;
+    border-radius: 999px;
+    background: #e5e5e5;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+.morefilter-toggle-switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.morefilter-toggle--active .morefilter-toggle-switch {
+    background: rgba(234, 57, 52, 1);
+}
+
+.morefilter-toggle--active .morefilter-toggle-switch::after {
+    transform: translateX(16px);
+}
+
+.morefilter-toggle-label {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Medium, sans-serif !important;
+    color: #222;
+}
+
+.morefilter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    border-bottom: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+}
+
+.morefilter-section-title {
+    font-size: 15px !important;
+    font-family: Medium, sans-serif !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin: 0 !important;
+}
+
+.morefilter-chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.morefilter-chip {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(34, 34, 34, 0.16);
+    background: #fff;
+    font-size: 13px;
+    font-family: Regular, sans-serif;
+    color: #222;
+    cursor: pointer;
+    outline: none;
+}
+
+.morefilter-chip--active {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+.morefilter-area-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.morefilter-area-input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(34, 34, 34, 0.16);
+    font-size: 13px;
+    font-family: Regular, sans-serif;
+}
+
+.morefilter-area-input::placeholder {
+    color: #999;
+}
+
+.morefilter-area-separator {
+    font-size: 13px;
+    color: #777;
+}
+
+.morefilter-amenities-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 25px 50px;
+}
+
+.morefilter-amenities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.morefilter-chip--amenity {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Regular, sans-serif;
+    color: #222;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    background: var(--White, #FFF);
+}
+
+.morefilter-chipamenity--active {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+.morefilter-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-radius: 0 0 16px 16px;
+    padding: 20px 50px 20px 50px;
+    // border-top: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    background: #fff;
+}
+
+.morefilter-result-btn {
+    margin-top: 0 !important;
+    width: 100%;
+    height: 48px;
+    border-radius: 12px !important;
+    font-family: SemiBold, sans-serif !important;
+    font-size: 15px !important;
+    background: rgba(234, 57, 52, 1) !important;
+    box-shadow: none !important;
+    text-transform: none !important;
+}
+
+.morefilter-clear-btn {
+    background: transparent;
+    border: none;
+    color: #0832AE;
+    font-size: 14px;
+    font-family: Medium, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+@media (max-width: 767px) {
+    .morefilter-modal-overlay {
+        align-items: flex-end;
+    }
+
+    .morefilter-modal {
+        width: 100%;
+        max-width: 100%;
+        height: 90%;
+        border-radius: 20px 20px 0 0;
+        animation: slideUp 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .morefilter-modal-content {
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    .morefilter-toggle {
+        padding: 15px 20px;
+    }
+
+    .morefilter-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px 20px;
+    }
+
+    .morefilter-area-row {
+        width: 100%;
+    }
+
+    .morefilter-amenities-section {
+        padding: 20px 20px;
+    }
+
+    .morefilter-footer {
+        padding: 16px 20px 20px 20px;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+}

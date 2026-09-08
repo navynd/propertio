@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+:root {
+    --primary-color: #1F3D51;
+    --primary-hover: #162b39;
+    --primary-color-alpha: rgba(31, 61, 81, 0.15);
+    --primary-hover-alpha: rgba(31, 61, 81, 0.05);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(./assets/fonts/PlusJakartaSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Medium;
+    src: url(./assets/fonts/PlusJakartaSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: SemiBold;
+    src: url(./assets/fonts/PlusJakartaSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Bold;
+    src: url(./assets/fonts/PlusJakartaSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: ExtraBold;
+    src: url(./assets/fonts/PlusJakartaSans-ExtraBold.ttf);
+}
+
+
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: #fff;
+}
+
+/* Prevent background scroll when modal is open */
+html.modal-open,
+body.modal-open {
+    overflow: hidden;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6E2C91;
+    border-radius: 50px;
+}
+
+/* Hide scrollbar */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .login_form {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1440px) and (max-width:2560px) {
+    .login_right {
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:660px) {
+    .cal-mobile {
+        left: -100px;
+    }
+}
+
+.molumulk-text {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.molumulk-text span {
+    display: inline-block;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 5px #7B4DDB,
+        0 0 10px #7B4DDB,
+        0 0 20px #9B6BFF,
+        0 0 40px #C084FC;
+
+    animation: letterJump 1.8s ease-in-out infinite;
+}
+
+/* One by one jumping */
+.molumulk-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.molumulk-text span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.molumulk-text span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.molumulk-text span:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.molumulk-text span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.molumulk-text span:nth-child(6) {
+    animation-delay: 0.75s;
+}
+
+.molumulk-text span:nth-child(7) {
+    animation-delay: 0.9s;
+}
+
+.molumulk-text span:nth-child(8) {
+    animation-delay: 1.05s;
+}
+
+.molumulk-text span:nth-child(9) {
+    animation-delay: 1.2s;
+}
+
+/* Smooth aligned jump */
+@keyframes letterJump {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Dynamic theme classes */
+.theme-active-parent-bg {
+  background-color: var(--primary-color-alpha, rgba(31, 61, 81, 0.15)) !important;
+}
+.theme-active-icon-bg {
+  background: var(--primary-color, #1F3D51) !important;
+}
+.theme-subitem-active-bg {
+  background-color: var(--primary-color, #1F3D51) !important;
+  color: #fff !important;
+}
+.theme-subitem-hover-bg:hover {
+  background-color: var(--primary-hover-alpha, rgba(31, 61, 81, 0.05)) !important;
+}
+.theme-hover-bg:hover {
+  background-color: var(--primary-color-alpha, rgba(31, 61, 81, 0.15)) !important;
+}
+.theme-primary-button {
+  background-color: var(--primary-color, #1F3D51) !important;
+  color: #fff !important;
+  transition: background-color 0.2s ease-in-out;
+}
+.theme-primary-button:hover {
+  background-color: var(--primary-hover, #193243) !important;
+}

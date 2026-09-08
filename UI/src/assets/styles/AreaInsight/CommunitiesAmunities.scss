@@ -1,0 +1,127 @@
+// Amenities tab — ComunitiesAmunities.tsx
+
+.pf-communities-amenities {
+    margin-bottom: 50px;
+}
+
+.pf-communities-amenities__card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.pf-communities-amenities__title {
+    margin: 0 0 12px;
+    font-family: Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.25;
+}
+
+.pf-communities-amenities__intro {
+    margin: 0 0 24px;
+    max-width: 72ch;
+    font-family: Regular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+.pf-communities-amenities__tabs-wrap {
+    border-bottom: 1px solid rgba(34, 34, 34, 0.10);
+    margin: 0 -30px 0px -30px;
+}
+
+.pf-communities-amenities__tabs-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.pf-communities-amenities__tab {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 17px 30px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    background: transparent;
+    font-family: Medium, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.pf-communities-amenities__tab--active {
+    color: #EA3934;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary, #EA3934);
+    box-shadow: 0 1px 0px 0 var(--primary, #EA3934);
+}
+
+.pf-communities-amenities__panel {
+    min-height: 80px;
+    margin-top: 30px;
+}
+
+.pf-communities-amenities__description {
+    margin: 0 0 22px;
+    font-family: Regular, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #4b5563;
+    max-width: 75ch;
+}
+
+.pf-communities-amenities__block {
+    margin-bottom: 22px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.pf-communities-amenities__subheading {
+    margin: 0 0 10px;
+    font-family: Medium, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.35;
+}
+
+.pf-communities-amenities__list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-family: Regular, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #374151;
+}
+
+.pf-communities-amenities__list-item {
+    margin-bottom: 6px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .pf-communities-amenities__card {
+        padding: 20px 16px 24px;
+    }
+}
