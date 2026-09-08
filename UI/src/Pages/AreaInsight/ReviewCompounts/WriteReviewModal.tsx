@@ -279,7 +279,7 @@ function WriteReviewModal({
                         }
                         label={
                             <span className="write-review-modal-terms-text">
-                                I agree to Terms and Conditions of Molumulk.
+                                I agree to Terms and Conditions of Propertio.
                             </span>
                         }
                     />

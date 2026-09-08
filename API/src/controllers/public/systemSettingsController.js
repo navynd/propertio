@@ -9,15 +9,15 @@ const getSettings = asyncHandler(async (req, res) => {
     if (!settings) {
       // Fallback defaults if not seeded yet
       settings = {
-        appName: 'Molumulk',
-        siteTitle: 'Molumulk - Real Estate Platform',
+        appName: 'Propertio',
+        siteTitle: 'Propertio - Real Estate Platform',
         themeColor: '#1F3D51',
         logo: '',
         favicon: '',
         seo: {
-          metaTitle: 'Molumulk',
+          metaTitle: 'Propertio',
           metaDescription: 'Find your dream property',
-          metaKeywords: ['real estate', 'molumulk', 'property']
+          metaKeywords: ['real estate', 'propertio', 'property']
         },
         currencies: [
           { code: 'AED', symbol: 'د.إ', exchangeRate: 1, isDefault: true, isActive: true },

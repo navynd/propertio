@@ -7,9 +7,9 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Molumulk API',
+      title: 'Propertio API',
       version: '1.0.0',
-      description: 'API documentation for the Molumulk platform.',
+      description: 'API documentation for the Propertio platform.',
     },
     servers: [
       {

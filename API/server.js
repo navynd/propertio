@@ -12,7 +12,7 @@ const { startUnitCountsReconciliationCron } = require('./src/crons/unitCountsRec
 const { startSearchAlertsPushCron } = require('./src/crons/searchAlertsPushCron');
 
 
-const sslPath = '/etc/letsencrypt/live/api.molumulk.tj';
+const sslPath = '/etc/letsencrypt/live/api.propertio.tj';
 
 const port = process.env.PORT || 5000;
 const isUnitStatusReleaseCronEnabled =

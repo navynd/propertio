@@ -1,5 +1,5 @@
 {
-  "name": "molumulk",
+  "name": "propertio",
   "version": "1.0.0",
   "description": " This Project is developed for a real estate search and discovery platform that connects property seekers (buyers/renters) with property listers (owners/agents/developers).",
   "main": "server.js",

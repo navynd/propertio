@@ -1,7 +1,7 @@
 {
-  "name": "molumulk-admin-api",
+  "name": "propertio-admin-api",
   "version": "1.0.0",
-  "description": " This Project is developed for a real estate search and discovery platform that connects property seekers (buyers/renters) with property listers (owners/agents/developers) Molumulk Admin API.",
+  "description": " This Project is developed for a real estate search and discovery platform that connects property seekers (buyers/renters) with property listers (owners/agents/developers) Propertio Admin API.",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",

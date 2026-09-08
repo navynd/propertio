@@ -28,8 +28,8 @@ function SiteSettings() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  const [appName, setAppName] = useState("Molumulk");
-  const [siteTitle, setSiteTitle] = useState("Molumulk - Real Estate Platform");
+  const [appName, setAppName] = useState("Propertio");
+  const [siteTitle, setSiteTitle] = useState("Propertio - Real Estate Platform");
   const [themeColor, setThemeColor] = useState("#1F3D51");
   const [logoPreview, setLogoPreview] = useState("");
   const [faviconPreview, setFaviconPreview] = useState("");
@@ -43,8 +43,8 @@ function SiteSettings() {
       try {
         const data = await systemSettingsService.getSettings();
         if (active) {
-          setAppName(data.appName || "Molumulk");
-          setSiteTitle(data.siteTitle || "Molumulk - Real Estate Platform");
+          setAppName(data.appName || "Propertio");
+          setSiteTitle(data.siteTitle || "Propertio - Real Estate Platform");
           setThemeColor(data.themeColor || "#1F3D51");
           if (data.logo) setLogoPreview(data.logo);
           if (data.favicon) setFaviconPreview(data.favicon);

@@ -9,7 +9,7 @@ const { connectToDatabase } = require('./src/config/db');
 const { logger } = require('./src/utils/logger');
 
 
-const sslPath = '/etc/letsencrypt/live/api.molumulk.tj';
+const sslPath = '/etc/letsencrypt/live/api.propertio.tj';
 
 const port = process.env.PORT || 4000;
 

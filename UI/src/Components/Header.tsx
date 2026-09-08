@@ -818,7 +818,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
             component="a"
             href="#"
             sx={{ textDecoration: "none" }}
-            aria-label="Molumulk Home"
+            aria-label="Propertio Home"
             onClick={handleNavigateToHome}
           >
             {shouldShowWhiteHeader ? (

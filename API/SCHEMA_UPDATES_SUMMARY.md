@@ -7,7 +7,7 @@
 
 ## Overview
 
-This document summarizes all schema updates made to align with the Molumulk Project Scope of Work (SOW) requirements. All changes are traceable to specific SOW sections.
+This document summarizes all schema updates made to align with the Propertio Project Scope of Work (SOW) requirements. All changes are traceable to specific SOW sections.
 
 ---
 
@@ -352,5 +352,5 @@ All SOW requirements are now covered by the MongoDB schemas. The updates ensure:
 - ✅ Partner logo management for homepage
 - ✅ All search and filter requirements supported
 
-The schemas are production-ready and fully aligned with the Molumulk Project Scope of Work.
+The schemas are production-ready and fully aligned with the Propertio Project Scope of Work.
 

@@ -188,7 +188,7 @@ function AgentSidebar() {
             </aside>
             <div className="pt-[20px] mt-auto border-t border-[rgba(34,34,34,0.10)]">
                 <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
-                    Copyright © 2025 molumulk.ae.
+                    Copyright © 2025 propertio.ae.
                 </p>
                 <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
                     All rights reserved.
@@ -387,7 +387,7 @@ export default AgentSidebar
 //             </aside>
 //             <div className="pt-[20px] mt-auto border-t border-[rgba(34,34,34,0.10)]">
 //                 <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
-//                     Copyright © 2025 molumulk.ae.
+//                     Copyright © 2025 propertio.ae.
 //                 </p>
 //                 <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
 //                     All rights reserved.

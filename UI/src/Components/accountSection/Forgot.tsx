@@ -86,7 +86,7 @@ function ForgotPassword() {
                 </Typography>
               </Box>
             )}
-            <Box className="pf-login__logo" aria-label="Molumulk">
+            <Box className="pf-login__logo" aria-label="Propertio">
               <PfOrangeLogoIcon />
             </Box>
 

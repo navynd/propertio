@@ -1,6 +1,6 @@
-const ACCESS_TOKEN_KEY = "molumulk.admin.accessToken";
-const REFRESH_TOKEN_KEY = "molumulk.admin.refreshToken";
-const ADMIN_USER_KEY = "molumulk.admin.user";
+const ACCESS_TOKEN_KEY = "propertio.admin.accessToken";
+const REFRESH_TOKEN_KEY = "propertio.admin.refreshToken";
+const ADMIN_USER_KEY = "propertio.admin.user";
 
 const isBrowser = typeof window !== "undefined";
 

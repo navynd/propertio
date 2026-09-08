@@ -10,13 +10,13 @@ const getSystemSettings = asyncHandler(async (req, res) => {
     let settings = await SystemSettings.findOne();
     if (!settings) {
       settings = new SystemSettings({
-        appName: 'Molumulk',
-        siteTitle: 'Molumulk - Real Estate Platform',
+        appName: 'Propertio',
+        siteTitle: 'Propertio - Real Estate Platform',
         themeColor: '#1F3D51',
         seo: {
-          metaTitle: 'Molumulk',
+          metaTitle: 'Propertio',
           metaDescription: 'Find your dream property',
-          metaKeywords: ['real estate', 'molumulk', 'property']
+          metaKeywords: ['real estate', 'propertio', 'property']
         },
         currencies: [
           { code: 'AED', symbol: 'د.إ', exchangeRate: 1, isDefault: true, isActive: true },

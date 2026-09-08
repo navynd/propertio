@@ -55,7 +55,7 @@ const DEFAULT_TIMELINE: AboutTimelineEntry[] = [
     day: "22",
     year: "2024",
     title: "New milestone reached across the region",
-    description: "Molumulk surpasses record engagement and marketplace growth.",
+    description: "Propertio surpasses record engagement and marketplace growth.",
     displayOrder: 1,
   },
   {
@@ -82,7 +82,7 @@ const DEFAULT_TIMELINE: AboutTimelineEntry[] = [
     day: "05",
     year: "2024",
     title: "Buyback of Shares from BECO Capital",
-    description: "Molumulk raised US$90 million debt financing.",
+    description: "Propertio raised US$90 million debt financing.",
     displayOrder: 4,
   },
   {

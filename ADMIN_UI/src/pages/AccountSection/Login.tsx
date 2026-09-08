@@ -20,7 +20,7 @@ function Login() {
   const [showChangePassword, setShowChangePassword] = useState(false);
   const [isPasswordSuccessModalOpen, setIsPasswordSuccessModalOpen] = useState(false);
 
-  const [email, setEmail] = useState("molumulkadmin@yopmail.com");
+  const [email, setEmail] = useState("propertioadmin@yopmail.com");
   const [password, setPassword] = useState("admin@123");
   const [rememberMe, setRememberMe] = useState(false);
   const [forgotEmail, setForgotEmail] = useState("");

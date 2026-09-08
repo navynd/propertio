@@ -10,7 +10,7 @@ const DEFAULT_LEGAL_SETTINGS = {
   breadcrumbHomeLabel: 'Home',
   defaultCountryCode: 'AE',
   contactBlock: {
-    supportEmail: 'support@molumulk.ae',
+    supportEmail: 'support@propertio.ae',
     sectionTitle: 'Contact us',
   },
 };

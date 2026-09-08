@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || "https://molumulk.tj/api").replace(/\/$/, "");
+const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || "https://propertio.tj/api").replace(/\/$/, "");
 
 const apiClient = axios.create({
   baseURL: apiBaseUrl,

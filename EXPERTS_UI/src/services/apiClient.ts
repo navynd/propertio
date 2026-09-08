@@ -1,7 +1,7 @@
 import { authStorage } from "./authStorage";
 import type { ApiEnvelope } from "../types/auth";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "https://molumulk.tj/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "https://propertio.tj/api";
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 

@@ -214,15 +214,15 @@ function Dashboard() {
                     <h3 className="text-[16px] font-[Bold] text-[#222] mb-[12px]">Ecosystem Overview</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[12px]">
                         <div className="rounded-[10px] bg-[#F5F5F5] p-[14px]">
-                            <p className="text-[12px] text-[#707070]">molumulkclone-sultan</p>
+                            <p className="text-[12px] text-[#707070]">propertioclone-sultan</p>
                             <p className="text-[14px] font-[SemiBold] text-[#222] mt-[4px]">User portal (buy/rent/search)</p>
                         </div>
                         <div className="rounded-[10px] bg-[#F5F5F5] p-[14px]">
-                            <p className="text-[12px] text-[#707070]">molumulkexperts</p>
+                            <p className="text-[12px] text-[#707070]">propertioexperts</p>
                             <p className="text-[14px] font-[SemiBold] text-[#222] mt-[4px]">Developer / Agency / Agent portal</p>
                         </div>
                         <div className="rounded-[10px] bg-[var(--primary-color-alpha)] p-[14px] border border-[var(--primary-color-alpha)]">
-                            <p className="text-[12px] text-[var(--primary-color)]">molumulkadminsrc-ui</p>
+                            <p className="text-[12px] text-[var(--primary-color)]">propertioadminsrc-ui</p>
                             <p className="text-[14px] font-[SemiBold] text-[#222] mt-[4px]">Central admin control panel</p>
                         </div>
                     </div>

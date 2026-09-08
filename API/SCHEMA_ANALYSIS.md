@@ -1,8 +1,8 @@
-# MongoDB Schema Analysis & Updates for Molumulk Project
+# MongoDB Schema Analysis & Updates for Propertio Project
 
 ## 1. High-Level Understanding of SOW
 
-The Molumulk platform is a comprehensive real estate search and discovery system connecting:
+The Propertio platform is a comprehensive real estate search and discovery system connecting:
 - **Property Seekers** (Buyers/Renters) - Users
 - **Property Listers** (Agents, Agencies, Developers)
 

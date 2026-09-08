@@ -3,7 +3,7 @@ const { Schema, model } = mongoose;
 
 const siteSettingsSchema = new Schema({
     // Branding
-    siteName: { type: String, default: 'Molumulk' },
+    siteName: { type: String, default: 'Propertio' },
     logo: String,
     favicon: String,
     primaryColor: { type: String, default: '#ff0000' },

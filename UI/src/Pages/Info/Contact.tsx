@@ -23,7 +23,7 @@ const DEFAULT_SETTINGS: ContactPageSettings = {
   heroSubtitle: "Send us a message, give us a call, or better still visit us.",
   sectionTitle: "Let's get in touch",
   sectionSubtext: "Contact if you have any queries",
-  email: "info@molumulk.ae",
+  email: "info@propertio.ae",
   phone: "+971 4 558 0000",
   officeAddress: "Media City, Shatha Tower, 1506, Dubai, UAE",
   mapUrl: "https://maps.google.com",

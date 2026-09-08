@@ -252,7 +252,7 @@ function Footer() {
 
         <Box className="pf-footer__download">
           <Typography className="pf-footer__downloadText">
-            Download our Molumulk app on Playstore and Appstore
+            Download our Propertio app on Playstore and Appstore
           </Typography>
           <Box className="pf-footer__stores">
             <a
@@ -276,7 +276,7 @@ function Footer() {
 
         <Box className="pf-footer__bottom">
           <Typography className="pf-footer__copyright">
-            Copyright © {new Date().getFullYear()} Molumulk. All rights
+            Copyright © {new Date().getFullYear()} Propertio. All rights
             reserved.
           </Typography>
           <div

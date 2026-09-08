@@ -147,7 +147,7 @@ const sendExpertPasswordResetOtpEmail = async (to, otp, name = 'there') => {
 const sendPasswordResetEmail = async (to, resetToken, name = 'there') => {
   const resetLink = resetToken.startsWith('http')
     ? resetToken
-    : `https://molumulk/reset-password?token=${resetToken}`;
+    : `https://propertio/reset-password?token=${resetToken}`;
 
   const html = baseTemplate(
     'Reset your password',

@@ -697,7 +697,7 @@ function runRentVsBuyCalculation(reqBody) {
       mortgageBlock.principalPct = Number(amortization.principalPct.toFixed(2));
     }
 
-    // ─── Payment Breakdown modal (Molumulk–style totals over `comparisonYears`) ───
+    // ─── Payment Breakdown modal (Propertio–style totals over `comparisonYears`) ───
     // Amounts are positive AED outflows unless noted; clients may display as negative.
     const rentInitialTotal = rentAgentFeeAed + rentGovernmentFeeAed;
     const renterInsuranceTotal = renterInsuranceMonthly * horizonMonths;

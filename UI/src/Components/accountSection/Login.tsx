@@ -152,7 +152,7 @@ function Login() {
 
         <Box className="pf-login__scroll">
           <Box className="pf-login__card" component="section">
-            <Box className="pf-login__logo" aria-label="Molumulk">
+            <Box className="pf-login__logo" aria-label="Propertio">
               <PfOrangeLogoIcon />
             </Box>
 
@@ -301,7 +301,7 @@ function Login() {
             */}
 
             <Typography className="pf-login__terms">
-              By continuing you accept Molumulk’s
+              By continuing you accept Propertio’s
               <br />
               <Link href="#" underline="none">
                 Terms of use

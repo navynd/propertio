@@ -15,7 +15,7 @@ const DEFAULT_BLOG_SETTINGS = {
   showRecentPostsSidebar: true,
   enableComments: true,
   seo: {
-    metaTitle: 'Blogs | Molumulk',
+    metaTitle: 'Blogs | Propertio',
     metaDescription: 'Read the latest property insights and updates.',
     metaKeywords: 'blog, property, insights',
   },

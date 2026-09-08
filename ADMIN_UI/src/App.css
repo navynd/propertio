@@ -102,7 +102,7 @@ body.modal-open {
     }
 }
 
-.molumulk-text {
+.propertio-text {
     display: flex;
     align-items: flex-end;
     gap: 2px;
@@ -111,7 +111,7 @@ body.modal-open {
     font-weight: 900;
 }
 
-.molumulk-text span {
+.propertio-text span {
     display: inline-block;
 
     color: #fff;
@@ -126,39 +126,39 @@ body.modal-open {
 }
 
 /* One by one jumping */
-.molumulk-text span:nth-child(1) {
+.propertio-text span:nth-child(1) {
     animation-delay: 0s;
 }
 
-.molumulk-text span:nth-child(2) {
+.propertio-text span:nth-child(2) {
     animation-delay: 0.15s;
 }
 
-.molumulk-text span:nth-child(3) {
+.propertio-text span:nth-child(3) {
     animation-delay: 0.3s;
 }
 
-.molumulk-text span:nth-child(4) {
+.propertio-text span:nth-child(4) {
     animation-delay: 0.45s;
 }
 
-.molumulk-text span:nth-child(5) {
+.propertio-text span:nth-child(5) {
     animation-delay: 0.6s;
 }
 
-.molumulk-text span:nth-child(6) {
+.propertio-text span:nth-child(6) {
     animation-delay: 0.75s;
 }
 
-.molumulk-text span:nth-child(7) {
+.propertio-text span:nth-child(7) {
     animation-delay: 0.9s;
 }
 
-.molumulk-text span:nth-child(8) {
+.propertio-text span:nth-child(8) {
     animation-delay: 1.05s;
 }
 
-.molumulk-text span:nth-child(9) {
+.propertio-text span:nth-child(9) {
     animation-delay: 1.2s;
 }
 

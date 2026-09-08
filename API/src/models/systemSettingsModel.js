@@ -10,14 +10,14 @@ const currencySchema = new Schema({
 });
 
 const systemSettingsSchema = new Schema({
-  appName: { type: String, default: 'Molumulk' },
-  siteTitle: { type: String, default: 'Molumulk - Real Estate Platform' },
+  appName: { type: String, default: 'Propertio' },
+  siteTitle: { type: String, default: 'Propertio - Real Estate Platform' },
   logo: { type: String, default: '' },
   favicon: { type: String, default: '' },
   themeColor: { type: String, required: true, default: '#1F3D51' },
 
   seo: {
-    metaTitle: { type: String, default: 'Molumulk' },
+    metaTitle: { type: String, default: 'Propertio' },
     metaDescription: { type: String, default: 'Find your dream property' },
     metaKeywords: { type: [String], default: [] }
   },

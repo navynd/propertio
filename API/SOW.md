@@ -1,5 +1,5 @@
 SCOPE OF WORK
-Project Name: Molumulk
+Project Name: Propertio
 Customer Name: Mr. Sultan
 Platforms: Website, Android & iOS App and Web Admin Panel
 Core Concept: This Project is developed for a real estate search and discovery

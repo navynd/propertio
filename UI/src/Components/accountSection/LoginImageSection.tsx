@@ -29,7 +29,7 @@ function LoginImageSection() {
       />
 
       <Box className="pf-login__leftOverlay">
-        <img src={loginlogo} alt="Molumulk" className="login_logos" />
+        <img src={loginlogo} alt="Propertio" className="login_logos" />
       </Box>
 
       {/* Progress bar */}
@@ -106,7 +106,7 @@ export default LoginImageSection;
 //         component="section"
 //         aria-label="Awesome Properties message"
 //       >
-//         <img src={loginlogo} alt="Molumulk" className="login_logos" />
+//         <img src={loginlogo} alt="Propertio" className="login_logos" />
 
 //       </Box>
 
