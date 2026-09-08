@@ -503,14 +503,14 @@ textarea {
   top: 50% !important;
   transform: translateY(-50%);
   pointer-events: none;
-  color: #0a3aa6;
+  color: #1F3D51;
 }
 
 .pf-search__toggle,
 .pf-search__back {
   border: none;
   background: transparent;
-  color: #0a3aa6;
+  color: #1F3D51;
   font-family: SemiBold, sans-serif;
   font-size: 13px;
   display: inline-flex;
@@ -987,8 +987,8 @@ textarea {
   gap: 8px;
   padding: 4px 10px;
   border-radius: 18px;
-  border: 1px solid #0a3aa6;
-  background: #0a3aa6;
+  border: 1px solid #1F3D51;
+  background: #1F3D51;
   color: #ffffff;
   font-family: Medium, sans-serif;
   font-size: 12px;
@@ -1016,10 +1016,10 @@ textarea {
 }
 
 .pf-searchChip--active {
-  background: #0a3aa6;
+  background: #1F3D51;
   color: #ffffff;
-  border-color: #0a3aa6;
-  box-shadow: 0 6px 14px rgba(10, 58, 166, 0.25);
+  border-color: #1F3D51;
+  box-shadow: 0 6px 14px rgba(31, 61, 81, 0.25);
 }
 
 .pf-searchChip__label {
@@ -1113,7 +1113,7 @@ textarea {
 }
 
 .pf-link {
-  color: #0a3aa6;
+  color: #1F3D51;
   text-decoration: none;
   font-family: SemiBold, sans-serif;
 }
@@ -1135,14 +1135,14 @@ textarea {
 }
 
 .pf-chip--active {
-  background: #0a3aa6;
+  background: #1F3D51;
   color: #ffffff;
-  border-color: #0a3aa6;
+  border-color: #1F3D51;
 }
 
 /* CTA - centered content below cards */
 .pf-cta {
-  margin: 40px 0 40px;
+  margin: 50px 0 50px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -1163,13 +1163,15 @@ textarea {
   line-height: 1.15;
   margin: 0;
   color: #ffffff;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
 }
 
 .pf-cta__desc {
   margin: 0;
-  color: #e5e7eb;
+  color: rgba(255, 255, 255, 0.92);
   font-family: Regular, sans-serif;
   font-size: 16px;
+  max-width: 580px;
 }
 
 .pf-cta__btn {
@@ -1177,17 +1179,21 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 19px;
+  padding: 14px 28px;
   border-radius: 10px;
   font-family: SemiBold, sans-serif;
-  font-size: 13px;
-  background: rgba(212, 163, 115, 1);
+  font-size: 14px;
+  background: #D4A373;
   color: #ffffff;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 14px rgba(212, 163, 115, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background: #222;
+    background: #c39262;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(212, 163, 115, 0.5);
   }
 }
 
@@ -1471,6 +1477,20 @@ textarea {
   background-size: cover;
   background-position: center;
   pointer-events: none;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(248, 249, 250, 0.05) 0%,
+      rgba(15, 30, 40, 0.72) 30%,
+      rgba(31, 61, 81, 0.88) 70%,
+      rgba(17, 34, 44, 0.96) 100%
+    );
+  }
 }
 
 .pf-projectCard {
@@ -1556,7 +1576,7 @@ textarea {
     position: absolute !important;
     top: 10px;
     left: 10px;
-    background: #0a3aa6 !important;
+    background: #1F3D51 !important;
     color: #fff !important;
     height: 22px !important;
     border-radius: 6px !important;
@@ -1777,7 +1797,7 @@ textarea {
   }
 
   &--new {
-    background: #0a3aa6;
+    background: #1F3D51;
     color: #ffffff;
     text-transform: uppercase;
   }

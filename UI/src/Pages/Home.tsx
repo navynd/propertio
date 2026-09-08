@@ -1842,7 +1842,7 @@ function Home() {
                         className="pf-search__back"
                         onClick={() => setShowAdvancedFilters(false)}
                       >
-                        <LeftArrowIcon width="15" height="15" fill="#0A3AA6" />
+                        <LeftArrowIcon width="15" height="15" fill="#1F3D51" />
                         <span>Back</span>
                       </button>
                     </div>
@@ -1895,7 +1895,7 @@ function Home() {
                         onClick={() => setShowAdvancedFilters(true)}
                       >
                         Advanced filters
-                        <RightArrowIcon width="15" height="15" fill="#0A3AA6" />
+                        <RightArrowIcon width="15" height="15" fill="#1F3D51" />
                       </button>
                     </div>
                   )}
