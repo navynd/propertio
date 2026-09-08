@@ -172,7 +172,7 @@ function ChangePassword() {
 
         <Box className="pf-login__scroll">
           <Box className="pf-login__card card_center" component="section">
-            <Box className="pf-login__logo" aria-label="Propertio">
+            <Box className="pf-login__logo" aria-label="Estatehub">
               <PfOrangeLogoIcon />
             </Box>
 

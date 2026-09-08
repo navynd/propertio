@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #1F3D51;
+  --primary-hover: #162b39;
+  --primary-color-alpha: rgba(31, 61, 81, 0.15);
+  --primary-hover-alpha: rgba(31, 61, 81, 0.05);
+
+  --accent-color: #D4A373;
+  --accent-hover: #c49262;
+  --accent-alpha: rgba(212, 163, 115, 0.18);
+
+  --bg-color: #F8F9FA;
+  --surface-color: #FFFFFF;
+  --text-main: #1E293B;
+}
+
+body {
+  background-color: var(--bg-color, #F8F9FA);
+  color: var(--text-main, #1E293B);
+}
+
+/* Anti-gravity floating transitions & cards */
+.floating-card,
+.card,
+[class*="shadow"],
+button {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.floating-card:hover,
+.card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 32px -8px rgba(31, 61, 81, 0.16) !important;
+}
+
+.btn-accent,
+.cta-btn {
+  background-color: var(--accent-color, #D4A373) !important;
+  color: #ffffff !important;
+}
+
+.btn-accent:hover,
+.cta-btn:hover {
+  background-color: var(--accent-hover, #c49262) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px -4px rgba(212, 163, 115, 0.4);
+}

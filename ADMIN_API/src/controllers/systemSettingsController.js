@@ -10,13 +10,13 @@ const getSystemSettings = asyncHandler(async (req, res) => {
     let settings = await SystemSettings.findOne();
     if (!settings) {
       settings = new SystemSettings({
-        appName: 'Propertio',
-        siteTitle: 'Propertio - Real Estate Platform',
+        appName: 'Estatehub',
+        siteTitle: 'Estatehub - Real Estate Platform',
         themeColor: '#1F3D51',
         seo: {
-          metaTitle: 'Propertio',
+          metaTitle: 'Estatehub',
           metaDescription: 'Find your dream property',
-          metaKeywords: ['real estate', 'propertio', 'property']
+          metaKeywords: ['real estate', 'estatehub', 'property']
         },
         currencies: [
           { code: 'AED', symbol: 'د.إ', exchangeRate: 1, isDefault: true, isActive: true },

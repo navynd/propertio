@@ -426,7 +426,7 @@ const AgencyProfile = () => {
     return (
         <div className="min-h-screen bg-[#F5F5F5] flex flex-col items-center pt-[40px] pb-[30px] px-[20px] font-['Outfit',sans-serif]">
             <div className="mb-[40px]">
-                <img src={logoimg} alt="Propertio Providers" className="h-[40px]" />
+                <img src={logoimg} alt="Estatehub Providers" className="h-[40px]" />
             </div>
 
             <div className="relative w-full max-w-[1200px] bg-white rounded-[15px] p-[4px] flex flex-col md:flex-row">
@@ -822,7 +822,7 @@ const AgencyProfile = () => {
                 </div>
             </div>
 
-            <p className="mt-[30px] text-[#222] text-[14px] font-[Regular]">Copyright © 2025 propertio.ae. All rights reserved.</p>
+            <p className="mt-[30px] text-[#222] text-[14px] font-[Regular]">Copyright © 2025 estatehub.ae. All rights reserved.</p>
         </div>
     );
 };

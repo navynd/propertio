@@ -150,7 +150,7 @@ const navItems: NavItem[] = [
 function Sidebar() {
     const { settings } = useSystemSettings();
     const logoSrc = settings?.logo ? `http://localhost:5000/${settings.logo}` : logo;
-    const appName = settings?.appName || "Propertio";
+    const appName = settings?.appName || "Estatehub";
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>({});
@@ -211,7 +211,7 @@ function Sidebar() {
                 >
                     <img src={logoSrc} alt={appName} className="w-[100px]" />
                 </Link>
-                {/* <h4 className="propertio-text">
+                {/* <h4 className="estatehub-text">
                     <span>P</span>
                     <span>R</span>
                     <span>O</span>
@@ -352,7 +352,7 @@ function Sidebar() {
             </aside>
             <div className="pt-[20px] mt-auto border-t border-[rgba(34,34,34,0.10)]">
                 <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
-                    Copyright © 2025 {settings?.appName || 'Propertio'}.
+                    Copyright © 2025 {settings?.appName || 'Estatehub'}.
                 </p>
                 <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
                     All rights reserved.

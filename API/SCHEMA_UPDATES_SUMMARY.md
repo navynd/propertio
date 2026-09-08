@@ -7,7 +7,7 @@
 
 ## Overview
 
-This document summarizes all schema updates made to align with the Propertio Project Scope of Work (SOW) requirements. All changes are traceable to specific SOW sections.
+This document summarizes all schema updates made to align with the Estatehub Project Scope of Work (SOW) requirements. All changes are traceable to specific SOW sections.
 
 ---
 
@@ -329,16 +329,16 @@ This document summarizes all schema updates made to align with the Propertio Pro
 
 ## Files Modified
 
-1. `/home/hts/Documents/PROJECTS/Propertyfinder/pfmongoschema.js`
+1. `/home/hts/Documents/PROJECTS/Estatehub/pfmongoschema.js`
    - Updated Developer schema
    - Added Partner schema
    - Added performance indexes
    - Updated model exports
 
-2. `/home/hts/Documents/PROJECTS/Propertyfinder/API/SCHEMA_ANALYSIS.md` (New)
+2. `/home/hts/Documents/PROJECTS/Estatehub/API/SCHEMA_ANALYSIS.md` (New)
    - Comprehensive API-driven schema analysis
 
-3. `/home/hts/Documents/PROJECTS/Propertyfinder/API/SCHEMA_UPDATES_SUMMARY.md` (This file)
+3. `/home/hts/Documents/PROJECTS/Estatehub/API/SCHEMA_UPDATES_SUMMARY.md` (This file)
    - Summary of all changes
 
 ---
@@ -352,5 +352,5 @@ All SOW requirements are now covered by the MongoDB schemas. The updates ensure:
 - ✅ Partner logo management for homepage
 - ✅ All search and filter requirements supported
 
-The schemas are production-ready and fully aligned with the Propertio Project Scope of Work.
+The schemas are production-ready and fully aligned with the Estatehub Project Scope of Work.
 

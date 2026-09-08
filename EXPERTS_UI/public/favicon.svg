@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" fill="none">
-  <!-- Elevated floating roofline -->
   <path d="M4 14.5L20 3L36 14.5L31.5 17.8L20 9.5L8.5 17.8L4 14.5Z" fill="#D4A373" />
-  
-  <!-- Architectural Geometric E Monogram -->
   <rect x="7.5" y="18" width="25" height="4" rx="1.5" fill="#1F3D51" />
   <rect x="7.5" y="18" width="5.2" height="21" rx="1.5" fill="#1F3D51" />
   <rect x="12.7" y="26.5" width="15" height="3.8" rx="1.2" fill="#D4A373" />
   <rect x="7.5" y="35" width="25" height="4" rx="1.5" fill="#1F3D51" />
-
-  <!-- Anti-Gravity Ground Beam Shadow -->
   <ellipse cx="20" cy="42" rx="11" ry="1.5" fill="#D4A373" opacity="0.4" />
 </svg>

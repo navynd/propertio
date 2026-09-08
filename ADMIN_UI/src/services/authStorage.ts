@@ -1,6 +1,6 @@
-const ACCESS_TOKEN_KEY = "propertio.admin.accessToken";
-const REFRESH_TOKEN_KEY = "propertio.admin.refreshToken";
-const ADMIN_USER_KEY = "propertio.admin.user";
+const ACCESS_TOKEN_KEY = "estatehub.admin.accessToken";
+const REFRESH_TOKEN_KEY = "estatehub.admin.refreshToken";
+const ADMIN_USER_KEY = "estatehub.admin.user";
 
 const isBrowser = typeof window !== "undefined";
 

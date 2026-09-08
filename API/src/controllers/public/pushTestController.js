@@ -23,7 +23,7 @@ const sendWebPushTest = asyncHandler(async (req, res) => {
   try {
     const messageId = await sendPushNotificationToToken({
       token: token.trim(),
-      title: title || 'Propertyfinder Test',
+      title: title || 'Estatehub Test',
       body: body || 'Web push test from API',
       data: data && typeof data === 'object' ? data : {},
       webpush: {

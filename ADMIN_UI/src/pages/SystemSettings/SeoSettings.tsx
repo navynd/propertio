@@ -96,7 +96,7 @@ function SeoSettings() {
                 type="text"
                 value={metaTitle}
                 onChange={(e) => setMetaTitle(e.target.value)}
-                placeholder="Propertio | Buy, Rent & Sell Properties"
+                placeholder="Estatehub | Buy, Rent & Sell Properties"
                 className={inputClass}
                 required
               />
@@ -120,7 +120,7 @@ function SeoSettings() {
               <textarea
                 value={metaDescription}
                 onChange={(e) => setMetaDescription(e.target.value)}
-                placeholder="Search thousands of properties for sale and rent on Propertio. Find your next villa, townhouse or apartment easily."
+                placeholder="Search thousands of properties for sale and rent on Estatehub. Find your next villa, townhouse or apartment easily."
                 rows={4}
                 className={textareaClass}
                 required

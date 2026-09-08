@@ -6,12 +6,12 @@ const TEAM_SETTINGS_SLUG = 'team-overview';
 
 const DEFAULT_TEAM_SETTINGS = {
   pageTitle: 'Our Team',
-  pageSubtitle: 'Meet the people behind Propertio',
+  pageSubtitle: 'Meet the people behind Estatehub',
   itemsPerPage: 24,
   seo: {
-    metaTitle: 'Our Team | Propertio',
+    metaTitle: 'Our Team | Estatehub',
     metaDescription: 'Meet our team',
-    metaKeywords: 'team, property finder',
+    metaKeywords: 'team, Estatehub',
   },
 };
 

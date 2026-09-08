@@ -85,7 +85,7 @@ const Checkout = () => {
 
             <footer className="bg-white md:p-[18px_20px] p-[18px_15px]">
                 <div className="mx-auto flex w-full max-w-[1220px] flex-col gap-[8px] text-[12px] text-[#222] sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-[14px] text-[#222] font-[Regular]">Copyright © 2025 propertio.ae. All rights reserved.</p>
+                    <p className="text-[14px] text-[#222] font-[Regular]">Copyright © 2025 estatehub.ae. All rights reserved.</p>
                     <div className="flex items-center gap-[26px] font-[Regular]">
                         <button type="button" className="cursor-pointer text-[14px] text-[#222] font-[Regular]">Terms & Conditions</button>
                         <button type="button" className="cursor-pointer text-[14px] text-[#222] font-[Regular]">Privacy policy</button>

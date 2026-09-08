@@ -1430,7 +1430,7 @@ function AgentDetails() {
                   Track Record for the past 12 months
                 </Typography>
                 <Typography className="pf-agent-details__track-record-note">
-                  Transactions submitted by agent to Propertio.
+                  Transactions submitted by agent to Estatehub.
                 </Typography>
               </Box>
 

@@ -415,7 +415,7 @@ const AgentProfile = () => {
         <div className="min-h-screen bg-[#F5F5F5] flex flex-col items-center pt-[40px] pb-[30px] px-[20px] font-['Outfit',sans-serif]">
             {/* Logo */}
             <div className="mb-[40px]">
-                <img src={logoimg} alt="Propertio Providers" className="h-[40px]" />
+                <img src={logoimg} alt="Estatehub Providers" className="h-[40px]" />
             </div>
 
             {/* Main Card */}
@@ -848,7 +848,7 @@ const AgentProfile = () => {
             </div>
 
             {/* Footer */}
-            <p className="mt-[30px] text-[#222] text-[14px] font-[Regular]">Copyright © 2025 propertio.ae. All rights reserved.</p>
+            <p className="mt-[30px] text-[#222] text-[14px] font-[Regular]">Copyright © 2025 estatehub.ae. All rights reserved.</p>
         </div>
     );
 };

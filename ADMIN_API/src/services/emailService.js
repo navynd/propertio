@@ -108,7 +108,7 @@ const sendVerificationEmail = async (to, otp, name = 'there') => {
 
 const sendWelcomeEmail = async (to, name = 'there', userType = 'member') => {
   const html = baseTemplate(
-    'Welcome to Propertyfinder',
+    'Welcome to Estatehub',
     `
     <div class="header">Welcome aboard, ${name}!</div>
     <p class="paragraph">We are excited to have you join as a valued ${userType}. Your account is set up and ready to go.</p>
@@ -116,13 +116,13 @@ const sendWelcomeEmail = async (to, name = 'there', userType = 'member') => {
     <a class="cta" href="#">Go to your dashboard</a>
     `
   );
-  return sendEmail(to, 'Welcome to Propertyfinder', html);
+  return sendEmail(to, 'Welcome to Estatehub', html);
 };
 
 const sendPasswordResetEmail = async (to, resetToken, name = 'there') => {
   const resetLink = resetToken.startsWith('http')
     ? resetToken
-    : `https://propertio/reset-password?token=${resetToken}`;
+    : `https://estatehub/reset-password?token=${resetToken}`;
 
   const html = baseTemplate(
     'Reset your password',
@@ -141,17 +141,17 @@ const sendPasswordResetEmail = async (to, resetToken, name = 'there') => {
 const sendInvitationEmail = async (to, name, invitationLink, invitedBy, role = 'member') => {
   const safeLink = invitationLink || '#';
   const html = baseTemplate(
-    'You are invited to join Propertyfinder',
+    'You are invited to join Estatehub',
     `
     <div class="header">Invitation to join</div>
     <p class="paragraph">Hi ${name || 'there'},</p>
-    <p class="paragraph">${invitedBy || 'A colleague'} has invited you to join Propertyfinder as ${role}. Click the button below to accept and set up your account.</p>
+    <p class="paragraph">${invitedBy || 'A colleague'} has invited you to join Estatehub as ${role}. Click the button below to accept and set up your account.</p>
     <a class="cta" href="${safeLink}">Accept Invitation</a>
     <p class="paragraph">If the button does not work, copy and paste this link into your browser:</p>
     <div class="card" style="word-break: break-all;">${safeLink}</div>
     `
   );
-  return sendEmail(to, 'Invitation to join Propertyfinder', html);
+  return sendEmail(to, 'Invitation to join Estatehub', html);
 };
 
 module.exports = {

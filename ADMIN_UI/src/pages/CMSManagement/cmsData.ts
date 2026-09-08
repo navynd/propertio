@@ -201,9 +201,9 @@ export const SITEMAP_CATEGORIES: SitemapCategory[] = [
 ];
 
 export const teamMembersSeed: TeamMember[] = [
-    { id: "1", fullName: "William James", jobTitle: "Senior Property Consultant", email: "william@propertio.ae", phone: "+971 4 558 0001", profileImage: "", displayOrder: 1, isActive: true },
-    { id: "2", fullName: "Sarah Ahmed", jobTitle: "Property Advisor", email: "sarah@propertio.ae", phone: "+971 4 558 0002", profileImage: "", displayOrder: 2, isActive: true },
-    { id: "3", fullName: "Mohamed Ali", jobTitle: "Sales Manager", email: "mohamed@propertio.ae", phone: "+971 4 558 0003", profileImage: "", displayOrder: 3, isActive: true },
+    { id: "1", fullName: "William James", jobTitle: "Senior Property Consultant", email: "william@estatehub.ae", phone: "+971 4 558 0001", profileImage: "", displayOrder: 1, isActive: true },
+    { id: "2", fullName: "Sarah Ahmed", jobTitle: "Property Advisor", email: "sarah@estatehub.ae", phone: "+971 4 558 0002", profileImage: "", displayOrder: 2, isActive: true },
+    { id: "3", fullName: "Mohamed Ali", jobTitle: "Sales Manager", email: "mohamed@estatehub.ae", phone: "+971 4 558 0003", profileImage: "", displayOrder: 3, isActive: true },
 ];
 
 export const officeLocationsSeed: OfficeLocation[] = [
@@ -215,7 +215,7 @@ export const officeLocationsSeed: OfficeLocation[] = [
         address: "Maslak, Maslak Mah., Ahi Evran Cd. No:6 D:3, 42, D:D Blok, 34398 Sarıyer/İstanbul",
         mapUrl: "https://maps.google.com",
         phone: "+90 212 924 10 24",
-        email: "info@propertio.com.tr",
+        email: "info@estatehub.com.tr",
         displayOrder: 1,
         isActive: true,
     },
@@ -319,14 +319,14 @@ export const defaultAboutUsSettings: AboutUsSettings = {
     ctaSubheadline: "Verified listings, trusted agents, and real opportunities — all in one place.",
     ctaButtonLabel: "Discover Properties",
     ctaButtonUrl: "/searchlisting",
-    seo: { metaTitle: "About Us | Propertio", metaDescription: "Learn about Propertio", metaKeywords: "about, propertio" },
+    seo: { metaTitle: "About Us | Estatehub", metaDescription: "Learn about Estatehub", metaKeywords: "about, estatehub" },
 };
 
 export const defaultTeamPageSettings: TeamPageSettings = {
     pageTitle: "Our Team",
-    pageSubtitle: "Meet the people behind Propertio",
+    pageSubtitle: "Meet the people behind Estatehub",
     itemsPerPage: 24,
-    seo: { metaTitle: "Our Team | Propertio", metaDescription: "Meet our team", metaKeywords: "team, propertio" },
+    seo: { metaTitle: "Our Team | Estatehub", metaDescription: "Meet our team", metaKeywords: "team, estatehub" },
 };
 
 export const defaultTestimonialSettings: TestimonialSectionSettings = {
@@ -354,7 +354,7 @@ export const defaultContactPageSettings: ContactPageSettings = {
     heroBackgroundImage: "",
     sectionTitle: "Let's get in touch",
     sectionSubtext: "Contact if you have any queries",
-    email: "info@propertio.ae",
+    email: "info@estatehub.ae",
     phone: "+971 4 558 0000",
     officeAddress: "Media City, Shatha Tower, 1505, Dubai, UAE",
     mapUrl: "https://maps.google.com",
@@ -362,12 +362,12 @@ export const defaultContactPageSettings: ContactPageSettings = {
     instagramUrl: "https://instagram.com",
     twitterUrl: "https://twitter.com",
     linkedinUrl: "https://linkedin.com",
-    seo: { metaTitle: "Contact Us | Propertio", metaDescription: "Get in touch with Propertio", metaKeywords: "contact, propertio" },
+    seo: { metaTitle: "Contact Us | Estatehub", metaDescription: "Get in touch with Estatehub", metaKeywords: "contact, estatehub" },
 };
 
 export const defaultBlogPageSettings: BlogPageSettings = {
     pageTitle: "Browse our blogs",
-    pageSubtitle: "Insights and updates from the Propertio team",
+    pageSubtitle: "Insights and updates from the Estatehub team",
     featuredSectionTitle: "Featured Article",
     featuredSectionSubtitle: "Top picks from our editors",
     itemsPerPage: 15,
@@ -376,7 +376,7 @@ export const defaultBlogPageSettings: BlogPageSettings = {
     showRecentPostsSidebar: true,
     enableComments: true,
     seo: {
-        metaTitle: "Blogs | Propertio",
+        metaTitle: "Blogs | Estatehub",
         metaDescription: "Read the latest property insights and updates.",
         metaKeywords: "blog, property, insights",
     },

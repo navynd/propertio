@@ -59,7 +59,7 @@ const verifyFirebaseIdToken = async (idToken) => {
 
 const sendPushNotificationToToken = async ({
   token,
-  title = 'Propertyfinder Test',
+  title = 'Estatehub Test',
   body = 'Test push notification from API',
   data = {},
   webpush = {},

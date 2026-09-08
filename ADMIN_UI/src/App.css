@@ -5,6 +5,14 @@
     --primary-hover: #162b39;
     --primary-color-alpha: rgba(31, 61, 81, 0.15);
     --primary-hover-alpha: rgba(31, 61, 81, 0.05);
+
+    --accent-color: #D4A373;
+    --accent-hover: #c49262;
+    --accent-alpha: rgba(212, 163, 115, 0.18);
+
+    --bg-color: #F8F9FA;
+    --surface-color: #FFFFFF;
+    --text-main: #1E293B;
 }
 
 @font-face {
@@ -102,7 +110,7 @@ body.modal-open {
     }
 }
 
-.propertio-text {
+.estatehub-text {
     display: flex;
     align-items: flex-end;
     gap: 2px;
@@ -111,7 +119,7 @@ body.modal-open {
     font-weight: 900;
 }
 
-.propertio-text span {
+.estatehub-text span {
     display: inline-block;
 
     color: #fff;
@@ -126,39 +134,39 @@ body.modal-open {
 }
 
 /* One by one jumping */
-.propertio-text span:nth-child(1) {
+.estatehub-text span:nth-child(1) {
     animation-delay: 0s;
 }
 
-.propertio-text span:nth-child(2) {
+.estatehub-text span:nth-child(2) {
     animation-delay: 0.15s;
 }
 
-.propertio-text span:nth-child(3) {
+.estatehub-text span:nth-child(3) {
     animation-delay: 0.3s;
 }
 
-.propertio-text span:nth-child(4) {
+.estatehub-text span:nth-child(4) {
     animation-delay: 0.45s;
 }
 
-.propertio-text span:nth-child(5) {
+.estatehub-text span:nth-child(5) {
     animation-delay: 0.6s;
 }
 
-.propertio-text span:nth-child(6) {
+.estatehub-text span:nth-child(6) {
     animation-delay: 0.75s;
 }
 
-.propertio-text span:nth-child(7) {
+.estatehub-text span:nth-child(7) {
     animation-delay: 0.9s;
 }
 
-.propertio-text span:nth-child(8) {
+.estatehub-text span:nth-child(8) {
     animation-delay: 1.05s;
 }
 
-.propertio-text span:nth-child(9) {
+.estatehub-text span:nth-child(9) {
     animation-delay: 1.2s;
 }
 

@@ -1,8 +1,8 @@
-# MongoDB Schema Analysis & Updates for Propertio Project
+# MongoDB Schema Analysis & Updates for Estatehub Project
 
 ## 1. High-Level Understanding of SOW
 
-The Propertio platform is a comprehensive real estate search and discovery system connecting:
+The Estatehub platform is a comprehensive real estate search and discovery system connecting:
 - **Property Seekers** (Buyers/Renters) - Users
 - **Property Listers** (Agents, Agencies, Developers)
 

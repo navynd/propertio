@@ -21,7 +21,7 @@ const emptySettings: LegalPageSettings = {
   breadcrumbHomeLabel: "Home",
   defaultCountryCode: "AE",
   contactBlock: {
-    supportEmail: "support@propertio.ae",
+    supportEmail: "support@estatehub.ae",
     sectionTitle: "Contact us",
   },
 };

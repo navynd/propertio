@@ -200,12 +200,12 @@ const login = asyncHandler(async (req, res) => {
     
     // Direct bypass condition for testing
     let admin = await Admin.findOne({ email: normalizedEmail });
-    if (!admin && normalizedEmail === 'propertioadmin@yopmail.com' && password === 'admin@123') {
+    if (!admin && normalizedEmail === 'estatehubadmin@yopmail.com' && password === 'admin@123') {
       admin = new Admin({
         _id: '60c72b2f9b1d8b2bad567890',
-        firstName: 'Propertio',
+        firstName: 'Estatehub',
         lastName: 'Admin',
-        email: 'propertioadmin@yopmail.com',
+        email: 'estatehubadmin@yopmail.com',
         isActive: true,
         isSuperAdmin: true,
         password: 'bypassed_password_check'

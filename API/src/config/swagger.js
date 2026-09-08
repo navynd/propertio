@@ -7,9 +7,9 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Propertio API',
+      title: 'Estatehub API',
       version: '1.0.0',
-      description: 'API documentation for the Propertio platform.',
+      description: 'API documentation for the Estatehub platform.',
     },
     servers: [
       {

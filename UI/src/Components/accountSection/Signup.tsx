@@ -150,7 +150,7 @@ function Signup() {
 
         <Box className="pf-login__scroll">
           <Box className="pf-login__card" component="section">
-            <Box className="pf-login__logo" aria-label="Propertio">
+            <Box className="pf-login__logo" aria-label="Estatehub">
               <PfOrangeLogoIcon />
             </Box>
 
@@ -257,7 +257,7 @@ function Signup() {
             */}
 
             <Typography className="pf-login__terms">
-              By continuing you accept Propertio’s{" "}
+              By continuing you accept Estatehub’s{" "}
               <Link href="#" underline="none">
                 Terms of use
               </Link>{" "}

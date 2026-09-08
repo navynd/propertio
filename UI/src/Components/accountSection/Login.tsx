@@ -152,7 +152,7 @@ function Login() {
 
         <Box className="pf-login__scroll">
           <Box className="pf-login__card" component="section">
-            <Box className="pf-login__logo" aria-label="Propertio">
+            <Box className="pf-login__logo" aria-label="Estatehub">
               <PfOrangeLogoIcon />
             </Box>
 
@@ -301,7 +301,7 @@ function Login() {
             */}
 
             <Typography className="pf-login__terms">
-              By continuing you accept Propertio’s
+              By continuing you accept Estatehub’s
               <br />
               <Link href="#" underline="none">
                 Terms of use

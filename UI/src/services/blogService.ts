@@ -2,7 +2,7 @@ import axios from "axios";
 import type { RecommendedProperty } from "../Components/cards/RecommendedCard";
 import { getSupportedUrlsMasterData } from "./apiService";
 
-const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || "https://propertio.tj/api").replace(
+const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || "https://estatehub.tj/api").replace(
   /\/$/,
   ""
 );

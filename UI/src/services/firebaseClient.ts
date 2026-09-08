@@ -7,12 +7,12 @@ const firebaseConfig = {
     "AIzaSyBqmRu193t1w06320sl54Cw0oaYOdVaOII",
   authDomain:
     import.meta.env.VITE_FIREBASE_AUTH_DOMAIN ||
-    "propertio-1c039.firebaseapp.com",
+    "estatehub-1c039.firebaseapp.com",
   projectId:
-    import.meta.env.VITE_FIREBASE_PROJECT_ID || "propertio-1c039",
+    import.meta.env.VITE_FIREBASE_PROJECT_ID || "estatehub-1c039",
   storageBucket:
     import.meta.env.VITE_FIREBASE_STORAGE_BUCKET ||
-    "propertio-1c039.firebasestorage.app",
+    "estatehub-1c039.firebasestorage.app",
   messagingSenderId:
     import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "1077407810956",
   appId:

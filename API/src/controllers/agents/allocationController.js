@@ -434,8 +434,8 @@ const getAllocatedPropertyById = asyncHandler(async (req, res) => {
  *                 type: string
  *                 description: |
  *                   Optional. Empty clears. When set, must be http(s); the last path segment must be the
- *                   property MongoDB id (24 hex), e.g. https://propertio.tj/propertydrilldown/69de2c13bbed8e594c50e513
- *                 example: "https://propertio.tj/propertydrilldown/507f1f77bcf86cd799439011"
+ *                   property MongoDB id (24 hex), e.g. https://estatehub.tj/propertydrilldown/69de2c13bbed8e594c50e513
+ *                 example: "https://estatehub.tj/propertydrilldown/507f1f77bcf86cd799439011"
  *               notes:
  *                 type: string
  *                 description: Completion notes (optional)

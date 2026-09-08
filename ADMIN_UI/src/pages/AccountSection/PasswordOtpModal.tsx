@@ -90,7 +90,7 @@ const PasswordOtpModal: React.FC<PasswordOtpModalProps> = ({
 
         <div className="md:p-[0px_50px_60px_50px] p-[0px_20px_30px_20px]">
           <div className="flex flex-col items-center text-center">
-            <img src={logo} alt="Propertio" className="w-[138px] mb-[31px]" />
+            <img src={logo} alt="Estatehub" className="w-[138px] mb-[31px]" />
 
             <h3 className="font-[Bold] text-[#222] text-[20px] leading-[1.1] mb-[8px]">
               Enter the OTP we send to your email

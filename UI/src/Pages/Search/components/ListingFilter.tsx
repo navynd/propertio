@@ -1080,7 +1080,7 @@ function ListingFilter({
                     </Typography>
                   </Box>
                   <Typography variant="body2" className="pf-search-listing__verified-by">
-                    by propertio
+                    by estatehub
                   </Typography>
                 </Box>
               </Box>

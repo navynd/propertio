@@ -3,7 +3,7 @@ const { Schema, model } = mongoose;
 
 const siteSettingsSchema = new Schema({
     // Branding
-    siteName: { type: String, default: 'Propertio' },
+    siteName: { type: String, default: 'Estatehub' },
     logo: String,
     favicon: String,
     primaryColor: { type: String, default: '#ff0000' },

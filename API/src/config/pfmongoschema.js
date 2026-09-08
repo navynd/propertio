@@ -1,5 +1,5 @@
 // ============================================
-// PROPERTY FINDER PROJECT - COMPLETE MONGODB SCHEMAS
+// Estatehub PROJECT - COMPLETE MONGODB SCHEMAS
 // Version: 2.0 (Production Ready)
 // ============================================
 
@@ -2254,7 +2254,7 @@ roleSchema.index({ isActive: 1, level: -1 });
 // ============================================
 const siteSettingsSchema = new Schema({
     // General Settings
-    siteName: { type: String, default: 'Propertio' },
+    siteName: { type: String, default: 'Estatehub' },
     siteTagline: String,
     siteLogo: String,
     siteLogoDark: String, // For dark mode

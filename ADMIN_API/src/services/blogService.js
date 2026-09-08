@@ -15,7 +15,7 @@ const DEFAULT_BLOG_SETTINGS = {
   showRecentPostsSidebar: true,
   enableComments: true,
   seo: {
-    metaTitle: 'Blogs | Propertio',
+    metaTitle: 'Blogs | Estatehub',
     metaDescription: 'Read the latest property insights and updates.',
     metaKeywords: 'blog, property, insights',
   },

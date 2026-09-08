@@ -22,7 +22,7 @@ if (!mongoUri) {
   process.exit(1);
 }
 
-const email = 'propertioadmin@yopmail.com';
+const email = 'estatehubadmin@yopmail.com';
 const plainPassword = 'admin@123';
 
 async function seed() {
@@ -60,7 +60,7 @@ async function seed() {
     } else {
       console.log(`Creating new admin user with email ${email}...`);
       const newAdmin = {
-        firstName: 'Propertio',
+        firstName: 'Estatehub',
         lastName: 'Admin',
         email,
         phoneNumber: '+971501234567',

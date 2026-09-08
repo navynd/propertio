@@ -818,7 +818,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
             component="a"
             href="#"
             sx={{ textDecoration: "none" }}
-            aria-label="Propertio Home"
+            aria-label="Estatehub Home"
             onClick={handleNavigateToHome}
           >
             {shouldShowWhiteHeader ? (

@@ -34,9 +34,9 @@ const DEFAULT_ABOUT_SETTINGS = {
   ctaButtonLabel: 'Discover Properties',
   ctaButtonUrl: '/searchlisting',
   seo: {
-    metaTitle: 'About Us | Propertio',
-    metaDescription: 'Learn about Propertio',
-    metaKeywords: 'about, property finder',
+    metaTitle: 'About Us | Estatehub',
+    metaDescription: 'Learn about Estatehub',
+    metaKeywords: 'about, Estatehub',
   },
 };
 
@@ -47,7 +47,7 @@ const DEFAULT_TIMELINE = [
     day: '22',
     year: '2024',
     title: 'New milestone reached across the region',
-    description: 'Propertio surpasses record engagement and marketplace growth.',
+    description: 'Estatehub surpasses record engagement and marketplace growth.',
     displayOrder: 1,
   },
   {
@@ -74,7 +74,7 @@ const DEFAULT_TIMELINE = [
     day: '05',
     year: '2024',
     title: 'Buyback of Shares from BECO Capital',
-    description: 'Propertio raised US$90 million debt financing.',
+    description: 'Estatehub raised US$90 million debt financing.',
     displayOrder: 4,
   },
   {
