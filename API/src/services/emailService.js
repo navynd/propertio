@@ -22,13 +22,17 @@ const ensureMailConfig = () => {
       MAIL_FROM: Boolean(MAIL_FROM),
       MAIL_FROM_NAME: Boolean(MAIL_FROM_NAME),
     });
-    throw new Error('Email configuration not set');
+    return false;
   }
+  return true;
 };
 
 const transporter = (() => {
   try {
-    ensureMailConfig();
+    if (!ensureMailConfig()) {
+      logger.warn('Email service disabled: MAIL_PASS or other email config is missing. Emails will not be sent.');
+      return null;
+    }
     return nodemailer.createTransport({
       host: MAIL_HOST,
       port: Number(MAIL_PORT),
@@ -40,9 +44,10 @@ const transporter = (() => {
     });
   } catch (error) {
     logger.error('Failed to initialize mail transporter', { error: error.message });
-    throw error;
+    return null;
   }
 })();
+
 
 const baseTemplate = (title, bodyContent) => `
 <!DOCTYPE html>
@@ -73,7 +78,10 @@ const baseTemplate = (title, bodyContent) => `
 `;
 
 const sendEmail = async (to, subject, html) => {
-  ensureMailConfig();
+  if (!transporter) {
+    logger.warn('Email not sent (email service disabled): missing MAIL_PASS or email config', { to, subject });
+    return null;
+  }
   const fromName = MAIL_FROM_NAME ? `${MAIL_FROM_NAME} <${MAIL_FROM}>` : MAIL_FROM;
   try {
     const info = await transporter.sendMail({
@@ -89,6 +97,7 @@ const sendEmail = async (to, subject, html) => {
     throw new Error('Email sending failed');
   }
 };
+
 
 const sendVerificationEmail = async (to, otp, name = 'there') => {
   const html = baseTemplate(
