@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"cityKey":{"$numberInt":"1"}},"name":"cityKey_1","unique":true},{"v":{"$numberInt":"2"},"key":{"displayName":{"$numberInt":"1"}},"name":"displayName_1"}],"uuid":"2844424ad40e44c2817f58c73f838fd5","collectionName":"listingsearchcities","type":"collection"}

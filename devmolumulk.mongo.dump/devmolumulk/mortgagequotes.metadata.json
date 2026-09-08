@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"fe6f188ac3e94eb6bd209c6d70a9e02e","collectionName":"mortgagequotes","type":"collection"}
