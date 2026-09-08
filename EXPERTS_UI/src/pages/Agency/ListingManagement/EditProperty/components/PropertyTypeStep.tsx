@@ -94,7 +94,7 @@ const PropertyTypeStep = ({
             {/* listing type */}
             <div className="flex flex-col gap-[8px] shrink-0">
                 <label className="text-[14px] font-[SemiBold] text-[#222] block ">
-                    Listing type <span className="text-[#EA3934]">*</span>
+                    Listing type <span className="text-[#D4A373]">*</span>
                 </label>
                 <div className="relative" ref={listingTypeDropdownRef}>
                     <button
@@ -137,7 +137,7 @@ const PropertyTypeStep = ({
             {/* property type */}
             <div className="flex flex-col gap-[8px] shrink-0 mt-[20px]">
                 <label className="text-[14px] font-[SemiBold] text-[#222] block ">
-                    property type <span className="text-[#EA3934]">*</span>
+                    property type <span className="text-[#D4A373]">*</span>
                 </label>
                 <div className="relative" ref={propertyTypeDropdownRef}>
                     <button

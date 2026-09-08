@@ -305,7 +305,7 @@ const RevenueManagement = () => {
                                     type="button"
                                     onClick={() => selectDate(day)}
                                     className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                        ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                        ? "bg-[#D4A373] text-white border-[#D4A373]"
                                         : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                         }`}
                                 >
@@ -399,7 +399,7 @@ const RevenueManagement = () => {
                             <button
                                 type="button"
                                 onClick={() => setIsAddDealModalOpen(true)}
-                                className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934] text-[#FFF] px-[14px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
+                                className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] text-[#FFF] px-[14px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
                             >
                                 <PlusIcon width={16} height={16} />
                                 Add Deal

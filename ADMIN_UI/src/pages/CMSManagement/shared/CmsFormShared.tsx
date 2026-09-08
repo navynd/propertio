@@ -13,7 +13,7 @@ export const sectionTitleClass = "text-[18px] font-[Bold] text-[#222] mb-[20px]"
 export function RequiredLabel({ children }: { children: React.ReactNode }) {
     return (
         <label className={labelClass}>
-            {children} <span className="text-[#EA3934]">*</span>
+            {children} <span className="text-[#D4A373]">*</span>
         </label>
     );
 }

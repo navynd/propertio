@@ -399,7 +399,7 @@ const ProperyLeadsHeader = ({ leads }: { leads: any }) => {
                 </div>
                 <div className="flex flex-col gap-[5px]">
                   {isSuperAgent && (
-                    <span className="flex items-center justify-center gap-1 bg-[#EA3934] w-fit h-[21px] p-[6px_7px] text-[10px] font-[SemiBold] text-white uppercase ">
+                    <span className="flex items-center justify-center gap-1 bg-[#D4A373] w-fit h-[21px] p-[6px_7px] text-[10px] font-[SemiBold] text-white uppercase ">
                       <SuperAgentIcon width={10} height={10} />
                       SUPER AGENT
                     </span>

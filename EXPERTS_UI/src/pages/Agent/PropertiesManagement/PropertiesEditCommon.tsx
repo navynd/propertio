@@ -75,7 +75,7 @@ function SuffixInput({
         <div>
             {label ? (
                 <label htmlFor={inputId} className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                    {label} {required && <span className="text-[#EA3934]">*</span>}
+                    {label} {required && <span className="text-[#D4A373]">*</span>}
                 </label>
             ) : null}
             <div className="flex overflow-hidden rounded-[10px] border border-[rgba(34,34,34,0.10)]">
@@ -262,7 +262,7 @@ const PropertiesEditCommon = () => {
                     {/* Listing type */}
                     <div ref={listingTypeDropdownRef} className="relative">
                         <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                            Listing type <span className="text-[#EA3934]">*</span>
+                            Listing type <span className="text-[#D4A373]">*</span>
                         </label>
                         <button
                             type="button"
@@ -295,7 +295,7 @@ const PropertiesEditCommon = () => {
                                             setListingType(option);
                                             setIsListingTypeDropdownOpen(false);
                                         }}
-                                        className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${listingType === option ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                                        className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${listingType === option ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                                     >
                                         {option}
                                     </button>
@@ -306,7 +306,7 @@ const PropertiesEditCommon = () => {
                     {/* Property type */}
                     <div ref={propertyTypeDropdownRef} className="relative">
                         <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                            Property type <span className="text-[#EA3934]">*</span>
+                            Property type <span className="text-[#D4A373]">*</span>
                         </label>
                         <button
                             type="button"
@@ -339,7 +339,7 @@ const PropertiesEditCommon = () => {
                                             setPropertyType(option);
                                             setIsPropertyTypeDropdownOpen(false);
                                         }}
-                                        className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${propertyType === option ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                                        className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${propertyType === option ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                                     >
                                         {option}
                                     </button>
@@ -350,7 +350,7 @@ const PropertiesEditCommon = () => {
 
                     <div>
                         <p className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-                            Amenities <span className="text-[#EA3934]">*</span>
+                            Amenities <span className="text-[#D4A373]">*</span>
                         </p>
                         <div className="max-h-[280px] overflow-y-auto pr-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2">
                             {amenitiesList.map((amenity, idx) => {
@@ -367,7 +367,7 @@ const PropertiesEditCommon = () => {
                                     >
                                         <span
                                             className={`h-[15px] w-[15px] rounded-full border flex shrink-0 items-center justify-center ${isActive
-                                                ? "bg-[#EA3934] border-[#EA3934]"
+                                                ? "bg-[#D4A373] border-[#D4A373]"
                                                 : "bg-white border-[rgba(34,34,34,0.20)]"
                                                 }`}
                                         >
@@ -382,7 +382,7 @@ const PropertiesEditCommon = () => {
 
                     <div>
                         <label htmlFor="bedrooms" className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Number of bedrooms <span className="text-[#EA3934]">*</span>
+                            Number of bedrooms <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             id="bedrooms"
@@ -403,7 +403,7 @@ const PropertiesEditCommon = () => {
                         />
                         <span
                             className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors ${maidBedroom
-                                ? "border-[#EA3934] bg-[#EA3934]"
+                                ? "border-[#D4A373] bg-[#D4A373]"
                                 : "border-[rgba(34,34,34,0.25)] bg-white"
                                 }`}
                         >
@@ -417,7 +417,7 @@ const PropertiesEditCommon = () => {
                 <div className="md:p-[30px_0px_30px_0px] p-[20px_0px_20px_0px] flex flex-col gap-5 min-w-0">
                     <div>
                         <label htmlFor="bathrooms" className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Number of bathrooms <span className="text-[#EA3934]">*</span>
+                            Number of bathrooms <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             id="bathrooms"
@@ -431,7 +431,7 @@ const PropertiesEditCommon = () => {
 
                     <div>
                         <p className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Area of the property <span className="text-[#EA3934]">*</span>
+                            Area of the property <span className="text-[#D4A373]">*</span>
                         </p>
                         <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-3">
                             {/* Area in square meters */}
@@ -457,7 +457,7 @@ const PropertiesEditCommon = () => {
 
                     <div>
                         <p className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            DLD Permit number <span className="text-[#EA3934]">*</span>
+                            DLD Permit number <span className="text-[#D4A373]">*</span>
                         </p>
                         <div className="flex flex-col gap-3">
                             <input
@@ -507,7 +507,7 @@ const PropertiesEditCommon = () => {
                     {/* Zone location */}
                     <div ref={zoneLocationDropdownRef} className="relative">
                         <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                            Zone location <span className="text-[#EA3934]">*</span>
+                            Zone location <span className="text-[#D4A373]">*</span>
                         </label>
                         <button
                             type="button"
@@ -538,7 +538,7 @@ const PropertiesEditCommon = () => {
                                             setZone(option);
                                             setIsZoneLocationDropdownOpen(false);
                                         }}
-                                        className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${zone === option ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                                        className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${zone === option ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                                     >
                                         {option}
                                     </button>

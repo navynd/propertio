@@ -51,7 +51,7 @@ const metricCardTemplates: MetricTemplate[] = [
     {
         key: "totalRevenueSalesAndRent",
         title: "Total revenues by sales & renting",
-        // iconBg: "bg-[#EA3934]",
+        // iconBg: "bg-[#D4A373]",
         iconBg: "bg-[#00C853]",
         cardBg:
             "linear-gradient(180deg,rgba(0, 166, 99, 0) 42.64%,rgba(0, 166, 99, 0.2) 100%), #ffffff",
@@ -61,9 +61,9 @@ const metricCardTemplates: MetricTemplate[] = [
     {
         key: "activeListings",
         title: "Active listings",
-        iconBg: "bg-[#EA3934]",
+        iconBg: "bg-[#D4A373]",
         cardBg:
-            "linear-gradient(180deg,rgba(234, 57, 52, 0) 42.64%,rgba(234, 57, 52, 0.20) 100%), #ffffff",
+            "linear-gradient(180deg,rgba(212, 163, 115, 0) 42.64%,rgba(212, 163, 115, 0.20) 100%), #ffffff",
         icon: AgencyIcon1,
     },
     {
@@ -135,7 +135,7 @@ const inquiryContactStyles = {
         Icon: WhatsappIcon,
     },
     call: {
-        container: "bg-[#EA3934]",
+        container: "bg-[#D4A373]",
         Icon: CallIcon,
     },
     message: {
@@ -332,7 +332,7 @@ function AgentDashboard() {
         return metricCardTemplates.map((tpl) => {
             const s = stats?.[tpl.key];
             const direction = s?.direction ?? "up";
-            const badgeBg = direction === "up" ? "bg-[#00A663]" : "bg-[#EA3934]";
+            const badgeBg = direction === "up" ? "bg-[#00A663]" : "bg-[#D4A373]";
             const arrow = direction;
             const change = typeof s?.change === "number" ? s.change : 0;
             const badgeText = formatPercent(change);
@@ -669,12 +669,12 @@ function AgentDashboard() {
                                             <span
                                                 className={`inline-flex items-center rounded-[6px] p-[6px_10px] text-[12px] font-[SemiBold] leading-none ${row.listingLabel === "Buy"
                                                     ? "bg-[rgba(0,166,99,0.10)] text-[#00A663]" : row.listingLabel === "Rent"
-                                                        ? "bg-[rgba(234,57,52,0.10)] text-[#EA3934]"
+                                                        ? "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
                                                         : row.listingLabel === "Commercial Buy"
                                                             ? "bg-[rgba(255,70,162,0.10)] text-[#FF46A2]"
                                                             : row.listingLabel === "Commercial Rent"
                                                                 ? "bg-[rgba(199,163,53,0.10)] text-[#C7A335]"
-                                                                : "bg-[rgba(234,57,52,0.10)] text-[#EA3934]"
+                                                                : "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
                                                     }`}
                                             >
                                                 {row.listingLabel || "-"}

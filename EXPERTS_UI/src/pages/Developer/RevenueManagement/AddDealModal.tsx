@@ -372,7 +372,7 @@ const AddDealModal = ({ isOpen, onClose, onSaved }: AddDealModalProps) => {
                                                 setUnitOptions([]);
                                                 setIsProjectDropdownOpen(false);
                                             }}
-                                            className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${projectName === option.projectName ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                                            className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${projectName === option.projectName ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                                         >
                                             {option.projectName}
                                         </button>
@@ -422,7 +422,7 @@ const AddDealModal = ({ isOpen, onClose, onSaved }: AddDealModalProps) => {
                                                     setUnitOptions([]);
                                                     setIsAgencyDropdownOpen(false);
                                                 }}
-                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${agencyName === option.agencyName ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${agencyName === option.agencyName ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                                             >
                                                 {option.agencyName}
                                             </button>
@@ -479,7 +479,7 @@ const AddDealModal = ({ isOpen, onClose, onSaved }: AddDealModalProps) => {
                                                     setUnitOptions([]);
                                                     setIsLayoutDropdownOpen(false);
                                                 }}
-                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${layout.includes(option.layoutName) ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"
+                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${layout.includes(option.layoutName) ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"
                                                     }`}
                                             >
                                                 {[option.layoutName, option.buildingName, option.propertyType].filter(Boolean).join(" / ")}
@@ -534,7 +534,7 @@ const AddDealModal = ({ isOpen, onClose, onSaved }: AddDealModalProps) => {
                                                     setSelectedUnitId(option.id);
                                                     setIsUnitDropdownOpen(false);
                                                 }}
-                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${unit.includes(String(option.unitNumber || option.unitId || "")) ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"
+                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${unit.includes(String(option.unitNumber || option.unitId || "")) ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"
                                                     }`}
                                             >
                                                 {option.unitNumber ? `Unit ${option.unitNumber}` : (option.unitId || "Unit")}
@@ -594,7 +594,7 @@ const AddDealModal = ({ isOpen, onClose, onSaved }: AddDealModalProps) => {
                                                     type="button"
                                                     onClick={() => selectDate(day)}
                                                     className={`cursor-pointer h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                                        ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                                        ? "bg-[#D4A373] text-white border-[#D4A373]"
                                                         : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                                         }`}
                                                 >
@@ -666,7 +666,7 @@ const AddDealModal = ({ isOpen, onClose, onSaved }: AddDealModalProps) => {
                         type="button"
                         onClick={handleSave}
                         disabled={isSaving}
-                        className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                         {isSaving ? "Saving..." : "Save"}
                     </button>

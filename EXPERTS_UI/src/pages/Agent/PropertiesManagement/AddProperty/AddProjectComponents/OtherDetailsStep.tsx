@@ -34,7 +34,7 @@ const OtherDetailsStep = ({ listingTransaction = "", value, onChange }: OtherDet
             <div className="flex flex-col gap-[14px]">
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        Number of bedrooms <span className="text-[#EA3934]">*</span>
+                        Number of bedrooms <span className="text-[#D4A373]">*</span>
                     </label>
                     <input
                         type="text"
@@ -56,7 +56,7 @@ const OtherDetailsStep = ({ listingTransaction = "", value, onChange }: OtherDet
 
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        Number of bathrooms <span className="text-[#EA3934]">*</span>
+                        Number of bathrooms <span className="text-[#D4A373]">*</span>
                     </label>
                     <input
                         type="text"
@@ -69,7 +69,7 @@ const OtherDetailsStep = ({ listingTransaction = "", value, onChange }: OtherDet
 
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        Area of the property <span className="text-[#EA3934]">*</span>
+                        Area of the property <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[8px]">
                         <div className="relative">
@@ -97,7 +97,7 @@ const OtherDetailsStep = ({ listingTransaction = "", value, onChange }: OtherDet
 
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        DLD Permit number <span className="text-[#EA3934]">*</span>
+                        DLD Permit number <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[8px]">
                         <input
@@ -119,7 +119,7 @@ const OtherDetailsStep = ({ listingTransaction = "", value, onChange }: OtherDet
 
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        {priceLabel} <span className="text-[#EA3934]">*</span>
+                        {priceLabel} <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative">
                         <input

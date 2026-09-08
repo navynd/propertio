@@ -264,7 +264,7 @@ const EditPricePay = ({ projectId, project, onContinue, primaryActionLabel = "Sa
                 <div className="flex flex-col gap-[12px]">
                     <div>
                         <label className="text-[14px] font-[Bold] text-[#222] block mb-[6px]">
-                            Project Price <span className="text-[#EA3934]">*</span>
+                            Project Price <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"
@@ -278,7 +278,7 @@ const EditPricePay = ({ projectId, project, onContinue, primaryActionLabel = "Sa
                     </div>
                     <div>
                         <label className="text-[14px] font-[Bold] text-[#222] block mb-[6px]">
-                            Government Fees <span className="text-[#EA3934]">*</span>
+                            Government Fees <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"
@@ -307,7 +307,7 @@ const EditPricePay = ({ projectId, project, onContinue, primaryActionLabel = "Sa
                                     onClick={() => deletePaymentOption(option.id)}
                                     className="cursor-pointer  bg-white flex items-center justify-center"
                                 >
-                                    <TrashIcon width={20} height={20} fill="#EA3934" />
+                                    <TrashIcon width={20} height={20} fill="#D4A373" />
                                 </button>
                             </div>
                             <div className="rounded-[15px] bg-[#F5F5F5] md:p-[20px] p-[15px]">
@@ -459,7 +459,7 @@ const EditPricePay = ({ projectId, project, onContinue, primaryActionLabel = "Sa
                     type="button"
                     onClick={onSave}
                     disabled={isSaving}
-                    className={`h-[44px] rounded-[10px] px-[20px] text-[14px] font-[Bold] inline-flex items-center gap-[5px] ${isSaving ? "bg-[#EA3934]/50 text-[#FFF] cursor-not-allowed" : "bg-[#EA3934] text-[#FFF] cursor-pointer"}`}
+                    className={`h-[44px] rounded-[10px] px-[20px] text-[14px] font-[Bold] inline-flex items-center gap-[5px] ${isSaving ? "bg-[#D4A373]/50 text-[#FFF] cursor-not-allowed" : "bg-[#D4A373] text-[#FFF] cursor-pointer"}`}
                 >
                     {isSaving ? "Saving..." : primaryActionLabel}
                 </button>

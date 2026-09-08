@@ -253,7 +253,7 @@ export default function AgencyAccountDetail() {
 
   const onDeleteAvatar = async () => {
     if (!agencyId) return;
-    const result = await Swal.fire({ title: "Delete logo?", text: "This will remove the current agency logo.", icon: "warning", showCancelButton: true, confirmButtonText: "Delete", cancelButtonText: "Cancel", confirmButtonColor: "#EA3934" });
+    const result = await Swal.fire({ title: "Delete logo?", text: "This will remove the current agency logo.", icon: "warning", showCancelButton: true, confirmButtonText: "Delete", cancelButtonText: "Cancel", confirmButtonColor: "#D4A373" });
     if (!result.isConfirmed) return;
     try {
       setAvatarLoading(true);
@@ -282,7 +282,7 @@ export default function AgencyAccountDetail() {
             <div className="flex items-center gap-[12px] flex-wrap">
               <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={onUploadAvatar} />
               <button type="button" className="h-[42px] px-[18px] rounded-[10px] bg-[#222] text-[#fff] text-[14px] font-[Medium]" onClick={() => fileInputRef.current?.click()} disabled={avatarLoading}>Change Logo</button>
-              <button type="button" className="h-[42px] px-[18px] rounded-[10px] border border-[rgba(34,34,34,0.10)] text-[#EA3934] text-[14px] font-[Medium]" onClick={() => void onDeleteAvatar()} disabled={avatarLoading}>Delete</button>
+              <button type="button" className="h-[42px] px-[18px] rounded-[10px] border border-[rgba(34,34,34,0.10)] text-[#D4A373] text-[14px] font-[Medium]" onClick={() => void onDeleteAvatar()} disabled={avatarLoading}>Delete</button>
             </div>
           </div>
         </div>

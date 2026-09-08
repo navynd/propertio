@@ -188,7 +188,7 @@ const ProjectDetailsStep = ({ value, amenityOptions, onChange }: ProjectDetailsS
                 {/* project title */}
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        Project Title <span className="text-[#EA3934]">*</span>
+                        Project Title <span className="text-[#D4A373]">*</span>
                     </label>
                     <input
                         type="text"
@@ -201,7 +201,7 @@ const ProjectDetailsStep = ({ value, amenityOptions, onChange }: ProjectDetailsS
                 {/* project address */}
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        Project Address <span className="text-[#EA3934]">*</span>
+                        Project Address <span className="text-[#D4A373]">*</span>
                     </label>
                     {googleMapsApiKey && isGooglePlacesLoaded ? (
                         <Autocomplete
@@ -232,7 +232,7 @@ const ProjectDetailsStep = ({ value, amenityOptions, onChange }: ProjectDetailsS
                 {/* Amenities  * */}
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-                        Amenities <span className="text-[#EA3934]">*</span>
+                        Amenities <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="flex flex-wrap gap-[8px]">
                         {amenityOptions.map((amenity) => {
@@ -249,7 +249,7 @@ const ProjectDetailsStep = ({ value, amenityOptions, onChange }: ProjectDetailsS
                                 >
                                     <span
                                         className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center ${isActive
-                                            ? "bg-[#EA3934] border-[#EA3934]"
+                                            ? "bg-[#D4A373] border-[#D4A373]"
                                             : "bg-white border-[rgba(34,34,34,0.20)]"
                                             }`}
                                     >
@@ -268,7 +268,7 @@ const ProjectDetailsStep = ({ value, amenityOptions, onChange }: ProjectDetailsS
                 {/*  About the project */}
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-                        About the project <span className="text-[#EA3934]">*</span>
+                        About the project <span className="text-[#D4A373]">*</span>
                     </label>
                     <textarea
                         placeholder="Describe about the project"
@@ -283,7 +283,7 @@ const ProjectDetailsStep = ({ value, amenityOptions, onChange }: ProjectDetailsS
                 <div>
                     {/* Label */}
                     <label className="text-[14px] font-[600] text-[#222] block mb-[8px]">
-                        Project description <span className="text-[#EA3934]">*</span>
+                        Project description <span className="text-[#D4A373]">*</span>
                     </label>
 
                     {/* Editor Container */}

@@ -122,7 +122,7 @@ const DeveloperHeader = ({ title, showBack, onBackClick, profileImage, verified 
                     <button onClick={() => navigate('/developer/notification')} className="cursor-pointer relative flex p-[10px] items-center justify-center rounded-full bg-[#FFF]">
                         <NotificationIcon className="w-[20px] h-[20px]" />
                         {unreadNotificationCount > 0 && (
-                            <div className="absolute top-[4px] right-[4px] min-w-[17px] h-[17px] px-[4px] bg-[#EA3934] rounded-full flex items-center justify-center">
+                            <div className="absolute top-[4px] right-[4px] min-w-[17px] h-[17px] px-[4px] bg-[#D4A373] rounded-full flex items-center justify-center">
                                 <p className="text-[#fff] text-[10px] font-[Bold] leading-none">
                                     {unreadNotificationCount > 99 ? "99+" : unreadNotificationCount}
                                 </p>

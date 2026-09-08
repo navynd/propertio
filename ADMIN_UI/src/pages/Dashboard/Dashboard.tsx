@@ -54,7 +54,7 @@ const defaultStatCards: DashboardStatCard[] = [
         growth: "—",
         growthUp: false,
         cardBg: "bg-[#FFF2F2]",
-        iconBg: "bg-[#EA3934]",
+        iconBg: "bg-[#D4A373]",
     },
 ];
 

@@ -116,7 +116,7 @@ export default function JobTitleModal({
                     <div className="flex flex-col gap-[20px] mt-[28px]">
                         <div>
                             <label className={labelClass}>
-                                Title <span className="text-[#EA3934]">*</span>
+                                Title <span className="text-[#D4A373]">*</span>
                             </label>
                             <input
                                 type="text"

@@ -175,7 +175,7 @@ export function SitemapCategorySection({
       showCancelButton: true,
       confirmButtonText: "Delete",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
       reverseButtons: true,
     });
     if (!result.isConfirmed) return;
@@ -273,7 +273,7 @@ export function SitemapCategorySection({
               <button
                 type="button"
                 onClick={() => void handleDeleteCategory()}
-                className="h-[44px] px-[28px] rounded-[10px] text-[14px] font-[Bold] text-[#EA3934] border border-[#EA3934] bg-white cursor-pointer whitespace-nowrap"
+                className="h-[44px] px-[28px] rounded-[10px] text-[14px] font-[Bold] text-[#D4A373] border border-[#D4A373] bg-white cursor-pointer whitespace-nowrap"
               >
                 Delete category
               </button>

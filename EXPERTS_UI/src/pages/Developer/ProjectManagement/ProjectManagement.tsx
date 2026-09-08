@@ -101,7 +101,7 @@ const getProjectTypeLabel = (projectType?: string, completionStatus?: string) =>
 const statusPillClass = (tab: ProjectFilter, projectTypeLabel: string) => {
     if (tab === "Soldout") return "bg-[#E80808] text-white";
     if (projectTypeLabel === "New") return "bg-[rgba(0,166,99,0.10)] text-[#00A663]";
-    if (projectTypeLabel === "Off-plan") return "bg-[rgba(234,57,52,0.10)] text-[#EA3934]";
+    if (projectTypeLabel === "Off-plan") return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
     return "bg-[#F5F5F5] text-[#222]";
 };
 
@@ -570,7 +570,7 @@ const ProjectManagement = () => {
                             onClick={() => {
                                 navigate("/developer/add-project");
                             }}
-                            className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934]  text-[#FFF] px-[15px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
+                            className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373]  text-[#FFF] px-[15px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
                         >
                             <PlusIcon width={16} height={16} className="text-white" />
                             Add project

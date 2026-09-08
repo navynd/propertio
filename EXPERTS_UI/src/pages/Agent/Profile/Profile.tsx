@@ -529,7 +529,7 @@ const Profile = () => {
                         <div className="flex flex-col gap-[16px]">
                             {/* Agent name */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Agent name <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Agent name <span className="text-[#D4A373]">*</span></label>
                                 <input
                                     type="text"
                                     placeholder="Enter name"
@@ -542,7 +542,7 @@ const Profile = () => {
                             {/*Phone number */}
                             <div>
                                 <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                    Phone number <span className="text-[#EA3934]">*</span>
+                                    Phone number <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="flex items-center gap-[10px] mb-[10px]">
                                     {/* Country Code */}
@@ -631,7 +631,7 @@ const Profile = () => {
                             {/*Email Id */}
                             <div>
                                 <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                    Email Id <span className="text-[#EA3934]">*</span>
+                                    Email Id <span className="text-[#D4A373]">*</span>
                                 </label>
 
                                 <div className="relative flex-1">
@@ -661,7 +661,7 @@ const Profile = () => {
                             </div>
                             {/* Job title */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Job title <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Job title <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={jobTitleDropdownRef}>
                                     <div
                                         className="w-full h-[44px] rounded-[10px] border border-[#EAEAEA] px-[16px] text-[14px] font-[Regular] flex items-center justify-between cursor-pointer"
@@ -693,7 +693,7 @@ const Profile = () => {
 
                             {/* Experience */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Experience <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Experience <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={experienceDropdownRef}>
                                     <div
                                         className="w-full h-[44px] rounded-[10px] border border-[#EAEAEA] px-[16px] text-[14px] font-[Regular] flex items-center justify-between cursor-pointer"
@@ -726,7 +726,7 @@ const Profile = () => {
                             {/*Dubai Broker License (BRN) */}
                             <div>
                                 <label className="block text-[12px] font-[SemiBold] text-[#222] mb-[8px]">
-                                    Dubai Broker License (BRN) <span className="text-[#EA3934]">*</span>
+                                    Dubai Broker License (BRN) <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <input
                                     type="text"
@@ -738,7 +738,7 @@ const Profile = () => {
                             </div>
                             {/* Nationality */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Nationality <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Nationality <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={nationalityDropdownRef}>
                                     <div
                                         className="w-full h-[44px] rounded-[10px] border border-[#EAEAEA] px-[16px] flex items-center justify-between cursor-pointer"
@@ -796,7 +796,7 @@ const Profile = () => {
                         <div className="flex flex-col gap-[16px]">
                             {/* Languages (multi-select, same pattern as developer Assign Agencies) */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Language known <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Language known <span className="text-[#D4A373]">*</span></label>
                                 <div className={`relative ${selectedLanguageItems.length > 0 ? "mb-[10px]" : "mb-[0px]"}`} ref={languageDropdownRef}>
                                     <button
                                         type="button"
@@ -852,7 +852,7 @@ const Profile = () => {
                             {/* Long description */}
                             <div>
                                 <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                    description <span className="text-[#EA3934]">*</span>
+                                    description <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <textarea
                                     value={description}
@@ -863,7 +863,7 @@ const Profile = () => {
                             </div>
                             {/* LinkedIn */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">LinkedIn <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">LinkedIn <span className="text-[#D4A373]">*</span></label>
                                 <div className="h-[44px] border border-[rgba(34,34,34,0.10)] rounded-[10px] p-[0px_10px] flex items-center gap-[10px]">
                                     <input
                                         type="url"
@@ -883,7 +883,7 @@ const Profile = () => {
                             {/* Password */}
                             {/* <div>
                                 <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                    Password <span className="text-[#EA3934]">*</span>
+                                    Password <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="h-[44px] border border-[rgba(34,34,34,0.10)] rounded-[10px] p-[0px_10px] flex items-center gap-[10px]">
                                     <input
@@ -902,7 +902,7 @@ const Profile = () => {
                             {/* Confirm Password */}
                             {/* <div>
                                 <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                    Confirm password <span className="text-[#EA3934]">*</span>
+                                    Confirm password <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="h-[44px] border border-[rgba(34,34,34,0.10)] rounded-[10px] p-[0px_10px] flex items-center gap-[10px]">
                                     <input
@@ -930,7 +930,7 @@ const Profile = () => {
                                 type="button"
                                 disabled={isSavingProfile || isProfileLoading}
                                 onClick={handleSaveProfile}
-                                className="bg-[#EA3934] text-white text-[14px] font-[Bold] px-[20px] h-[44px] rounded-[10px] disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="bg-[#D4A373] text-white text-[14px] font-[Bold] px-[20px] h-[44px] rounded-[10px] disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {isSavingProfile ? "Saving…" : "Save changes"}
                             </button>

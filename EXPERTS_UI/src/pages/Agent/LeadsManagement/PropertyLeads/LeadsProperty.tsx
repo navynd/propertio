@@ -475,7 +475,7 @@ const getCalendarCells = (date: Date) => {
 
 function sourceIconChip(source: LeadSource) {
     if (source === "whatsapp") return { bg: "bg-[#25D366]", Icon: WhatsappIcon };
-    if (source === "call") return { bg: "bg-[#EA3934]", Icon: CallIcon };
+    if (source === "call") return { bg: "bg-[#D4A373]", Icon: CallIcon };
     return { bg: "bg-[#0832AE]", Icon: MessageIcon };
 }
 
@@ -714,7 +714,7 @@ const LeadsProperty = () => {
                                     type="button"
                                     onClick={() => selectDate(day)}
                                     className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                        ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                        ? "bg-[#D4A373] text-white border-[#D4A373]"
                                         : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                         }`}
                                 >

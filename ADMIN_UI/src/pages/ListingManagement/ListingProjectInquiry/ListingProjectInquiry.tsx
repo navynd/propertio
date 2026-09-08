@@ -269,16 +269,16 @@ function statusDotClass(status: LeadStatus) {
     if (status === "Reserved") return "bg-[#C7A335]";
     if (status === "In-Progress") return "bg-[#FF46A2]";
     if (status === "Follow up") return "bg-[#0832AE]";
-    if (status === "PreClose") return "bg-[#EA3934]";
+    if (status === "PreClose") return "bg-[#D4A373]";
     if (status === "Waiting for approval") return "bg-[#0832AE]";
     if (status === "Deal closed") return "bg-[#00A663]";
-    return "bg-[#EA3934]";
+    return "bg-[#D4A373]";
 }
 
 function statusPillClass(status: LeadStatus) {
     if (status === "Waiting for approval") return "bg-[#0832AE] text-white";
     if (status === "Deal closed") return "bg-[#00A663] text-white";
-    if (status === "Inquiry closed") return "bg-[rgba(234,57,52,0.10)] text-[#EA3934]";
+    if (status === "Inquiry closed") return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
     return "bg-white text-[#222]";
 }
 
@@ -289,7 +289,7 @@ function StatCards({ totalInquiries, newInquiries, attendedInquiries, closedInqu
         { label: "Total", value: totalInquiries, accent: "#222" },
         { label: "New Inquiry", value: newInquiries, accent: "#0832AE" },
         { label: "Attended Inquiry", value: attendedInquiries, accent: "#00A663" },
-        { label: "Closed Inquiry", value: closedInquiries, accent: "#EA3934" },
+        { label: "Closed Inquiry", value: closedInquiries, accent: "#D4A373" },
     ];
 
     return (
@@ -607,7 +607,7 @@ function ListingProjectInquiry() {
                                     type="button"
                                     onClick={() => selectDate(day)}
                                     className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                        ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                        ? "bg-[#D4A373] text-white border-[#D4A373]"
                                         : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                         }`}
                                 >

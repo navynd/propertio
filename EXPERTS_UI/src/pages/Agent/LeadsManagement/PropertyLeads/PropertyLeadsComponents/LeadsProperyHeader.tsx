@@ -175,7 +175,7 @@ const LeadsProperyHeader = ({
                                     type="button"
                                     onClick={onMoveToAttended}
                                     disabled={isUpdatingStatus}
-                                    className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-[#FFF] text-[14px] font-[Bold] transition-opacity"
+                                    className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-[#FFF] text-[14px] font-[Bold] transition-opacity"
                                 >
                                     {isUpdatingStatus ? "Updating..." : "Move to attended"}
                                 </button>
@@ -194,7 +194,7 @@ const LeadsProperyHeader = ({
                                         type="button"
                                         onClick={onCloseDeal}
                                         disabled={isUpdatingStatus}
-                                        className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-[#FFF] text-[14px] font-[Bold] transition-opacity"
+                                        className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-[#FFF] text-[14px] font-[Bold] transition-opacity"
                                     >
                                         {isUpdatingStatus ? "Updating..." : "Close the deal"}
                                     </button>

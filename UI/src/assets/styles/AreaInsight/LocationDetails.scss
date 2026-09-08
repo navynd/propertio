@@ -262,7 +262,7 @@
     height: 44px;
     border: none;
     border-radius: 10px;
-    background: #ea3934;
+    background: #D4A373;
     color: #fff;
     font-family: Medium, sans-serif;
     font-size: 14px;
@@ -271,7 +271,7 @@
     transition: background 0.2s ease;
 
     &:hover {
-        background: #EA3934;
+        background: #D4A373;
     }
 }
 
@@ -520,7 +520,7 @@
     padding: 0 28px;
     border: none;
     border-radius: 10px;
-    background: #ea3934;
+    background: #D4A373;
     color: #fff;
     font-family: Medium, sans-serif;
     font-size: 14px;
@@ -616,8 +616,8 @@
     cursor: pointer;
 
     &.active {
-        background: rgba(234, 57, 52, 0.12);
-        color: #ea3934;
+        background: rgba(212, 163, 115, 0.12);
+        color: #D4A373;
         font-weight: 600;
     }
 

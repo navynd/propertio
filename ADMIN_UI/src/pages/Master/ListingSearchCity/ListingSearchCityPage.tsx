@@ -228,7 +228,7 @@ export default function ListingSearchCityPage({ config }: { config: ListingSearc
       showCancelButton: true,
       confirmButtonText: "Delete",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
       reverseButtons: true,
     });
     if (!result.isConfirmed) return;

@@ -167,7 +167,7 @@ const DebitCard = () => {
                     <button
                         onClick={() => setIsDebitCardModalOpen(true)}
                         type="button"
-                        className="flex h-[40px] shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-[50px] bg-[#EA3934] px-5 text-[13px] font-[Bold] text-white transition-opacity hover:opacity-95"
+                        className="flex h-[40px] shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-[50px] bg-[#D4A373] px-5 text-[13px] font-[Bold] text-white transition-opacity hover:opacity-95"
                     >
                         <PlusIcon width={16} height={16} />
                         Add debit/credit card

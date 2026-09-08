@@ -43,7 +43,7 @@ type FlatPropertyRow = {
 };
 
 function propertyForBadgeClass(label: string) {
-    if (label === "Rent") return "bg-[rgba(234,57,52,0.12)] text-[#EA3934]";
+    if (label === "Rent") return "bg-[rgba(212, 163, 115,0.12)] text-[#D4A373]";
     if (label === "Commercial Rent") return "bg-[rgba(199,163,53,0.18)] text-[#8B6914]";
     if (label === "Buy") return "bg-[rgba(0,166,99,0.12)] text-[#00A663]";
     return "bg-[rgba(255,70,162,0.12)] text-[#C41E7A]";
@@ -53,7 +53,7 @@ function statusBadgeClass(status: string) {
     if (status === "Rented") return "bg-white text-[#222] border border-[rgba(34,34,34,0.10)]";
     if (status === "Active") return "bg-[#00A663] text-white border border-transparent";
     if (status === "Sold") return "bg-[#FFF] text-[#222] border border-[rgba(34,34,34,0.10)]";
-    return "bg-[#EA3934] text-white border border-transparent";
+    return "bg-[#D4A373] text-white border border-transparent";
 }
 
 /** Rent list column: prefer API `rentPricing.monthly`, else derive from yearly or stored price (yearly). */
@@ -494,7 +494,7 @@ const PropertiesManagement = () => {
                                 <button
                                     type="button"
                                     onClick={() => navigate("/agent/properties-management/add-property")}
-                                    className="inline-flex items-center justify-center gap-[6px] h-[33px] px-[16px] rounded-full bg-[#EA3934] text-white text-[12px] font-[SemiBold] cursor-pointer"
+                                    className="inline-flex items-center justify-center gap-[6px] h-[33px] px-[16px] rounded-full bg-[#D4A373] text-white text-[12px] font-[SemiBold] cursor-pointer"
                                 >
                                     <PlusIcon width={14} height={14} />
                                     Add property

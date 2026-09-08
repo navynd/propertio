@@ -266,7 +266,7 @@ const UnitsDetails = () => {
                                 `/developer/units-assign?projectId=${encodeURIComponent(projectId)}&layoutId=${encodeURIComponent(layoutId)}`
                             )
                         }
-                        className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white"
+                        className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white"
                     >
                         <MultiUserIcon width={20} height={20} stroke="#FFFFFF" />
                         Assign agency

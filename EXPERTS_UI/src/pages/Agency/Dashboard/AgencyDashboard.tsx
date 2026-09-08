@@ -120,10 +120,10 @@ function AgencyDashboard() {
         value: stats.totalActiveListings.count,
         badgeText: `${stats.totalActiveListings.change}%`,
         arrow: stats.totalActiveListings.direction,
-        iconBg: "bg-[#EA3934]",
+        iconBg: "bg-[#D4A373]",
         badgeBg: "bg-[#00A663]",
         cardBg:
-          "linear-gradient(180deg,rgba(234, 57, 52, 0) 42.64%,rgba(234, 57, 52, 0.2) 100%), #ffffff",
+          "linear-gradient(180deg,rgba(212, 163, 115, 0) 42.64%,rgba(212, 163, 115, 0.2) 100%), #ffffff",
         icon: AgencyIcon1,
         navigateTo: "/agency/listings?listingScope=Active",
       },
@@ -625,7 +625,7 @@ function AgencyDashboard() {
                     <div className="flex items-center">
                       <span
                         className={`inline-flex items-center rounded-[6px] p-[6px_10px] text-[12px] font-[Medium] leading-none ${row.projectStatus === "Off-plan"
-                          ? "bg-[rgba(234,57,52,0.10)] text-[#EA3934]"
+                          ? "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
                           : "bg-[rgba(0,166,99,0.10)] text-[#00A663]"
                           }`}
                       >

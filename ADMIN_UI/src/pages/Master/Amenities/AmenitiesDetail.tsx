@@ -108,7 +108,7 @@ function MediaUploadBlock({
             <button
               type="button"
               onClick={onDelete}
-              className="h-[42px] px-[18px] rounded-[10px] border border-[#EAEAEA] text-[#EA3934] text-[14px] font-[Medium] cursor-pointer"
+              className="h-[42px] px-[18px] rounded-[10px] border border-[#EAEAEA] text-[#D4A373] text-[14px] font-[Medium] cursor-pointer"
             >
               Remove
             </button>
@@ -300,7 +300,7 @@ function AmenitiesDetail() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
               <div>
                 <label className={labelClass}>
-                  Name <span className="text-[#EA3934]">*</span>
+                  Name <span className="text-[#D4A373]">*</span>
                 </label>
                 <input
                   type="text"

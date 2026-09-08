@@ -9,7 +9,7 @@ import { toast } from "../../../../services/toast";
 
 const unitLegend: { status: UnitTileStatus; label: string; swatchClass: string }[] = [
     { status: "agentSold", label: "Units Sold by you", swatchClass: "bg-[#0832AE]" },
-    { status: "soldOther", label: "Units Sold by other", swatchClass: "bg-[#EA3934]" },
+    { status: "soldOther", label: "Units Sold by other", swatchClass: "bg-[#D4A373]" },
     { status: "agentWorking", label: "Agent working on", swatchClass: "bg-[#00A663]" },
     { status: "available", label: "Units available", swatchClass: "bg-[#F3F4F6] border border-[rgba(34,34,34,0.08)]" },
     { status: "unavailable", label: "Units unavailable", swatchClass: "bg-[#D1D5DB]" },
@@ -18,7 +18,7 @@ const unitLegend: { status: UnitTileStatus; label: string; swatchClass: string }
 type UnitTileStatus = "agentSold" | "soldOther" | "agentWorking" | "available" | "unavailable";
 function unitTileClass(status: UnitTileStatus) {
     if (status === "agentSold") return "bg-[#0832AE] text-white";
-    if (status === "soldOther") return "bg-[#EA3934] text-white";
+    if (status === "soldOther") return "bg-[#D4A373] text-white";
     if (status === "agentWorking") return "bg-[#00A663] text-white";
     if (status === "available") return "bg-[#F5F5F5] text-[#222] border border-[rgba(34,34,34,0.08)]";
     return "bg-[rgba(34,34,34,0.20)] text-[#222]";
@@ -113,9 +113,9 @@ function unitStatusBadgeClass(status: UnitRowStatus) {
         case "Follow up":
             return "bg-[rgba(8,50,174,0.10)] text-[#0832AE]";
         case "PreClose":
-            return "bg-[rgba(234,57,52,0.12)] text-[#EA3934]";
+            return "bg-[rgba(212, 163, 115,0.12)] text-[#D4A373]";
         case "Closed":
-            return "bg-[#EA3934] text-white";
+            return "bg-[#D4A373] text-white";
         default:
             return "bg-[#F5F5F5] text-[#222]";
     }

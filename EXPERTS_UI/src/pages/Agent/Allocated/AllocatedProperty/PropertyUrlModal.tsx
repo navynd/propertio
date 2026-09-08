@@ -64,7 +64,7 @@ const PropertyUrlModal = ({ isOpen, onClose, value, onSave, isSaving = false }: 
                             onSave?.(url.trim());
                         }}
                         disabled={isSaving}
-                        className="cursor-pointer h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="cursor-pointer h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {isSaving ? "Saving..." : "Save"}
                     </button>

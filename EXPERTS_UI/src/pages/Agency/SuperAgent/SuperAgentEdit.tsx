@@ -653,7 +653,7 @@ const SuperAgentEdit = () => {
                   {/* Agency Name / Agent Name (typo preserved as in design "Agenct Name") */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Agenct Name <span className="text-[#EA3934]">*</span>
+                      Agenct Name <span className="text-[#D4A373]">*</span>
                     </label>
                     <input
                       type="text"
@@ -668,7 +668,7 @@ const SuperAgentEdit = () => {
                   {/* Agent Role */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Agent job role<span className="text-[#EA3934]">*</span>
+                      Agent job role<span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative" ref={jobTitleDropdownRef}>
                       <div
@@ -715,7 +715,7 @@ const SuperAgentEdit = () => {
                   {/* Agent type */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Agent type <span className="text-[#EA3934]">*</span>
+                      Agent type <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative" ref={agentTypeDropdownRef}>
                       <div
@@ -764,7 +764,7 @@ const SuperAgentEdit = () => {
                   {/* Phone Number */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Phone Number <span className="text-[#EA3934]">*</span>
+                      Phone Number <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="flex gap-[10px] bg-white rounded-[10px] h-[44px] items-center mb-[10px]">
                       <div className="relative h-full" ref={dropdownRef}>
@@ -872,7 +872,7 @@ const SuperAgentEdit = () => {
                   {/* Email Id */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Email Id <span className="text-[#EA3934]">*</span>
+                      Email Id <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative mb-[5px]">
                       <input
@@ -905,7 +905,7 @@ const SuperAgentEdit = () => {
                   {/* Experience */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Experience <span className="text-[#EA3934]">*</span>
+                      Experience <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative" ref={experienceDropdownRef}>
                       <div
@@ -953,7 +953,7 @@ const SuperAgentEdit = () => {
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
                       Dubai Broker License (BRN){" "}
-                      <span className="text-[#EA3934]">*</span>
+                      <span className="text-[#D4A373]">*</span>
                     </label>
                     <input
                       type="text"
@@ -972,7 +972,7 @@ const SuperAgentEdit = () => {
                   {/* Nationality */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Nationality <span className="text-[#EA3934]">*</span>
+                      Nationality <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative" ref={nationalityDropdownRef}>
                       <div
@@ -1059,7 +1059,7 @@ const SuperAgentEdit = () => {
                   {/* Languages */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Language known <span className="text-[#EA3934]">*</span>
+                      Language known <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative" ref={languageDropdownRef}>
                       <button
@@ -1122,7 +1122,7 @@ const SuperAgentEdit = () => {
                   {/* Description */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      Description <span className="text-[#EA3934]">*</span>
+                      Description <span className="text-[#D4A373]">*</span>
                     </label>
                     <textarea
                       placeholder="Enter description"
@@ -1137,7 +1137,7 @@ const SuperAgentEdit = () => {
                   {/* LinkedIn */}
                   <div>
                     <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                      LinkedIn <span className="text-[#EA3934]">*</span>
+                      LinkedIn <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="relative">
                       <input
@@ -1177,7 +1177,7 @@ const SuperAgentEdit = () => {
                   type="button"
                   onClick={handleSave}
                   disabled={saveLoading || discardLoading}
-                  className="bg-[#EA3934] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="bg-[#D4A373] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {saveLoading ? "Saving…" : "Save the changes"}
                 </button>
@@ -1197,7 +1197,7 @@ const SuperAgentEdit = () => {
                   aria-disabled={invitationDeclined}
                   disabled={invitationDeclined}
                   onClick={handleToggleAgent}
-                  className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors ${invitationDeclined ? "cursor-not-allowed opacity-50" : "cursor-pointer"} ${activateAgent ? "bg-[#EA3934]" : "bg-[#D4D4D4]"
+                  className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors ${invitationDeclined ? "cursor-not-allowed opacity-50" : "cursor-pointer"} ${activateAgent ? "bg-[#D4A373]" : "bg-[#D4D4D4]"
                     }`}
                 >
                   <span

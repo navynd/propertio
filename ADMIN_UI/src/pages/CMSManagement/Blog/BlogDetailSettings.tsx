@@ -315,7 +315,7 @@ function BlogDetailSettings() {
                         </div>
                         <div className="md:col-span-2">
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Article Content <span className="text-[#EA3934]">*</span>
+                                Article Content <span className="text-[#D4A373]">*</span>
                             </label>
                             <div className="edittoolbar relative min-h-[320px] border border-[rgba(34,34,34,0.10)] rounded-[12px] overflow-hidden bg-white">
                                 <style>
@@ -390,7 +390,7 @@ function BlogDetailSettings() {
                                         setCoverImage("");
                                         setCoverImageFile(null);
                                     }}
-                                    className="h-[38px] px-[14px] rounded-[8px] border border-[#EAEAEA] text-[#EA3934] text-[13px] font-[Medium] cursor-pointer"
+                                    className="h-[38px] px-[14px] rounded-[8px] border border-[#EAEAEA] text-[#D4A373] text-[13px] font-[Medium] cursor-pointer"
                                 >
                                     Remove
                                 </button>

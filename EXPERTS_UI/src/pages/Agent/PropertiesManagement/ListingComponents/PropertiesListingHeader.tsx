@@ -398,7 +398,7 @@ const PropertiesListingHeader = ({ property, onPropertyUpdated }: PropertiesList
                                     setActivateAgent(next);
                                     setSelectedStatusValue(next ? "active" : "inactive");
                                 }}
-                                className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors ${activateAgent ? "bg-[#EA3934]" : "bg-[#D4D4D4]"
+                                className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors ${activateAgent ? "bg-[#D4A373]" : "bg-[#D4D4D4]"
                                     } disabled:opacity-40 disabled:cursor-not-allowed`}
                             >
                                 <span
@@ -412,7 +412,7 @@ const PropertiesListingHeader = ({ property, onPropertyUpdated }: PropertiesList
                             <div className="flex flex-col gap-[10px] mt-[40px]">
                                 <div className="relative" ref={statusDropdownRef}>
                                     <label className="block text-[14px] font-[SemiBold] text-[#222] mb-2">
-                                        Status <span className="text-[#EA3934]">*</span>
+                                        Status <span className="text-[#D4A373]">*</span>
                                     </label>
                                     <button
                                         type="button"
@@ -454,7 +454,7 @@ const PropertiesListingHeader = ({ property, onPropertyUpdated }: PropertiesList
                                                         setIsStatusOpen(false);
                                                     }}
                                                     className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${selectedStatusValue === option.value
-                                                        ? "text-[#EA3934] bg-[#FDF2F2]"
+                                                        ? "text-[#D4A373] bg-[#FDF2F2]"
                                                         : "text-[#222]"
                                                         }`}
                                                 >
@@ -473,7 +473,7 @@ const PropertiesListingHeader = ({ property, onPropertyUpdated }: PropertiesList
                                         selectedStatusValue === serverStatusNorm
                                     }
                                     onClick={() => void handleSaveStatus()}
-                                    className="cursor-pointer mt-[30px] h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-40 disabled:cursor-not-allowed"
+                                    className="cursor-pointer mt-[30px] h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-40 disabled:cursor-not-allowed"
                                 >
                                     {isSaving ? "Saving…" : "Save"}
                                 </button>
@@ -499,7 +499,7 @@ const PropertiesListingHeader = ({ property, onPropertyUpdated }: PropertiesList
                                             type="button"
                                             disabled={!property?.propertyUrl?.trim()}
                                             onClick={() => void handleCopyPropertyUrl()}
-                                            className="text-[12px] font-[Bold] text-[#FFF] bg-[#EA3934] rounded-[8px] h-[32px] px-[20px] py-[5px] mt-[15px] disabled:opacity-40 disabled:cursor-not-allowed"
+                                            className="text-[12px] font-[Bold] text-[#FFF] bg-[#D4A373] rounded-[8px] h-[32px] px-[20px] py-[5px] mt-[15px] disabled:opacity-40 disabled:cursor-not-allowed"
                                         >
                                             Copy
                                         </button>

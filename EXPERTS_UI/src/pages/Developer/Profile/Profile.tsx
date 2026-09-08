@@ -279,7 +279,7 @@ const Profile = () => {
                     <div className="flex flex-col gap-[16px]">
                         <div>
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Developer name <span className="text-[#EA3934]">*</span>
+                                Developer name <span className="text-[#D4A373]">*</span>
                             </label>
                             <input
                                 type="text"
@@ -291,7 +291,7 @@ const Profile = () => {
 
                         <div>
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Phone number <span className="text-[#EA3934]">*</span>
+                                Phone number <span className="text-[#D4A373]">*</span>
                             </label>
                             <div className="flex items-center gap-[10px] mb-[10px]">
                                 {/* Country Code */}
@@ -378,7 +378,7 @@ const Profile = () => {
 
                         <div>
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Email Id <span className="text-[#EA3934]">*</span>
+                                Email Id <span className="text-[#D4A373]">*</span>
                             </label>
 
                             <div className="relative flex-1">
@@ -407,7 +407,7 @@ const Profile = () => {
 
                         <div>
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Address <span className="text-[#EA3934]">*</span>
+                                Address <span className="text-[#D4A373]">*</span>
                             </label>
                             <input
                                 type="text"
@@ -419,7 +419,7 @@ const Profile = () => {
 
                         <div>
                             <label className="block text-[12px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Founded year <span className="text-[#EA3934]">*</span>
+                                Founded year <span className="text-[#D4A373]">*</span>
                             </label>
                             <input
                                 type="text"
@@ -431,7 +431,7 @@ const Profile = () => {
 
                         <div>
                             <label className="block text-[12px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Short Description <span className="text-[#EA3934]">*</span>
+                                Short Description <span className="text-[#D4A373]">*</span>
                             </label>
                             <input
                                 type="text"
@@ -448,7 +448,7 @@ const Profile = () => {
                         </div> */}
                         <div className=" pt-[20px] flex ">
                             <button
-                                className="bg-[#EA3934] text-white text-[14px] font-[Bold] px-[20px] h-[44px] rounded-[10px] disabled:opacity-60 cursor-pointer"
+                                className="bg-[#D4A373] text-white text-[14px] font-[Bold] px-[20px] h-[44px] rounded-[10px] disabled:opacity-60 cursor-pointer"
                                 onClick={handleSaveProfile}
                                 disabled={isSavingProfile}
                             >
@@ -461,7 +461,7 @@ const Profile = () => {
                     <div className="flex flex-col gap-[16px]">
                         <div>
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Long description <span className="text-[#EA3934]">*</span>
+                                Long description <span className="text-[#D4A373]">*</span>
                             </label>
                             <textarea
                                 value={form.longDescription}
@@ -472,7 +472,7 @@ const Profile = () => {
 
                         {/* <div>
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Password <span className="text-[#EA3934]">*</span>
+                                Password <span className="text-[#D4A373]">*</span>
                             </label>
                             <div className="relative">
                                 <input
@@ -488,7 +488,7 @@ const Profile = () => {
 
                         <div>
                             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                Confirm password <span className="text-[#EA3934]">*</span>
+                                Confirm password <span className="text-[#D4A373]">*</span>
                             </label>
                             <div className="relative">
                                 <input
@@ -504,7 +504,7 @@ const Profile = () => {
 
                         {/* <div className="mt-auto pt-[20px] flex justify-end">
                             <button
-                                className="bg-[#EA3934] text-white text-[14px] font-[Bold] px-[20px] h-[44px] rounded-[10px] disabled:opacity-60"
+                                className="bg-[#D4A373] text-white text-[14px] font-[Bold] px-[20px] h-[44px] rounded-[10px] disabled:opacity-60"
                                 onClick={handleSaveProfile}
                                 disabled={isSavingProfile}
                             >

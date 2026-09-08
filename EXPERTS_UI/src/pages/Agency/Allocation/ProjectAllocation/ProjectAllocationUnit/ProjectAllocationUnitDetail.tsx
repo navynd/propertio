@@ -43,7 +43,7 @@ const unitLegend: {
     {
       status: "soldOther",
       label: "Units Sold by other",
-      swatchClass: "bg-[#EA3934]",
+      swatchClass: "bg-[#D4A373]",
     },
     {
       status: "agentWorking",
@@ -64,7 +64,7 @@ const unitLegend: {
 
 function unitTileClass(status: UnitTileStatus) {
   if (status === "agentSold") return "bg-[#0832AE] text-white";
-  if (status === "soldOther") return "bg-[#EA3934] text-white";
+  if (status === "soldOther") return "bg-[#D4A373] text-white";
   if (status === "agentWorking") return "bg-[#00A663] text-white";
   if (status === "available")
     return "bg-[#F3F4F6] text-[#222] border border-[rgba(34,34,34,0.08)]";
@@ -294,7 +294,7 @@ const ProjectAllocationUnitDetail = () => {
                 },
               })
             }
-            className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white"
+            className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white"
           >
             <MultiUserIcon width={20} height={20} stroke="#FFFFFF" />
             Assign agent

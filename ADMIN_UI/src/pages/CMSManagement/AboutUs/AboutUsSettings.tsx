@@ -317,7 +317,7 @@ function AboutUsSettings() {
                                 <button
                                     type="button"
                                     onClick={() => removeTimelineEntry(entry.id)}
-                                    className="text-[12px] text-[#EA3934] font-[SemiBold] cursor-pointer"
+                                    className="text-[12px] text-[#D4A373] font-[SemiBold] cursor-pointer"
                                 >
                                     Remove
                                 </button>

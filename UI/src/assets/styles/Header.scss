@@ -3,7 +3,7 @@
 .pf-header {
   --pf-header-text-color: #ffffff;
   --pf-header-link-color: #ffffff;
-  // --pf-header-hover-bg:rgba(234, 57, 52, 1) !important;
+  // --pf-header-hover-bg:rgba(212, 163, 115, 1) !important;
   --pf-header-mobile-toggle-color: #ffffff;
   background-color: var(--AppBar-background, transparent);
   color: var(--pf-header-text-color);
@@ -82,17 +82,17 @@
   line-height: normal;
 
   &:hover {
-    color: rgba(234, 57, 52, 1) !important;
+    color: rgba(212, 163, 115, 1) !important;
   }
 }
 
 .pf-header__exploreBtn {
   &:hover {
-    color: rgba(234, 57, 52, 1) !important;
+    color: rgba(212, 163, 115, 1) !important;
 
     .pf-downarrow-icon {
       path {
-        fill: rgba(234, 57, 52, 1) !important;
+        fill: rgba(212, 163, 115, 1) !important;
       }
     }
   }
@@ -114,7 +114,7 @@
   text-transform: none !important;
   font-family: SemiBold, sans-serif !important;
   font-size: 14px !important;
-  background: rgb(234, 57, 52) !important;
+  background: rgb(212, 163, 115) !important;
   border-radius: 10px !important;
   padding: 17px 20px !important;
   font-weight: 700 !important;
@@ -286,7 +286,7 @@
 
 .pf-header__profileMenuItem--logout {
   .MuiListItemText-primary {
-    color: #ea3934 !important;
+    color: #D4A373 !important;
     font-family: SemiBold, sans-serif !important;
   }
 
@@ -458,7 +458,7 @@
 .pf-header__drawerCta {
   text-transform: none !important;
   font-family: SemiBold, sans-serif !important;
-  background: rgba(234, 57, 52, 1) !important;
+  background: rgba(212, 163, 115, 1) !important;
   border-radius: 10px !important;
   padding: 14px 18px !important;
   width: 100% !important;

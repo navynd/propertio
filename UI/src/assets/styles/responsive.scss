@@ -303,12 +303,12 @@
   .pf-header__mobileToggle {
     display: inline-flex !important;
     margin-left: 0 !important;
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
     box-shadow: none !important;
   }
 
   .pf-header__mobileToggle--sticky {
-    background: rgba(234, 57, 52, 0.92) !important;
+    background: rgba(212, 163, 115, 0.92) !important;
   }
 
   .pf-header__drawer {
@@ -343,7 +343,7 @@
   }
 
   .pf-header__drawerClose {
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
   }
 
   .pf-header__drawerControls {
@@ -359,7 +359,7 @@
   }
 
   .pf-header__drawerClose {
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
   }
 
   .pf-header__drawerDivider {
@@ -401,7 +401,7 @@
   }
 
   .pf-header__drawerCta {
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
     box-shadow: none !important;
   }
 
@@ -792,7 +792,7 @@
     }
 
     &.Mui-focused {
-      // border-color: rgba(234, 57, 52, 1) !important;
+      // border-color: rgba(212, 163, 115, 1) !important;
       border-width: 1px !important;
     }
   }
@@ -859,7 +859,7 @@
   .pf-mobile-filter__apply {
     height: 44px !important;
     border-radius: 10px !important;
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
     color: #ffffff !important;
     font-family: SemiBold, sans-serif !important;
     font-size: 14px !important;
@@ -870,7 +870,7 @@
     font-weight: 700 !important;
 
     &:hover {
-      background: rgba(234, 57, 52, 0.9) !important;
+      background: rgba(212, 163, 115, 0.9) !important;
     }
   }
 
@@ -963,7 +963,7 @@
     }
 
     &.Mui-focused {
-      // border-color: rgba(234, 57, 52, 1) !important;
+      // border-color: rgba(212, 163, 115, 1) !important;
       border-width: 1px !important;
     }
   }

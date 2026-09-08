@@ -53,7 +53,7 @@ function UserStatusBadge({
 }) {
   if (isBanned) {
     return (
-      <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center border border-[#ea393459] p-[6px_10px] text-[12px] font-[SemiBold] text-[#ea3934] bg-[#ea393414]">
+      <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center border border-[#D4A37359] p-[6px_10px] text-[12px] font-[SemiBold] text-[#D4A373] bg-[#D4A37314]">
         Banned
       </span>
     );
@@ -220,7 +220,7 @@ function UserAccount() {
       showCancelButton: true,
       confirmButtonText: "Yes, delete",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
       reverseButtons: true,
     });
 
@@ -248,7 +248,7 @@ function UserAccount() {
     const stats = [
       { label: "Total", value: counts?.totalUsers ?? 0, accent: "#222" },
       { label: "Active", value: counts?.activeUsers ?? 0, accent: "#00A663" },
-      { label: "Inactive", value: counts?.inactiveUsers ?? 0, accent: "#EA3934" },
+      { label: "Inactive", value: counts?.inactiveUsers ?? 0, accent: "#D4A373" },
       { label: "Banned", value: counts?.bannedUsers ?? 0, accent: "#F59E0B" },
     ];
 
@@ -327,7 +327,7 @@ function UserAccount() {
         </div>
 
         {error && (
-          <div className="mb-[20px] rounded-[10px] border border-[rgba(234,57,52,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] text-[13px] font-[Medium] text-[#EA3934]">
+          <div className="mb-[20px] rounded-[10px] border border-[rgba(212, 163, 115,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] text-[13px] font-[Medium] text-[#D4A373]">
             {error}
           </div>
         )}

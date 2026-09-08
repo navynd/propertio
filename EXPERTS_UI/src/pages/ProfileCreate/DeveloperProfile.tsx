@@ -468,7 +468,7 @@ const DeveloperProfile = () => {
                         <div className="flex flex-col gap-[20px]">
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Developer name <span className="text-[#EA3934]">*</span>
+                                    Developer name <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <input
                                     value={developerName}
@@ -480,7 +480,7 @@ const DeveloperProfile = () => {
                             </div>
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Email Id <span className="text-[#EA3934]">*</span>
+                                    Email Id <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="relative mb-[5px] w-full">
                                     <input
@@ -525,7 +525,7 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Phone number <span className="text-[#EA3934]">*</span>
+                                    Phone number <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="flex gap-[10px] bg-white rounded-[10px] h-[44px] items-center mb-[10px]">
                                     <div className="relative h-full" ref={dropdownRef}>
@@ -626,7 +626,7 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Address <span className="text-[#EA3934]">*</span>
+                                    Address <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <input
                                     value={address}
@@ -639,7 +639,7 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Nationality <span className="text-[#EA3934]">*</span>
+                                    Nationality <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="relative" ref={nationalityDropdownRef}>
                                     <div
@@ -705,7 +705,7 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Upload office related documents <span className="text-[#EA3934]">*</span>
+                                    Upload office related documents <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div
                                     className="border border-dashed border-[#D1D1D1] rounded-[14px] lg:p-[56px] md:p-[40px] p-[24px] flex flex-col items-center justify-center cursor-pointer transition-colors hover:bg-[#FAFAFA]"
@@ -748,7 +748,7 @@ const DeveloperProfile = () => {
                         <div className="flex flex-col gap-[20px]">
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Founded year <span className="text-[#EA3934]">*</span>
+                                    Founded year <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <input
                                     value={foundedYear}
@@ -762,7 +762,7 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Short description <span className="text-[#EA3934]">*</span>
+                                    Short description <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <input
                                     value={shortDescription}
@@ -775,7 +775,7 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Long description <span className="text-[#EA3934]">*</span>
+                                    Long description <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <textarea
                                     value={longDescription}
@@ -788,7 +788,7 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Password <span className="text-[#EA3934]">*</span>
+                                    Password <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="relative">
                                     <input
@@ -810,11 +810,11 @@ const DeveloperProfile = () => {
 
                             <div>
                                 <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">
-                                    Confirm password <span className="text-[#EA3934]">*</span>
+                                    Confirm password <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div
                                     className={`relative rounded-[10px] border ${
-                                        passwordMismatch ? "border-[#EA3934]" : "border-[rgba(34,34,34,0.10)]"
+                                        passwordMismatch ? "border-[#D4A373]" : "border-[rgba(34,34,34,0.10)]"
                                     }`}
                                 >
                                     <input
@@ -834,7 +834,7 @@ const DeveloperProfile = () => {
                                     </button>
                                 </div>
                                 {passwordMismatch ? (
-                                    <p className="text-[12px] font-[Medium] text-[#EA3934] mt-[6px]">Passwords do not match.</p>
+                                    <p className="text-[12px] font-[Medium] text-[#D4A373] mt-[6px]">Passwords do not match.</p>
                                 ) : null}
                             </div>
                         </div>
@@ -852,7 +852,7 @@ const DeveloperProfile = () => {
                             type="button"
                             onClick={handleCreateProfile}
                             disabled={isSubmittingProfile}
-                            className="bg-[#EA3934] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60"
+                            className="bg-[#D4A373] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60"
                         >
                             {isSubmittingProfile ? "Creating..." : "Create profile"}
                         </button>

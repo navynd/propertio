@@ -63,7 +63,7 @@ function formatProgressStatusLabel(value: string | null | undefined): string {
 
 function statusChipClass(status: ProjectStatus) {
   if (status === "New") return "bg-[rgba(0,166,99,0.10)] text-[#00A663]";
-  return "bg-[rgba(234,57,52,0.10)] text-[#EA3934]";
+  return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
 }
 
 function searchFromSearchParams(params: URLSearchParams): string {

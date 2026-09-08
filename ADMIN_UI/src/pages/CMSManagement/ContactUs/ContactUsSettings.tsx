@@ -278,7 +278,7 @@ function ContactUsSettings() {
               <button
                 type="button"
                 onClick={() => removeSubject(index)}
-                className="text-[12px] text-[#EA3934] font-[SemiBold] px-[8px] cursor-pointer"
+                className="text-[12px] text-[#D4A373] font-[SemiBold] px-[8px] cursor-pointer"
               >
                 Remove
               </button>
@@ -304,7 +304,7 @@ function ContactUsSettings() {
                 <button
                   type="button"
                   onClick={() => removeLocation(loc.id)}
-                  className="text-[12px] text-[#EA3934] font-[SemiBold] cursor-pointer"
+                  className="text-[12px] text-[#D4A373] font-[SemiBold] cursor-pointer"
                 >
                   Remove
                 </button>

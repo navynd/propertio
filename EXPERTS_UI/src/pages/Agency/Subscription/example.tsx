@@ -162,7 +162,7 @@ function CurrentPlanCard() {
                 </button>
                 <button
                     type="button"
-                    className="flex-1 h-[44px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] hover:opacity-95 transition-opacity"
+                    className="flex-1 h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] hover:opacity-95 transition-opacity"
                 >
                     Cancel subscription
                 </button>
@@ -245,7 +245,7 @@ function PlansSection({ cycle, onCycleChange }: { cycle: BillingCycle; onCycleCh
                                 <p className="text-[12px] text-[#707070] mb-4">{plan.description}</p>
                                 <button
                                     type="button"
-                                    className="w-full h-[42px] rounded-[10px] bg-[#EA3934] text-white text-[13px] font-[Bold] hover:opacity-95 transition-opacity"
+                                    className="w-full h-[42px] rounded-[10px] bg-[#D4A373] text-white text-[13px] font-[Bold] hover:opacity-95 transition-opacity"
                                 >
                                     Select this plan
                                 </button>
@@ -268,7 +268,7 @@ function PlansSection({ cycle, onCycleChange }: { cycle: BillingCycle; onCycleCh
 function PaymentCardVisual() {
     return (
         <div className="relative w-full max-w-[400px] aspect-[1.58/1] rounded-[16px] bg-[#0a0a0a] text-white overflow-hidden shadow-lg">
-            <div className="absolute -right-6 -top-10 w-32 h-32 rounded-full bg-[#EA3934]/90" />
+            <div className="absolute -right-6 -top-10 w-32 h-32 rounded-full bg-[#D4A373]/90" />
             <div className="absolute -bottom-8 left-1/3 w-40 h-40 rounded-full bg-[#22c55e]/80" />
             <div className="relative p-6 h-full flex flex-col justify-between">
                 <div>
@@ -302,7 +302,7 @@ function CardsSection() {
                 <h2 className="text-[18px] md:text-[20px] font-[Bold] text-[#222]">Manage debit/credit cards</h2>
                 <button
                     type="button"
-                    className="h-[40px] px-5 rounded-[10px] bg-[#EA3934] text-white text-[13px] font-[Bold] whitespace-nowrap hover:opacity-95 transition-opacity"
+                    className="h-[40px] px-5 rounded-[10px] bg-[#D4A373] text-white text-[13px] font-[Bold] whitespace-nowrap hover:opacity-95 transition-opacity"
                 >
                     + Add debit/credit card
                 </button>

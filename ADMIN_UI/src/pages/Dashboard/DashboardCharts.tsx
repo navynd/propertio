@@ -81,7 +81,7 @@ export function UserDistributionChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "donut", height: 300 },
-        colors: ["var(--primary-color, #1F3D51)", "#0832AE", "#00A663", "#EA3934"],
+        colors: ["var(--primary-color, #1F3D51)", "#0832AE", "#00A663", "#D4A373"],
         labels,
         plotOptions: {
             pie: {
@@ -159,7 +159,7 @@ export function ReportsOverviewChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "bar", height: 300, stacked: true },
-        colors: ["#EA3934", "#00A663"],
+        colors: ["#D4A373", "#00A663"],
         plotOptions: {
             bar: {
                 borderRadius: 6,
@@ -228,7 +228,7 @@ export function CmsActivityChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "radialBar", height: 280 },
-        colors: ["var(--primary-color, #1F3D51)", "#0832AE", "#00A663", "#EA3934", "#F5A623", "#8E44AD", "#16A085"],
+        colors: ["var(--primary-color, #1F3D51)", "#0832AE", "#00A663", "#D4A373", "#F5A623", "#8E44AD", "#16A085"],
         labels,
         plotOptions: {
             radialBar: {

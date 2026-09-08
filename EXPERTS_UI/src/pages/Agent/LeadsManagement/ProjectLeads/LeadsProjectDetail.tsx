@@ -16,9 +16,9 @@ function statusDotClass(status: LeadStatus) {
     if (key === "reserved") return "bg-[#C7A335]";
     if (key === "in-progress") return "bg-[#FF46A2]";
     if (key === "follow-up") return "bg-[#0832AE]";
-    if (key === "pre-close") return "bg-[#EA3934]";
+    if (key === "pre-close") return "bg-[#D4A373]";
     if (key === "waiting-for-approval") return "bg-[#0832AE]";
-    return "bg-[#EA3934]";
+    return "bg-[#D4A373]";
 }
 
 const defaultProjectLeadStatusOptions = [
@@ -44,7 +44,7 @@ type UnitTileStatus = "agentSold" | "soldOther" | "agentWorking" | "available" |
 
 const unitLegend: { status: UnitTileStatus; label: string; swatchClass: string }[] = [
     { status: "agentSold", label: "Units Sold by your agent", swatchClass: "bg-[#0832AE]" },
-    { status: "soldOther", label: "Units Sold by other", swatchClass: "bg-[#EA3934]" },
+    { status: "soldOther", label: "Units Sold by other", swatchClass: "bg-[#D4A373]" },
     { status: "agentWorking", label: "Agent working on", swatchClass: "bg-[#00A663]" },
     { status: "available", label: "Units available", swatchClass: "bg-[#F3F4F6] border border-[rgba(34,34,34,0.08)]" },
     { status: "unavailable", label: "Units unavailable", swatchClass: "bg-[#D1D5DB]" },
@@ -52,7 +52,7 @@ const unitLegend: { status: UnitTileStatus; label: string; swatchClass: string }
 
 function unitTileClass(status: UnitTileStatus) {
     if (status === "agentSold") return "bg-[#0832AE] text-white";
-    if (status === "soldOther") return "bg-[#EA3934] text-white";
+    if (status === "soldOther") return "bg-[#D4A373] text-white";
     if (status === "agentWorking") return "bg-[#00A663] text-white";
     if (status === "available") return "bg-[#F5F5F5] text-[#222] border border-[rgba(34,34,34,0.08)]";
     return "bg-[rgba(34,34,34,0.20)] text-[#222]";
@@ -392,7 +392,7 @@ const LeadsProjectDetail = () => {
                             {/* Project status */}
                             <div>
                                 <p className="text-[12px] font-[SemiBold] text-[#222] mb-[8px]">
-                                    Project status <span className="text-[#EA3934]">*</span>
+                                    Project status <span className="text-[#D4A373]">*</span>
                                 </p>
 
                                 {/* Status dropdown */}
@@ -537,7 +537,7 @@ const LeadsProjectDetail = () => {
                                             setIsSubmittingStatus(false);
                                         }
                                     }}
-                                    className="h-[44px] flex-1 px-[16px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
+                                    className="h-[44px] flex-1 px-[16px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
                                 >
                                     {isSubmittingStatus ? "Saving..." : isPreCloseSaved ? "Close deal" : "Save"}
                                 </button>
@@ -749,7 +749,7 @@ const LeadsProjectDetail = () => {
                                             setIsSubmittingStatus(false);
                                         }
                                     }}
-                                    className="h-[44px] px-[20px] w-auto rounded-[10px] bg-[#EA3934] text-[14px] font-[Bold] text-white cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+                                    className="h-[44px] px-[20px] w-auto rounded-[10px] bg-[#D4A373] text-[14px] font-[Bold] text-white cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
                                 >
                                     {isSubmittingStatus ? "Saving..." : "Yes"}
                                 </button>

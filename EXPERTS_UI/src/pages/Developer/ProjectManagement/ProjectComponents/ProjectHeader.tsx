@@ -65,7 +65,7 @@ const ProjectHeader = ({ projectName = "Omniyat Bespoke", projectId }: ProjectHe
                                 { state: { projectName } }
                             )
                         }
-                        className={`cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full  px-[14px] h-[33px] text-[12px] font-[SemiBold] text-[#FFF] shrink-0 ${isSoldOut ? "opacity-50 bg-[#EA3934]" : "bg-[#EA3934]"}`}
+                        className={`cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full  px-[14px] h-[33px] text-[12px] font-[SemiBold] text-[#FFF] shrink-0 ${isSoldOut ? "opacity-50 bg-[#D4A373]" : "bg-[#D4A373]"}`}
                     >
                         <MultiUserIcon width={20} height={20} stroke="#FFFFFF" />
                         Assign agency

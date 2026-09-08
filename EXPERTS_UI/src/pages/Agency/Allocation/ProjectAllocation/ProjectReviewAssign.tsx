@@ -230,7 +230,7 @@ const ProjectReviewAssign = () => {
       >
         <span
           className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center text-[9px] leading-none ${isSelected
-            ? "bg-[#EA3934] border-[#EA3934] text-white"
+            ? "bg-[#D4A373] border-[#D4A373] text-white"
             : locked
               ? "bg-[#DCE3F5] border-[#C4CEE9] text-transparent"
               : "bg-white border-[rgba(34,34,34,0.12)] text-transparent"

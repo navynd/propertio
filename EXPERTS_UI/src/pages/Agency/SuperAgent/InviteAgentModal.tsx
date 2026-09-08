@@ -130,7 +130,7 @@ const InviteAgentModal = ({ isOpen, onClose }: InviteAgentModalProps) => {
             type="button"
             onClick={handleInvite}
             disabled={loading}
-            className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-[14px] font-[Bold] text-white transition disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
+            className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-[14px] font-[Bold] text-white transition disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
           >
             {loading ? "Sending…" : "Send"}
           </button>

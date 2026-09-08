@@ -386,7 +386,7 @@ const EditUnitdetail = ({ projectId, unitProperties, onAfterSave, primaryActionL
                     type="button"
                     onClick={() => void handleSave()}
                     disabled={isSaving}
-                    className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#EA3934] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px] disabled:opacity-50"
+                    className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#D4A373] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px] disabled:opacity-50"
                 >
                     {isSaving ? "Saving…" : primaryActionLabel}
                 </button>

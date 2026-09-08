@@ -121,7 +121,7 @@ const PasswordOtpModal: React.FC<PasswordOtpModalProps> = ({
             </div>
 
             {error ? (
-              <p className="text-[12px] text-[#EA3934] mb-[16px]">{error}</p>
+              <p className="text-[12px] text-[#D4A373] mb-[16px]">{error}</p>
             ) : null}
 
             <button

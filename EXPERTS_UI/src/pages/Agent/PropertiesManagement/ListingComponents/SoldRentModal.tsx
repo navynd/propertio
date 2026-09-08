@@ -183,12 +183,12 @@ const SoldRentModal = ({
                             Close the deal — mark as {labelVerb}
                         </h2>
                         {formError ? (
-                            <p className="mt-3 text-center text-[13px] text-[#EA3934] font-[Medium]">{formError}</p>
+                            <p className="mt-3 text-center text-[13px] text-[#D4A373] font-[Medium]">{formError}</p>
                         ) : null}
                         <div className="flex flex-col gap-[24px] mt-[35px]">
                             <div>
                                 <label className="text-[14px] font-[Bold] text-[#222] block mb-[6px]">
-                                    Customer name <span className="text-[#EA3934]">*</span>
+                                    Customer name <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <input
                                     type="text"
@@ -307,7 +307,7 @@ const SoldRentModal = ({
                             </div>
                             <div>
                                 <label className="text-[14px] font-[Bold] text-[#222] block mb-[6px]">
-                                    Deal amount <span className="text-[#EA3934]">*</span>
+                                    Deal amount <span className="text-[#D4A373]">*</span>
                                 </label>
                                 <div className="relative flex-1">
                                     <input
@@ -331,7 +331,7 @@ const SoldRentModal = ({
                             type="button"
                             disabled={isSubmitting || !countriesLoaded}
                             onClick={handlePrimaryAction}
-                            className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] transition-opacity hover:opacity-90 disabled:opacity-50"
+                            className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] transition-opacity hover:opacity-90 disabled:opacity-50"
                         >
                             {!countriesLoaded ? "Loading…" : "Continue"}
                         </button>
@@ -370,7 +370,7 @@ const SoldRentModal = ({
                                 type="button"
                                 disabled={isSubmitting}
                                 onClick={() => void handleFinalConfirm()}
-                                className="h-[44px] px-[20px] w-auto rounded-[10px] bg-[#EA3934] text-[14px] font-[Bold] text-white cursor-pointer disabled:opacity-50"
+                                className="h-[44px] px-[20px] w-auto rounded-[10px] bg-[#D4A373] text-[14px] font-[Bold] text-white cursor-pointer disabled:opacity-50"
                             >
                                 {isSubmitting ? "Saving…" : "Yes, confirm"}
                             </button>

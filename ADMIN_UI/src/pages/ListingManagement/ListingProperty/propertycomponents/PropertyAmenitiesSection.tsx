@@ -39,7 +39,7 @@ const PropertyAmenitiesSection = ({
               <span
                 className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center ${
                   isActive
-                    ? "bg-[#EA3934] border-[#EA3934]"
+                    ? "bg-[#D4A373] border-[#D4A373]"
                     : "bg-white border-[rgba(34,34,34,0.20)]"
                 }`}
               >

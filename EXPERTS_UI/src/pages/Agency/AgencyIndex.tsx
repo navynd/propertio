@@ -280,7 +280,7 @@ function AgencyIndex() {
                       },
                     });
                   }}
-                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold]"
+                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold]"
                 >
                   Review assignment
                 </button>
@@ -322,7 +322,7 @@ function AgencyIndex() {
                       setFooterAllocating(false);
                     }
                   }}
-                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {footerAllocating ? "Allocating…" : "Allocate to agents"}
                 </button>
@@ -394,7 +394,7 @@ function AgencyIndex() {
                     setFooterEditSaving(false);
                   }
                 }}
-                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-60 disabled:cursor-not-allowed"
+                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {footerEditSaving ? "Saving…" : "Save Changes"}
               </button>

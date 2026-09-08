@@ -329,7 +329,7 @@ function ProjectDescription({
                             type="button"
                             onClick={() => selectDate(day)}
                             className={`cursor-pointer h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                ? "bg-[#D4A373] text-white border-[#D4A373]"
                                 : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                 }`}
                         >
@@ -434,7 +434,7 @@ function ProjectDescription({
                                 role="switch"
                                 aria-checked={soldOut}
                                 onClick={() => setSoldOut((v) => !v)}
-                                className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors ${soldOut ? "bg-[#EA3934]" : "bg-[#D4D4D4]"
+                                className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors ${soldOut ? "bg-[#D4A373]" : "bg-[#D4D4D4]"
                                     }`}
                             >
                                 <span
@@ -450,7 +450,7 @@ function ProjectDescription({
                                 {/* Progress status */}
                                 <div className="relative">
                                     <label className="block text-[14px] font-[SemiBold] text-[#222] mb-2">
-                                        Progress status <span className="text-[#EA3934]">*</span>
+                                        Progress status <span className="text-[#D4A373]">*</span>
                                     </label>
                                     <button
                                         type="button"
@@ -476,7 +476,7 @@ function ProjectDescription({
                                                         setProgressStatus(option.value);
                                                         setProgressOpen(false);
                                                     }}
-                                                    className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${progressStatus === option.value ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"
+                                                    className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${progressStatus === option.value ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"
                                                         }`}
                                                 >
                                                     {option.name}
@@ -488,7 +488,7 @@ function ProjectDescription({
                                 {/* Project announcement date */}
                                 <div className="relative">
                                     <label className="block text-[14px] font-[SemiBold] text-[#222] mb-2">
-                                        Project announcement date <span className="text-[#EA3934]">*</span>
+                                        Project announcement date <span className="text-[#D4A373]">*</span>
                                     </label>
                                     <button
                                         type="button"
@@ -526,7 +526,7 @@ function ProjectDescription({
                                 type="button"
                                 onClick={handleSaveProgress}
                                 disabled={isSavingProgress}
-                                className="mt-[40px] h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] hover:opacity-95 transition-opacity"
+                                className="mt-[40px] h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] hover:opacity-95 transition-opacity"
                             >
                                 {isSavingProgress ? "Saving..." : "Save"}
                             </button>

@@ -768,7 +768,7 @@ const SuperAgentDetail = () => {
                       isSaving
                     }
                     onClick={handleActivateToggle}
-                    className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors disabled:opacity-60 disabled:cursor-not-allowed ${activateAgent ? "bg-[#EA3934]" : "bg-[#D4D4D4]"
+                    className={`relative shrink-0 h-[26px] w-[48px] rounded-full transition-colors disabled:opacity-60 disabled:cursor-not-allowed ${activateAgent ? "bg-[#D4A373]" : "bg-[#D4D4D4]"
                       }`}
                   >
                     <span
@@ -786,7 +786,7 @@ const SuperAgentDetail = () => {
                     <div className="flex flex-col gap-5">
                       <div className="relative">
                         <label className="block text-[14px] font-[SemiBold] text-[#222] mb-2">
-                          Agent job role <span className="text-[#EA3934]">*</span>
+                          Agent job role <span className="text-[#D4A373]">*</span>
                         </label>
                         <button
                           type="button"
@@ -826,7 +826,7 @@ const SuperAgentDetail = () => {
                                     setOpenDropdown(null);
                                   }}
                                   className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${jobRole?._id === option._id
-                                    ? "text-[#EA3934] bg-[#FDF2F2]"
+                                    ? "text-[#D4A373] bg-[#FDF2F2]"
                                     : "text-[#222]"
                                     }`}
                                 >
@@ -839,7 +839,7 @@ const SuperAgentDetail = () => {
 
                       <div className="relative">
                         <label className="block text-[14px] font-[SemiBold] text-[#222] mb-2">
-                          Agent type <span className="text-[#EA3934]">*</span>
+                          Agent type <span className="text-[#D4A373]">*</span>
                         </label>
                         <button
                           type="button"
@@ -876,7 +876,7 @@ const SuperAgentDetail = () => {
                                     setOpenDropdown(null);
                                   }}
                                   className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${agentType?.value === option.value
-                                    ? "text-[#EA3934] bg-[#FDF2F2]"
+                                    ? "text-[#D4A373] bg-[#FDF2F2]"
                                     : "text-[#222]"
                                     }`}
                                 >
@@ -902,15 +902,15 @@ const SuperAgentDetail = () => {
                             type="button"
                             disabled={verifyBusy}
                             onClick={handleApproveAgent}
-                            className="cursor-pointer h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:cursor-not-allowed disabled:opacity-60"
+                            className="cursor-pointer h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:cursor-not-allowed disabled:opacity-60"
                           >
                             {verifyAction === "approve" ? "Approving…" : "Approve"}
                           </button>
                         </div>
                       )}
                       {invitationDeclined && (
-                        <div className="rounded-[10px] border border-[rgba(234,57,52,0.35)] bg-[rgba(234,57,52,0.08)] px-[16px] py-[16px] text-center">
-                          <p className="text-[14px] font-[Bold] text-[#EA3934]">Approval declined</p>
+                        <div className="rounded-[10px] border border-[rgba(212, 163, 115,0.35)] bg-[rgba(212, 163, 115,0.08)] px-[16px] py-[16px] text-center">
+                          <p className="text-[14px] font-[Bold] text-[#D4A373]">Approval declined</p>
                         </div>
                       )}
                       {!approvalPending && !invitationDeclined && (
@@ -918,7 +918,7 @@ const SuperAgentDetail = () => {
                           type="button"
                           disabled={isSaving}
                           onClick={handleSave}
-                          className="cursor-pointer h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] hover:opacity-95 transition-opacity disabled:cursor-not-allowed disabled:opacity-70"
+                          className="cursor-pointer h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] hover:opacity-95 transition-opacity disabled:cursor-not-allowed disabled:opacity-70"
                         >
                           {isSaving ? "Saving…" : "Save"}
                         </button>
@@ -1067,7 +1067,7 @@ const SuperAgentDetail = () => {
                   <button
                     type="button"
                     onClick={() => setIsAllocateAgentModalOpen(true)}
-                    className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934] text-[#FFF] px-[15px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
+                    className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] text-[#FFF] px-[15px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
                   >
                     <PlusUserIcon width={16} height={16} className="text-white" />
                     Allocate Property
@@ -1155,12 +1155,12 @@ const SuperAgentDetail = () => {
                                 className={`inline-flex items-center rounded-[6px] p-[6px_10px] text-[12px] font-[SemiBold] leading-none ${row.projectStatus === "Buy"
                                   ? "bg-[rgba(0,166,99,0.10)] text-[#00A663]"
                                   : row.projectStatus === "Rent"
-                                    ? "bg-[rgba(234,57,52,0.10)] text-[#EA3934]"
+                                    ? "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
                                     : row.projectStatus === "Commercial Buy"
                                       ? "bg-[rgba(255,70,162,0.10)] text-[#FF46A2]"
                                       : row.projectStatus === "Commercial Rent"
                                         ? "bg-[rgba(199,163,53,0.10)] text-[#C7A335]"
-                                        : "bg-[rgba(234,57,52,0.10)] text-[#EA3934]"
+                                        : "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
                                   }`}
                               >
                                 {row.projectStatus}

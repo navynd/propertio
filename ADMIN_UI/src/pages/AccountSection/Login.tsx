@@ -244,7 +244,7 @@ function Login() {
                                             id="remember"
                                             checked={rememberMe}
                                             onCheckedChange={(checked) => setRememberMe(Boolean(checked))}
-                                            className="flex h-[15px] w-[15px] items-center justify-center rounded-[5px] border border-[rgba(34,34,34,0.20)] bg-white text-white data-[state=checked]:bg-[#EA3934] data-[state=checked]:border-[#EA3934] cursor-pointer"
+                                            className="flex h-[15px] w-[15px] items-center justify-center rounded-[5px] border border-[rgba(34,34,34,0.20)] bg-white text-white data-[state=checked]:bg-[#D4A373] data-[state=checked]:border-[#D4A373] cursor-pointer"
                                         >
                                             <CheckboxIndicator>
                                                 <TickIcon className="mt-[-1px]" />
@@ -280,7 +280,7 @@ function Login() {
                                     {isLoginLoading ? "Logging in..." : "Login"}
                                 </button>
                                 {loginError ? (
-                                    <p className="text-[12px] text-[#EA3934] mt-[2px]">{loginError}</p>
+                                    <p className="text-[12px] text-[#D4A373] mt-[2px]">{loginError}</p>
                                 ) : null}
                             </form>
                         </>
@@ -317,7 +317,7 @@ function Login() {
                                     {isSendingOtp ? "Sending..." : "Get OTP"}
                                 </button>
                                 {forgotError ? (
-                                    <p className="text-[12px] text-[#EA3934] mt-[2px]">{forgotError}</p>
+                                    <p className="text-[12px] text-[#D4A373] mt-[2px]">{forgotError}</p>
                                 ) : null}
                             </form>
                             <div className="text-center flex items-center justify-center gap-[6px]">
@@ -373,7 +373,7 @@ function Login() {
                                     {isResetLoading ? "Saving..." : "Confirm password"}
                                 </button>
                                 {changeError ? (
-                                    <p className="text-[12px] text-[#EA3934] mt-[2px]">{changeError}</p>
+                                    <p className="text-[12px] text-[#D4A373] mt-[2px]">{changeError}</p>
                                 ) : null}
                             </form>
                             <div className="text-center flex items-center justify-center gap-[6px]">

@@ -122,7 +122,7 @@ const DebitCardModal = ({ isOpen, onClose }: DebitCardModalProps) => {
                                 type="checkbox"
                                 checked={useForFuture}
                                 onChange={(e) => setUseForFuture(e.target.checked)}
-                                className="mt-0.5 h-[15px] w-[15px] shrink-0 cursor-pointer rounded-full border border-[rgba(34,34,34,0.20)] accent-[#EA3934] focus:ring-0"
+                                className="mt-0.5 h-[15px] w-[15px] shrink-0 cursor-pointer rounded-full border border-[rgba(34,34,34,0.20)] accent-[#D4A373] focus:ring-0"
                             />
                             <span className="text-left text-[14px] font-[Regular] leading-snug text-[#222]">
                                 Use this card for future payments
@@ -134,7 +134,7 @@ const DebitCardModal = ({ isOpen, onClose }: DebitCardModalProps) => {
                 <div className="shrink-0 px-5 pb-6 pt-2 md:px-8 md:pb-8">
                     <button
                         type="button"
-                        className="h-[48px] w-full rounded-[10px] bg-[#EA3934] text-center text-[14px] font-[Bold] text-white transition-opacity hover:opacity-95"
+                        className="h-[48px] w-full rounded-[10px] bg-[#D4A373] text-center text-[14px] font-[Bold] text-white transition-opacity hover:opacity-95"
                     >
                         Save
                     </button>

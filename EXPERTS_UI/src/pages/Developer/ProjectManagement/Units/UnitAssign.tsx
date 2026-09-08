@@ -202,9 +202,9 @@ const UnitAssign = () => {
                                   if (isClosed) return;
                                   toggleUnit(unit.id);
                                 }}
-                                className={`rounded-[10px] p-[12px_20px] flex flex-col gap-[7px] items-center justify-between text-[12px] font-[Bold] border border-[rgba(34,34,34,0.10)] leading-[1.2] transition-colors ${isSelected ? "cursor-pointer bg-[#222] text-white border-[#222]" : isClosed ? "cursor-not-allowed bg-[#FFECEC] text-[#EA3934] border-[#F7C5C5]" : isAssigned ? "cursor-pointer bg-[rgba(8,50,174,0.10)] text-[#222] border-none" : "cursor-pointer bg-white text-[#222]"}`}
+                                className={`rounded-[10px] p-[12px_20px] flex flex-col gap-[7px] items-center justify-between text-[12px] font-[Bold] border border-[rgba(34,34,34,0.10)] leading-[1.2] transition-colors ${isSelected ? "cursor-pointer bg-[#222] text-white border-[#222]" : isClosed ? "cursor-not-allowed bg-[#FFECEC] text-[#D4A373] border-[#F7C5C5]" : isAssigned ? "cursor-pointer bg-[rgba(8,50,174,0.10)] text-[#222] border-none" : "cursor-pointer bg-white text-[#222]"}`}
                               >
-                                <span className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center text-[9px] leading-none ${isSelected ? "bg-[#EA3934] border-[#EA3934] text-white" : isAssigned ? "bg-[#DCE3F5] border-[#C4CEE9] text-transparent" : "bg-white border-[rgba(34,34,34,0.12)] text-transparent"}`}>{isSelected && <TickIcon width={8} height={6} fill="#FFF" />}</span>
+                                <span className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center text-[9px] leading-none ${isSelected ? "bg-[#D4A373] border-[#D4A373] text-white" : isAssigned ? "bg-[#DCE3F5] border-[#C4CEE9] text-transparent" : "bg-white border-[rgba(34,34,34,0.12)] text-transparent"}`}>{isSelected && <TickIcon width={8} height={6} fill="#FFF" />}</span>
                                 <span>{unit.name}</span>
                               </button>
                             );
@@ -222,7 +222,7 @@ const UnitAssign = () => {
         <div className="rounded-[15px] bg-white md:p-[30px] p-[20px] h-fit">
           <h2 className="text-[#222] text-[20px] leading-[1.1] font-[Bold] mb-[18px]">Select Agencies</h2>
           <div className={`relative ${selectedAgencyItems.length > 0 ? "mb-[10px]" : "mb-[20px]"}`}>
-            <label className="text-[#222] text-[14px] font-[SemiBold] mb-[8px] block">Agencies <span className="text-[#EA3934]">*</span></label>
+            <label className="text-[#222] text-[14px] font-[SemiBold] mb-[8px] block">Agencies <span className="text-[#D4A373]">*</span></label>
             <button type="button" onClick={() => setIsAgencyDropdownOpen((prev) => !prev)} className="w-full h-[44px] rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[14px] text-left text-[14px] font-[Regular] text-[#707070] flex items-center justify-between cursor-pointer">
               Select authorized agencies
               <DownArrowIcon width={11} height={7} className={`transition-transform ${isAgencyDropdownOpen ? "rotate-180" : ""}`} />

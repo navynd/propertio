@@ -353,7 +353,7 @@ const AllocatedProperty = () => {
                                                             setIsCompletingId(null);
                                                         }
                                                     }}
-                                                    className="h-[33px] w-auto px-[15px] rounded-full bg-[#EA3934] text-white text-[12px] font-[SemiBold] cursor-pointer"
+                                                    className="h-[33px] w-auto px-[15px] rounded-full bg-[#D4A373] text-white text-[12px] font-[SemiBold] cursor-pointer"
                                                 >
                                                     {isCompletingId === row.id ? "Completing..." : "Complete"}
                                                 </button>

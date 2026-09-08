@@ -169,7 +169,7 @@ const Frq = () => {
                                     <button
                                         type="button"
                                         onClick={handleSave}
-                                        className="cursor-pointer h-[44px] rounded-[10px] bg-[#EA3934] px-[16px] text-[14px] font-[Bold] text-white"
+                                        className="cursor-pointer h-[44px] rounded-[10px] bg-[#D4A373] px-[16px] text-[14px] font-[Bold] text-white"
                                     >
                                         Save the questions
                                     </button>

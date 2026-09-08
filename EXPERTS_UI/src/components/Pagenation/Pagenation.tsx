@@ -86,7 +86,7 @@ const Pagenation = ({
                     type="button"
                     onClick={() => goToPage(page)}
                     className={`h-[40px] min-w-[40px] px-[8px] rounded-[8px] text-[18px] font-[SemiBold] border ${currentPage === page
-                        ? "bg-[#EA3934] border-[#EA3934] text-white"
+                        ? "bg-[#D4A373] border-[#D4A373] text-white"
                         : "bg-white border-[rgba(34,34,34,0.10)] text-[#222]"
                         }`}
                 >
@@ -103,7 +103,7 @@ const Pagenation = ({
                     type="button"
                     onClick={() => goToPage(resolvedTotalPages)}
                     className={`h-[40px] min-w-[40px] px-[8px] rounded-[8px] text-[18px] font-[SemiBold] border ${currentPage === resolvedTotalPages
-                        ? "bg-[#EA3934] border-[#EA3934] text-white"
+                        ? "bg-[#D4A373] border-[#D4A373] text-white"
                         : "bg-white border-[rgba(34,34,34,0.10)] text-[#222]"
                         }`}
                 >

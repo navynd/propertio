@@ -246,7 +246,7 @@ const Step1 = ({ onNext, onCancel }: Step1Props) => {
                         <button
                             type="button"
                             onClick={onNext}
-                            className="h-[43px] rounded-[10px] bg-[#EA3934] text-[13px] font-[SemiBold] text-white cursor-pointer"
+                            className="h-[43px] rounded-[10px] bg-[#D4A373] text-[13px] font-[SemiBold] text-white cursor-pointer"
                         >
                             Next
                         </button>

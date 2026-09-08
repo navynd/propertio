@@ -257,7 +257,7 @@ const PricePayment = ({ value, onChange }: PricePaymentProps) => {
                 <div className="flex flex-col gap-[12px]">
                     <div>
                         <label className="text-[14px] font-[Bold] text-[#222] block mb-[6px]">
-                            Project Price <span className="text-[#EA3934]">*</span>
+                            Project Price <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"
@@ -273,7 +273,7 @@ const PricePayment = ({ value, onChange }: PricePaymentProps) => {
                     </div>
                     <div>
                         <label className="text-[14px] font-[Bold] text-[#222] block mb-[6px]">
-                            Government Fees <span className="text-[#EA3934]">*</span>
+                            Government Fees <span className="text-[#D4A373]">*</span>
                         </label>
                         <div className="relative">
                             <input
@@ -306,7 +306,7 @@ const PricePayment = ({ value, onChange }: PricePaymentProps) => {
             {/* payment plan */}
             <div className="mt-[20px] rounded-[15px] bg-white border border-[rgba(34,34,34,0.06)] md:p-[30px] p-[16px]">
                 <h3 className="text-[20px] font-[Bold] text-[#222] mb-[14px]">
-                    Payment Plan <span className="text-[#EA3934]">*</span>
+                    Payment Plan <span className="text-[#D4A373]">*</span>
                 </h3>
 
                 <div className="flex flex-col gap-[12px]">
@@ -319,7 +319,7 @@ const PricePayment = ({ value, onChange }: PricePaymentProps) => {
                                     onClick={() => deletePaymentOption(option.id)}
                                     className="cursor-pointer  bg-white flex items-center justify-center"
                                 >
-                                    <TrashIcon width={20} height={20} fill="#EA3934" />
+                                    <TrashIcon width={20} height={20} fill="#D4A373" />
                                 </button>
                             </div>
                             <div className="rounded-[15px] bg-[#F5F5F5] md:p-[20px] p-[15px]">
@@ -473,7 +473,7 @@ const PricePayment = ({ value, onChange }: PricePaymentProps) => {
                                                                                         type="button"
                                                                                         onClick={() => selectDate(option.id, item.id, day)}
                                                                                         className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                                                                            ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                                                                            ? "bg-[#D4A373] text-white border-[#D4A373]"
                                                                                             : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                                                                             }`}
                                                                                     >
@@ -497,7 +497,7 @@ const PricePayment = ({ value, onChange }: PricePaymentProps) => {
                                                 </div>
                                             ))}
                                             {installmentDateError && (
-                                                <p className="text-[12px] font-[Medium] text-[#EA3934] mt-[8px]">
+                                                <p className="text-[12px] font-[Medium] text-[#D4A373] mt-[8px]">
                                                     {installmentDateError}
                                                 </p>
                                             )}

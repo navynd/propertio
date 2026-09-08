@@ -36,7 +36,7 @@ function StatCards({ counts }: { counts?: BlogCategoryListCounts }) {
   const stats = [
     { label: "Total", value: counts?.totalBlogCategories ?? 0, accent: "#222" },
     { label: "Active", value: counts?.activeBlogCategories ?? 0, accent: "#00A663" },
-    { label: "Inactive", value: counts?.inactiveBlogCategories ?? 0, accent: "#EA3934" },
+    { label: "Inactive", value: counts?.inactiveBlogCategories ?? 0, accent: "#D4A373" },
   ];
 
   return (
@@ -181,7 +181,7 @@ function BlogCategoriesPage() {
       showCancelButton: true,
       confirmButtonText: "Delete",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
       reverseButtons: true,
     });
     if (!result.isConfirmed || !record._id) return;

@@ -289,7 +289,7 @@ function DeveloperAccDetail() {
       showCancelButton: true,
       confirmButtonText: "Yes, delete",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
       reverseButtons: true,
     });
 
@@ -376,7 +376,7 @@ function DeveloperAccDetail() {
       <Header title="Developer Detail" showBack={true} onBackClick={() => navigate(-1)} />
       <div className="p-[20px] bg-[#fff] mt-[20px] shadow-[0px_1px_0px_rgba(17,17,26,0.05),0px_0px_8px_rgba(17,17,26,0.10)] rounded-[12px]">
         {loadError && (
-          <div className="mb-[20px] rounded-[10px] border border-[rgba(234,57,52,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] text-[13px] font-[Medium] text-[#EA3934]">
+          <div className="mb-[20px] rounded-[10px] border border-[rgba(212, 163, 115,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] text-[13px] font-[Medium] text-[#D4A373]">
             {loadError}
           </div>
         )}
@@ -419,7 +419,7 @@ function DeveloperAccDetail() {
                 type="button"
                 onClick={handleDeleteImage}
                 disabled={isUploadingPhoto}
-                className="h-[42px] px-[18px] rounded-[10px] border border-[rgba(34,34,34,0.10)] text-[#EA3934] text-[14px] font-[Medium] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="h-[42px] px-[18px] rounded-[10px] border border-[rgba(34,34,34,0.10)] text-[#D4A373] text-[14px] font-[Medium] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Delete
               </button>
@@ -437,7 +437,7 @@ function DeveloperAccDetail() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[20px]">
           <div>
             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-              Developer Name <span className="text-[#EA3934]">*</span>
+              Developer Name <span className="text-[#D4A373]">*</span>
             </label>
             <input
               type="text"
@@ -449,7 +449,7 @@ function DeveloperAccDetail() {
 
           <div>
             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-              Email Address <span className="text-[#EA3934]">*</span>
+              Email Address <span className="text-[#D4A373]">*</span>
             </label>
             <div className="relative">
               <input
@@ -469,7 +469,7 @@ function DeveloperAccDetail() {
 
           <div>
             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-              Phone Number <span className="text-[#EA3934]">*</span>
+              Phone Number <span className="text-[#D4A373]">*</span>
             </label>
             <div className="flex items-center gap-[10px]">
               <div className="relative" ref={phoneDropdownRef}>
@@ -533,7 +533,7 @@ function DeveloperAccDetail() {
 
           <div>
             <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-              Country <span className="text-[#EA3934]">*</span>
+              Country <span className="text-[#D4A373]">*</span>
             </label>
             <div className="relative w-full" ref={countryDropdownRef}>
               <div

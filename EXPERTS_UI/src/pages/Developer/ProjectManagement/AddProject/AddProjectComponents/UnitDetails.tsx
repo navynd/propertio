@@ -227,7 +227,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                     >
                         <div onClick={() => toggleProperty(property.id)} className={`flex items-start justify-between gap-[12px] cursor-pointer ${property.isOpen ? "mb-[0px]" : `pb-[20px] ${index !== properties.length - 1 ? "border-b border-[rgba(34,34,34,0.10)]" : ""} `}`}>
                             <p className={`text-[14px] font-[Medium] ${property.isOpen ? "text-[#0832AE]" : "text-[#222]"}`}>
-                                Property Type #{property.id} <span className="text-[#EA3934]">*</span>
+                                Property Type #{property.id} <span className="text-[#D4A373]">*</span>
                             </p>
                             <button
                                 type="button"
@@ -237,7 +237,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                 }}
                                 className="bg-white flex items-center justify-center cursor-pointer"
                             >
-                                <TrashIcon width={20} height={20} fill="#EA3934" />
+                                <TrashIcon width={20} height={20} fill="#D4A373" />
                             </button>
                         </div>
 
@@ -314,7 +314,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
 
                                     <div className="mt-[12px]">
                                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                                            Area of the property <span className="text-[#EA3934]">*</span>
+                                            Area of the property <span className="text-[#D4A373]">*</span>
                                         </label>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
                                             <div className="relative">
@@ -390,7 +390,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                                 type="button"
                                                 className="cursor-pointer flex items-center justify-center bg-white"
                                             >
-                                                <TrashIcon width={20} height={20} fill="#EA3934" />
+                                                <TrashIcon width={20} height={20} fill="#D4A373" />
                                             </button>
                                         </div>
                                         {/*layout types details*/}
@@ -399,7 +399,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                                 {/* layout name and size */}
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] md:mb-[30px] mb-[15px]">
                                                     <div>
-                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout name <span className="text-[#EA3934]">*</span></label>
+                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout name <span className="text-[#D4A373]">*</span></label>
                                                         <input
                                                             type="text"
                                                             value={layout.layoutName}
@@ -413,7 +413,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                                         />
                                                     </div>
                                                     <div>
-                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Size (sq.ft.) <span className="text-[#EA3934]">*</span></label>
+                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Size (sq.ft.) <span className="text-[#D4A373]">*</span></label>
                                                         <div className="grid grid-cols-2 gap-[10px]">
                                                             <div className="relative">
                                                                 <input
@@ -449,7 +449,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                                 {/* number of bedrooms and maid bedroom is available */}
                                                 <div className="md:mb-[30px] mb-[15px]">
                                                     <div>
-                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bedrooms <span className="text-[#EA3934]">*</span></label>
+                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bedrooms <span className="text-[#D4A373]">*</span></label>
                                                         <input
                                                             type="text"
                                                             value={layout.bedrooms}
@@ -481,7 +481,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                                 {/* number of bathrooms and number of units */}
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] md:mb-[30px] mb-[15px]">
                                                     <div>
-                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bathrooms <span className="text-[#EA3934]">*</span></label>
+                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bathrooms <span className="text-[#D4A373]">*</span></label>
                                                         <input
                                                             type="text"
                                                             value={layout.bathrooms}
@@ -495,7 +495,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                                         />
                                                     </div>
                                                     <div>
-                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of units <span className="text-[#EA3934]">*</span></label>
+                                                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of units <span className="text-[#D4A373]">*</span></label>
                                                         <input
                                                             type="text"
                                                             value={layout.totalUnits}
@@ -513,7 +513,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
 
                                                 {/* layout price */}
                                                 <div className="">
-                                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout price <span className="text-[#EA3934]">*</span></label>
+                                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout price <span className="text-[#D4A373]">*</span></label>
                                                     <div className="relative">
                                                         <input
                                                             type="text"
@@ -533,7 +533,7 @@ const UnitDetails = ({ value, onChange, propertyTypeOptions, resolveFloorPlanSrc
                                                 {/* layout gallery */}
                                                 <div className="md:mt-[30px] mt-[15px]">
                                                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-                                                        Upload floor plan images <span className="text-[#EA3934]">*</span>
+                                                        Upload floor plan images <span className="text-[#D4A373]">*</span>
                                                     </label>
                                                     <div className="rounded-[10px] border border-dashed border-[rgba(34,34,34,0.15)] bg-white min-h-[180px] flex flex-col items-center justify-center text-center md:p-[56px] p-[20px]">
                                                         {floorPlanPreview ? (

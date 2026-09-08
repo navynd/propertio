@@ -157,7 +157,7 @@ export default function Plans() {
                                 ) : (
                                     <button
                                         type="button"
-                                        className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-[14px] font-[Bold] text-white"
+                                        className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-[14px] font-[Bold] text-white"
                                     >
                                         Select this plan
                                     </button>

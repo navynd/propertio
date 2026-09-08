@@ -352,7 +352,7 @@ function DeveloperIndex() {
                 Cancel
               </button>
 
-              <button onClick={handleBulkAssignFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-70">
+              <button onClick={handleBulkAssignFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-70">
                 {isAssignAgencies ? "Review assignment" : "Publish"}
               </button>
             </div>
@@ -374,7 +374,7 @@ function DeveloperIndex() {
                 Cancel
               </button>
 
-              <button onClick={handleUnitsFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-70">
+              <button onClick={handleUnitsFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-70">
                 {isUnitsAssign ? "Review assignment" : "Save changes"}
               </button>
             </div>

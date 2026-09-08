@@ -225,7 +225,7 @@ const Units = () => {
           </div>
           <div className="flex flex-wrap items-center gap-[10px] shrink-0">
             <button type="button" className="opacity-50 cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full border border-[rgba(34,34,34,0.10)] bg-white px-[14px] h-[33px] text-[12px] font-[SemiBold] text-[#94A3B8]"><TrashIcon width={16} height={16} />Delete</button>
-            <button type="button" onClick={handleHeaderAssignAgency} className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white"><MultiUserIcon width={18} height={18} stroke="#FFFFFF" />Assign agency</button>
+            <button type="button" onClick={handleHeaderAssignAgency} className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white"><MultiUserIcon width={18} height={18} stroke="#FFFFFF" />Assign agency</button>
           </div>
         </div>
 

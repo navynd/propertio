@@ -110,7 +110,7 @@ const AgentHeader = ({
                     >
                         <NotificationIcon className="w-[20px] h-[20px]" />
                         {unreadNotificationCount > 0 && (
-                            <div className="absolute top-[4px] right-[4px] min-w-[17px] h-[17px] px-[4px] bg-[#EA3934] rounded-full flex items-center justify-center">
+                            <div className="absolute top-[4px] right-[4px] min-w-[17px] h-[17px] px-[4px] bg-[#D4A373] rounded-full flex items-center justify-center">
                                 <p className="text-[#fff] text-[10px] font-[Bold] leading-none">
                                     {unreadNotificationCount > 99 ? "99+" : unreadNotificationCount}
                                 </p>
@@ -120,7 +120,7 @@ const AgentHeader = ({
                     <div className="relative flex-shrink-0 cursor-pointer flex items-center rounded-full border-2 border-[rgba(255,255,255,0.10)] bg-[rgba(34,34,34,0.10)] shadow-[2px_0_15px_0_rgba(0,0,0,0.15)]" onClick={() => navigate("/agent/profile")}>
                         <img src={avatarSrc} alt="" className="w-[40px] h-[40px] rounded-full object-cover" />
                         <div
-                            className={`absolute flex-shrink-0 w-[23px] h-[23px] flex items-center justify-center ${isSuperAgent ? "bg-[#EA3934]" : "bg-[#0832AE]"} border border-[#222] rounded-full top-[-1px] right-[-4px] z-10`}
+                            className={`absolute flex-shrink-0 w-[23px] h-[23px] flex items-center justify-center ${isSuperAgent ? "bg-[#D4A373]" : "bg-[#0832AE]"} border border-[#222] rounded-full top-[-1px] right-[-4px] z-10`}
                             title={isSuperAgent ? "Super agent" : "Agent"}
                             aria-hidden
                         >
@@ -149,7 +149,7 @@ export default AgentHeader;
 //             </button>
 //             <button className="cursor-pointer relative flex p-[14px] items-center justify-center rounded-full bg-[#FFF]">
 //                 <NotificationIcon className="w-[20px] h-[20px]" />
-//                 <div className="absolute top-[4px] right-[6px] bg-[#EA3934] rounded-full w-[18px] h-[18px] flex items-center justify-center">
+//                 <div className="absolute top-[4px] right-[6px] bg-[#D4A373] rounded-full w-[18px] h-[18px] flex items-center justify-center">
 //                     <p className="text-[#fff] text-[10px] font-[Bold]">2</p>
 //                 </div>
 //             </button>

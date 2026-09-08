@@ -77,16 +77,16 @@
     }
 
     &:focus-visible {
-        outline: 2px solid #EA3934;
+        outline: 2px solid #D4A373;
         outline-offset: 2px;
     }
 }
 
 .pf-communities-detail__lifestyle-tab--active {
-    color: #EA3934;
+    color: #D4A373;
     font-weight: 700;
-    border-bottom: 2px solid var(--primary, #EA3934);
-    box-shadow: 0 0px 0px 0 var(--primary, #EA3934);
+    border-bottom: 2px solid var(--primary, #D4A373);
+    box-shadow: 0 0px 0px 0 var(--primary, #D4A373);
 }
 
 .pf-communities-detail__lifestyle-panel {

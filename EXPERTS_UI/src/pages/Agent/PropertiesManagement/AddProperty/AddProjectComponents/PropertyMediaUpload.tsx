@@ -145,7 +145,7 @@ const PropertyMediaUpload = ({
             {/* Project images */}
             <div>
                 <p className="text-[14px] font-[Bold] text-[#222] mb-[12px]">
-                    Upload project images <span className="text-[#EA3934]">*</span>
+                    Upload project images <span className="text-[#D4A373]">*</span>
                 </p>
                 <div
                     onClick={() => projectImagesInputRef.current?.click()}

@@ -166,7 +166,7 @@ const DeveloperAccView = () => {
       ) : (
         <>
           {error && (
-            <div className="rounded-[10px] border border-[rgba(234,57,52,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] text-[13px] font-[Medium] text-[#EA3934]">
+            <div className="rounded-[10px] border border-[rgba(212, 163, 115,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] text-[13px] font-[Medium] text-[#D4A373]">
               {error}
             </div>
           )}
@@ -252,8 +252,8 @@ const DeveloperAccView = () => {
           <div className="rounded-[15px] md:p-[22px] p-[20px] min-w-0 flex justify-end flex-wrap gap-[20px]">
             <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3 w-full">
               {isDeclined ? (
-                <div className="rounded-[10px] border border-[rgba(234,57,52,0.35)] bg-[rgba(234,57,52,0.08)] px-[16px] py-[16px] text-center w-full md:w-auto min-w-[180px]">
-                  <p className="text-[14px] font-[Bold] text-[#EA3934]">Approval declined</p>
+                <div className="rounded-[10px] border border-[rgba(212, 163, 115,0.35)] bg-[rgba(212, 163, 115,0.08)] px-[16px] py-[16px] text-center w-full md:w-auto min-w-[180px]">
+                  <p className="text-[14px] font-[Bold] text-[#D4A373]">Approval declined</p>
                 </div>
               ) : (
                 <>

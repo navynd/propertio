@@ -339,7 +339,7 @@ export default function AgentAccountDetail() {
       showCancelButton: true,
       confirmButtonText: "Delete",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
     });
     if (!result.isConfirmed) return;
     try {
@@ -373,7 +373,7 @@ export default function AgentAccountDetail() {
     return (
       <div className="px-4 pb-6 pt-4 sm:px-6 lg:px-8">
         <Header title="Agent Detail" showBack={true} onBackClick={() => navigate(-1)} />
-        <div className="rounded-[10px] border border-[rgba(234,57,52,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] mt-[20px] text-[13px] font-[Medium] text-[#EA3934]">
+        <div className="rounded-[10px] border border-[rgba(212, 163, 115,0.25)] bg-[#FFF5F5] px-[14px] py-[12px] mt-[20px] text-[13px] font-[Medium] text-[#D4A373]">
           Missing agent id in URL.
         </div>
       </div>
@@ -426,7 +426,7 @@ export default function AgentAccountDetail() {
               </button>
               <button
                 type="button"
-                className="h-[42px] px-[18px] rounded-[10px] border border-[rgba(34,34,34,0.10)] text-[#EA3934] text-[14px] font-[Medium]"
+                className="h-[42px] px-[18px] rounded-[10px] border border-[rgba(34,34,34,0.10)] text-[#D4A373] text-[14px] font-[Medium]"
                 onClick={() => void onDeleteAvatar()}
                 disabled={avatarLoading}
               >

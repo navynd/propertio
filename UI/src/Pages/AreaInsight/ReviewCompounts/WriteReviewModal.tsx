@@ -273,7 +273,7 @@ function WriteReviewModal({
                                 size="small"
                                 sx={{
                                     color: "rgba(0,0,0,0.35)",
-                                    "&.Mui-checked": { color: "#ea3934" },
+                                    "&.Mui-checked": { color: "#D4A373" },
                                 }}
                             />
                         }

@@ -389,7 +389,7 @@ const AddProperty = () => {
                             }
                             setActiveStep((prev) => Math.min(steps.length, prev + 1));
                         }}
-                        className="cursor-pointer h-[44px] px-[20px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-40 disabled:cursor-not-allowed"
+                        className="cursor-pointer h-[44px] px-[20px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-40 disabled:cursor-not-allowed"
                     >
                         {isUploadingMedia ? "Uploading..." : isSubmittingProperty ? "Submitting..." : "Next"}
                     </button>

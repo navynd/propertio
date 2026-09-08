@@ -107,7 +107,7 @@ const ProjectAllocationDetail = () => {
                     },
                   })
                 }
-                className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white shrink-0"
+                className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] px-[14px] h-[33px] text-[12px] font-[SemiBold] text-white shrink-0"
               >
                 <MultiUserIcon width={20} height={20} stroke="#FFF" />
                 Assign Agents

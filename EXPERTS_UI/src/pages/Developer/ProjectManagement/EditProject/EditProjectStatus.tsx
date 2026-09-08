@@ -200,7 +200,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
         <div>
             <div className="bg-white p-[16px] md:p-[30px] border-b border-[rgba(34,34,34,0.10)]">
                 <h3 className="text-[20px] font-[Bold] text-[#222] mb-[30px]">Project status</h3>
-                <p className="text-[14px] font-[SemiBold] text-[#222] mb-[15px]">Select project status <span className="text-[#EA3934]">*</span></p>
+                <p className="text-[14px] font-[SemiBold] text-[#222] mb-[15px]">Select project status <span className="text-[#D4A373]">*</span></p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
                     {projectStatusOptions.map(({ id, label, Icon }) => {
                         const isActive = form.projectType === id;
@@ -228,7 +228,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
                 <div className="flex flex-col gap-[30px]">
                     <div>
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Project Title <span className="text-[#EA3934]">*</span>
+                            Project Title <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"
@@ -240,7 +240,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
                     </div>
                     <div>
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Project Address <span className="text-[#EA3934]">*</span>
+                            Project Address <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"
@@ -253,7 +253,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
 
                     <div>
                         <label className="text-[14px] font-[600] text-[#222] block mb-[8px]">
-                            Project description <span className="text-[#EA3934]">*</span>
+                            Project description <span className="text-[#D4A373]">*</span>
                         </label>
                         <div className="edittoolbar relative h-[320px] border border-[rgba(34,34,34,0.10)] rounded-[12px] overflow-hidden bg-white">
                             <style>
@@ -270,7 +270,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
 
                     <div>
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-                            Amenities <span className="text-[#EA3934]">*</span>
+                            Amenities <span className="text-[#D4A373]">*</span>
                         </label>
                         <div className="flex flex-wrap gap-[8px]">
                             {amenityOptions.map((amenity) => {
@@ -287,7 +287,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
                                     >
                                         <span
                                             className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center ${isActive
-                                                ? "bg-[#EA3934] border-[#EA3934]"
+                                                ? "bg-[#D4A373] border-[#D4A373]"
                                                 : "bg-white border-[rgba(34,34,34,0.20)]"
                                                 }`}
                                         >
@@ -302,7 +302,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
 
                     <div>
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-                            About the project <span className="text-[#EA3934]">*</span>
+                            About the project <span className="text-[#D4A373]">*</span>
                         </label>
                         <textarea
                             placeholder="Describe about the project"
@@ -332,7 +332,7 @@ const EditProjectStatus = ({ projectId, project, onContinue, primaryActionLabel 
                     type="button"
                     onClick={onSave}
                     disabled={isSaving}
-                    className={`h-[44px] rounded-[10px] px-[20px] text-[14px] font-[Bold] inline-flex items-center gap-[5px] ${isSaving ? "bg-[#EA3934]/50 text-[#FFF] cursor-not-allowed" : "bg-[#EA3934] text-[#FFF] cursor-pointer"}`}
+                    className={`h-[44px] rounded-[10px] px-[20px] text-[14px] font-[Bold] inline-flex items-center gap-[5px] ${isSaving ? "bg-[#D4A373]/50 text-[#FFF] cursor-not-allowed" : "bg-[#D4A373] text-[#FFF] cursor-pointer"}`}
                 >
                     {isSaving ? "Saving..." : primaryActionLabel}
                 </button>

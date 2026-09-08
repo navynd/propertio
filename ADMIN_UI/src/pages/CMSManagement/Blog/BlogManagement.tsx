@@ -94,7 +94,7 @@ function BlogManagement() {
             text: `Delete "${post.title}"? This cannot be undone.`,
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#EA3934",
+            confirmButtonColor: "#D4A373",
             confirmButtonText: "Delete",
         });
         if (!result.isConfirmed) return;
@@ -186,7 +186,7 @@ function BlogManagement() {
                                                     <p className="text-[13px] font-[Medium] text-[#222]">{post.title}</p>
                                                     <p className="text-[13px] text-[#707070]">{categoryNameBySlug(post.categorySlug)}</p>
                                                     <p className="text-[13px] text-[#707070]">{post.publishDate || "—"}</p>
-                                                    <span className={`text-[12px] font-[Medium] px-[10px] py-[4px] rounded-full w-fit ${post.isPublished ? "bg-[#E8F5EE] text-[#05A666]" : "bg-[#FFF2F2] text-[#EA3934]"}`}>
+                                                    <span className={`text-[12px] font-[Medium] px-[10px] py-[4px] rounded-full w-fit ${post.isPublished ? "bg-[#E8F5EE] text-[#05A666]" : "bg-[#FFF2F2] text-[#D4A373]"}`}>
                                                         {post.isPublished ? "Published" : "Draft"}
                                                     </span>
                                                     <div className="flex items-center gap-[10px]">

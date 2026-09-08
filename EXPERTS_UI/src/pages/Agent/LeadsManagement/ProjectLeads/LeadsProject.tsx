@@ -257,17 +257,17 @@ function statusDotClass(status: LeadStatus) {
     if (key === "reserved") return "bg-[#C7A335]";
     if (key === "in-progress") return "bg-[#FF46A2]";
     if (key === "follow-up") return "bg-[#0832AE]";
-    if (key === "pre-close") return "bg-[#EA3934]";
+    if (key === "pre-close") return "bg-[#D4A373]";
     if (key === "waiting-for-approval") return "bg-[#0832AE]";
     if (key === "deal-closed") return "bg-[#00A663]";
-    return "bg-[#EA3934]";
+    return "bg-[#D4A373]";
 }
 
 function statusPillClass(status: LeadStatus) {
     const key = status.trim().toLowerCase().replace(/\s+/g, "-");
     if (key === "waiting-for-approval") return "bg-[#0832AE] text-white";
     if (key === "deal-closed") return "bg-[#00A663] text-white";
-    if (key === "inquiry-closed") return "bg-[rgba(234,57,52,0.10)] text-[#EA3934]";
+    if (key === "inquiry-closed") return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
     return "bg-white border border-[rgba(34,34,34,0.10)] text-[#222]";
 }
 
@@ -674,7 +674,7 @@ const LeadsProject = () => {
                                     type="button"
                                     onClick={() => selectDate(day)}
                                     className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                        ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                        ? "bg-[#D4A373] text-white border-[#D4A373]"
                                         : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                         }`}
                                 >

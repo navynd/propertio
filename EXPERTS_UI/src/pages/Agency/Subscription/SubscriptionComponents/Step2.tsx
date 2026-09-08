@@ -92,7 +92,7 @@ const Step2 = ({ onNext, onCancel }: Step2Props) => {
                         <div onClick={() => setPaymentMethod("card")} className={`cursor-pointer gap-[10px] flex items-center justify-between ${paymentMethod === "card" ? "border-b border-[rgba(34,34,34,0.10)] mr-[-20px] ml-[-20px] pb-[20px] md:pr-[30px] pr-[16px] md:pl-[30px] pl-[16px]" : ""}`}>
                             <div className="flex items-start gap-[10px]">
                                 <span
-                                    className={`mt-[3px] h-[18px] w-[18px] shrink-0 rounded-full border ${paymentMethod === "card" ? "border-[4px] border-[#EA3934] " : "border-[1px] border-[rgba(34,34,34,0.10)] bg-white"}`}
+                                    className={`mt-[3px] h-[18px] w-[18px] shrink-0 rounded-full border ${paymentMethod === "card" ? "border-[4px] border-[#D4A373] " : "border-[1px] border-[rgba(34,34,34,0.10)] bg-white"}`}
                                 />
                                 <div>
                                     <p className="text-[14px] font-[SemiBold] text-[#222]">Credit / Debit card</p>
@@ -305,7 +305,7 @@ const Step2 = ({ onNext, onCancel }: Step2Props) => {
                                                     type="checkbox"
                                                     checked={useForFuture}
                                                     onChange={(e) => setUseForFuture(e.target.checked)}
-                                                    className="mt-0.5 h-[15px] w-[15px] shrink-0 cursor-pointer rounded-full border border-[rgba(34,34,34,0.20)] accent-[#EA3934] focus:ring-0"
+                                                    className="mt-0.5 h-[15px] w-[15px] shrink-0 cursor-pointer rounded-full border border-[rgba(34,34,34,0.20)] accent-[#D4A373] focus:ring-0"
                                                 />
                                                 <span className="text-left text-[14px] font-[Regular] leading-snug text-[#222]">
                                                     Use and save the card details for future use
@@ -338,7 +338,7 @@ const Step2 = ({ onNext, onCancel }: Step2Props) => {
                         <div onClick={() => setPaymentMethod("paypal")} className={`cursor-pointer flex items-center justify-between ${paymentMethod === "paypal" ? "" : ""}`}>
                             <div className="flex items-start gap-[10px]">
                                 <span
-                                    className={`mt-[3px] h-[18px] w-[18px] shrink-0 rounded-full border ${paymentMethod === "paypal" ? "border-[4px] border-[#EA3934]" : "border-[1px] border-[rgba(34,34,34,0.10)] bg-white"}`}
+                                    className={`mt-[3px] h-[18px] w-[18px] shrink-0 rounded-full border ${paymentMethod === "paypal" ? "border-[4px] border-[#D4A373]" : "border-[1px] border-[rgba(34,34,34,0.10)] bg-white"}`}
                                 />
                                 <div>
                                     <p className="text-[14px] font-[SemiBold] text-[#222]">Paypal</p>
@@ -365,7 +365,7 @@ const Step2 = ({ onNext, onCancel }: Step2Props) => {
                         <button
                             type="button"
                             onClick={onNext}
-                            className="h-[44px] rounded-[10px] bg-[#EA3934] text-[14px] font-[Bold] text-white cursor-pointer"
+                            className="h-[44px] rounded-[10px] bg-[#D4A373] text-[14px] font-[Bold] text-white cursor-pointer"
                         >
                             Confirm payment: 20,000 AED
                         </button>

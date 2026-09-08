@@ -64,7 +64,7 @@ const getAgencyStatusLabel = (agency: AdminAgencyListItem): AgencyStatusLabel =>
 function StatusBadge({ status }: { status: AgencyStatusLabel }) {
   if (status === "Approval pending") return <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center border border-[rgba(34,34,34,0.10)] bg-white p-[6px_10px] text-[12px] font-[SemiBold] text-[#222] whitespace-nowrap">Approval pending</span>;
   if (status === "Active") return <span className="bg-[#00A663] rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center p-[6px_10px] text-[12px] font-[SemiBold] text-[#FFF] whitespace-nowrap">Active</span>;
-  if (status === "Approval Declined") return <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center border border-[#ea393459] p-[6px_10px] text-[12px] font-[SemiBold] text-[#ea3934] bg-[#ea393414] whitespace-nowrap">Approval Declined</span>;
+  if (status === "Approval Declined") return <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center border border-[#D4A37359] p-[6px_10px] text-[12px] font-[SemiBold] text-[#D4A373] bg-[#D4A37314] whitespace-nowrap">Approval Declined</span>;
   if (status === "Invited") return <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center p-[6px_10px] text-[12px] font-[SemiBold] text-[#FFF] bg-[#8ACBD0] whitespace-nowrap">Invited</span>;
   if (status === "Invitation Expired") return <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center p-[6px_10px] text-[12px] font-[SemiBold] text-[#FFF] bg-[#FF6B35] whitespace-nowrap">Invitation Expired</span>;
   return <span className="rounded-[5px] h-[25px] w-fit text-center flex items-center justify-center p-[6px_10px] text-[12px] font-[SemiBold] text-[#FFF] bg-[#E80808] whitespace-nowrap">Inactive</span>;
@@ -138,7 +138,7 @@ export default function AgencyAccount() {
       confirmButtonText: "Delete",
       cancelButtonText: "Cancel",
       reverseButtons: true,
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
     });
     if (!result.isConfirmed || !agency._id) return;
     try {
@@ -166,11 +166,11 @@ export default function AgencyAccount() {
     const stats = [
       { label: "Total", value: counts?.totalAgencies ?? 0, accent: "#222" },
       { label: "Active", value: counts?.activeAgencies ?? 0, accent: "#00A663" },
-      { label: "Inactive", value: counts?.inactiveAgencies ?? 0, accent: "#EA3934" },
+      { label: "Inactive", value: counts?.inactiveAgencies ?? 0, accent: "#D4A373" },
       { label: "Approval Pending", value: counts?.approvalPendingAgencies ?? 0, accent: "#F59E0B" },
-      // { label: "Approval Declined", value: counts?.declinedAgencies ?? 0, accent: "#EA3934" },
+      // { label: "Approval Declined", value: counts?.declinedAgencies ?? 0, accent: "#D4A373" },
       // { label: "Invited", value: counts?.invitedAgencies ?? 0, accent: "#00A663" },
-      // { label: "Invitation Expired", value: counts?.expiredAgencies ?? 0, accent: "#EA3934" },
+      // { label: "Invitation Expired", value: counts?.expiredAgencies ?? 0, accent: "#D4A373" },
     ];
 
     return (

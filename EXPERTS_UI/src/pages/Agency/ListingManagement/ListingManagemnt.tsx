@@ -216,7 +216,7 @@ function propertyForBadgeClass(forType: PropertyFor) {
     case "Buy":
       return "bg-[rgba(0,166,99,0.10)] text-[#00A663]";
     case "Rent":
-      return "bg-[rgba(234,57,52,0.10)] text-[#EA3934]";
+      return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
     case "Commercial Buy":
       return "bg-[rgba(255,70,162,0.10)] text-[#FF46A2]";
     default:
@@ -729,7 +729,7 @@ const ListingManagement = () => {
                   type="button"
                   onClick={() => selectDate(day)}
                   className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                    ? "bg-[#EA3934] text-white border-[#EA3934]"
+                    ? "bg-[#D4A373] text-white border-[#D4A373]"
                     : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                     }`}
                 >
@@ -942,7 +942,7 @@ const ListingManagement = () => {
                     setIsLocationDropdownOpen(false);
                   }}
                   className={`w-full text-left px-[14px] py-[9px] text-[13px] font-[Medium] hover:bg-[#F5F5F5] ${selectedLocationId === ALL_LOCATIONS_ID
-                    ? "text-[#EA3934] bg-[#FDF2F2]"
+                    ? "text-[#D4A373] bg-[#FDF2F2]"
                     : "text-[#222]"
                     }`}
                 >
@@ -958,7 +958,7 @@ const ListingManagement = () => {
                       setIsLocationDropdownOpen(false);
                     }}
                     className={`w-full text-left px-[14px] py-[9px] text-[13px] font-[Medium] hover:bg-[#F5F5F5] ${selectedLocationId === loc.id
-                      ? "text-[#EA3934] bg-[#FDF2F2]"
+                      ? "text-[#D4A373] bg-[#FDF2F2]"
                       : "text-[#222]"
                       }`}
                   >

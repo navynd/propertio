@@ -151,7 +151,7 @@ const CloseDealModal = ({
                                 {/*Phone number */}
                                 <div className="flex-1">
                                     <label className="block text-[14px] font-[SemiBold] text-[#222] mb-[8px]">
-                                        Phone number <span className="text-[#EA3934]">*</span>
+                                        Phone number <span className="text-[#D4A373]">*</span>
                                     </label>
                                     <div className="flex items-center gap-[10px]">
                                         {/* Country Code */}
@@ -287,7 +287,7 @@ const CloseDealModal = ({
                                             Select File
                                         </button>
                                         {documentError && (
-                                            <p className="mt-[12px] text-[12px] font-[Regular] text-[#EA3934]">{documentError}</p>
+                                            <p className="mt-[12px] text-[12px] font-[Regular] text-[#D4A373]">{documentError}</p>
                                         )}
                                     </div>
                                 ) : (
@@ -312,7 +312,7 @@ const CloseDealModal = ({
                                             </button>
                                         </div>
                                         {documentError && (
-                                            <p className="mt-[8px] text-[12px] font-[Regular] text-[#EA3934]">{documentError}</p>
+                                            <p className="mt-[8px] text-[12px] font-[Regular] text-[#D4A373]">{documentError}</p>
                                         )}
                                     </div>
                                 )}
@@ -345,7 +345,7 @@ const CloseDealModal = ({
                                 onClose();
                             }}
                             disabled={isSubmitting}
-                            className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] transition-opacity hover:opacity-90"
+                            className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] transition-opacity hover:opacity-90"
                         >
                             {isSubmitting ? "Submitting..." : "Close the deal"}
                         </button>

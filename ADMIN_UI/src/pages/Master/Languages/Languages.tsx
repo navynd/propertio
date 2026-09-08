@@ -36,7 +36,7 @@ function StatCards({ counts }: { counts?: LanguageListCounts }) {
   const stats = [
     { label: "Total", value: counts?.totalLanguages ?? 0, accent: "#222" },
     { label: "Active", value: counts?.activeLanguages ?? 0, accent: "#00A663" },
-    { label: "Inactive", value: counts?.inactiveLanguages ?? 0, accent: "#EA3934" },
+    { label: "Inactive", value: counts?.inactiveLanguages ?? 0, accent: "#D4A373" },
   ];
 
   return (
@@ -180,7 +180,7 @@ function LanguagesPage() {
       showCancelButton: true,
       confirmButtonText: "Delete",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#EA3934",
+      confirmButtonColor: "#D4A373",
       reverseButtons: true,
     });
     if (!result.isConfirmed) return;

@@ -111,7 +111,7 @@ function StatCards({ counts }: { counts?: { pending: number; underReview: number
         {
             label: "Urgent Open",
             value: counts?.urgentOpen ?? 0,
-            accent: "#EA3934",
+            accent: "#D4A373",
         },
     ];
 
@@ -199,7 +199,7 @@ function ReportManagement() {
                 showCancelButton: true,
                 confirmButtonText: "Yes, delete",
                 cancelButtonText: "Cancel",
-                confirmButtonColor: "#EA3934",
+                confirmButtonColor: "#D4A373",
                 reverseButtons: true,
             });
             if (!result.isConfirmed) return;
@@ -298,7 +298,7 @@ function ReportManagement() {
                 </div>
 
                 {error && (
-                    <p className="text-[13px] text-[#EA3934] mb-[12px] font-[Medium]">{error}</p>
+                    <p className="text-[13px] text-[#D4A373] mb-[12px] font-[Medium]">{error}</p>
                 )}
 
                 <div className="overflow-x-auto w-full scrollbar-hide mb-[30px]">

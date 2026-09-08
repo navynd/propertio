@@ -154,7 +154,7 @@ const ActiveProject = () => {
                                     <span
                                         className={`inline-flex items-center h-[21px] rounded-[5px] p-[6px_10px] text-[11px] font-[SemiBold] capitalize ${row.status === "New"
                                             ? "bg-[rgba(0,166,99,0.10)] text-[#00A663]"
-                                            : "bg-[rgba(234,57,52,0.10)] text-[#EA3934]"
+                                            : "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
                                             }`}
                                     >
                                         {row.status}

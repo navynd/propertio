@@ -236,7 +236,7 @@ function ReportManagementDetail() {
             <div className="px-4 pb-6 pt-4 sm:px-6 lg:px-8">
                 <Header title="Report Details" showBack onBackClick={() => navigate("/reportsmanagement")} />
                 <div className="mt-[20px] rounded-[12px] border border-[#EAEAEA] bg-white p-[20px]">
-                    <p className="text-[14px] text-[#EA3934]">{error || "Report not found"}</p>
+                    <p className="text-[14px] text-[#D4A373]">{error || "Report not found"}</p>
                 </div>
             </div>
         );

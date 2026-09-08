@@ -29,7 +29,7 @@ const MOCK_LEAD: CloseDealLeadData = {
 };
 
 function listingBadgeClass(type: "Rent" | "Buy") {
-    if (type === "Rent") return "bg-[rgba(234,57,52,0.10)] text-[#EA3934]";
+    if (type === "Rent") return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
     return "bg-[rgba(0,166,99,0.10)] text-[#00A663]";
 }
 
@@ -161,7 +161,7 @@ const CloseDealModal = ({ isOpen, onClose, lead, onSubmit, isSubmitting = false 
                             await onSubmit({ dealAmount: parsedAmount });
                             setDealAmount("");
                         }}
-                        className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:cursor-not-allowed disabled:opacity-60"
+                        className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:cursor-not-allowed disabled:opacity-60"
                     >
                         {isSubmitting ? "Submitting..." : "Submit"}
                     </button>

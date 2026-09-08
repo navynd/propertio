@@ -31,7 +31,7 @@ textarea {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ea393480 !important;
+  background: #D4A37380 !important;
   border-radius: 4px;
 }
 
@@ -427,7 +427,7 @@ textarea {
       left: 2px !important;
 
       &+.MuiSwitch-track {
-        background-color: #ea3934 !important;
+        background-color: #D4A373 !important;
         opacity: 1 !important;
       }
     }
@@ -723,7 +723,7 @@ textarea {
 
 /* checked state */
 .pf-toggle__label input:checked+.pf-toggle__slider {
-  background-color: rgb(234, 57, 52)
+  background-color: rgb(212, 163, 115)
 }
 
 .pf-toggle__label input:checked+.pf-toggle__slider::before {
@@ -1162,7 +1162,7 @@ textarea {
   border-radius: 10px;
   font-family: SemiBold, sans-serif;
   font-size: 13px;
-  background: rgba(234, 57, 52, 1);
+  background: rgba(212, 163, 115, 1);
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -1251,7 +1251,7 @@ textarea {
 
     // This is the BEM modifier: .pf-about__btn--primary
     &--primary {
-      background-color: rgba(234, 57, 52, 1) !important;
+      background-color: rgba(212, 163, 115, 1) !important;
       color: #ffffff;
 
       &:hover {
@@ -1397,7 +1397,7 @@ textarea {
     line-height: normal !important;
     border-radius: 10px !important;
     text-transform: none !important;
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
     color: #ffffff !important;
     box-shadow: none !important;
     height: 44px !important;
@@ -1735,7 +1735,7 @@ textarea {
   }
 
   &--superagent {
-    background: #EA3934;
+    background: #D4A373;
     color: #ffffff;
     letter-spacing: 0;
   }
@@ -1746,7 +1746,7 @@ textarea {
   }
 
   &--salestarted {
-    background: #ea3934;
+    background: #D4A373;
     color: #ffffff;
     text-transform: uppercase;
   }
@@ -3111,7 +3111,7 @@ textarea {
   padding: 17px 20px !important;
   border-radius: 10px !important;
   text-transform: none !important;
-  background: rgba(234, 57, 52, 1) !important;
+  background: rgba(212, 163, 115, 1) !important;
   color: #ffffff !important;
   font-weight: 700 !important;
   box-shadow: none !important;
@@ -3141,7 +3141,7 @@ textarea {
 }
 
 .pf-prime-location__mobileAction--primary {
-  background: #ea3934 !important;
+  background: #D4A373 !important;
   color: #ffffff !important;
   border: none !important;
 }
@@ -4015,7 +4015,7 @@ textarea {
 
   &__badge {
     display: inline-flex;
-    background: rgba(234, 57, 52, 1);
+    background: rgba(212, 163, 115, 1);
     color: #ffffff;
     font-family: ExtraBold, sans-serif !important;
     font-size: 40px !important;
@@ -4068,7 +4068,7 @@ textarea {
   }
 
   &__overlayLine02--accent {
-    color: rgba(234, 57, 52, 1);
+    color: rgba(212, 163, 115, 1);
 
     span {
       color: inherit;
@@ -4318,12 +4318,12 @@ textarea {
     font-family: SemiBold, sans-serif !important;
     font-size: 14px !important;
     padding: 17px 20px !important;
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
     box-shadow: none !important;
     text-transform: none !important;
 
     &:disabled {
-      background: rgba(234, 57, 52, 1) !important;
+      background: rgba(212, 163, 115, 1) !important;
       color: #ffffff !important;
       opacity: 0.6 !important;
     }
@@ -4615,22 +4615,22 @@ textarea {
     &--error {
       .MuiOutlinedInput-root {
         fieldset {
-          border-color: rgba(234, 57, 52, 1) !important;
+          border-color: rgba(212, 163, 115, 1) !important;
           border-width: 1.5px !important;
         }
 
         &:hover fieldset {
-          border-color: rgba(234, 57, 52, 1) !important;
+          border-color: rgba(212, 163, 115, 1) !important;
         }
 
         // &.Mui-focused fieldset {
-        //   border-color: rgba(234, 57, 52, 1) !important;
+        //   border-color: rgba(212, 163, 115, 1) !important;
         //   border-width: 2px !important;
         // }
       }
 
       .MuiInputBase-input {
-        color: rgba(234, 57, 52, 1) !important;
+        color: rgba(212, 163, 115, 1) !important;
       }
     }
 
@@ -4655,7 +4655,7 @@ textarea {
   &__errorText {
     font-family: Medium, sans-serif !important;
     font-size: 14px !important;
-    color: rgba(234, 57, 52, 1) !important;
+    color: rgba(212, 163, 115, 1) !important;
     text-align: center;
     margin: -20px 0 -20px 0px !important;
     padding: 0 !important;
@@ -4667,7 +4667,7 @@ textarea {
     border-radius: 12px !important;
     font-family: SemiBold, sans-serif !important;
     font-size: 15px !important;
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
     box-shadow: none !important;
     text-transform: none !important;
     margin-top: 8px !important;
@@ -4681,7 +4681,7 @@ textarea {
     // }
 
     &:disabled {
-      background: rgba(234, 57, 52, 1) !important;
+      background: rgba(212, 163, 115, 1) !important;
       color: #ffffff !important;
       opacity: 1 !important;
       cursor: not-allowed !important;
@@ -4940,7 +4940,7 @@ textarea {
 
       &.Mui-focused fieldset,
       &:focus-within fieldset {
-        border-color: rgba(234, 57, 52, 1) !important;
+        border-color: rgba(212, 163, 115, 1) !important;
         border-width: 1.5px !important;
       }
     }
@@ -4996,7 +4996,7 @@ textarea {
       }
 
       // &.Mui-focused fieldset {
-      //   border-color: rgba(234, 57, 52, 1);
+      //   border-color: rgba(212, 163, 115, 1);
       // }
     }
 
@@ -5784,7 +5784,7 @@ textarea {
     font-family: Medium, sans-serif !important;
     font-size: 20px !important;
     font-weight: 700 !important;
-    color: #EA3934 !important;
+    color: #D4A373 !important;
     margin: 0 !important;
   }
 }
@@ -6001,7 +6001,7 @@ textarea {
 .emailotp-error {
   font-family: Medium, sans-serif !important;
   font-size: 14px !important;
-  color: rgb(234, 57, 52) !important;
+  color: rgb(212, 163, 115) !important;
   text-align: center;
 }
 
@@ -6407,7 +6407,7 @@ textarea {
   border-radius: 12px !important;
   font-family: SemiBold, sans-serif !important;
   font-size: 15px !important;
-  background: rgba(234, 57, 52, 1) !important;
+  background: rgba(212, 163, 115, 1) !important;
   box-shadow: none !important;
   text-transform: none !important;
 }
@@ -6723,7 +6723,7 @@ textarea {
     border-radius: 12px !important;
     font-family: SemiBold, sans-serif !important;
     font-size: 15px !important;
-    background: rgba(234, 57, 52, 1) !important;
+    background: rgba(212, 163, 115, 1) !important;
     box-shadow: none !important;
     text-transform: none !important;
     width: 100%;

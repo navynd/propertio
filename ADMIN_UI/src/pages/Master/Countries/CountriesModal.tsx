@@ -144,7 +144,7 @@ export default function CountriesModal({
           <div className="flex flex-col gap-[20px] mt-[28px]">
             <div>
               <label className={labelClass}>
-                Name <span className="text-[#EA3934]">*</span>
+                Name <span className="text-[#D4A373]">*</span>
               </label>
               <input
                 type="text"
@@ -158,7 +158,7 @@ export default function CountriesModal({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px]">
               <div>
                 <label className={labelClass}>
-                  Code <span className="text-[#EA3934]">*</span>
+                  Code <span className="text-[#D4A373]">*</span>
                 </label>
                 <input
                   type="text"

@@ -88,7 +88,7 @@ function Login() {
 
     return (
 
-        <div className="h-screen flex overflow-hidden [--primary:#EA3934] bg-[linear-gradient(-2deg,var(--primary,rgba(234,57,52,0.10))_-34.83%,rgba(234,57,52,0)_15.73%)]">
+        <div className="h-screen flex overflow-hidden [--primary:#D4A373] bg-[linear-gradient(-2deg,var(--primary,rgba(212, 163, 115,0.10))_-34.83%,rgba(212, 163, 115,0)_15.73%)]">
 
             {/* Left image collage */}
             <div className="hidden lg:block lg:flex-[6] h-full">
@@ -197,7 +197,7 @@ function Login() {
                                                     id="remember"
                                                     checked={rememberMe}
                                                     onCheckedChange={(value) => setRememberMe(value === true)}
-                                                    className="flex h-[15px] w-[15px] items-center justify-center rounded-[5px] border border-[rgba(34,34,34,0.20)] bg-[#F5F5F5] text-white data-[state=checked]:bg-[#EA3934] data-[state=checked]:border-[#EA3934] cursor-pointer"
+                                                    className="flex h-[15px] w-[15px] items-center justify-center rounded-[5px] border border-[rgba(34,34,34,0.20)] bg-[#F5F5F5] text-white data-[state=checked]:bg-[#D4A373] data-[state=checked]:border-[#D4A373] cursor-pointer"
                                                 >
                                                     <CheckboxIndicator className="">
                                                         <TickIcon className="mt-[-1px]" />
@@ -226,12 +226,12 @@ function Login() {
                                         <button
                                             type="submit"
                                             disabled={isLoggingIn}
-                                            className="cursor-pointer bg-[#EA3934] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px] disabled:opacity-70"
+                                            className="cursor-pointer bg-[#D4A373] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px] disabled:opacity-70"
                                         >
                                             {isLoggingIn ? "Signing in..." : "Login"}
                                         </button>
                                         {loginError ? (
-                                            <p className="text-[12px] font-[Medium] text-[#EA3934]">{loginError}</p>
+                                            <p className="text-[12px] font-[Medium] text-[#D4A373]">{loginError}</p>
                                         ) : null}
                                     </form>
                                     <div className="text-center">
@@ -292,12 +292,12 @@ function Login() {
                                         <button
                                             type="submit"
                                             disabled={isSendingOtp}
-                                            className="cursor-pointer bg-[#EA3934] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+                                            className="cursor-pointer bg-[#D4A373] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
                                         >
                                             {isSendingOtp ? "Sending..." : "Get OTP"}
                                         </button>
                                         {forgotError ? (
-                                            <p className="text-[12px] font-[Medium] text-[#EA3934]">
+                                            <p className="text-[12px] font-[Medium] text-[#D4A373]">
                                                 {forgotError}
                                             </p>
                                         ) : null}
@@ -389,12 +389,12 @@ function Login() {
                                         <button
                                             type="submit"
                                             disabled={isResettingPassword}
-                                            className="cursor-pointer bg-[#EA3934] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+                                            className="cursor-pointer bg-[#D4A373] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
                                         >
                                             {isResettingPassword ? "Saving..." : "Confirm password"}
                                         </button>
                                         {resetError ? (
-                                            <p className="text-[12px] font-[Medium] text-[#EA3934]">
+                                            <p className="text-[12px] font-[Medium] text-[#D4A373]">
                                                 {resetError}
                                             </p>
                                         ) : null}
@@ -557,7 +557,7 @@ export default Login;
 
 //     return (
 
-//         <div className="[--primary:#EA3934] bg-[linear-gradient(-2deg,var(--primary,rgba(234,57,52,0.10))_-34.83%,rgba(234,57,52,0)_15.73%)]">
+//         <div className="[--primary:#D4A373] bg-[linear-gradient(-2deg,var(--primary,rgba(212, 163, 115,0.10))_-34.83%,rgba(212, 163, 115,0)_15.73%)]">
 //             <div className="grid grid-cols-2 max-sm:grid-cols-1">
 //                 {/* Left image collage */}
 //                 <div className="max-sm:hidden">
@@ -645,7 +645,7 @@ export default Login;
 //                                                 <div className="flex items-center gap-2">
 //                                                     <Checkbox
 //                                                         id="remember"
-//                                                         className="flex h-[15px] w-[15px] items-center justify-center rounded-[5px] border border-[rgba(34,34,34,0.20)] bg-[#F5F5F5] text-white data-[state=checked]:bg-[#EA3934] data-[state=checked]:border-[#EA3934] cursor-pointer"
+//                                                         className="flex h-[15px] w-[15px] items-center justify-center rounded-[5px] border border-[rgba(34,34,34,0.20)] bg-[#F5F5F5] text-white data-[state=checked]:bg-[#D4A373] data-[state=checked]:border-[#D4A373] cursor-pointer"
 //                                                     >
 //                                                         <CheckboxIndicator className="">
 //                                                             <TickIcon className="mt-[-1px]" />
@@ -675,12 +675,12 @@ export default Login;
 //                                                 type="submit"
 //                                                 onClick={() => handleLogin()}
 //                                                 disabled={isLoggingIn}
-//                                                 className="cursor-pointer bg-[#EA3934] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+//                                                 className="cursor-pointer bg-[#D4A373] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
 //                                             >
 //                                                 {isLoggingIn ? "Signing in..." : "Login"}
 //                                             </button>
 //                                             {loginError ? (
-//                                                 <p className="text-[12px] font-[Medium] text-[#EA3934]">{loginError}</p>
+//                                                 <p className="text-[12px] font-[Medium] text-[#D4A373]">{loginError}</p>
 //                                             ) : null}
 //                                         </div>
 //                                         <div className="text-center">
@@ -741,12 +741,12 @@ export default Login;
 //                                             <button
 //                                                 type="submit"
 //                                                 disabled={isSendingOtp}
-//                                                 className="cursor-pointer bg-[#EA3934] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+//                                                 className="cursor-pointer bg-[#D4A373] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
 //                                             >
 //                                                 {isSendingOtp ? "Sending..." : "Get OTP"}
 //                                             </button>
 //                                             {forgotError ? (
-//                                                 <p className="text-[12px] font-[Medium] text-[#EA3934]">
+//                                                 <p className="text-[12px] font-[Medium] text-[#D4A373]">
 //                                                     {forgotError}
 //                                                 </p>
 //                                             ) : null}
@@ -838,12 +838,12 @@ export default Login;
 //                                             <button
 //                                                 type="submit"
 //                                                 disabled={isResettingPassword}
-//                                                 className="cursor-pointer bg-[#EA3934] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+//                                                 className="cursor-pointer bg-[#D4A373] w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
 //                                             >
 //                                                 {isResettingPassword ? "Saving..." : "Confirm password"}
 //                                             </button>
 //                                             {resetError ? (
-//                                                 <p className="text-[12px] font-[Medium] text-[#EA3934]">
+//                                                 <p className="text-[12px] font-[Medium] text-[#D4A373]">
 //                                                     {resetError}
 //                                                 </p>
 //                                             ) : null}

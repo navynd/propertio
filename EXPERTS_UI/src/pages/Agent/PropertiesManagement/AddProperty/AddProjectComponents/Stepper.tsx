@@ -33,7 +33,7 @@ const Stepper = ({ activeStep, steps }: StepperProps) => {
 
                 {/* ✅ Active progress line */}
                 <div
-                    className="absolute top-[9px] h-[2px] bg-[#EA3934]"
+                    className="absolute top-[9px] h-[2px] bg-[#D4A373]"
                     style={{
                         left: `${100 / (2 * totalSteps)}%`,
                         width: `calc(${progressWidth} * ${(totalSteps - 1) / totalSteps})`,
@@ -57,9 +57,9 @@ const Stepper = ({ activeStep, steps }: StepperProps) => {
                                 {/* Dot */}
                                 <span
                                     className={`h-[18px] w-[18px] rounded-full border-2 flex items-center justify-center ${isDone
-                                        ? "border-[#EA3934] bg-[#EA3934]"
+                                        ? "border-[#D4A373] bg-[#D4A373]"
                                         : isActive
-                                            ? "border-[#EA3934] bg-white"
+                                            ? "border-[#D4A373] bg-white"
                                             : "border-[rgba(34,34,34,0.15)] bg-white"
                                         }`}
                                 >
@@ -67,7 +67,7 @@ const Stepper = ({ activeStep, steps }: StepperProps) => {
                                         className={`h-[6px] w-[6px] rounded-full ${isDone
                                             ? "bg-white"
                                             : isActive
-                                                ? "bg-[#EA3934]"
+                                                ? "bg-[#D4A373]"
                                                 : "bg-[rgba(34,34,34,0.20)]"
                                             }`}
                                     />

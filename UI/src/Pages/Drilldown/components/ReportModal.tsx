@@ -220,7 +220,7 @@ function ReportModal({
             </div>
 
             {submitError ? (
-              <Typography sx={{ color: "#EA3934", fontSize: "13px", mt: 1 }}>
+              <Typography sx={{ color: "#D4A373", fontSize: "13px", mt: 1 }}>
                 {submitError}
               </Typography>
             ) : null}

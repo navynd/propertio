@@ -184,7 +184,7 @@ function PropertyStatusBadge({ status }: { status?: string }) {
     if (normalized === "sold") {
         return (
             <span
-                className={`${propertyStatusBadgeClass} border border-[#ea393459] bg-[#ea393414] text-[#ea3934]`}
+                className={`${propertyStatusBadgeClass} border border-[#D4A37359] bg-[#D4A37314] text-[#D4A373]`}
             >
                 {label}
             </span>
@@ -232,8 +232,8 @@ function StatCards({
             accent: "#222",
         },
         { label: "Active", value: counts?.activeProperties ?? 0, accent: "#00A663" },
-        { label: "Inactive", value: counts?.inactiveProperties ?? 0, accent: "#EA3934" },
-        { label: "Sold", value: counts?.soldProperties ?? 0, accent: "#EA3934" },
+        { label: "Inactive", value: counts?.inactiveProperties ?? 0, accent: "#D4A373" },
+        { label: "Sold", value: counts?.soldProperties ?? 0, accent: "#D4A373" },
         { label: "Rented", value: counts?.rentedProperties ?? 0, accent: "#8ACBD0" },
         { label: "Pending", value: counts?.pendingProperties ?? 0, accent: "#F59E0B" },
     ];
@@ -563,7 +563,7 @@ function ListingProperty() {
                 showCancelButton: true,
                 confirmButtonText: "Yes, delete",
                 cancelButtonText: "Cancel",
-                confirmButtonColor: "#EA3934",
+                confirmButtonColor: "#D4A373",
                 reverseButtons: true,
             });
             if (!result.isConfirmed) return;
@@ -697,7 +697,7 @@ function ListingProperty() {
                                     type="button"
                                     onClick={() => selectDate(day)}
                                     className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                        ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                        ? "bg-[#D4A373] text-white border-[#D4A373]"
                                         : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                         }`}
                                 >
@@ -1046,7 +1046,7 @@ function ListingProperty() {
                                             setSelectedLocation(loc);
                                             setIsLocationDropdownOpen(false);
                                         }}
-                                        className={`w-full text-left px-[14px] py-[9px] text-[13px] font-[Medium] hover:bg-[#F5F5F5] ${selectedLocation === loc ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                                        className={`w-full text-left px-[14px] py-[9px] text-[13px] font-[Medium] hover:bg-[#F5F5F5] ${selectedLocation === loc ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                                     >
                                         {loc}
                                     </button>
@@ -1065,7 +1065,7 @@ function ListingProperty() {
                 </div>
 
                 {error && (
-                    <p className="text-[13px] text-[#EA3934] mb-[12px] font-[Medium]">{error}</p>
+                    <p className="text-[13px] text-[#D4A373] mb-[12px] font-[Medium]">{error}</p>
                 )}
 
                 <div className="overflow-x-auto w-full scrollbar-hide mb-[30px]">

@@ -69,13 +69,13 @@ function statusBadgeClass(status: UnitStatusRow["status"]) {
     case "Available":
       return "bg-[rgba(0,166,99,0.10)] text-[#00A663]";
     case "PreClose":
-      return "bg-[rgba(234,57,52,0.10)] text-[#EA3934]";
+      return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
     case "In-Progress":
       return "bg-[rgba(255,70,162,0.10)] text-[#FF46A2]";
     case "Reserved":
       return "bg-[rgba(199,163,53,0.10)] text-[#C7A335]";
     case "Closed":
-      return "bg-[#EA3934] text-white";
+      return "bg-[#D4A373] text-white";
     case "Follow up":
       return "bg-[rgba(8,50,174,0.10)] text-[#0832AE]";
     default:

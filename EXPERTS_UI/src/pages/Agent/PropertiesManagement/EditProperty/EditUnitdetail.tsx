@@ -155,14 +155,14 @@
 //                         >
 //                             <div onClick={() => toggleProperty(property.id)} className={`flex items-start justify-between gap-[12px] cursor-pointer ${property.isOpen ? "mb-[0px]" : `pb-[20px] ${index !== properties.length - 1 ? "border-b border-[rgba(34,34,34,0.10)]" : ""} `}`}>
 //                                 <p className={`text-[14px] font-[Medium] ${property.isOpen ? "text-[#0832AE]" : "text-[#222]"}`}>
-//                                     Property Type #{property.id} <span className="text-[#EA3934]">*</span>
+//                                     Property Type #{property.id} <span className="text-[#D4A373]">*</span>
 //                                 </p>
 //                                 <button
 //                                     type="button"
 //                                     onClick={() => deleteProperty(property.id)}
 //                                     className="bg-white flex items-center justify-center cursor-pointer"
 //                                 >
-//                                     <TrashIcon width={20} height={20} fill="#EA3934" />
+//                                     <TrashIcon width={20} height={20} fill="#D4A373" />
 //                                 </button>
 //                             </div>
 
@@ -231,7 +231,7 @@
 
 //                                         <div className="mt-[12px]">
 //                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-//                                                 Area of the property <span className="text-[#EA3934]">*</span>
+//                                                 Area of the property <span className="text-[#D4A373]">*</span>
 //                                             </label>
 //                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
 //                                                 <div className="relative">
@@ -275,7 +275,7 @@
 //                                             <div onClick={() => toggleLayout(property.id, layout.id)} className="cursor-pointer flex items-center justify-between">
 //                                                 <p className={`text-[13px] font-[SemiBold] ${layout.isOpen ? "text-[#0832AE]" : "text-[#222]"}`}>  Layout type #{layout.id}</p>
 //                                                 <button onClick={() => deleteLayout(property.id, layout.id)} type="button" className="cursor-pointer flex items-center justify-center bg-white">
-//                                                     <TrashIcon width={20} height={20} fill="#EA3934" />
+//                                                     <TrashIcon width={20} height={20} fill="#D4A373" />
 //                                                 </button>
 //                                             </div>
 //                                             {/*layout types details*/}
@@ -284,11 +284,11 @@
 //                                                     {/* layout name and size */}
 //                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] md:mb-[30px] mb-[15px]">
 //                                                         <div>
-//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout name <span className="text-[#EA3934]">*</span></label>
+//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout name <span className="text-[#D4A373]">*</span></label>
 //                                                             <input type="text" defaultValue="TYPE A -1BHK" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
 //                                                         </div>
 //                                                         <div>
-//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Size (sq.ft.) <span className="text-[#EA3934]">*</span></label>
+//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Size (sq.ft.) <span className="text-[#D4A373]">*</span></label>
 //                                                             <div className="grid grid-cols-2 gap-[10px]">
 //                                                                 <div className="relative">
 //                                                                     <input type="text" defaultValue="147" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] pr-[56px] text-[13px] text-[#222] focus:outline-none" />
@@ -304,7 +304,7 @@
 //                                                     {/* number of bedrooms and maid bedroom is available */}
 //                                                     <div className="md:mb-[30px] mb-[15px]">
 //                                                         <div>
-//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bedrooms <span className="text-[#EA3934]">*</span></label>
+//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bedrooms <span className="text-[#D4A373]">*</span></label>
 //                                                             <input type="text" defaultValue="2" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
 //                                                         </div>
 //                                                         <label className="inline-flex items-center gap-[8px] mt-[10px] cursor-pointer">
@@ -316,18 +316,18 @@
 //                                                     {/* number of bathrooms and number of units */}
 //                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] md:mb-[30px] mb-[15px]">
 //                                                         <div>
-//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bathrooms <span className="text-[#EA3934]">*</span></label>
+//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bathrooms <span className="text-[#D4A373]">*</span></label>
 //                                                             <input type="text" defaultValue="1" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
 //                                                         </div>
 //                                                         <div>
-//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of units <span className="text-[#EA3934]">*</span></label>
+//                                                             <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of units <span className="text-[#D4A373]">*</span></label>
 //                                                             <input type="text" defaultValue="20" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
 //                                                         </div>
 //                                                     </div>
 
 //                                                     {/* layout price */}
 //                                                     <div className="">
-//                                                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout price <span className="text-[#EA3934]">*</span></label>
+//                                                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout price <span className="text-[#D4A373]">*</span></label>
 //                                                         <div className="relative">
 //                                                             <input type="text" defaultValue="2800000" className="h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] pr-[48px] text-[13px] text-[#222] font-[Regular] focus:outline-none" />
 //                                                             <span className="absolute right-[12px] top-1/2 -translate-y-1/2 text-[13px] text-[#707070] font-[SemiBold]">AED</span>
@@ -337,7 +337,7 @@
 //                                                     {/* layout gallery */}
 //                                                     <div className="md:mt-[30px] mt-[15px]">
 //                                                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-//                                                             Upload floor plan images <span className="text-[#EA3934]">*</span>
+//                                                             Upload floor plan images <span className="text-[#D4A373]">*</span>
 //                                                         </label>
 //                                                         <div className="rounded-[10px] border border-dashed border-[rgba(34,34,34,0.15)] bg-white min-h-[180px] flex flex-col items-center justify-center text-center md:p-[56px] p-[20px]">
 //                                                             {layoutImageByKey[getLayoutKey(property.id, layout.id)] ? (
@@ -405,7 +405,7 @@
 //             </div>
 //             <div className="flex items-center justify-end gap-[10px] mt-[30px]">
 //                 <button className="cursor-pointer h-[44px] rounded-[10px] px-[20px] border border-[#222]  text-[#222] text-[14px] font-[Bold] inline-flex items-center gap-[5px]">Discard</button>
-//                 <button className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#EA3934] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px]">Save changes</button>
+//                 <button className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#D4A373] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px]">Save changes</button>
 //             </div>
 //         </div>
 //     );

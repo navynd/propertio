@@ -1018,8 +1018,8 @@ const AddProject = () => {
                                 isSavingDraft ||
                                 isUploadingMedia ||
                                 isSubmittingProject
-                                ? "bg-[#EA3934]/50 cursor-not-allowed"
-                                : "bg-[#EA3934] cursor-pointer"
+                                ? "bg-[#D4A373]/50 cursor-not-allowed"
+                                : "bg-[#D4A373] cursor-pointer"
                             }`}
                     >
                         {isUploadingMedia ? "Uploading..." : isSubmittingProject ? "Submitting..." : "Next"}

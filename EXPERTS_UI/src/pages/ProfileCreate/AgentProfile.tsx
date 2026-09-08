@@ -441,13 +441,13 @@ const AgentProfile = () => {
                         <div className="flex flex-col gap-[20px]">
                             {/* Agency Name / Agent Name (typo preserved as in design "Agenct Name") */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Agenct Name <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Agenct Name <span className="text-[#D4A373]">*</span></label>
                                 <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder="Enter Name" className="w-full border border-[rgba(34,34,34,0.10)] rounded-[10px] pl-[14px] h-[44px] text-[13px] font-[Regular] text-[#222] focus:outline-none placeholder:text-[#707070] placeholder:text-[13px] placeholder:font-[Regular]" />
                             </div>
 
                             {/* Email Id */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Email Id <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Email Id <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative mb-[5px] w-full">
                                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter Email address" className="w-full border border-[rgba(34,34,34,0.10)] rounded-[10px] pl-[14px] pr-[90px] h-[44px] text-[13px] font-[Regular] text-[#222] focus:outline-none placeholder:text-[#707070] placeholder:text-[13px] placeholder:font-[Regular]" />
                                     {isEmailVerified ? (
@@ -464,7 +464,7 @@ const AgentProfile = () => {
 
                             {/* Phone Number */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Phone Number (whatsapp) <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Phone Number (whatsapp) <span className="text-[#D4A373]">*</span></label>
                                 <div className="flex gap-[10px] bg-white rounded-[10px] h-[44px] items-center mb-[10px]">
                                     <div className="relative h-full" ref={dropdownRef}>
                                         <div
@@ -532,7 +532,7 @@ const AgentProfile = () => {
 
                             {/* Job title */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Job title <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Job title <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={jobTitleDropdownRef}>
                                     <div
                                         className="w-full h-[44px] rounded-[10px] border border-[#EAEAEA] px-[16px] text-[14px] font-[Regular] flex items-center justify-between cursor-pointer"
@@ -565,7 +565,7 @@ const AgentProfile = () => {
 
                             {/* Experience */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Experience <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Experience <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={experienceDropdownRef}>
                                     <div
                                         className="w-full h-[44px] rounded-[10px] border border-[#EAEAEA] px-[16px] text-[14px] font-[Regular] flex items-center justify-between cursor-pointer"
@@ -597,13 +597,13 @@ const AgentProfile = () => {
 
                             {/* BRN */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Dubai Broker License (BRN) <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Dubai Broker License (BRN) <span className="text-[#D4A373]">*</span></label>
                                 <input value={brokerLicenseNumber} onChange={(e) => setBrokerLicenseNumber(e.target.value)} type="text" placeholder="Enter Dubai Broker License (BRN)" className="w-full border border-[rgba(34,34,34,0.10)] rounded-[10px] pl-[14px]  h-[44px] text-[13px] font-[Regular] text-[#222] focus:outline-none placeholder:text-[#707070] placeholder:text-[13px] placeholder:font-[Regular]" />
                             </div>
 
                             {/* Nationality */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Nationality <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Nationality <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={nationalityDropdownRef}>
                                     <div
                                         className="w-full h-[44px] rounded-[10px] border border-[#EAEAEA] px-[16px] flex items-center justify-between cursor-pointer"
@@ -661,7 +661,7 @@ const AgentProfile = () => {
                         <div className="flex flex-col gap-[20px]">
                             {/* Languages */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Language known <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Language known <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={languageDropdownRef}>
                                     <button
                                         type="button"
@@ -722,7 +722,7 @@ const AgentProfile = () => {
 
                             {/* Description */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Description <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Description <span className="text-[#D4A373]">*</span></label>
                                 <textarea
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
@@ -733,7 +733,7 @@ const AgentProfile = () => {
 
                             {/* LinkedIn */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">LinkedIn <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">LinkedIn <span className="text-[#D4A373]">*</span></label>
                                 <div className="flex items-center gap-[10px] h-[44px] p-[0_14px] border border-[rgba(34,34,34,0.10)] rounded-[10px]">
                                     <input
                                         value={linkedin}
@@ -752,7 +752,7 @@ const AgentProfile = () => {
 
                             {/* Password */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Password <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Password <span className="text-[#D4A373]">*</span></label>
                                 <div className="flex items-center gap-[10px] h-[44px] p-[0_14px] border border-[rgba(34,34,34,0.10)] rounded-[10px]">
                                     <input
                                         value={password}
@@ -769,9 +769,9 @@ const AgentProfile = () => {
 
                             {/* Confirm Password */}
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Confirm password <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Confirm password <span className="text-[#D4A373]">*</span></label>
                                 <div
-                                    className={`flex items-center gap-[10px] h-[44px] p-[0_14px] border rounded-[10px] ${passwordMismatch ? "border-[#EA3934]" : "border-[rgba(34,34,34,0.10)]"
+                                    className={`flex items-center gap-[10px] h-[44px] p-[0_14px] border rounded-[10px] ${passwordMismatch ? "border-[#D4A373]" : "border-[rgba(34,34,34,0.10)]"
                                         }`}
                                 >
                                     <input
@@ -787,7 +787,7 @@ const AgentProfile = () => {
                                     </button>
                                 </div>
                                 {passwordMismatch ? (
-                                    <p className="text-[12px] font-[Medium] text-[#EA3934] mt-[6px]">
+                                    <p className="text-[12px] font-[Medium] text-[#D4A373] mt-[6px]">
                                         Passwords do not match.
                                     </p>
                                 ) : null}
@@ -800,7 +800,7 @@ const AgentProfile = () => {
                         <button type="button" onClick={() => navigate("/")} className="border border-[#222] text-[#222] text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition">
                             Cancel
                         </button>
-                        <button type="button" onClick={handleCreateProfile} disabled={isSubmittingProfile} className="bg-[#EA3934] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60">
+                        <button type="button" onClick={handleCreateProfile} disabled={isSubmittingProfile} className="bg-[#D4A373] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60">
                             {isSubmittingProfile ? "Creating..." : "Create profile"}
                         </button>
                     </div>

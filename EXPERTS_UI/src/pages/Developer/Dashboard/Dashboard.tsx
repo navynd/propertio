@@ -40,7 +40,7 @@ const metricCardTemplates: MetricTemplate[] = [
         key: "totalProjects",
         iconBg: "bg-[#FF4B4F]",
         cardBg:
-            "linear-gradient(180deg, rgba(234,57,52,0) 42.64%, rgba(234,57,52,0.2) 100%), #ffffff",
+            "linear-gradient(180deg, rgba(212, 163, 115,0) 42.64%, rgba(212, 163, 115,0.2) 100%), #ffffff",
         icon: TotalProjectIcon,
         navigateTo: "/developer/project-management?tab=active&subTab=all",
     },
@@ -467,7 +467,7 @@ function Dashboard() {
                                             <span
                                                 className={`inline-flex items-center rounded-[6px] p-[6px_10px] text-[12px] font-[Medium] leading-none ${row.projectStatus === "ready"
                                                     ? "bg-[rgba(0,166,99,0.10)] text-[#00A663]"
-                                                    : "bg-[rgba(234,57,52,0.10)] text-[#EA3934]"
+                                                    : "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
                                                     }`}
                                             >
                                                 {row.projectStatus === "ready" ? "Ready" : "Off-plan"}

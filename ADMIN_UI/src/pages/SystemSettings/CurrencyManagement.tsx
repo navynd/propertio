@@ -232,7 +232,7 @@ function CurrencyManagement() {
                         type="button"
                         onClick={() => handleRemoveField(index)}
                         disabled={currency.isDefault}
-                        className="text-[#EA3934] font-[Bold] hover:underline disabled:opacity-50 disabled:no-underline text-[12px] cursor-pointer"
+                        className="text-[#D4A373] font-[Bold] hover:underline disabled:opacity-50 disabled:no-underline text-[12px] cursor-pointer"
                       >
                         Remove
                       </button>

@@ -275,7 +275,7 @@ export default function BlogCategoriesModal({
                     <button
                       type="button"
                       onClick={() => removeSubcategory(index)}
-                      className="h-[40px] w-[36px] flex items-center justify-center rounded-[8px] border border-[rgba(234,57,52,0.2)] text-[#EA3934] cursor-pointer"
+                      className="h-[40px] w-[36px] flex items-center justify-center rounded-[8px] border border-[rgba(212, 163, 115,0.2)] text-[#D4A373] cursor-pointer"
                       aria-label="Remove subcategory"
                     >
                       <TrashIcon width={16} height={16} />

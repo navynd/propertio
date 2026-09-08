@@ -2,7 +2,7 @@ import { useToast, type Toast as ToastModel } from "../../context/ToastContext";
 
 const typeStyles: Record<ToastModel["type"], { border: string; title: string }> = {
   success: { border: "border-l-[#05A666]", title: "text-[#222]" },
-  error: { border: "border-l-[#EA3934]", title: "text-[#222]" },
+  error: { border: "border-l-[#D4A373]", title: "text-[#222]" },
   info: { border: "border-l-[#0832AE]", title: "text-[#222]" },
 };
 

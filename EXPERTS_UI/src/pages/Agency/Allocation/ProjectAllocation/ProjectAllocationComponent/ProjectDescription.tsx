@@ -162,7 +162,7 @@ function ProjectDescription({ project }: { project: any }) {
                             type="button"
                             onClick={() => selectDate(day)}
                             className={`cursor-pointer h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                ? "bg-[#EA3934] text-white border-[#EA3934]"
+                                ? "bg-[#D4A373] text-white border-[#D4A373]"
                                 : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
                                 }`}
                         >

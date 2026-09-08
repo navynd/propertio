@@ -457,7 +457,7 @@ const AllocateAgentModal = ({
                         setSelectedAgentId("");
                         setIsAgentTypeDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${agentType === option.name ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                      className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${agentType === option.name ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                     >
                       {option.name}
                     </button>
@@ -503,7 +503,7 @@ const AllocateAgentModal = ({
 
                         setIsAvailableAgentDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${availableAgent === option.name ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                      className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${availableAgent === option.name ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                     >
                       {option.name}
                     </button>
@@ -563,7 +563,7 @@ const AllocateAgentModal = ({
                     Select File
                   </button>
                   {documentError && (
-                    <p className="mt-[12px] text-[12px] font-[Regular] text-[#EA3934]">
+                    <p className="mt-[12px] text-[12px] font-[Regular] text-[#D4A373]">
                       {documentError}
                     </p>
                   )}
@@ -597,7 +597,7 @@ const AllocateAgentModal = ({
                     </button>
                   </div>
                   {documentError && (
-                    <p className="mt-[8px] text-[12px] font-[Regular] text-[#EA3934]">
+                    <p className="mt-[8px] text-[12px] font-[Regular] text-[#D4A373]">
                       {documentError}
                     </p>
                   )}
@@ -633,7 +633,7 @@ const AllocateAgentModal = ({
             type="button"
             onClick={handleAllocate}
             disabled={allocating}
-            className="h-[44px] w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold]"
+            className="h-[44px] w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold]"
           >
             save changes
           </button>

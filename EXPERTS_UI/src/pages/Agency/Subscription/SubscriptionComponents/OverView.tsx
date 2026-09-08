@@ -64,7 +64,7 @@ function paymentStatusBadgeClass(status: PaymentStatus) {
         case "paid":
             return "bg-[rgba(0,166,99,0.12)] text-[#00A663]";
         case "failed":
-            return "bg-[rgba(234,57,52,0.12)] text-[#EA3934]";
+            return "bg-[rgba(212, 163, 115,0.12)] text-[#D4A373]";
         default:
             return "bg-[rgba(199,163,53,0.18)] text-[#9A6700]";
     }
@@ -120,7 +120,7 @@ function CurrentPlanCard() {
                     Renew subscription
                 </button>
 
-                <button className="min-h-[44px] min-w-[min(100%,10rem)] flex-1 rounded-[10px] bg-[#EA3934] px-3 py-2.5 text-[14px] font-[Bold] text-white hover:opacity-95">
+                <button className="min-h-[44px] min-w-[min(100%,10rem)] flex-1 rounded-[10px] bg-[#D4A373] px-3 py-2.5 text-[14px] font-[Bold] text-white hover:opacity-95">
                     Cancel subscription
                 </button>
             </div>
@@ -255,7 +255,7 @@ function InvoicesSection() {
                                     type="button"
                                     onClick={() => selectDate(day)}
                                     className={`mx-auto h-[30px] w-[30px] rounded-full border text-[12px] font-[SemiBold] transition-colors ${isSelected
-                                        ? "border-[#EA3934] bg-[#EA3934] text-white"
+                                        ? "border-[#D4A373] bg-[#D4A373] text-white"
                                         : "border-[rgba(34,34,34,0.10)] text-[#707070] hover:bg-[#F2F2F2]"
                                         }`}
                                 >

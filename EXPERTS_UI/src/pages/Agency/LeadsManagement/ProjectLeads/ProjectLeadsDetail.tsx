@@ -32,9 +32,9 @@ function statusDotClass(status: string) {
   if (s === "reserved") return "bg-[#C7A335]";
   if (s === "in-progress") return "bg-[#FF46A2]";
   if (s === "follow-up") return "bg-[#0832AE]";
-  if (s === "pre-close" || s === "preclose") return "bg-[#EA3934]";
+  if (s === "pre-close" || s === "preclose") return "bg-[#D4A373]";
   if (s === "waiting-for-approval") return "bg-[#0832AE]";
-  return "bg-[#EA3934]";
+  return "bg-[#D4A373]";
 }
 
 type UnitTileStatus =
@@ -57,7 +57,7 @@ const unitLegend: {
     {
       status: "soldOther",
       label: "Units Sold by other",
-      swatchClass: "bg-[#EA3934]",
+      swatchClass: "bg-[#D4A373]",
     },
     {
       status: "agentWorking",
@@ -78,7 +78,7 @@ const unitLegend: {
 
 function unitTileClass(status: UnitTileStatus) {
   if (status === "agentSold") return "bg-[#0832AE] text-white";
-  if (status === "soldOther") return "bg-[#EA3934] text-white";
+  if (status === "soldOther") return "bg-[#D4A373] text-white";
   if (status === "agentWorking") return "bg-[#00A663] text-white";
   if (status === "available")
     return "bg-[#F5F5F5] text-[#222] border border-[rgba(34,34,34,0.08)]";
@@ -566,7 +566,7 @@ const ProjectLeadsDetail = () => {
               </div>
               <div className="min-w-0 flex flex-col gap-[5px]">
                 {leadDetail?.agent?.isSuperAgent ? (
-                  <span className="flex items-center justify-center gap-1 bg-[#EA3934] w-fit h-[21px] p-[6px_7px] text-[10px] font-[SemiBold] text-white text-uppercase ">
+                  <span className="flex items-center justify-center gap-1 bg-[#D4A373] w-fit h-[21px] p-[6px_7px] text-[10px] font-[SemiBold] text-white text-uppercase ">
                     <SuperAgentIcon width={10} height={10} />
                     SUPER AGENT
                   </span>
@@ -737,7 +737,7 @@ const ProjectLeadsDetail = () => {
 
               <div>
                 <p className="text-[12px] font-[SemiBold] text-[#222] mb-[8px]">
-                  Project status <span className="text-[#EA3934]">*</span>
+                  Project status <span className="text-[#D4A373]">*</span>
                 </p>
 
                 <div className="relative">
@@ -914,7 +914,7 @@ const ProjectLeadsDetail = () => {
                       setIsSubmittingStatus(false);
                     }
                   }}
-                  className="h-[44px] flex-1 px-[16px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
+                  className="h-[44px] flex-1 px-[16px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {isSubmittingStatus
                     ? "Saving..."
@@ -991,7 +991,7 @@ const ProjectLeadsDetail = () => {
                       setIsSubmittingApprove(false);
                     }
                   }}
-                  className="w-full h-[44px] px-[16px] rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] transition-opacity disabled:opacity-60"
+                  className="w-full h-[44px] px-[16px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] transition-opacity disabled:opacity-60"
                 >
                   {isSubmittingApprove ? "Saving..." : "Approve"}
                 </button>
@@ -1276,7 +1276,7 @@ const ProjectLeadsDetail = () => {
                       setIsSubmittingStatus(false);
                     }
                   }}
-                  className="h-[44px] px-[20px] w-auto rounded-[10px] bg-[#EA3934] text-[14px] font-[Bold] text-white cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+                  className="h-[44px] px-[20px] w-auto rounded-[10px] bg-[#D4A373] text-[14px] font-[Bold] text-white cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {isSubmittingStatus ? "Saving..." : "Yes"}
                 </button>
@@ -1351,7 +1351,7 @@ const ProjectLeadsDetail = () => {
                     setIsSubmittingApprove(false);
                   }
                 }}
-                className="h-[44px] px-5 rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold] disabled:opacity-60"
+                className="h-[44px] px-5 rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-60"
               >
                 {isSubmittingApprove ? "Saving..." : "Submit decline"}
               </button>

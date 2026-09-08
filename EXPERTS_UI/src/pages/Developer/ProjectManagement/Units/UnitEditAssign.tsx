@@ -412,7 +412,7 @@ const UnitEditAssign = () => {
                                   isSelected
                                     ? "cursor-pointer bg-[#222] text-white border-[#222] border border-[rgba(34,34,34,0.10)]"
                                     : isClosed
-                                      ? "cursor-not-allowed bg-[#FFECEC] text-[#EA3934] border-[#F7C5C5]"
+                                      ? "cursor-not-allowed bg-[#FFECEC] text-[#D4A373] border-[#F7C5C5]"
                                     : isAssigned
                                       ? "cursor-not-allowed bg-[rgba(8,50,174,0.10)] text-[#222] border-none"
                                       : "cursor-pointer bg-white text-[#222] border-[rgba(34,34,34,0.10)]"
@@ -421,7 +421,7 @@ const UnitEditAssign = () => {
                                 <span
                                   className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center text-[9px] leading-none ${
                                     isSelected
-                                      ? "bg-[#EA3934] border-[#EA3934] text-white"
+                                      ? "bg-[#D4A373] border-[#D4A373] text-white"
                                       : isAssigned
                                         ? "bg-[#DCE3F5] border-[#C4CEE9] text-transparent"
                                         : "bg-white border-[rgba(34,34,34,0.12)] text-transparent"

@@ -447,7 +447,7 @@ const AgencyProfile = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px] gap-y-[24px]">
                         <div className="flex flex-col gap-[20px]">
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Agency Name <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Agency Name <span className="text-[#D4A373]">*</span></label>
                                 <input
                                     value={agencyName}
                                     onChange={(e) => setAgencyName(e.target.value)}
@@ -458,7 +458,7 @@ const AgencyProfile = () => {
                             </div>
 
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Email Id <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Email Id <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative mb-[5px] w-full">
                                     <input
                                         value={email}
@@ -501,7 +501,7 @@ const AgencyProfile = () => {
                             </div>
 
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Phone Number <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Phone Number <span className="text-[#D4A373]">*</span></label>
                                 <div className="flex gap-[10px] bg-white rounded-[10px] h-[44px] items-center mb-[10px]">
                                     <div className="relative h-full" ref={dropdownRef}>
                                         <div
@@ -596,7 +596,7 @@ const AgencyProfile = () => {
                            
 
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Office Registration Number (ORN) <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Office Registration Number (ORN) <span className="text-[#D4A373]">*</span></label>
                                 <input
                                     value={orn}
                                     onChange={(e) => setOrn(e.target.value)}
@@ -607,7 +607,7 @@ const AgencyProfile = () => {
                             </div>
 
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Address <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Address <span className="text-[#D4A373]">*</span></label>
                                 <input
                                     value={address}
                                     onChange={(e) => setAddress(e.target.value)}
@@ -618,7 +618,7 @@ const AgencyProfile = () => {
                             </div>
 
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Nationality <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Nationality <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative" ref={nationalityDropdownRef}>
                                     <div
                                         className="w-full h-[44px] rounded-[10px] border border-[#EAEAEA] px-[16px] flex items-center justify-between cursor-pointer"
@@ -682,7 +682,7 @@ const AgencyProfile = () => {
 
                         <div className="flex flex-col gap-[20px]">
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Upload office registration related documents <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Upload office registration related documents <span className="text-[#D4A373]">*</span></label>
                                 <div
                                     className="border border-dashed border-[#D1D1D1] rounded-[14px] lg:p-[56px] md:p-[40px] p-[24px] flex flex-col items-center justify-center cursor-pointer transition-colors hover:bg-[#FAFAFA]"
                                     onClick={() => docInputRef.current?.click()}
@@ -719,7 +719,7 @@ const AgencyProfile = () => {
                             </div>
 
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Password <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Password <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative">
                                     <input
                                         type={showPassword ? "text" : "password"}
@@ -735,10 +735,10 @@ const AgencyProfile = () => {
                             </div>
 
                             <div>
-                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Confirm password <span className="text-[#EA3934]">*</span></label>
+                                <label className="block text-[#222] text-[14px] font-[SemiBold] mb-[8px]">Confirm password <span className="text-[#D4A373]">*</span></label>
                                 <div
                                     className={`relative rounded-[10px] border ${
-                                        passwordMismatch ? "border-[#EA3934]" : "border-[rgba(34,34,34,0.10)]"
+                                        passwordMismatch ? "border-[#D4A373]" : "border-[rgba(34,34,34,0.10)]"
                                     }`}
                                 >
                                     <input
@@ -754,7 +754,7 @@ const AgencyProfile = () => {
                                     </button>
                                 </div>
                                 {passwordMismatch ? (
-                                    <p className="text-[12px] font-[Medium] text-[#EA3934] mt-[6px]">Passwords do not match.</p>
+                                    <p className="text-[12px] font-[Medium] text-[#D4A373] mt-[6px]">Passwords do not match.</p>
                                 ) : null}
                             </div>
                         </div>
@@ -772,7 +772,7 @@ const AgencyProfile = () => {
                             type="button"
                             onClick={handleCreateProfile}
                             disabled={isSubmittingProfile}
-                            className="bg-[#EA3934] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60"
+                            className="bg-[#D4A373] text-white text-[14px] font-[Bold] rounded-[10px] px-[20px] h-[44px] transition disabled:opacity-60"
                         >
                             {isSubmittingProfile ? "Creating..." : "Create & Login"}
                         </button>

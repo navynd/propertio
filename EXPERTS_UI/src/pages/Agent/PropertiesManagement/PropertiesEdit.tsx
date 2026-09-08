@@ -94,7 +94,7 @@ const PropertiesEdit = () => {
                 <div className="flex flex-col gap-[24px]">
                     <div>
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Property Title <span className="text-[#EA3934]">*</span>
+                            Property Title <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"
@@ -107,7 +107,7 @@ const PropertiesEdit = () => {
 
                     <div>
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Property Address <span className="text-[#EA3934]">*</span>
+                            Property Address <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"
@@ -120,7 +120,7 @@ const PropertiesEdit = () => {
 
                     <div>
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[8px]">
-                            Property Description <span className="text-[#EA3934]">*</span>
+                            Property Description <span className="text-[#D4A373]">*</span>
                         </label>
 
                         <div className="rounded-[12px] border border-[rgba(34,34,34,0.10)] overflow-hidden bg-white min-h-[320px] flex flex-col">
@@ -193,7 +193,7 @@ const PropertiesEdit = () => {
 
             <div className="flex justify-end gap-[16px] mt-[15px]">
                 <button className="text-[14px] font-[Bold] text-[#222] border border-[#222] px-[20px] h-[44px] rounded-[10px]">Discard</button>
-                <button className="text-[14px] font-[Bold] text-[#FFF] px-[20px] h-[44px] rounded-[10px] bg-[#EA3934]">Save Changes</button>
+                <button className="text-[14px] font-[Bold] text-[#FFF] px-[20px] h-[44px] rounded-[10px] bg-[#D4A373]">Save Changes</button>
             </div>
         </div>
     );

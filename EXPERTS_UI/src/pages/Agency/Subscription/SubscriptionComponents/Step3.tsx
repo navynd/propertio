@@ -8,11 +8,11 @@ const Step3 = ({ onCancel }: Step3Props) => {
     return (
         <div className="mx-auto flex w-full max-w-[760px] flex-col items-center px-2 py-6 text-center">
             {/* <div className="relative mb-[10px] mt-[10px] h-[84px] w-[220px]">
-                <span className="absolute left-[20px] top-[22px] h-[4px] w-[4px] rounded-full bg-[#EA3934]" />
+                <span className="absolute left-[20px] top-[22px] h-[4px] w-[4px] rounded-full bg-[#D4A373]" />
                 <span className="absolute left-[42px] top-[12px] h-[3px] w-[3px] rounded-full bg-[#FF4EC5]" />
                 <span className="absolute left-[58px] top-[28px] h-[6px] w-[3px] rotate-[20deg] rounded-[2px] bg-[#0832AE]" />
                 <span className="absolute left-[78px] top-[14px] h-[2px] w-[12px] rounded-full bg-[#8A58FF]" />
-                <span className="absolute right-[20px] top-[24px] h-[4px] w-[4px] rounded-full bg-[#EA3934]" />
+                <span className="absolute right-[20px] top-[24px] h-[4px] w-[4px] rounded-full bg-[#D4A373]" />
                 <span className="absolute right-[45px] top-[12px] h-[3px] w-[3px] rounded-full bg-[#FF4EC5]" />
                 <span className="absolute right-[63px] top-[28px] h-[6px] w-[3px] -rotate-[20deg] rounded-[2px] bg-[#00A663]" />
                 <span className="absolute right-[82px] top-[14px] h-[2px] w-[12px] rounded-full bg-[#D0A63A]" />

@@ -126,15 +126,15 @@ const PasswordOtpModal: React.FC<PasswordOtpModalProps> = ({
                             className={`
                                 w-full text-[22px] font-[Bold] p-[16px] rounded-[10px] mb-[40px] transition-colors
                                 ${isOtpComplete && !isVerifying
-                                    ? "bg-[#EA3934] text-white cursor-pointer"
-                                    : "bg-[#EA3934] text-white opacity-[0.4] cursor-not-allowed"
+                                    ? "bg-[#D4A373] text-white cursor-pointer"
+                                    : "bg-[#D4A373] text-white opacity-[0.4] cursor-not-allowed"
                                 }
                             `}
                         >
                             {isVerifying ? "Verifying..." : "Verify OTP"}
                         </button>
                         {error ? (
-                            <p className="text-[12px] font-[Medium] text-[#EA3934] mb-[14px]">
+                            <p className="text-[12px] font-[Medium] text-[#D4A373] mb-[14px]">
                                 {error}
                             </p>
                         ) : null}

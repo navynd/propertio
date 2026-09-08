@@ -97,7 +97,7 @@ const StatusChangeModal = ({ isOpen, onClose, nextStatus, onSave, unitOptions }:
                                                     setUnit(option);
                                                     setIsUnitDropdownOpen(false);
                                                 }}
-                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${unit === option ? "text-[#EA3934] bg-[#FDF2F2]" : "text-[#222]"}`}
+                                                className={`w-full text-left px-[14px] py-[9px] text-[14px] font-[Medium] hover:bg-[#F5F5F5] ${unit === option ? "text-[#D4A373] bg-[#FDF2F2]" : "text-[#222]"}`}
                                             >
                                                 {option}
                                             </button>
@@ -118,7 +118,7 @@ const StatusChangeModal = ({ isOpen, onClose, nextStatus, onSave, unitOptions }:
                         </button>
                         <button
                             type="button"
-                            className="h-[44px] flex-1 w-full rounded-[10px] bg-[#EA3934] text-white text-[14px] font-[Bold]"
+                            className="h-[44px] flex-1 w-full rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold]"
                             onClick={() => setShowConfirm(true)}
                         >
                             Save
@@ -163,7 +163,7 @@ const StatusChangeModal = ({ isOpen, onClose, nextStatus, onSave, unitOptions }:
                                     setShowConfirm(false);
                                     onClose();
                                 }}
-                                className="h-[44px] rounded-[14px] bg-[#EA3934] text-white text-[16px] font-[Bold]"
+                                className="h-[44px] rounded-[14px] bg-[#D4A373] text-white text-[16px] font-[Bold]"
                             >
                                 Save
                             </button>

@@ -198,7 +198,7 @@ const LocationAdd = ({ value, onChange, projectAddress, projectAddressPlaceId }:
                 <div>
                     <div className="md:col-span-2">
                         <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                            Zone location <span className="text-[#EA3934]">*</span>
+                            Zone location <span className="text-[#D4A373]">*</span>
                         </label>
                         <input
                             type="text"

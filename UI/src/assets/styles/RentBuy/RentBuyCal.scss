@@ -168,7 +168,7 @@
         color: #777;
 
         .pct {
-            color: #ea3934;
+            color: #D4A373;
             font-family: Medium, sans-serif;
         }
     }
@@ -402,9 +402,9 @@
         }
 
         .is-active {
-            color: #ea3934;
-            border-bottom: 2px solid var(--primary, #EA3934);
-            box-shadow: 0 0px 0px 0 var(--primary, #EA3934);
+            color: #D4A373;
+            border-bottom: 2px solid var(--primary, #D4A373);
+            box-shadow: 0 0px 0px 0 var(--primary, #D4A373);
         }
     }
 
@@ -430,7 +430,7 @@
 
 
         .red {
-            background: #ea3934;
+            background: #D4A373;
         }
 
         .blue {
@@ -617,7 +617,7 @@
     &__quote-btn {
         border: none;
         border-radius: 9px;
-        background: #ea3934;
+        background: #D4A373;
         color: #fff;
         width: 100%;
         height: 42px;

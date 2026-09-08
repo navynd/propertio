@@ -844,7 +844,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                     className="pf-header__navItem"
                     disableRipple
                     onClick={() => handleNavLinkClick(link)}
-                    sx={active ? { color: "#EA3934 !important" } : {}}
+                    sx={active ? { color: "#D4A373 !important" } : {}}
                   >
                     {link.label}
                   </Button>
@@ -857,7 +857,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                 aria-controls={isMenuOpen ? "pf-explore-menu" : undefined}
                 aria-expanded={isMenuOpen ? "true" : undefined}
                 onClick={handleExploreClick}
-                sx={isExploreActive ? { color: "#EA3934 !important" } : {}}
+                sx={isExploreActive ? { color: "#D4A373 !important" } : {}}
               >
                 <Box
                   display="inline-flex"
@@ -873,7 +873,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                     height={6}
                     className={`pf-downarrow-icon${isMenuOpen ? " pf-downarrow-icon--open" : ""
                       }`}
-                    fill={shouldShowWhiteHeader ? (isExploreActive ? "#EA3934" : "#111827") : (isExploreActive ? "#EA3934" : "white")}
+                    fill={shouldShowWhiteHeader ? (isExploreActive ? "#D4A373" : "#111827") : (isExploreActive ? "#D4A373" : "white")}
                   />
                 </Box>
               </Button>
@@ -905,7 +905,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                       handleExploreNavItemClick(item);
                     }}
                     className="pf-dropdown__item"
-                    sx={item.href === location.pathname ? { color: "#EA3934", fontWeight: "bold" } : {}}
+                    sx={item.href === location.pathname ? { color: "#D4A373", fontWeight: "bold" } : {}}
                   >
                     {item.label}
                   </MenuItem>
@@ -916,7 +916,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                 className="pf-header__navItem"
                 disableRipple
                 onClick={() => handleNavLinkClick({ label: "Mortgages", href: "/mortgagecal" })}
-                sx={isNavLinkActive({ label: "Mortgages", href: "/mortgagecal" }) ? { color: "#EA3934 !important" } : {}}
+                sx={isNavLinkActive({ label: "Mortgages", href: "/mortgagecal" }) ? { color: "#D4A373 !important" } : {}}
               >
                 {navLinks[5].label}
               </Button>
@@ -951,7 +951,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                       badgeContent={savedPropertiesCount || 0}
                       sx={{
                         "& .MuiBadge-badge": {
-                          backgroundColor: "#EA3934",
+                          backgroundColor: "#D4A373",
                           color: "#ffffff",
                           fontSize: "10px",
                           minWidth: "18px",
@@ -1120,7 +1120,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                   <ListItemText
                     primary="Logout"
                     primaryTypographyProps={{
-                      sx: { color: "#EA3934" },
+                      sx: { color: "#D4A373" },
                     }}
                   />
                 </MenuItem>
@@ -1301,7 +1301,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                     >
                       <ListItemText 
                         primary={link.label} 
-                        primaryTypographyProps={active ? { sx: { color: "#EA3934", fontWeight: "bold" } } : {}}
+                        primaryTypographyProps={active ? { sx: { color: "#D4A373", fontWeight: "bold" } } : {}}
                       />
                     </ListItemButton>
                   </ListItem>
@@ -1317,12 +1317,12 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                 >
                   <ListItemText
                     primary="Explore"
-                    primaryTypographyProps={{ fontWeight: 600, sx: isExploreActive ? { color: "#EA3934" } : {} }}
+                    primaryTypographyProps={{ fontWeight: 600, sx: isExploreActive ? { color: "#D4A373" } : {} }}
                   />
                   <DownArrowIcon
                     width={12}
                     height={7}
-                    fill={isExploreActive ? "#EA3934" : "#ffffff"}
+                    fill={isExploreActive ? "#D4A373" : "#ffffff"}
                     className={`pf-header-explore-icon pf-header__drawerHeadingIcon${isMobileExploreOpen
                       ? " pf-header__drawerHeadingIcon--open"
                       : ""
@@ -1343,7 +1343,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                       >
                         <ListItemText 
                           primary={item.label} 
-                          primaryTypographyProps={item.href === location.pathname ? { sx: { color: "#EA3934", fontWeight: "bold" } } : {}}
+                          primaryTypographyProps={item.href === location.pathname ? { sx: { color: "#D4A373", fontWeight: "bold" } } : {}}
                         />
                       </ListItemButton>
                     </ListItem>
@@ -1362,7 +1362,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                 >
                   <ListItemText 
                     primary={navLinks[5].label} 
-                    primaryTypographyProps={isNavLinkActive({ label: "Mortgages", href: "/mortgagecal" }) ? { sx: { color: "#EA3934", fontWeight: "bold" } } : {}}
+                    primaryTypographyProps={isNavLinkActive({ label: "Mortgages", href: "/mortgagecal" }) ? { sx: { color: "#D4A373", fontWeight: "bold" } } : {}}
                   />
                 </ListItemButton>
               </ListItem>

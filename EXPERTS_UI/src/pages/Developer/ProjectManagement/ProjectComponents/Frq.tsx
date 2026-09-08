@@ -282,7 +282,7 @@ const Frq = ({ initialFaqs, projectId, onPendingDeleteIdsChange }: FrqProps) => 
                                         type="button"
                                         onClick={handleSave}
                                         disabled={isSaving}
-                                        className="cursor-pointer h-[44px] rounded-[10px] bg-[#EA3934] px-[16px] text-[14px] font-[Bold] text-white"
+                                        className="cursor-pointer h-[44px] rounded-[10px] bg-[#D4A373] px-[16px] text-[14px] font-[Bold] text-white"
                                     >
                                         {isSaving ? "Saving..." : "Save the questions"}
                                     </button>

@@ -817,7 +817,7 @@ function ListingPropertyDetail() {
                     onBackClick={() => navigate(-1)}
                 />
                 <div className="mt-[20px] rounded-[12px] border border-[#EAEAEA] bg-white p-[24px] text-center">
-                    <p className="text-[14px] text-[#EA3934] mb-[12px]">{pageError}</p>
+                    <p className="text-[14px] text-[#D4A373] mb-[12px]">{pageError}</p>
                     <button
                         type="button"
                         onClick={() => navigate(-1)}

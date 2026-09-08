@@ -24,7 +24,7 @@ function MortgageDonutChart({
       animations: { enabled: true },
       sparkline: { enabled: true },
     },
-    colors: ["#EA3934", "#0E3BFF"],
+    colors: ["#D4A373", "#0E3BFF"],
     stroke: { width: 0 },
     dataLabels: { enabled: false },
     legend: { show: false },

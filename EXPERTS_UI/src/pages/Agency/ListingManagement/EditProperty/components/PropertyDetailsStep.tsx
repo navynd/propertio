@@ -193,7 +193,7 @@ const PropertyDetailsStep = ({ value, onChange }: PropertyDetailsStepProps) => {
                 {/* property title */}
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        Property Title <span className="text-[#EA3934]">*</span>
+                        Property Title <span className="text-[#D4A373]">*</span>
                     </label>
                     <input
                         type="text"
@@ -208,7 +208,7 @@ const PropertyDetailsStep = ({ value, onChange }: PropertyDetailsStepProps) => {
                 {/* property address */}
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                        Property Address <span className="text-[#EA3934]">*</span>
+                        Property Address <span className="text-[#D4A373]">*</span>
                     </label>
                     {googleMapsApiKey && isGooglePlacesLoaded ? (
                         <Autocomplete
@@ -266,7 +266,7 @@ const PropertyDetailsStep = ({ value, onChange }: PropertyDetailsStepProps) => {
                 <div>
                     {/* Label */}
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[8px]">
-                        Property description <span className="text-[#EA3934]">*</span>
+                        Property description <span className="text-[#D4A373]">*</span>
                     </label>
 
                     {/* Editor Container */}
@@ -288,7 +288,7 @@ const PropertyDetailsStep = ({ value, onChange }: PropertyDetailsStepProps) => {
                 {/* Amenities  * */}
                 <div>
                     <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">
-                        Amenities <span className="text-[#EA3934]">*</span>
+                        Amenities <span className="text-[#D4A373]">*</span>
                     </label>
                     <div className="flex flex-wrap   gap-[8px]">
                         {amenities.map((amenity) => {
@@ -305,7 +305,7 @@ const PropertyDetailsStep = ({ value, onChange }: PropertyDetailsStepProps) => {
                                 >
                                     <span
                                         className={`h-[15px] w-[15px] rounded-full border flex items-center justify-center ${isActive
-                                            ? "bg-[#EA3934] border-[#EA3934]"
+                                            ? "bg-[#D4A373] border-[#D4A373]"
                                             : "bg-white border-[rgba(34,34,34,0.20)]"
                                             }`}
                                     >

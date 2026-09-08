@@ -275,7 +275,7 @@ const ActiveProjectDetail = () => {
                             <button
                                 onClick={onSaveChanges}
                                 disabled={isSavingChanges}
-                                className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#EA3934] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px] disabled:opacity-60 disabled:cursor-not-allowed"
+                                className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#D4A373] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px] disabled:opacity-60 disabled:cursor-not-allowed"
                             >
                                 {isSavingChanges ? "Saving..." : "Save changes"}
                             </button>

@@ -53,7 +53,7 @@ const UnitEdit = () => {
                 <div className="flex items-start justify-between gap-3 mb-[15px]">
                     <h3 className="text-[14px] font-[SemiBold] text-[#0832AE]">Property Type #1*</h3>
                     <button type="button" className="cursor-pointer flex items-center justify-center bg-white">
-                        <TrashIcon width={20} height={20} fill="#EA3934" />
+                        <TrashIcon width={20} height={20} fill="#D4A373" />
                     </button>
                 </div>
                 <div className="flex flex-col md:p-[20px] p-[15px] bg-[#F5F5F5] rounded-[15px]">
@@ -74,7 +74,7 @@ const UnitEdit = () => {
                     </div>
 
                     <div className="mt-[30px]">
-                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">Area of the property <span className="text-[#EA3934]">*</span></label>
+                        <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">Area of the property <span className="text-[#D4A373]">*</span></label>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
                             <div className="relative">
                                 <input type="text" defaultValue="147" className="h-[44px] w-full bg-[#FFF] rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] pr-[56px] text-[13px] text-[#222] focus:outline-none" />
@@ -93,18 +93,18 @@ const UnitEdit = () => {
                             <div className="flex items-center justify-between mb-[30px]">
                                 <p className="text-[13px] font-[SemiBold] text-[#222]">Layout type #1</p>
                                 <button type="button" className="cursor-pointer flex items-center justify-center bg-white">
-                                    <TrashIcon width={20} height={20} fill="#EA3934" />
+                                    <TrashIcon width={20} height={20} fill="#D4A373" />
                                 </button>
                             </div>
 
                             {/* layout name and size */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] md:mb-[30px] mb-[15px]">
                                 <div>
-                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout name <span className="text-[#EA3934]">*</span></label>
+                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout name <span className="text-[#D4A373]">*</span></label>
                                     <input type="text" defaultValue="TYPE A -1BHK" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
                                 </div>
                                 <div>
-                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Size (sq.ft.) <span className="text-[#EA3934]">*</span></label>
+                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Size (sq.ft.) <span className="text-[#D4A373]">*</span></label>
                                     <div className="grid grid-cols-2 gap-[10px]">
                                         <div className="relative">
                                             <input type="text" defaultValue="147" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] pr-[56px] text-[13px] text-[#222] focus:outline-none" />
@@ -120,7 +120,7 @@ const UnitEdit = () => {
                             {/* number of bedrooms and maid bedroom is available */}
                             <div className="md:mb-[30px] mb-[15px]">
                                 <div>
-                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bedrooms <span className="text-[#EA3934]">*</span></label>
+                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bedrooms <span className="text-[#D4A373]">*</span></label>
                                     <input type="text" defaultValue="2" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
                                 </div>
                                 <label className="inline-flex items-center gap-[8px] mt-[10px] cursor-pointer">
@@ -132,18 +132,18 @@ const UnitEdit = () => {
                             {/* number of bathrooms and number of units */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px] md:mb-[30px] mb-[15px]">
                                 <div>
-                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bathrooms <span className="text-[#EA3934]">*</span></label>
+                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of bathrooms <span className="text-[#D4A373]">*</span></label>
                                     <input type="text" defaultValue="1" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
                                 </div>
                                 <div>
-                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of units <span className="text-[#EA3934]">*</span></label>
+                                    <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Number of units <span className="text-[#D4A373]">*</span></label>
                                     <input type="text" defaultValue="20" className="font-[Regular] h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] text-[13px] text-[#222] focus:outline-none" />
                                 </div>
                             </div>
 
                             {/* layout price */}
                             <div className="md:mb-[30px] mb-[15px]">
-                                <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout price <span className="text-[#EA3934]">*</span></label>
+                                <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Layout price <span className="text-[#D4A373]">*</span></label>
                                 <div className="relative">
                                     <input type="text" defaultValue="2800000" className="h-[44px] w-full rounded-[10px] border border-[rgba(34,34,34,0.10)] px-[12px] pr-[48px] text-[13px] text-[#222] font-[Regular] focus:outline-none" />
                                     <span className="absolute right-[12px] top-1/2 -translate-y-1/2 text-[13px] text-[#707070] font-[SemiBold]">AED</span>
@@ -151,7 +151,7 @@ const UnitEdit = () => {
                             </div>
                             {/*upload floor plan images*/}
                             <section className="rounded-[15px] bg-white min-w-0">
-                                <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Upload floor plan images <span className="text-[#EA3934]">*</span></label>
+                                <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[10px]">Upload floor plan images <span className="text-[#D4A373]">*</span></label>
                                 <input
                                     ref={floorPlanFileRef}
                                     type="file"
@@ -201,7 +201,7 @@ const UnitEdit = () => {
             </div>
             <div className="flex items-center justify-end gap-[10px] mt-[30px]">
                 <button className="cursor-pointer h-[44px] rounded-[10px] px-[20px] border border-[#222]  text-[#222] text-[14px] font-[Bold] inline-flex items-center gap-[5px]">Discard</button>
-                <button className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#EA3934] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px]">Save changes</button>
+                <button className="cursor-pointer h-[44px] rounded-[10px] px-[20px] bg-[#D4A373] text-[#FFF] text-[14px] font-[Bold] inline-flex items-center gap-[5px]">Save changes</button>
             </div>
         </div>
     );

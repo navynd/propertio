@@ -116,7 +116,7 @@ export function RoleBadge({ role }: { role: AgentRoleLabel }) {
   }
 
   return (
-    <span className="inline-flex items-center justify-center gap-1 rounded-[5px] bg-[#EA3934] h-[21px] p-[6px_10px] text-[12px] font-[SemiBold] text-white">
+    <span className="inline-flex items-center justify-center gap-1 rounded-[5px] bg-[#D4A373] h-[21px] p-[6px_10px] text-[12px] font-[SemiBold] text-white">
       <SuperAgentIcon width={12} height={12} />
       Superagent
     </span>
@@ -133,7 +133,7 @@ function StatusBadge({ status }: { status: AgentStatusLabel }) {
   }
   if (status === "Approval declined") {
     return (
-      <span className="inline-flex items-center justify-center rounded-[5px] h-[21px] border border-[rgba(234,57,52,0.35)] bg-[rgba(234,57,52,0.08)] p-[6px_10px] text-[12px] font-[SemiBold] text-[#EA3934]">
+      <span className="inline-flex items-center justify-center rounded-[5px] h-[21px] border border-[rgba(212, 163, 115,0.35)] bg-[rgba(212, 163, 115,0.08)] p-[6px_10px] text-[12px] font-[SemiBold] text-[#D4A373]">
         Approval declined
       </span>
     );
@@ -508,7 +508,7 @@ const SuperAgent = () => {
             <button
               type="button"
               onClick={() => setIsInviteAgentModalOpen(true)}
-              className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#EA3934] text-[#FFF] px-[15px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
+              className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] text-[#FFF] px-[15px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
             >
               <PlusUserIcon width={16} height={16} className="text-white" />
               Invite Agent

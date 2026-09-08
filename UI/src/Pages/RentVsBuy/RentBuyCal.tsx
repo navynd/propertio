@@ -334,7 +334,7 @@ const RentBuyCal: React.FC = () => {
             curve: "straight",
             width: 2,
         },
-        colors: ["#EA3934", "#1D44D2"],
+        colors: ["#D4A373", "#1D44D2"],
         fill: {
             type: "gradient",
             gradient: {
@@ -428,7 +428,7 @@ const RentBuyCal: React.FC = () => {
             },
         },
         dataLabels: { enabled: false },
-        colors: ["#EA3934", "#1D44D2"],
+        colors: ["#D4A373", "#1D44D2"],
         grid: {
             borderColor: "#ECECEC",
             strokeDashArray: 0,

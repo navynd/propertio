@@ -178,7 +178,7 @@ const LocationAdd = ({ value, onChange, propertyAddress, propertyAddressPlaceId 
             <div className={`bg-white  md:p-[30px] p-[16px] ${isEditpath ? "" : "rounded-[15px] border border-[rgba(34,34,34,0.06)]"}`}>
                 <h3 className="text-[20px] font-[Bold] text-[#222] mb-[14px]">Location</h3>
                 <label className="text-[14px] font-[SemiBold] text-[#222] block mb-[6px]">
-                    Zone location <span className="text-[#EA3934]">*</span>
+                    Zone location <span className="text-[#D4A373]">*</span>
                 </label>
                 <input
                     type="text"
