@@ -295,7 +295,6 @@ function Home() {
   const [hoveredMarkerId, setHoveredMarkerId] = React.useState<string | null>(
     null
   );
-  const appDownloadRef = useRef<HTMLElement>(null);
   const worldwideRef = useRef<HTMLElement>(null);
   const [worldwideParallaxOffset, setWorldwideParallaxOffset] =
     React.useState<number>(0);
@@ -791,73 +790,7 @@ function Home() {
   const primeLocationProperties = useMemo<PrimeLocationProperty[]>(() => [...], []);
   */
 
-  // Smooth parallax effect for app download and worldwide sections
-  React.useEffect(() => {
-    const handleScroll = () => {
-      if (!appDownloadRef.current || !worldwideRef.current) return;
 
-      const appDownloadRect = appDownloadRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const scrollPosition = window.scrollY;
-
-      // Get app download section dimensions
-      const appDownloadHeight = appDownloadRect.height;
-      const appDownloadTop = appDownloadRect.top + scrollPosition;
-      const appDownloadBottom = appDownloadTop + appDownloadHeight;
-
-      // Calculate the distance worldwide should move up (half of app download height)
-      const parallaxDistance = appDownloadHeight * 0.5;
-
-      // Calculate viewport boundaries
-      const viewportTop = scrollPosition;
-      const viewportCenter = scrollPosition + windowHeight * 0.5;
-
-      // Start parallax when app download bottom reaches viewport
-      // End when app download bottom reaches viewport center (half covered)
-      let offset = 0;
-
-      if (
-        appDownloadBottom > viewportTop &&
-        appDownloadBottom <= viewportCenter
-      ) {
-        // Calculate progress from 0 to 1
-        const distanceFromTop = appDownloadBottom - viewportTop;
-        const totalDistance = viewportCenter - viewportTop;
-        const progress = Math.min(
-          Math.max(distanceFromTop / totalDistance, 0),
-          1
-        );
-
-        // Move worldwide section up by half of app download height
-        offset = -progress * parallaxDistance;
-      } else if (appDownloadBottom <= viewportTop) {
-        // App download is above viewport - worldwide should be fully up (half covered)
-        offset = -parallaxDistance;
-      } else if (appDownloadBottom > viewportCenter) {
-        // App download is still below viewport center - no offset yet
-        offset = 0;
-      }
-
-      // Use requestAnimationFrame for smooth updates
-      if (rafIdRef.current) {
-        cancelAnimationFrame(rafIdRef.current);
-      }
-
-      rafIdRef.current = requestAnimationFrame(() => {
-        setWorldwideParallaxOffset(offset);
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial calculation
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (rafIdRef.current) {
-        cancelAnimationFrame(rafIdRef.current);
-      }
-    };
-  }, []);
 
   const resolveTestimonialAvatar = useCallback(
     (filename: string | undefined) => {
@@ -2370,103 +2303,7 @@ function Home() {
         </PFContainer>
       </section>
 
-      {/* App Download Section */}
-      <section
-        ref={appDownloadRef}
-        className="pf-section pf-section--app-download"
-        aria-label="Download App"
-      >
-        <PFContainer className="pf-app-download-pfcontainer">
-          <div className="pf-app-download-wrapper">
-            <div className="pf-app-download-container">
-              <div className="pf-app-download__left">
-                <div className="pf-app-download__top-content">
-                  <Typography variant="h2" className="pf-app-download__title">
-                    Download Our
 
-                    App Today!
-                  </Typography>
-
-                  <div className="pf-app-download__download">
-                    <div className="pf-app-download__qr">
-                      <QrIcon width="120" height="105" />
-                    </div>
-
-                    <div className="pf-app-download__buttons">
-                      <div className="pf-app-download__button pf-app-download__button--google">
-                        <PlayStoreIcon width="120" height="40" />
-                      </div>
-
-                      <div className="pf-app-download__button pf-app-download__button--apple">
-                        <AppleStoreIcon width="120" height="40" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pf-app-download__features">
-                    <div className="pf-app-download__feature">
-                      <TickIcon
-                        width={20}
-                        height={20}
-                        className="pf-app-download__featureIcon"
-                        aria-hidden="true"
-                      />
-                      <Typography className="pf-app-download__featureText">
-                        Easy to use, fast, and secure
-                      </Typography>
-                    </div>
-                    <div className="pf-app-download__feature">
-                      <TickIcon
-                        width={20}
-                        height={20}
-                        className="pf-app-download__featureIcon"
-                        aria-hidden="true"
-                      />
-                      <Typography className="pf-app-download__featureText">
-                        Access all features in one place
-                      </Typography>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pf-app-download__right">
-                <img src={Homepage03Image} alt="download app" className="" />
-              </div>
-            </div>
-
-            <div className="pf-app-download__ratings-wrapper">
-              <div className="pf-app-download__ratings-section">
-                <div className="pf-app-download__ratings">
-                  <div className="pf-app-download__rating">
-                    <Typography className="pf-app-download__ratingScore">
-                      4.8/5
-                    </Typography>
-                    <div className="pf-app-download__ratingStars">
-                      <StarIcon width="86" height="14" />
-                    </div>
-                    <Typography className="pf-app-download__ratingLabel">
-                      On Google
-                    </Typography>
-                  </div>
-                  <div className="pf-app-downaload-divider"></div>
-                  <div className="pf-app-download__rating">
-                    <Typography className="pf-app-download__ratingScore">
-                      4.9/5
-                    </Typography>
-                    <div className="pf-app-download__ratingStars">
-                      <StarIcon width="86" height="14" />
-                    </div>
-                    <Typography className="pf-app-download__ratingLabel">
-                      On Trustpilot
-                    </Typography>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </PFContainer>
-      </section>
 
       {/* Worldwide User Management Section */}
       <section
