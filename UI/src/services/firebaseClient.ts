@@ -4,22 +4,22 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey:
     import.meta.env.VITE_FIREBASE_API_KEY ||
-    "AIzaSyDx7dEwBCDfgtSgqNT_8hDiCTd4m_a-Jdw",
+    "AIzaSyBqmRu193t1w06320sl54Cw0oaYOdVaOII",
   authDomain:
     import.meta.env.VITE_FIREBASE_AUTH_DOMAIN ||
-    "molumulk-82e12.firebaseapp.com",
+    "propertio-1c039.firebaseapp.com",
   projectId:
-    import.meta.env.VITE_FIREBASE_PROJECT_ID || "molumulk-82e12",
+    import.meta.env.VITE_FIREBASE_PROJECT_ID || "propertio-1c039",
   storageBucket:
     import.meta.env.VITE_FIREBASE_STORAGE_BUCKET ||
-    "molumulk-82e12.firebasestorage.app",
+    "propertio-1c039.firebasestorage.app",
   messagingSenderId:
-    import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "878591549071",
+    import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "1077407810956",
   appId:
     import.meta.env.VITE_FIREBASE_APP_ID ||
-    "1:878591549071:web:64297f98055f259caadafa",
+    "1:1077407810956:web:50e977936ef761b155c2a9",
   measurementId:
-    import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-FN0ZHTJEJ9",
+    import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-J26VFGHVW1",
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
