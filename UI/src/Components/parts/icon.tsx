@@ -24,34 +24,50 @@ export function DownArrowIcon({ ...props }) {
 export function HeaderLogoIcon({ ...props }) {
   return (
     <svg
-      width={props.width || "148"}
-      height={props.height || "44"}
-      viewBox="0 0 148 44"
+      width={props.width || "154"}
+      height={props.height || "48"}
+      viewBox="0 0 154 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={props.className}
     >
+      {/* Exact Monogram Architecture */}
       <g transform="translate(2, 2)">
+        {/* Roof and Chimney */}
         <path
-          d="M3 13.5L18 2.5L33 13.5L28.8 16.5L18 8.5L7.2 16.5L3 13.5Z"
+          d="M20 7 L34 17.5 L31.5 17.5 L20 9 L11.5 15.5 V 10 H 9 V 17.5 L 6 17.5 L 20 7 Z"
+          fill={props.fill || "#FFFFFF"}
+        />
+        {/* Ochre Location Pin */}
+        <path
+          d="M20 11.5 C18.5 11.5 17.4 12.6 17.4 14.1 C17.4 16.2 20 19 20 19 C20 19 22.6 16.2 22.6 14.1 C22.6 12.6 21.5 11.5 20 11.5 Z"
           fill="#D4A373"
         />
-        <rect x="6.5" y="16.5" width="23" height="3.8" rx="1.5" fill={props.fill || "#FFFFFF"} />
-        <rect x="6.5" y="16.5" width="4.8" height="19.5" rx="1.5" fill={props.fill || "#FFFFFF"} />
-        <rect x="11.3" y="24.4" width="14" height="3.4" rx="1.2" fill="#D4A373" />
-        <rect x="6.5" y="32.2" width="23" height="3.8" rx="1.5" fill={props.fill || "#FFFFFF"} />
-        <ellipse cx="18" cy="39" rx="10" ry="1.2" fill="#D4A373" opacity="0.45" />
+        <circle cx="20" cy="14" r="0.9" fill="#1F3D51" />
+
+        {/* Left Column with Base Foot */}
+        <path
+          d="M8.5 35.5 H13.5 V 20 L16.5 18 L14 16 V 19 H11.5 V 33 H8.5 V 35.5 Z"
+          fill={props.fill || "#FFFFFF"}
+        />
+
+        {/* Geometric E */}
+        <path
+          d="M17.5 19 H31 V 22.2 H21.2 V 26 H29.5 V 29 H21.2 V 32.3 H31 V 35.5 H17.5 V 19 Z"
+          fill={props.fill || "#FFFFFF"}
+        />
       </g>
+      {/* Typography: Estatehub */}
       <text
-        x="44"
-        y="29"
+        x="42"
+        y="30"
         fontFamily="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif"
         fontSize="21"
         fontWeight="800"
-        letterSpacing="-0.4px"
+        letterSpacing="-0.3px"
+        fill={props.fill || "#FFFFFF"}
       >
-        <tspan fill={props.fill || "#FFFFFF"}>Estate</tspan>
-        <tspan fill="#D4A373">hub</tspan>
+        Estatehub
       </text>
     </svg>
   );
@@ -935,34 +951,50 @@ export function LinkedInIcon({ ...props }) {
 export function PfOrangeLogoIcon({ ...props }) {
   return (
     <svg
-      width={props.width || "148"}
-      height={props.height || "44"}
-      viewBox="0 0 148 44"
+      width={props.width || "154"}
+      height={props.height || "48"}
+      viewBox="0 0 154 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={props.className}
     >
+      {/* Exact Monogram Architecture */}
       <g transform="translate(2, 2)">
+        {/* Roof and Chimney */}
         <path
-          d="M3 13.5L18 2.5L33 13.5L28.8 16.5L18 8.5L7.2 16.5L3 13.5Z"
+          d="M20 7 L34 17.5 L31.5 17.5 L20 9 L11.5 15.5 V 10 H 9 V 17.5 L 6 17.5 L 20 7 Z"
+          fill="#1F3D51"
+        />
+        {/* Ochre Location Pin */}
+        <path
+          d="M20 11.5 C18.5 11.5 17.4 12.6 17.4 14.1 C17.4 16.2 20 19 20 19 C20 19 22.6 16.2 22.6 14.1 C22.6 12.6 21.5 11.5 20 11.5 Z"
           fill="#D4A373"
         />
-        <rect x="6.5" y="16.5" width="23" height="3.8" rx="1.5" fill="#1F3D51" />
-        <rect x="6.5" y="16.5" width="4.8" height="19.5" rx="1.5" fill="#1F3D51" />
-        <rect x="11.3" y="24.4" width="14" height="3.4" rx="1.2" fill="#D4A373" />
-        <rect x="6.5" y="32.2" width="23" height="3.8" rx="1.5" fill="#1F3D51" />
-        <ellipse cx="18" cy="39" rx="10" ry="1.2" fill="#D4A373" opacity="0.35" />
+        <circle cx="20" cy="14" r="0.9" fill="#FFFFFF" />
+
+        {/* Left Column with Base Foot */}
+        <path
+          d="M8.5 35.5 H13.5 V 20 L16.5 18 L14 16 V 19 H11.5 V 33 H8.5 V 35.5 Z"
+          fill="#1F3D51"
+        />
+
+        {/* Geometric E */}
+        <path
+          d="M17.5 19 H31 V 22.2 H21.2 V 26 H29.5 V 29 H21.2 V 32.3 H31 V 35.5 H17.5 V 19 Z"
+          fill="#1F3D51"
+        />
       </g>
+      {/* Typography: Estatehub */}
       <text
-        x="44"
-        y="29"
+        x="42"
+        y="30"
         fontFamily="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif"
         fontSize="21"
         fontWeight="800"
-        letterSpacing="-0.4px"
+        letterSpacing="-0.3px"
+        fill="#1F3D51"
       >
-        <tspan fill="#1F3D51">Estate</tspan>
-        <tspan fill="#D4A373">hub</tspan>
+        Estatehub
       </text>
     </svg>
   );
