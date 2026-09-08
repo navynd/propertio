@@ -1504,9 +1504,13 @@ function Home() {
         onClose={handleCloseLoginSuccessModal}
       />
       <main className="pf-hero" role="main">
-        {/* <div className="pf-hero__shade" /> */}
+        <div className="pf-hero__shade" />
 
         <PFContainer className="pf-hero__content">
+          <div className="pf-hero__badge">
+            <span className="pf-hero__badge-dot" />
+            Exceptional Living Spaces
+          </div>
           <h1 className="pf-hero__title">Innovative Properties</h1>
           <p className="pf-hero__subtitle">
             We provide the complete Service for sale and rent in United Arab
