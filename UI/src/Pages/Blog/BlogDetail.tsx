@@ -361,7 +361,7 @@ const BlogDetail: React.FC = () => {
                                     isRepliesOpen ? " pf-blog-detail__view-replies-arrow--open" : ""
                                   }`}
                                 >
-                                  <DownArrowIcon width="12" height="12" fill="#0832AE" />
+                                  <DownArrowIcon width="12" height="12" fill="#1F3D51" />
                                 </span>
                               </button>
                             )}

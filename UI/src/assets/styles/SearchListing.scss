@@ -2208,11 +2208,10 @@
 .pf-property-listing-card {
   display: flex;
   background: $whiteClr;
-  border-radius: 12px;
-  overflow: visible;
-  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  // margin-bottom: 30px;
-  transition: box-shadow 0.3s ease;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 61, 81, 0.08);
+  box-shadow: 0 4px 16px rgba(31, 61, 81, 0.05);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   height: 260px;
   position: relative;
   width: 100%;
@@ -2220,7 +2219,9 @@
   box-sizing: border-box;
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px -6px rgba(31, 61, 81, 0.14);
+    border-color: rgba(212, 163, 115, 0.35);
   }
 
   // Image Section

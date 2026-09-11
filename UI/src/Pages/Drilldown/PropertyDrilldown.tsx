@@ -2614,7 +2614,7 @@ function PropertyDrilldown() {
                                         cy="60"
                                         r={donutRadius}
                                         fill="none"
-                                        stroke="#0832AE"
+                                        stroke="#1F3D51"
                                         strokeWidth="18"
                                         strokeLinecap="round"
                                         strokeDasharray={`${interestStroke} ${donutCircumference}`}

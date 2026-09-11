@@ -1693,7 +1693,7 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
                       ? " pf-mobile-filter__advanced-icon--open"
                       : ""
                       }`}
-                    fill="#0832ae"
+                    fill="#1F3D51"
                   />
                 </button>
                 {isMobileAdvancedFiltersOpen && (

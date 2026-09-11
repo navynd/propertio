@@ -3,24 +3,29 @@
 .pf-header {
   --pf-header-text-color: #ffffff;
   --pf-header-link-color: #ffffff;
-  // --pf-header-hover-bg:rgba(212, 163, 115, 1) !important;
   --pf-header-mobile-toggle-color: #ffffff;
-  background-color: var(--AppBar-background, transparent);
+  background-color: var(--AppBar-background, rgba(15, 30, 40, 0.45));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--pf-header-text-color);
-  transition: color 0.3s ease;
-  z-index: 9 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99 !important;
 }
 
 .pf-header--sticky {
-  --pf-header-text-color: #111827;
-  --pf-header-link-color: #111827;
-  // --pf-header-hover-bg: rgba(17, 24, 39, 0.08);
-  --pf-header-mobile-toggle-color: #111827;
-  box-shadow: none !important;
+  --pf-header-text-color: #1E293B;
+  --pf-header-link-color: #1E293B;
+  --pf-header-mobile-toggle-color: #1E293B;
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(31, 61, 81, 0.08);
+  box-shadow: 0 4px 24px rgba(31, 61, 81, 0.08) !important;
 }
 
 .pf-header--about {
-  background-color: #0832AE !important;
+  background-color: #1F3D51 !important;
 }
 
 .pf-header__toolbar {

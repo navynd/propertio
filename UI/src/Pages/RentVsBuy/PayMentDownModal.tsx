@@ -281,7 +281,7 @@ function PayMentDownModal({
                                                         <DownArrowIconBlack
                                                             width={12}
                                                             height={12}
-                                                            fill="#0832AE"
+                                                            fill="#1F3D51"
                                                         />
                                                     </span>
                                                     <span className="payment-down-accordion-title">

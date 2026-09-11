@@ -88,12 +88,10 @@ textarea {
   position: absolute;
   content: "";
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(15, 30, 40, 0.72) 0%,
-    rgba(31, 61, 81, 0.58) 45%,
-    rgba(17, 34, 44, 0.88) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(15, 30, 40, 0.72) 0%,
+      rgba(31, 61, 81, 0.58) 45%,
+      rgba(17, 34, 44, 0.88) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1483,21 +1481,20 @@ textarea {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(248, 249, 250, 0.05) 0%,
-      rgba(15, 30, 40, 0.72) 30%,
-      rgba(31, 61, 81, 0.88) 70%,
-      rgba(17, 34, 44, 0.96) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(248, 249, 250, 0.05) 0%,
+        rgba(15, 30, 40, 0.72) 30%,
+        rgba(31, 61, 81, 0.88) 70%,
+        rgba(17, 34, 44, 0.96) 100%);
   }
 }
 
 .pf-projectCard {
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  border-radius: 16px !important;
+  border: 1px solid rgba(31, 61, 81, 0.08) !important;
+  border-radius: 18px !important;
   overflow: hidden !important;
-  // box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(31, 61, 81, 0.05) !important;
   width: 100%;
   max-width: none;
   /* let grid define width */
@@ -1506,10 +1503,12 @@ textarea {
   display: flex !important;
   flex-direction: column !important;
   justify-self: start;
-  /* align to start of grid cell */
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
 
   &:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+    transform: translateY(-6px) !important;
+    box-shadow: 0 16px 36px -8px rgba(31, 61, 81, 0.16) !important;
+    border-color: rgba(212, 163, 115, 0.4) !important;
   }
 
   &--expanded {
@@ -1530,11 +1529,6 @@ textarea {
     position: absolute;
     top: 5px;
     left: 5px;
-    // background: #ffffff;
-    // border: 1px solid rgba(0, 0, 0, 0.08);
-    // border-radius: 8px;
-    // padding: 8px 8px;
-    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     height: 50px;
     width: 70px;
     display: flex;
@@ -1544,12 +1538,9 @@ textarea {
 
     img {
       display: block;
-      // max-width: 100%;
-      // max-height: 100%;
       width: 100%;
       height: 100%;
       border-radius: 10px;
-      // object-fit: contain;
       object-position: center;
     }
   }
@@ -1652,7 +1643,6 @@ textarea {
       position: relative;
       padding: 5px 0 5px 13px;
       border-bottom: 1px solid rgba(34, 34, 34, 0.1);
-      // min-height: 32px; /* ensure consistent height */
 
       &::before {
         content: "";
@@ -1662,7 +1652,7 @@ textarea {
         width: 4px;
         height: 4px;
         border-radius: 50%;
-        background: #0a0a0a;
+        background: #D4A373;
       }
 
       &.pf-projectCard__feature--empty {
@@ -1723,20 +1713,22 @@ textarea {
   &__cta {
     text-transform: none !important;
     border-radius: 10px !important;
-    background: #f5f5f5 !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
+    background: #D4A373 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
     line-height: 100% !important;
     font-family: SemiBold, sans-serif !important;
-    color: $blackClr !important;
-    box-shadow: none !important;
-    padding: 17px 20px !important;
-    height: 37px !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(212, 163, 115, 0.28) !important;
+    padding: 10px 18px !important;
+    height: 38px !important;
     letter-spacing: 0px !important;
+    transition: all 0.25s ease !important;
 
     &:hover {
-      background: $blackClr !important;
-      color: $whiteClr !important;
+      background: #C39262 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(212, 163, 115, 0.42) !important;
     }
   }
 
@@ -3717,7 +3709,7 @@ textarea {
 }
 
 .pf-customer-card__face--back {
-  background: #0832ae;
+  background: #1F3D51;
   color: #ffffff;
   transform: rotateY(180deg);
 }
@@ -3729,7 +3721,7 @@ textarea {
 
 /* Color change on hover via CSS instead of flip */
 .pf-customer-card:hover .pf-customer-card__face--front {
-  background: #0832ae;
+  background: #1F3D51;
   color: #ffffff;
 }
 
@@ -4133,7 +4125,7 @@ textarea {
 
   &__progressFill {
     height: 100%;
-    background: #0832ae;
+    background: #1F3D51;
     transition: width 0.1s linear;
     width: 0%;
     animation-name: progressFill;
@@ -4343,7 +4335,7 @@ textarea {
     font-family: Bold, sans-serif !important;
     font-size: 14px !important;
     font-weight: 700 !important;
-    color: #0832ae;
+    color: #1F3D51;
     cursor: pointer;
 
     &:hover {
@@ -4383,7 +4375,7 @@ textarea {
     padding-top: 10px;
 
     a {
-      color: #0832ae;
+      color: #1F3D51;
       font-family: Bold, sans-serif !important;
       font-weight: 700 !important;
       margin-left: 5px;
@@ -4437,7 +4429,7 @@ textarea {
 
     &:hover {
       background: #f2f4fb !important;
-      border-color: #0832ae !important;
+      border-color: #1F3D51 !important;
     }
   }
 
@@ -4459,7 +4451,7 @@ textarea {
     padding-bottom: 100px;
 
     a {
-      color: #0832ae;
+      color: #1F3D51;
       font-family: Bold, sans-serif !important;
       font-weight: 700 !important;
 
@@ -4772,7 +4764,7 @@ textarea {
     font-family: Bold, sans-serif !important;
     font-weight: 700 !important;
     font-size: 14px !important;
-    color: #0832ae !important;
+    color: #1F3D51 !important;
     margin-left: 5px;
     cursor: pointer;
 

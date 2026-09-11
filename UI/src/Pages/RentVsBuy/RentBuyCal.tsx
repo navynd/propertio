@@ -498,7 +498,7 @@ const RentBuyCal: React.FC = () => {
                             <span>${formatNumber(monthlyInterestValue)} AED</span>
                         </p>
                         <p>
-                            <i style="background-color:#0832AE"></i>
+                            <i style="background-color:#1F3D51"></i>
                             Other
                             <span>${formatNumber(monthlyOtherValue)} AED</span>
                         </p>
