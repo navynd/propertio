@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 :root {
-    --primary-color: #1F3D51;
-    --primary-hover: #162b39;
-    --primary-color-alpha: rgba(31, 61, 81, 0.15);
-    --primary-hover-alpha: rgba(31, 61, 81, 0.05);
+    --primary-color: #C9A96E;
+    --primary-hover: #E4C98B;
+    --primary-color-alpha: rgba(201, 169, 110, 0.15);
+    --primary-hover-alpha: rgba(201, 169, 110, 0.08);
 
-    --accent-color: #D4A373;
-    --accent-hover: #c49262;
-    --accent-alpha: rgba(212, 163, 115, 0.18);
+    --accent-color: #C9A96E;
+    --accent-hover: #E4C98B;
+    --accent-alpha: rgba(201, 169, 110, 0.2);
 
-    --bg-color: #F8F9FA;
-    --surface-color: #FFFFFF;
-    --text-main: #1E293B;
+    --bg-color: #0A0A0A;
+    --surface-color: #141414;
+    --surface-secondary: #161616;
+    --surface-elevated: #1A1A1A;
+    --text-main: #F5F0E8;
+    --text-muted: #A89880;
+    --border-subtle: rgba(201, 169, 110, 0.15);
 }
 
 @font-face {
@@ -40,14 +44,15 @@
     src: url(./assets/fonts/PlusJakartaSans-ExtraBold.ttf);
 }
 
-
 html,
 body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
     min-height: 100vh;
-    background: #fff;
+    background: #0A0A0A !important;
+    color: #F5F0E8 !important;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Prevent background scroll when modal is open */
@@ -56,13 +61,23 @@ body.modal-open {
     overflow: hidden;
 }
 
-
+/* Luxury Gold Scrollbar */
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #0E0E0E;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(201, 169, 110, 0.35);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C9A96E;
 }
 
 .scrollbar-hide {
@@ -74,137 +89,150 @@ body.modal-open {
     display: none;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #6E2C91;
-    border-radius: 50px;
-}
-
-/* Hide scrollbar */
 .hide-scrollbar {
     -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
-    /* Safari and Chrome */
-}
-
-@media screen and (min-width:768px) and (max-width:1200px) {
-    .login_form {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width:1440px) and (max-width:2560px) {
-    .login_right {
-        height: 100%;
-    }
-}
-
-@media screen and (min-width:320px) and (max-width:660px) {
-    .cal-mobile {
-        left: -100px;
-    }
-}
-
-.estatehub-text {
-    display: flex;
-    align-items: flex-end;
-    gap: 2px;
-
-    font-size: 30px;
-    font-weight: 900;
-}
-
-.estatehub-text span {
-    display: inline-block;
-
-    color: #fff;
-
-    text-shadow:
-        0 0 5px #7B4DDB,
-        0 0 10px #7B4DDB,
-        0 0 20px #9B6BFF,
-        0 0 40px #C084FC;
-
-    animation: letterJump 1.8s ease-in-out infinite;
-}
-
-/* One by one jumping */
-.estatehub-text span:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.estatehub-text span:nth-child(2) {
-    animation-delay: 0.15s;
-}
-
-.estatehub-text span:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.estatehub-text span:nth-child(4) {
-    animation-delay: 0.45s;
-}
-
-.estatehub-text span:nth-child(5) {
-    animation-delay: 0.6s;
-}
-
-.estatehub-text span:nth-child(6) {
-    animation-delay: 0.75s;
-}
-
-.estatehub-text span:nth-child(7) {
-    animation-delay: 0.9s;
-}
-
-.estatehub-text span:nth-child(8) {
-    animation-delay: 1.05s;
-}
-
-.estatehub-text span:nth-child(9) {
-    animation-delay: 1.2s;
-}
-
-/* Smooth aligned jump */
-@keyframes letterJump {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-12px);
-    }
 }
 
 /* Dynamic theme classes */
 .theme-active-parent-bg {
-  background-color: var(--primary-color-alpha, rgba(31, 61, 81, 0.15)) !important;
+    background-color: rgba(201, 169, 110, 0.12) !important;
+    border: 1px solid rgba(201, 169, 110, 0.25) !important;
 }
+
 .theme-active-icon-bg {
-  background: var(--primary-color, #1F3D51) !important;
+    background: linear-gradient(135deg, #C9A96E 0%, #B89355 100%) !important;
+    color: #0A0A0A !important;
 }
+
 .theme-subitem-active-bg {
-  background-color: var(--primary-color, #1F3D51) !important;
-  color: #fff !important;
+    background: linear-gradient(135deg, #C9A96E 0%, #B89355 100%) !important;
+    color: #0A0A0A !important;
+    font-weight: 700 !important;
 }
+
 .theme-subitem-hover-bg:hover {
-  background-color: var(--primary-hover-alpha, rgba(31, 61, 81, 0.05)) !important;
+    background-color: rgba(201, 169, 110, 0.08) !important;
+    color: #C9A96E !important;
 }
+
 .theme-hover-bg:hover {
-  background-color: var(--primary-color-alpha, rgba(31, 61, 81, 0.15)) !important;
+    background-color: rgba(201, 169, 110, 0.08) !important;
 }
+
 .theme-primary-button {
-  background-color: var(--primary-color, #1F3D51) !important;
-  color: #fff !important;
-  transition: background-color 0.2s ease-in-out;
+    background: linear-gradient(135deg, #C9A96E 0%, #B89355 100%) !important;
+    color: #0A0A0A !important;
+    font-weight: 700 !important;
+    border: none !important;
+    box-shadow: 0 4px 18px rgba(201, 169, 110, 0.25) !important;
+    transition: all 0.2s ease-in-out;
 }
+
 .theme-primary-button:hover {
-  background-color: var(--primary-hover, #193243) !important;
+    background: linear-gradient(135deg, #E4C98B 0%, #C9A96E 100%) !important;
+    box-shadow: 0 6px 24px rgba(201, 169, 110, 0.4) !important;
+    transform: translateY(-1px);
+}
+
+/* Universal Dark Luxury Surfaces Inversion for ADMIN_UI */
+.bg-white,
+.bg-\[\#fff\],
+.bg-\[\#FFF\] {
+    background-color: #141414 !important;
+}
+
+.bg-\[\#F5F5F5\],
+.bg-\[\#FAFAFA\],
+.bg-\[\#F8F9FA\] {
+    background-color: #1A1A1A !important;
+}
+
+.border-\[\#ECECEC\],
+.border-\[\#EAEAEA\],
+.border-\[\#E6E6E6\],
+.border-\[rgba\(34\,34\,34\,0\.08\)\],
+.border-\[rgba\(34\,34\,34\,0\.10\)\] {
+    border-color: rgba(201, 169, 110, 0.15) !important;
+}
+
+.text-\[\#222\],
+.text-\[\#222222\],
+.text-\[\#1E293B\] {
+    color: #F5F0E8 !important;
+}
+
+.text-\[\#707070\],
+.text-\[\#8A8A8A\],
+.text-\[\#444\] {
+    color: #A89880 !important;
+}
+
+/* Inputs, Textareas, Search boxes */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    background-color: #1A1A1A !important;
+    color: #F5F0E8 !important;
+    border-color: rgba(201, 169, 110, 0.2) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #A89880 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #C9A96E !important;
+    box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.2) !important;
+    outline: none !important;
+}
+
+/* SweetAlert2 Luxury Dark Styling */
+.swal2-popup {
+    background: #141414 !important;
+    border: 1px solid rgba(201, 169, 110, 0.25) !important;
+    border-radius: 18px !important;
+    color: #F5F0E8 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75) !important;
+}
+
+.swal2-title {
+    color: #F5F0E8 !important;
+    font-family: 'Playfair Display', serif !important;
+}
+
+.swal2-html-container {
+    color: #A89880 !important;
+}
+
+.swal2-confirm {
+    background: linear-gradient(135deg, #C9A96E 0%, #B89355 100%) !important;
+    color: #0A0A0A !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+}
+
+.swal2-cancel {
+    background: #1A1A1A !important;
+    color: #F5F0E8 !important;
+    border: 1px solid rgba(201, 169, 110, 0.2) !important;
+    border-radius: 10px !important;
+}
+
+/* Table Enhancements */
+.table-dark-header {
+    background: #161616 !important;
+    color: #C9A96E !important;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.15) !important;
+}
+
+.table-dark-row:hover {
+    background: rgba(201, 169, 110, 0.04) !important;
 }

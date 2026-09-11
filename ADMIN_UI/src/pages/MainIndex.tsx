@@ -72,10 +72,10 @@ function MainIndex() {
 
   return (
     <>
-      <div className="flex min-h-screen bg-[#FFF] lg:mt-0 mt-[70px]">
+      <div className="flex min-h-screen bg-[#0A0A0A] lg:mt-0 mt-[70px]">
         <Sidebar />
         <div className="flex w-full flex-col lg:pl-[270px] xl:pl-[310px]">
-          <main className={`bg-[#FFF] ${isNotificationHidden ? 'pt-[66px]' : ''} ${isToggleVisible ? 'pt-[120px]' : ''}`}>
+          <main className={`bg-[#0A0A0A] min-h-screen ${isNotificationHidden ? 'pt-[66px]' : ''} ${isToggleVisible ? 'pt-[120px]' : ''}`}>
             <div className="">
               <Outlet />
             </div>

@@ -193,14 +193,14 @@ function Sidebar() {
         setOpenDropdowns(newDropdowns);
     }, [location.pathname]);
     const SidebarContent = ({ isMobile = false }: { isMobile?: boolean }) => (
-        <div className="relative flex flex-col h-full bg-[#FFF] shadow-md md:w-[350px] xl:w-[310px] lg:w-[280px] w-[320px] lg:p-[30px_30px_30px_30px]  p-[20px_20px_20px_20px] sidebar overflow-hidden">
+        <div className="relative flex flex-col h-full bg-[#141414] border-r border-[rgba(201,169,110,0.18)] shadow-2xl md:w-[350px] xl:w-[310px] lg:w-[280px] w-[320px] lg:p-[30px_24px] p-[20px_18px] sidebar overflow-hidden">
             {isLoggingOut ? (
-                <div className="absolute inset-0 z-[60] flex flex-col items-center justify-center gap-2 bg-white/90">
+                <div className="absolute inset-0 z-[60] flex flex-col items-center justify-center gap-2 bg-black/80 backdrop-blur-sm">
                     <Loader size={72} margin={0} />
-                    <p className="text-[14px] font-[Medium] text-[#707070]">Signing out…</p>
+                    <p className="text-[14px] font-[Medium] text-[#C9A96E]">Signing out…</p>
                 </div>
             ) : null}
-            <div className="mb-[40px] flex justify-between items-center w-full sidebar_logo">
+            <div className="mb-[36px] flex justify-between items-center w-full sidebar_logo">
                 <Link
                     to="/dashboard"
                     onClick={() => {
@@ -209,30 +209,19 @@ function Sidebar() {
                         }
                     }}
                 >
-                    <img src={logoSrc} alt={appName} className="w-[100px]" />
+                    <img src={logoSrc} alt={appName} className="w-[110px]" />
                 </Link>
-                {/* <h4 className="estatehub-text">
-                    <span>P</span>
-                    <span>R</span>
-                    <span>O</span>
-                    <span>P</span>
-                    <span>E</span>
-                    <span>R</span>
-                    <span>T</span>
-                    <span>I</span>
-                    <span>O</span>
-                </h4> */}
                 {isMobile && (
                     <button
                         type="button"
                         onClick={() => setIsDrawerOpen(false)}
-                        className="cursor-pointer w-[40px] h-[40px] rounded-[12px] border border-[#E6E6E6] bg-white flex items-center justify-center"
+                        className="cursor-pointer w-[38px] h-[38px] rounded-[10px] border border-[rgba(201,169,110,0.25)] bg-[#1A1A1A] flex items-center justify-center text-[#C9A96E] hover:bg-[#222]"
                     >
-                        <Cross2Icon className="w-[18px] h-[18px] text-[#222]" />
+                        <Cross2Icon className="w-[18px] h-[18px]" />
                     </button>
                 )}
             </div>
-            <aside className="flex-1 flex flex-col items-start gap-[10px] w-full sidebar_aside overflow-y-auto pr-[4px]">
+            <aside className="flex-1 flex flex-col items-start gap-[8px] w-full sidebar_aside overflow-y-auto pr-[4px]">
                 {navItems.map((item, index) => {
                     const pathsToMatch = item.activePaths ?? [item.path];
                     const isItemActive = pathsToMatch.some((p) => matchPath({ path: p, end: true }, location.pathname) != null);
@@ -242,18 +231,18 @@ function Sidebar() {
                         isDirectMatch ||
                         (item.hasDropdown && isNavSectionActive(item, location.pathname));
                     return item.hasDropdown ? (
-                        <div key={index} className={`flex flex-col w-full p-[6px] rounded-[18px] transition-colors ${isDropdownOpen ? 'theme-active-parent-bg' : isActiveParent ? 'theme-active-parent-bg' : 'bg-transparent theme-hover-bg'}`}>
+                        <div key={index} className={`flex flex-col w-full p-[6px] rounded-[16px] transition-all ${isDropdownOpen ? 'theme-active-parent-bg' : isActiveParent ? 'theme-active-parent-bg' : 'bg-transparent theme-hover-bg'}`}>
                             <Link
                                 to={item.path}
                                 onClick={(e) => {
                                     e.preventDefault();
                                     toggleDropdown(item.path);
                                 }}
-                                className={`flex w-full items-center justify-between pr-[14px] p-[2px] ${isDropdownOpen ? 'mb-[4px]' : ''} rounded-[15px] transition focus:outline-none focus:border-none focus:shadow-none bg-transparent`}
+                                className={`flex w-full items-center justify-between pr-[14px] p-[2px] ${isDropdownOpen ? 'mb-[6px]' : ''} rounded-[14px] transition focus:outline-none focus:border-none focus:shadow-none bg-transparent`}
                             >
-                                <div className="flex items-center gap-[10px]">
+                                <div className="flex items-center gap-[12px]">
                                     <div
-                                        className={`flex items-center justify-center w-[46px] h-[46px] rounded-[12px] ${isActiveParent || isDropdownOpen ? "theme-active-icon-bg" : "bg-[#fff] shadow-[0px_1px_4px_rgba(0,0,0,0.16)]"}`}
+                                        className={`flex items-center justify-center w-[42px] h-[42px] rounded-[10px] transition-all ${isActiveParent || isDropdownOpen ? "theme-active-icon-bg" : "bg-[#1A1A1A] border border-[rgba(201,169,110,0.12)] text-[#A89880]"}`}
                                     >
                                         {item.path === "/user" && (isActiveParent || isDropdownOpen) ? (
                                             <AllocationWhiteIcon />
@@ -264,36 +253,35 @@ function Sidebar() {
                                         ) :
                                             (
                                                 <item.icon
-                                                    stroke={isActiveParent || isDropdownOpen ? "#fff" : "#707070"}
-                                                    fill={isActiveParent || isDropdownOpen ? "#fff" : "#707070"}
+                                                    stroke={isActiveParent || isDropdownOpen ? "#0A0A0A" : "#A89880"}
+                                                    fill={isActiveParent || isDropdownOpen ? "#0A0A0A" : "#A89880"}
                                                 />
                                             )}
                                     </div>
-                                    <p className="text-[14px] text-[#222] font-[Medium]">{item.label}</p>
+                                    <p className={`text-[14px] font-[Medium] ${isActiveParent || isDropdownOpen ? "text-[#F5F0E8] font-[SemiBold]" : "text-[#A89880]"}`}>{item.label}</p>
                                 </div>
                                 <DownArrowIcon
                                     width={12}
                                     height={12}
                                     className={`transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}
-                                    fill="#222"
+                                    fill={isActiveParent || isDropdownOpen ? "#C9A96E" : "#A89880"}
                                 />
                             </Link>
 
                             {isDropdownOpen && item.subItems && (
-                                <div className="flex flex-col gap-[6px]">
+                                <div className="flex flex-col gap-[6px] pl-[10px]">
                                     {item.subItems.map((subItem, subIndex) => {
                                         const subItemActivePaths = getSubItemActivePaths(subItem.path);
                                         const isSubActive = subItemActivePaths.some(
                                             (p) => matchPath({ path: p, end: true }, location.pathname) != null
                                         );
-                                        // Default "Project allocation" to active if no sub-item is active, just to match the screenshot state exactly if we are at the parent
                                         const looksActive = isSubActive;
                                         return (
                                             <NavLink
                                                 key={subIndex}
                                                 to={subItem.path}
                                                 onClick={() => setIsDrawerOpen(false)}
-                                                className={`flex items-center justify-start w-full px-[20px] py-[16px] rounded-[12px] text-[13px] font-[Medium] transition-colors ${looksActive ? "theme-subitem-active-bg" : "bg-[#fff] text-[#222] theme-subitem-hover-bg"
+                                                className={`flex items-center justify-start w-full px-[16px] py-[12px] rounded-[10px] text-[13px] font-[Medium] transition-all ${looksActive ? "theme-subitem-active-bg shadow-md" : "bg-[#1A1A1A]/60 text-[#A89880] hover:text-[#C9A96E] hover:bg-[rgba(201,169,110,0.08)]"
                                                     }`}
                                             >
                                                 {subItem.label}
@@ -307,7 +295,7 @@ function Sidebar() {
                         <button
                             key={index}
                             type="button"
-                            className={`flex w-full gap-[10px] items-center justify-start rounded-[15px] p-[6px] transition theme-hover-bg focus:outline-none focus:border-none focus:shadow-none bg-transparent`}
+                            className={`flex w-full gap-[12px] items-center justify-start rounded-[16px] p-[6px] transition theme-hover-bg focus:outline-none focus:border-none focus:shadow-none bg-transparent cursor-pointer`}
                             onClick={async () => {
                                 try {
                                     setIsLoggingOut(true);
@@ -319,10 +307,10 @@ function Sidebar() {
                                 }
                             }}
                         >
-                            <div className="flex items-center justify-center w-[46px] h-[46px] rounded-[12px] bg-[#fff] shadow-[0px_1px_4px_rgba(0,0,0,0.16)]">
-                                <item.icon stroke="#707070" fill="#707070" />
+                            <div className="flex items-center justify-center w-[42px] h-[42px] rounded-[10px] bg-[#1A1A1A] border border-[rgba(201,169,110,0.12)] text-[#A89880]">
+                                <item.icon stroke="#A89880" fill="#A89880" />
                             </div>
-                            <p className="text-[14px] font-[Medium]">Logout</p>
+                            <p className="text-[14px] font-[Medium] text-[#A89880] hover:text-[#C9A96E]">Logout</p>
                         </button>
                     ) : (
                         <NavLink
@@ -330,7 +318,7 @@ function Sidebar() {
                             to={item.path}
                             end
                             className={() =>
-                                `flex w-full gap-[10px] items-center justify-start rounded-[15px] p-[6px] transition theme-hover-bg focus:outline-none focus:border-none focus:shadow-none ${isItemActive ? " theme-active-parent-bg " : "bg-transparent "
+                                `flex w-full gap-[12px] items-center justify-start rounded-[16px] p-[6px] transition theme-hover-bg focus:outline-none focus:border-none focus:shadow-none ${isItemActive ? " theme-active-parent-bg " : "bg-transparent "
                                 }`
                             }
                             onClick={() => {
@@ -338,24 +326,24 @@ function Sidebar() {
                             }}
                         >
                             <div
-                                className={`flex items-center justify-center w-[46px] h-[46px] rounded-[12px] ${isItemActive ? "theme-active-icon-bg" : "bg-[#fff] shadow-[0px_1px_4px_rgba(0,0,0,0.16)]"}`}
+                                className={`flex items-center justify-center w-[42px] h-[42px] rounded-[10px] transition-all ${isItemActive ? "theme-active-icon-bg" : "bg-[#1A1A1A] border border-[rgba(201,169,110,0.12)] text-[#A89880]"}`}
                             >
                                 <item.icon
-                                    stroke={isItemActive ? "#fff" : "#707070"}
-                                    fill={isItemActive ? "#fff" : "#707070"}
+                                    stroke={isItemActive ? "#0A0A0A" : "#A89880"}
+                                    fill={isItemActive ? "#0A0A0A" : "#A89880"}
                                 />
                             </div>
-                            <p className={`text-[14px] ${isItemActive ? "text-[#222]" : ""} font-[Medium]`}>{item.label}</p>
+                            <p className={`text-[14px] ${isItemActive ? "text-[#F5F0E8] font-[SemiBold]" : "text-[#A89880]"} font-[Medium]`}>{item.label}</p>
                         </NavLink>
                     );
                 })}
             </aside>
-            <div className="pt-[20px] mt-auto border-t border-[rgba(34,34,34,0.10)]">
-                <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
+            <div className="pt-[18px] mt-auto border-t border-[rgba(201,169,110,0.15)]">
+                <p className="text-[12px] leading-[1.5] text-[#A89880] font-[Regular]">
                     Copyright © 2025 {settings?.appName || 'Estatehub'}.
                 </p>
-                <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
-                    All rights reserved.
+                <p className="text-[11px] leading-[1.5] text-[#A89880]/60 font-[Regular]">
+                    Luxury Real Estate Portal
                 </p>
             </div>
         </div >
@@ -363,8 +351,8 @@ function Sidebar() {
 
     return (
         <>
-            {/* Mobile Hamburger Menu bg-gradient-to-r from-[#7B4DDB] to-[#9B6BFF] shadow-[0_5px_10px_rgba(123,77,49,0.15)]               bg-white/20 backdrop-blur-sm*/}
-            <div className={`lg:hidden fixed top-0 left-0 right-0 bg-[#fff] p-[14px_16px] z-[10] flex items-center justify-between border-b border-[rgba(0,0,0,0.1)] ${isCheckoutRoute ? "border-none" : ""}`}>
+            {/* Mobile Hamburger Menu */}
+            <div className={`lg:hidden fixed top-0 left-0 right-0 bg-[#141414] p-[14px_16px] z-[10] flex items-center justify-between border-b border-[rgba(201,169,110,0.18)] ${isCheckoutRoute ? "border-none" : ""}`}>
                 <Link to="/dashboard">
                     <img src={logoSrc} alt={appName} className="w-[100px]" />
                 </Link>
@@ -372,13 +360,13 @@ function Sidebar() {
                 <Dialog open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
                     <button
                         type="button"
-                        className="cursor-pointer w-[40px] h-[40px] rounded-[12px] border border-[#E6E6E6] bg-white flex items-center justify-center"
+                        className="cursor-pointer w-[40px] h-[40px] rounded-[10px] border border-[rgba(201,169,110,0.25)] bg-[#1A1A1A] flex items-center justify-center text-[#C9A96E]"
                         onClick={() => setIsDrawerOpen(true)}
                     >
-                        <HamburgerMenuIcon className="w-[20px] h-[20px] text-[#222]" />
+                        <HamburgerMenuIcon className="w-[20px] h-[20px]" />
                     </button>
-                    <DialogOverlay className="fixed inset-0 bg-[rgba(0,0,0,0.5)] data-[state=open]:animate-in data-[state=closed]:animate-out" />
-                    <DialogContent className="fixed left-0 top-0 h-[100dvh] bg-[#fff] border-r border-[rgba(0,0,0,0.1)] p-0 translate-x-0 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left z-[99] overflow-hidden">
+                    <DialogOverlay className="fixed inset-0 bg-black/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out" />
+                    <DialogContent className="fixed left-0 top-0 h-[100dvh] bg-[#141414] border-r border-[rgba(201,169,110,0.18)] p-0 translate-x-0 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left z-[99] overflow-hidden">
                         <SidebarContent isMobile />
                     </DialogContent>
                 </Dialog>

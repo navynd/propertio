@@ -4,25 +4,28 @@ import type { DashboardOverview } from "../../services/dashboardService";
 import { platformGrowthCategories, revenueTrendSeries } from "./dashboardData";
 
 const chartCardClass =
-    "bg-white rounded-[12px] border border-[#EAEAEA] p-[20px] shadow-[0px_1px_0px_rgba(17,17,26,0.05),0px_0px_8px_rgba(17,17,26,0.06)]";
+    "bg-[#141414] rounded-[18px] border border-[rgba(201,169,110,0.18)] p-[22px] shadow-[0_8px_24px_rgba(0,0,0,0.4)]";
 
-const chartTitleClass = "text-[16px] font-[Bold] text-[#222] mb-[4px]";
-const chartSubtitleClass = "text-[12px] font-[Regular] text-[#707070] mb-[16px]";
+const chartTitleClass = "text-[18px] font-['Playfair_Display',serif] font-bold text-[#F5F0E8] mb-[4px]";
+const chartSubtitleClass = "text-[12px] font-[Regular] text-[#A89880] mb-[16px]";
 
 const baseChartOptions: ApexOptions = {
     chart: {
         toolbar: { show: false },
-        fontFamily: "inherit",
+        fontFamily: "'DM Sans', sans-serif",
         animations: { enabled: false },
     },
     grid: {
-        borderColor: "rgba(34,34,34,0.08)",
+        borderColor: "rgba(201, 169, 110, 0.1)",
         strokeDashArray: 4,
+    },
+    theme: {
+        mode: "dark",
     },
     legend: {
         fontSize: "12px",
         fontWeight: 500,
-        labels: { colors: "#707070" },
+        labels: { colors: "#A89880" },
     },
 };
 
@@ -40,7 +43,7 @@ export function PlatformGrowthChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "area", height: 320 },
-        colors: ["var(--primary-color, #1F3D51)", "#00A663"],
+        colors: ["#C9A96E", "#10B981"],
         stroke: { curve: "smooth", width: 2 },
         fill: {
             type: "gradient",
@@ -54,15 +57,15 @@ export function PlatformGrowthChart({ data }: DashboardChartsProps) {
         dataLabels: { enabled: false },
         xaxis: {
             categories,
-            labels: { style: { colors: "#707070", fontSize: "11px" } },
+            labels: { style: { colors: "#A89880", fontSize: "11px" } },
         },
         yaxis: {
             labels: {
-                style: { colors: "#707070", fontSize: "11px" },
+                style: { colors: "#A89880", fontSize: "11px" },
                 formatter: (v) => `${Math.round(v)}`,
             },
         },
-        tooltip: { theme: "light" },
+        tooltip: { theme: "dark" },
     };
 
     return (
@@ -81,7 +84,7 @@ export function UserDistributionChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "donut", height: 300 },
-        colors: ["var(--primary-color, #1F3D51)", "#0832AE", "#00A663", "#D4A373"],
+        colors: ["#C9A96E", "#E4C98B", "#10B981", "#A89880"],
         labels,
         plotOptions: {
             pie: {
@@ -94,14 +97,20 @@ export function UserDistributionChart({ data }: DashboardChartsProps) {
                             label: "Total Users",
                             fontSize: "13px",
                             fontWeight: 600,
-                            color: "#222",
+                            color: "#F5F0E8",
+                        },
+                        value: {
+                            color: "#F5F0E8",
+                            fontSize: "20px",
+                            fontWeight: 700,
                         },
                     },
                 },
             },
         },
         dataLabels: { enabled: false },
-        legend: { position: "bottom" },
+        legend: { position: "bottom", labels: { colors: "#A89880" } },
+        tooltip: { theme: "dark" },
     };
 
     return (
@@ -120,7 +129,7 @@ export function ListingsByTypeChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "bar", height: 300 },
-        colors: ["var(--primary-color, #1F3D51)"],
+        colors: ["#C9A96E"],
         plotOptions: {
             bar: {
                 borderRadius: 8,
@@ -130,14 +139,15 @@ export function ListingsByTypeChart({ data }: DashboardChartsProps) {
         dataLabels: { enabled: false },
         xaxis: {
             categories,
-            labels: { style: { colors: "#707070", fontSize: "11px" } },
+            labels: { style: { colors: "#A89880", fontSize: "11px" } },
         },
         yaxis: {
             labels: {
-                style: { colors: "#707070", fontSize: "11px" },
+                style: { colors: "#A89880", fontSize: "11px" },
                 formatter: (v) => `${Math.round(v)}`,
             },
         },
+        tooltip: { theme: "dark" },
     };
 
     return (
@@ -159,7 +169,7 @@ export function ReportsOverviewChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "bar", height: 300, stacked: true },
-        colors: ["#D4A373", "#00A663"],
+        colors: ["#EF4444", "#10B981"],
         plotOptions: {
             bar: {
                 borderRadius: 6,
@@ -169,13 +179,14 @@ export function ReportsOverviewChart({ data }: DashboardChartsProps) {
         dataLabels: { enabled: false },
         xaxis: {
             categories,
-            labels: { style: { colors: "#707070", fontSize: "11px" } },
+            labels: { style: { colors: "#A89880", fontSize: "11px" } },
         },
         yaxis: {
             labels: {
-                style: { colors: "#707070", fontSize: "11px" },
+                style: { colors: "#A89880", fontSize: "11px" },
             },
         },
+        tooltip: { theme: "dark" },
     };
 
     return (
@@ -191,7 +202,7 @@ export function RevenueTrendChart() {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "line", height: 280 },
-        colors: ["var(--primary-color, #1F3D51)"],
+        colors: ["#C9A96E"],
         stroke: { curve: "smooth", width: 3 },
         markers: {
             size: 4,
@@ -201,14 +212,15 @@ export function RevenueTrendChart() {
         dataLabels: { enabled: false },
         xaxis: {
             categories: platformGrowthCategories,
-            labels: { style: { colors: "#707070", fontSize: "11px" } },
+            labels: { style: { colors: "#A89880", fontSize: "11px" } },
         },
         yaxis: {
             labels: {
-                style: { colors: "#707070", fontSize: "11px" },
+                style: { colors: "#A89880", fontSize: "11px" },
                 formatter: (v) => `${v}K`,
             },
         },
+        tooltip: { theme: "dark" },
     };
 
     return (
@@ -228,22 +240,25 @@ export function CmsActivityChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "radialBar", height: 280 },
-        colors: ["var(--primary-color, #1F3D51)", "#0832AE", "#00A663", "#D4A373", "#F5A623", "#8E44AD", "#16A085"],
-        labels,
+        colors: ["#C9A96E", "#E4C98B", "#10B981"],
         plotOptions: {
             radialBar: {
+                hollow: { size: "45%" },
                 dataLabels: {
-                    name: { fontSize: "12px" },
-                    value: { fontSize: "14px", fontWeight: 600 },
+                    name: { fontSize: "12px", color: "#A89880" },
+                    value: { fontSize: "16px", fontWeight: 700, color: "#F5F0E8" },
                     total: {
                         show: true,
-                        label: "CMS Items",
+                        label: "Total CMS",
+                        color: "#F5F0E8",
                         formatter: () => `${total}`,
                     },
                 },
             },
         },
-        legend: { show: true, position: "bottom" },
+        labels,
+        legend: { position: "bottom", labels: { colors: "#A89880" } },
+        tooltip: { theme: "dark" },
     };
 
     return (
@@ -265,7 +280,7 @@ export function InquiriesOverviewChart({ data }: DashboardChartsProps) {
     const options: ApexOptions = {
         ...baseChartOptions,
         chart: { ...baseChartOptions.chart, type: "bar", height: 300, stacked: true },
-        colors: ["var(--primary-color, #1F3D51)", "#00A663"],
+        colors: ["#C9A96E", "#10B981"],
         plotOptions: {
             bar: {
                 borderRadius: 6,
@@ -275,11 +290,12 @@ export function InquiriesOverviewChart({ data }: DashboardChartsProps) {
         dataLabels: { enabled: false },
         xaxis: {
             categories,
-            labels: { style: { colors: "#707070", fontSize: "11px" } },
+            labels: { style: { colors: "#A89880", fontSize: "11px" } },
         },
         yaxis: {
-            labels: { style: { colors: "#707070", fontSize: "11px" } },
+            labels: { style: { colors: "#A89880", fontSize: "11px" } },
         },
+        tooltip: { theme: "dark" },
     };
 
     return (

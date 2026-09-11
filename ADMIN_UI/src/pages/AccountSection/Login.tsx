@@ -166,85 +166,96 @@ function Login() {
   };
 
     return (
-        <div className="flex lg:flex-row flex-col min-h-[100dvh] bg-white overflow-hidden">
+        <div className="flex lg:flex-row flex-col min-h-[100dvh] bg-[#0A0A0A] overflow-hidden">
 
             {/* Left Image Section */}
-            <div className="lg:w-[60%] w-full hidden lg:block">
+            <div className="lg:w-[58%] w-full hidden lg:block relative">
                 <img
                     src={Loginbg}
                     alt="Login Background"
-                    className="w-full h-[100dvh] object-cover"
+                    className="w-full h-[100dvh] object-cover filter brightness-90"
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-[#0A0A0A]" />
+                <div className="absolute bottom-[50px] left-[50px] z-10 max-w-[500px]">
+                    <span className="inline-block px-[14px] py-[6px] rounded-full bg-black/60 backdrop-blur-md border border-[rgba(201,169,110,0.3)] text-[#C9A96E] text-[12px] font-semibold tracking-wider uppercase mb-3">
+                        Estatehub Administration
+                    </span>
+                    <h1 className="font-['Playfair_Display',serif] text-[#F5F0E8] text-[36px] font-bold leading-tight">
+                        Exclusive Portal for Real Estate Operations
+                    </h1>
+                </div>
             </div>
 
             {/* Right Login Section */}
-            <div className="flex items-center justify-center lg:w-[40%] w-full min-h-[100dvh] p-[20px] bg-white">
-                <div className="w-full max-w-[400px] relative">
+            <div className="flex items-center justify-center lg:w-[42%] w-full min-h-[100dvh] p-[24px] bg-[#0A0A0A]">
+                <div className="w-full max-w-[420px] relative bg-[#141414] border border-[rgba(201,169,110,0.18)] rounded-[24px] p-[36px_32px] shadow-[0_16px_50px_rgba(0,0,0,0.6)]">
                     {isLoginLoading ? (
-                        <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/80 rounded-[12px]">
+                        <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-sm rounded-[24px]">
                             <Loader size={88} margin={0} />
                         </div>
                     ) : null}
                     {showForgotPassword && !showChangePassword && isSendingOtp ? (
-                        <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/80 rounded-[12px]">
+                        <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-sm rounded-[24px]">
                             <Loader size={88} margin={0} />
                         </div>
                     ) : null}
                     {!showForgotPassword && (
                         <>
                             {/* Top Content */}
-                            <div className="flex flex-col items-center mb-[40px]">
-                                <div className="mb-[20px] flex justify-center items-center w-[60px] h-[60px] rounded-[15px] bg-[#FFF] shadow-[0_6px_18px_0_rgba(0,0,0,0.15)]">
-                                    <UserColorIcon fill="var(--primary-color, #1F3D51)" height={30} width={30} />
+                            <div className="flex flex-col items-center mb-[32px]">
+                                <div className="mb-[18px] flex justify-center items-center w-[58px] h-[58px] rounded-[16px] bg-[#1A1A1A] border border-[rgba(201,169,110,0.25)] shadow-[0_4px_18px_rgba(201,169,110,0.15)]">
+                                    <UserColorIcon fill="#C9A96E" height={28} width={28} />
                                 </div>
 
                                 <div className="text-center">
-                                    <h2 className="font-[Bold] text-[#222] text-[34px] mb-[4px] leading-[44px]">
-                                        Sign in with email
+                                    <h2 className="font-['Playfair_Display',serif] text-[#F5F0E8] text-[30px] font-bold mb-[6px] tracking-tight">
+                                        Sign in to Admin
                                     </h2>
 
-                                    <p className="font-[Regular] text-[#222] text-[14px]">
-                                        Please login to make your work easy.
+                                    <p className="text-[#A89880] text-[13px] font-[Regular]">
+                                        Enter your credentials to access the control panel.
                                     </p>
                                 </div>
                             </div>
 
                             {/* Form */}
-                            <form className="flex flex-col gap-[14px]" onSubmit={handleLogin}>
+                            <form className="flex flex-col gap-[16px]" onSubmit={handleLogin}>
 
                                 {/* Email */}
                                 <div>
+                                    <label className="block text-[12px] font-[Medium] text-[#C9A96E] mb-[6px]">Email Address</label>
                                     <input
                                         id="email"
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Email address"
-                                        className="border border-[rgba(34,34,34,0.10)] bg-[#fff] rounded-[10px] p-[20px_16px] text-[14px] font-[Regular] text-[#222] outline-none placeholder:text-[#707070] w-full"
+                                        placeholder="estatehubadmin@yopmail.com"
+                                        className="border border-[rgba(201,169,110,0.2)] bg-[#1A1A1A] rounded-[12px] px-[16px] py-[14px] text-[14px] text-[#F5F0E8] outline-none placeholder:text-[#A89880]/60 w-full focus:border-[#C9A96E] transition-all"
                                     />
                                 </div>
 
                                 {/* Password */}
                                 <div>
+                                    <label className="block text-[12px] font-[Medium] text-[#C9A96E] mb-[6px]">Password</label>
                                     <input
                                         id="password"
                                         type="password"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
-                                        placeholder="Password"
-                                        className="border border-[rgba(34,34,34,0.10)] bg-[#fff] rounded-[10px] p-[20px_16px] text-[14px] font-[Regular] text-[#222] outline-none placeholder:text-[#707070] w-full"
+                                        placeholder="••••••••"
+                                        className="border border-[rgba(201,169,110,0.2)] bg-[#1A1A1A] rounded-[12px] px-[16px] py-[14px] text-[14px] text-[#F5F0E8] outline-none placeholder:text-[#A89880]/60 w-full focus:border-[#C9A96E] transition-all"
                                     />
                                 </div>
 
                                 {/* Remember + Forgot */}
-                                <div className="flex items-center justify-between mb-[10px]">
+                                <div className="flex items-center justify-between my-[4px]">
 
                                     <div className="flex items-center gap-2">
                                         <Checkbox
                                             id="remember"
                                             checked={rememberMe}
                                             onCheckedChange={(checked) => setRememberMe(Boolean(checked))}
-                                            className="flex h-[15px] w-[15px] items-center justify-center rounded-[5px] border border-[rgba(34,34,34,0.20)] bg-white text-white data-[state=checked]:bg-[#D4A373] data-[state=checked]:border-[#D4A373] cursor-pointer"
+                                            className="flex h-[16px] w-[16px] items-center justify-center rounded-[5px] border border-[rgba(201,169,110,0.3)] bg-[#1A1A1A] text-black data-[state=checked]:bg-[#C9A96E] data-[state=checked]:border-[#C9A96E] cursor-pointer"
                                         >
                                             <CheckboxIndicator>
                                                 <TickIcon className="mt-[-1px]" />
@@ -253,7 +264,7 @@ function Login() {
 
                                         <label
                                             htmlFor="remember"
-                                            className="cursor-pointer font-[Regular] text-[14px] text-[#222]"
+                                            className="cursor-pointer font-[Regular] text-[13px] text-[#A89880]"
                                         >
                                             Remember me
                                         </label>
@@ -265,22 +276,22 @@ function Login() {
                                             setShowForgotPassword(true);
                                             setShowChangePassword(false);
                                         }}
-                                        className="font-[Bold] text-[15px] text-[#222]"
+                                        className="font-[Medium] text-[13px] text-[#C9A96E] hover:underline"
                                     >
                                         Forgot password?
                                     </button>
                                 </div>
 
-                                {/* Login Button EA3934*/}
+                                {/* Login Button */}
                                 <button
                                     type="submit"
                                     disabled={isLoginLoading}
-                                    className="cursor-pointer bg-[var(--primary-color,#1F3D51)] hover:bg-[var(--primary-hover,#162b39)] transition-colors w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+                                    className="cursor-pointer bg-gradient-to-r from-[#C9A96E] to-[#B89355] hover:from-[#E4C98B] hover:to-[#C9A96E] transition-all w-full text-[14px] font-[Bold] text-[#0A0A0A] py-[15px] rounded-[12px] shadow-[0_4px_18px_rgba(201,169,110,0.25)] hover:shadow-[0_6px_24px_rgba(201,169,110,0.4)] mt-[6px]"
                                 >
-                                    {isLoginLoading ? "Logging in..." : "Login"}
+                                    {isLoginLoading ? "Signing in..." : "Sign in to Dashboard"}
                                 </button>
                                 {loginError ? (
-                                    <p className="text-[12px] text-[#D4A373] mt-[2px]">{loginError}</p>
+                                    <p className="text-[12px] text-[#EF4444] mt-[2px]">{loginError}</p>
                                 ) : null}
                             </form>
                         </>
@@ -288,15 +299,16 @@ function Login() {
                     {/*Forgot password*/}
                     {showForgotPassword && !showChangePassword && (
                         <>
-                            <div className="flex flex-col items-center mb-[40px]">
+                            <div className="flex flex-col items-center mb-[32px]">
                                 <div className="text-center">
-                                    <h2 className="font-[Bold] text-[#222] text-[34px] mb-[4px]">
-                                        Forgot password
+                                    <h2 className="font-['Playfair_Display',serif] text-[#F5F0E8] text-[30px] font-bold mb-[6px]">
+                                        Reset Password
                                     </h2>
+                                    <p className="text-[#A89880] text-[13px] font-[Regular]">Enter your registered email to receive an OTP</p>
                                 </div>
                             </div>
                             <form
-                                className="w-[400px] flex flex-col gap-[14px] mb-[30px] max-sm:w-full login_form"
+                                className="w-full flex flex-col gap-[16px] mb-[24px]"
                                 onSubmit={handleSendOtp}
                             >
                                 <div>
@@ -305,28 +317,28 @@ function Login() {
                                         type="email"
                                         value={forgotEmail}
                                         onChange={(e) => setForgotEmail(e.target.value)}
-                                        className="border border-[rgba(34,34,34,0.10)] bg-[#fff] rounded-[10px] p-[20px_16px] text-[14px] font-[Regular] text-[#222] outline-none placeholder:text-[#707070] w-full"
+                                        className="border border-[rgba(201,169,110,0.2)] bg-[#1A1A1A] rounded-[12px] px-[16px] py-[14px] text-[14px] text-[#F5F0E8] outline-none placeholder:text-[#A89880]/60 w-full focus:border-[#C9A96E]"
                                         placeholder="Email address"
                                     />
                                 </div>
                                 <button
                                     type="submit"
                                     disabled={isSendingOtp}
-                                    className="cursor-pointer bg-[var(--primary-color,#1F3D51)] hover:bg-[var(--primary-hover,#162b39)] transition-colors w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+                                    className="cursor-pointer bg-gradient-to-r from-[#C9A96E] to-[#B89355] hover:from-[#E4C98B] hover:to-[#C9A96E] transition-all w-full text-[14px] font-[Bold] text-[#0A0A0A] py-[15px] rounded-[12px] shadow-[0_4px_18px_rgba(201,169,110,0.25)]"
                                 >
-                                    {isSendingOtp ? "Sending..." : "Get OTP"}
+                                    {isSendingOtp ? "Sending OTP..." : "Send Verification Code"}
                                 </button>
                                 {forgotError ? (
-                                    <p className="text-[12px] text-[#D4A373] mt-[2px]">{forgotError}</p>
+                                    <p className="text-[12px] text-[#EF4444] mt-[2px]">{forgotError}</p>
                                 ) : null}
                             </form>
                             <div className="text-center flex items-center justify-center gap-[6px]">
-                                <p className="font-[Regular] text-[#222] text-[14px] text-[#222]">Did you remember your password?</p>
+                                <p className="font-[Regular] text-[13px] text-[#A89880]">Remembered password?</p>
                                 <p
                                     onClick={returnToLogin}
-                                    className="font-[Bold] text-[#222] text-[15px] text-[#222] cursor-pointer"
+                                    className="font-[Bold] text-[13px] text-[#C9A96E] cursor-pointer hover:underline"
                                 >
-                                    Login now
+                                    Sign in
                                 </p>
                             </div>
                         </>
@@ -334,15 +346,16 @@ function Login() {
                     {/*Change Password*/}
                     {showChangePassword && (
                         <>
-                            <div className="flex flex-col items-center mb-[40px]">
+                            <div className="flex flex-col items-center mb-[32px]">
                                 <div className="text-center">
-                                    <h2 className="font-[Bold] text-[#222] text-[34px] mb-[4px]">
-                                        Change password
+                                    <h2 className="font-['Playfair_Display',serif] text-[#F5F0E8] text-[30px] font-bold mb-[6px]">
+                                        New Password
                                     </h2>
+                                    <p className="text-[#A89880] text-[13px] font-[Regular]">Create a secure password for your account</p>
                                 </div>
                             </div>
                             <form
-                                className="w-[400px] flex flex-col gap-[14px] mb-[30px] max-sm:w-full login_form"
+                                className="w-full flex flex-col gap-[16px] mb-[24px]"
                                 onSubmit={handleResetPassword}
                             >
                                 <div>
@@ -351,7 +364,7 @@ function Login() {
                                         type="password"
                                         value={newPassword}
                                         onChange={(e) => setNewPassword(e.target.value)}
-                                        className="border border-[rgba(34,34,34,0.10)] bg-[#fff] rounded-[10px] p-[20px_16px] text-[14px] font-[Regular] text-[#222] outline-none placeholder:text-[#707070] w-full"
+                                        className="border border-[rgba(201,169,110,0.2)] bg-[#1A1A1A] rounded-[12px] px-[16px] py-[14px] text-[14px] text-[#F5F0E8] outline-none placeholder:text-[#A89880]/60 w-full focus:border-[#C9A96E]"
                                         placeholder="Enter new password"
                                     />
                                 </div>
@@ -361,28 +374,28 @@ function Login() {
                                         type="password"
                                         value={confirmNewPassword}
                                         onChange={(e) => setConfirmNewPassword(e.target.value)}
-                                        className="border border-[rgba(34,34,34,0.10)] bg-[#fff] rounded-[10px] p-[20px_16px] text-[14px] font-[Regular] text-[#222] outline-none placeholder:text-[#707070] w-full"
+                                        className="border border-[rgba(201,169,110,0.2)] bg-[#1A1A1A] rounded-[12px] px-[16px] py-[14px] text-[14px] text-[#F5F0E8] outline-none placeholder:text-[#A89880]/60 w-full focus:border-[#C9A96E]"
                                         placeholder="Confirm new password"
                                     />
                                 </div>
                                 <button
                                     type="submit"
                                     disabled={isResetLoading}
-                                    className="cursor-pointer bg-[var(--primary-color,#1F3D51)] hover:bg-[var(--primary-hover,#162b39)] transition-colors w-full text-[14px] font-[Bold] text-[#FFF] p-[16px] rounded-[10px]"
+                                    className="cursor-pointer bg-gradient-to-r from-[#C9A96E] to-[#B89355] hover:from-[#E4C98B] hover:to-[#C9A96E] transition-all w-full text-[14px] font-[Bold] text-[#0A0A0A] py-[15px] rounded-[12px] shadow-[0_4px_18px_rgba(201,169,110,0.25)]"
                                 >
-                                    {isResetLoading ? "Saving..." : "Confirm password"}
+                                    {isResetLoading ? "Saving..." : "Update Password"}
                                 </button>
                                 {changeError ? (
-                                    <p className="text-[12px] text-[#D4A373] mt-[2px]">{changeError}</p>
+                                    <p className="text-[12px] text-[#EF4444] mt-[2px]">{changeError}</p>
                                 ) : null}
                             </form>
                             <div className="text-center flex items-center justify-center gap-[6px]">
-                                <p className="font-[Regular] text-[#222] text-[14px] text-[#222]">Did you remember your password?</p>
+                                <p className="font-[Regular] text-[13px] text-[#A89880]">Return to</p>
                                 <p
                                     onClick={returnToLogin}
-                                    className="font-[Bold] text-[#222] text-[14px] text-[#0832AE] cursor-pointer"
+                                    className="font-[Bold] text-[13px] text-[#C9A96E] cursor-pointer hover:underline"
                                 >
-                                    Login now
+                                    Sign in
                                 </p>
                             </div>
                         </>

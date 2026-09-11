@@ -107,34 +107,32 @@ function Dashboard() {
                         return (
                             <div
                                 key={card.title}
-                                className="bg-[#FFF] rounded-[16px] p-[20px] border border-[#ECECEC] shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-200 flex flex-col justify-between"
-                                style={{ borderTop: index === 0 ? "4px solid var(--primary-color, #1F3D51)" : "1px solid #ECECEC" }}
+                                className="bg-[#141414] rounded-[18px] p-[22px] border border-[rgba(201,169,110,0.18)] shadow-[0_8px_24px_rgba(0,0,0,0.4)] hover:border-[rgba(201,169,110,0.4)] hover:translate-y-[-2px] transition-all duration-200 flex flex-col justify-between"
                             >
                                 <div className="flex items-start justify-between gap-[10px]">
                                     <div>
-                                        <p className="text-[13px] font-[SemiBold] text-[#707070]">{card.title}</p>
-                                        <h2 className="text-[28px] font-[Bold] text-[#222222] mt-[10px] leading-none">
+                                        <p className="text-[13px] font-[Medium] text-[#A89880]">{card.title}</p>
+                                        <h2 className="text-[30px] font-['Playfair_Display',serif] font-bold text-[#F5F0E8] mt-[8px] leading-none">
                                             {loading ? "..." : card.value}
                                         </h2>
                                     </div>
                                     <span
-                                        className={`flex h-[42px] w-[42px] items-center justify-center rounded-[12px] ${index === 0 ? '' : card.iconBg}`}
-                                        style={index === 0 ? { backgroundColor: "var(--primary-color, #1F3D51)" } : undefined}
+                                        className="flex h-[44px] w-[44px] items-center justify-center rounded-[12px] bg-[#1A1A1A] border border-[rgba(201,169,110,0.25)] shadow-[0_4px_14px_rgba(0,0,0,0.3)]"
                                     >
-                                        <Icon stroke="#fff" fill="#fff" width={20} height={20} className="shrink-0" />
+                                        <Icon stroke="#C9A96E" fill="#C9A96E" width={20} height={20} className="shrink-0" />
                                     </span>
                                 </div>
-                                <div className="mt-[20px] flex items-center gap-[8px]">
+                                <div className="mt-[18px] flex items-center gap-[8px]">
                                     <span
-                                        className={`text-[12px] font-[Bold] px-[8px] py-[3px] rounded-[6px] ${
+                                        className={`text-[12px] font-[Bold] px-[8px] py-[3px] rounded-[6px] border ${
                                             card.growthUp
-                                                ? "bg-[#E6F4EA] text-[#137333]"
-                                                : "bg-[#FCE8E6] text-[#C5221F]"
+                                                ? "bg-[rgba(16,185,129,0.12)] text-[#10B981] border-[rgba(16,185,129,0.25)]"
+                                                : "bg-[rgba(239,68,68,0.12)] text-[#EF4444] border-[rgba(239,68,68,0.25)]"
                                         }`}
                                     >
                                         {loading ? "..." : card.growth}
                                     </span>
-                                    <span className="text-[12px] text-[#888888] font-[Regular]">vs last month</span>
+                                    <span className="text-[12px] text-[#A89880]/70 font-[Regular]">vs last month</span>
                                 </div>
                             </div>
                         );
