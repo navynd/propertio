@@ -53,10 +53,15 @@ import SeoSettings from "./pages/SystemSettings/SeoSettings";
 import { SystemSettingsProvider } from "./context/SystemSettingsContext";
 
 function App() {
+  const basename =
+    typeof window !== "undefined" && window.location.pathname.startsWith("/adminpanel")
+      ? "/adminpanel"
+      : "";
+
   return (
     <SystemSettingsProvider>
       <div className="whole_app">
-        <BrowserRouter basename="/adminpanel">
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route element={<ProtectedRoute><MainIndex /></ProtectedRoute>}>
               <Route path="/dashboard" element={<Dashboard />} />

@@ -8,7 +8,7 @@ export default defineConfig({
     host: "::",
     port: 8081,
   },
-  base: "/adminpanel/",
+  base: "/",
   build: {
     outDir: "dist/adminpanel",
   },
