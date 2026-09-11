@@ -1,21 +1,21 @@
 :root {
-  --primary-color: #1F3D51;
-  --primary-hover: #162b39;
-  --primary-color-alpha: rgba(31, 61, 81, 0.15);
-  --primary-hover-alpha: rgba(31, 61, 81, 0.05);
+  --primary-color: #C9A96E;
+  --primary-hover: #E4C98B;
+  --primary-color-alpha: rgba(201, 169, 110, 0.15);
+  --primary-hover-alpha: rgba(201, 169, 110, 0.05);
 
-  --accent-color: #D4A373;
-  --accent-hover: #c49262;
-  --accent-alpha: rgba(212, 163, 115, 0.18);
+  --accent-color: #C9A96E;
+  --accent-hover: #E4C98B;
+  --accent-alpha: rgba(201, 169, 110, 0.18);
 
-  --bg-color: #F8F9FA;
-  --surface-color: #FFFFFF;
-  --text-main: #1E293B;
+  --bg-color: #0A0A0A;
+  --surface-color: #141414;
+  --text-main: #F5F0E8;
 }
 
 body {
-  background-color: var(--bg-color, #F8F9FA) !important;
-  color: var(--text-main, #1E293B);
+  background-color: #0A0A0A !important;
+  color: #F5F0E8 !important;
 }
 
 /* Anti-gravity floating transitions & cards */

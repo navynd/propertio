@@ -1,12 +1,36 @@
-$primaryClr: var(--primary-color, #1F3D51);
-$blackClr: #1E293B;
-$bodyBgClr: #F8F9FA;
-$whiteClr: #ffffff;
-$grayClr: #64748B;
-$blueClr: var(--primary-color, #1F3D51);
-$greenClr: #00A663;
-$redClr: #D4A373;
-$accentClr: #D4A373;
-$accentHoverClr: #C39262;
-$darkSlateClr: #0F1E28;
+// ============================================================
+// ESTATEHUB — PREMIUM LUXURY DARK DESIGN SYSTEM TOKENS
+// ============================================================
 
+// Backgrounds
+$bg-primary:    #0A0A0A;                     // Jet Black
+$bg-secondary:  #111111;                     // Deep Charcoal
+$bg-surface:    #1A1A1A;                     // Dark Surface
+$bg-elevated:   #222222;                     // Elevated panels
+
+// Gold Accent
+$gold:               #C9A96E;               // Champagne Gold
+$gold-light:         #E4C98B;               // Light Gold (hover)
+$gold-dark:          #9B7B42;               // Dark Gold (press)
+$gold-soft:          rgba(201, 169, 110, 0.14);  // Soft glow
+$gold-border:        rgba(201, 169, 110, 0.18);  // Subtle border
+$gold-border-active: rgba(201, 169, 110, 0.55);  // Hover border
+
+// Text
+$text-primary:   #F5F0E8;                   // Cream White
+$text-secondary: #A89880;                   // Warm Gray
+$text-muted:     #5A5048;                   // Muted tone
+$text-inverse:   #0A0A0A;                   // For gold button text
+
+// Legacy aliases (keep existing SCSS from breaking)
+$primaryClr:      #C9A96E;
+$blackClr:        #F5F0E8;
+$bodyBgClr:       #0A0A0A;
+$whiteClr:        #1A1A1A;
+$grayClr:         #A89880;
+$blueClr:         #C9A96E;
+$greenClr:        #4ADE80;
+$redClr:          #C9A96E;
+$accentClr:       #C9A96E;
+$accentHoverClr:  #E4C98B;
+$darkSlateClr:    #0A0A0A;

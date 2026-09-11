@@ -1,7 +1,8 @@
 .morefilter-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,14 +10,15 @@
 }
 
 .morefilter-modal {
-    background: #fff;
+    background: #141414;
     width: 650px;
     max-height: 90vh;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
 }
 
 .morefilter-modal-header {
@@ -34,8 +36,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-    background: var(--White, #FFF);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
+    color: #C9A96E;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #C9A96E;
+        color: #0A0A0A;
+    }
 }
 
 
@@ -53,10 +62,10 @@
 }
 
 .morefilter-modal-title {
-    font-size: 20px !important;
-    font-family: Regular, sans-serif !important;
+    font-size: 22px !important;
+    font-family: "Playfair Display", serif !important;
     font-weight: 700 !important;
-    color: #222;
+    color: #F5F0E8 !important;
     text-align: center !important;
     margin-bottom: 20px !important;
 }
@@ -67,9 +76,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-top: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-    border-bottom: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-    background: var(--lightbg, #F5F5F5);
+    border-top: 1px solid rgba(201, 169, 110, 0.15);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+    background: #161616;
 }
 
 .morefilter-toggle {
@@ -84,7 +93,7 @@
     width: 36px;
     height: 20px;
     border-radius: 999px;
-    background: #e5e5e5;
+    background: #2a2a2a;
     position: relative;
     transition: background 0.2s ease;
 }
@@ -103,7 +112,7 @@
 }
 
 .morefilter-toggle--active .morefilter-toggle-switch {
-    background: rgba(212, 163, 115, 1);
+    background: #C9A96E;
 }
 
 .morefilter-toggle--active .morefilter-toggle-switch::after {
@@ -114,7 +123,7 @@
     font-size: 15px;
     font-weight: 700;
     font-family: Medium, sans-serif !important;
-    color: #222;
+    color: #F5F0E8;
 }
 
 .morefilter-section {
@@ -122,14 +131,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 50px;
-    border-bottom: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
+    border-bottom: 1px solid rgba(201, 169, 110, 0.15);
 }
 
 .morefilter-section-title {
     font-size: 15px !important;
     font-family: Medium, sans-serif !important;
     font-weight: 700 !important;
-    color: #222 !important;
+    color: #C9A96E !important;
     margin: 0 !important;
 }
 
@@ -142,19 +151,26 @@
 .morefilter-chip {
     padding: 8px 14px;
     border-radius: 999px;
-    border: 1px solid rgba(34, 34, 34, 0.16);
-    background: #fff;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
     font-size: 13px;
     font-family: Regular, sans-serif;
-    color: #222;
+    color: #F5F0E8;
     cursor: pointer;
     outline: none;
+    transition: all 0.15s ease;
+
+    &:hover {
+        border-color: #C9A96E;
+        color: #C9A96E;
+    }
 }
 
 .morefilter-chip--active {
-    background: #222;
-    color: #fff;
-    border-color: #222;
+    background: #C9A96E !important;
+    color: #0A0A0A !important;
+    border-color: #C9A96E !important;
+    font-weight: 700 !important;
 }
 
 .morefilter-area-row {
@@ -167,18 +183,25 @@
     flex: 1;
     padding: 10px 12px;
     border-radius: 12px;
-    border: 1px solid rgba(34, 34, 34, 0.16);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #161616;
+    color: #F5F0E8;
     font-size: 13px;
     font-family: Regular, sans-serif;
+    outline: none;
+
+    &:focus {
+        border-color: #C9A96E;
+    }
 }
 
 .morefilter-area-input::placeholder {
-    color: #999;
+    color: #707070;
 }
 
 .morefilter-area-separator {
     font-size: 13px;
-    color: #777;
+    color: #A89880;
 }
 
 .morefilter-amenities-section {
@@ -199,18 +222,25 @@
     font-size: 14px;
     font-weight: 400;
     font-family: Regular, sans-serif;
-    color: #222;
+    color: #F5F0E8;
     cursor: pointer;
     outline: none;
     border-radius: 5px;
-    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-    background: var(--White, #FFF);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
+    transition: all 0.15s ease;
+
+    &:hover {
+        border-color: #C9A96E;
+        color: #C9A96E;
+    }
 }
 
 .morefilter-chipamenity--active {
-    background: #222;
-    color: #fff;
-    border-color: #222;
+    background: #C9A96E !important;
+    color: #0A0A0A !important;
+    border-color: #C9A96E !important;
+    font-weight: 700 !important;
 }
 
 .morefilter-footer {
@@ -220,8 +250,8 @@
     gap: 30px;
     border-radius: 0 0 16px 16px;
     padding: 20px 50px 20px 50px;
-    // border-top: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-    background: #fff;
+    border-top: 1px solid rgba(201, 169, 110, 0.15);
+    background: #141414;
 }
 
 .morefilter-result-btn {
@@ -231,19 +261,26 @@
     border-radius: 12px !important;
     font-family: SemiBold, sans-serif !important;
     font-size: 15px !important;
-    background: rgba(212, 163, 115, 1) !important;
-    box-shadow: none !important;
+    background: linear-gradient(135deg, #C9A96E 0%, #E4C98B 100%) !important;
+    color: #0A0A0A !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4) !important;
     text-transform: none !important;
+    border: none !important;
 }
 
 .morefilter-clear-btn {
     background: transparent;
     border: none;
-    color: #1F3D51;
+    color: #C9A96E;
     font-size: 14px;
     font-family: Medium, sans-serif;
     font-weight: 700;
     cursor: pointer;
+
+    &:hover {
+        color: #E4C98B;
+    }
 }
 
 

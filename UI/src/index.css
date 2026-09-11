@@ -1,0 +1,559 @@
+/* ============================================================
+   ESTATEHUB — LUXURY DARK DESIGN SYSTEM
+   Global CSS Variables & Typography
+   ============================================================ */
+
+:root {
+  /* === BACKGROUNDS === */
+  --bg-void:       #060606;     /* deepest black */
+  --bg-primary:    #0A0A0A;     /* jet black */
+  --bg-secondary:  #111111;     /* deep charcoal */
+  --bg-surface:    #171717;     /* card surface */
+  --bg-elevated:   #1F1F1F;     /* elevated panels */
+  --bg-border:     #2A2A2A;     /* subtle borders */
+
+  /* === GOLD PALETTE === */
+  --gold:          #C9A96E;     /* champagne gold */
+  --gold-light:    #E4C98B;     /* hover gold */
+  --gold-dark:     #9B7B42;     /* pressed gold */
+  --gold-10:       rgba(201,169,110,0.10);
+  --gold-15:       rgba(201,169,110,0.15);
+  --gold-20:       rgba(201,169,110,0.20);
+  --gold-30:       rgba(201,169,110,0.30);
+  --gold-50:       rgba(201,169,110,0.50);
+
+  /* === TEXT === */
+  --text-primary:    #F5F0E8;   /* cream white */
+  --text-secondary:  #A89880;   /* warm gray */
+  --text-muted:      #5A5048;   /* subtle muted */
+  --text-on-gold:    #0A0A0A;   /* black on gold buttons */
+
+  /* === STATUS === */
+  --green:  #4ADE80;
+  --red:    #F87171;
+
+  /* === TYPOGRAPHY === */
+  --font-serif:  'Playfair Display', Georgia, serif;
+  --font-sans:   'DM Sans', system-ui, -apple-system, sans-serif;
+
+  /* === SPACING === */
+  --section-py: 96px;
+  --card-radius: 16px;
+  --btn-radius:  10px;
+
+  /* === TRANSITIONS === */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb {
+  background: var(--gold-30);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold-50); }
+
+/* ============================================================
+   TYPOGRAPHY SCALE
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Display — hero titles */
+.type-display {
+  font-family: var(--font-serif);
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+}
+
+/* Hero subtitle */
+.type-hero-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+/* Section label — gold uppercase tracker */
+.type-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Section title */
+.type-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+/* Body */
+.type-body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Price */
+.type-price {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.u-serif { font-family: var(--font-serif) !important; }
+.u-sans  { font-family: var(--font-sans) !important; }
+.u-gold  { color: var(--gold) !important; }
+.u-cream { color: var(--text-primary) !important; }
+.u-muted { color: var(--text-secondary) !important; }
+
+/* ============================================================
+   BUTTON SYSTEM
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: var(--btn-radius);
+  transition: all 0.3s var(--ease-smooth);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--text-on-gold);
+  padding: 14px 28px;
+  box-shadow: 0 4px 20px var(--gold-20);
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  box-shadow: 0 8px 32px var(--gold-30);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  padding: 13px 27px;
+  border: 1px solid var(--gold-50);
+}
+.btn-outline-gold:hover {
+  background: var(--gold-10);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 13px 24px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.04);
+}
+
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 13px;
+}
+
+/* ============================================================
+   SECTION LAYOUT
+   ============================================================ */
+
+.section {
+  padding: var(--section-py) 0;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.section-header--center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-divider {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 1px;
+}
+
+.section-divider--center {
+  margin: 0 auto;
+}
+
+/* ============================================================
+   CARD BASE
+   ============================================================ */
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--gold-10);
+  border-radius: var(--card-radius);
+  transition: all 0.4s var(--ease-smooth);
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--gold-30);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--gold-15);
+  transform: translateY(-6px);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--gold-20); }
+  50%       { box-shadow: 0 0 0 8px transparent; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s var(--ease-smooth) both;
+}
+
+.animate-fade-up--d1 { animation-delay: 0.1s; }
+.animate-fade-up--d2 { animation-delay: 0.2s; }
+.animate-fade-up--d3 { animation-delay: 0.3s; }
+.animate-fade-up--d4 { animation-delay: 0.4s; }
+.animate-fade-up--d5 { animation-delay: 0.5s; }
+
+/* ============================================================
+   LOADING SKELETON
+   ============================================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface) 25%,
+    var(--bg-elevated) 50%,
+    var(--bg-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   GOLD BADGE / TAG
+   ============================================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.badge-gold {
+  background: var(--gold-15);
+  border: 1px solid var(--gold-30);
+  color: var(--gold);
+}
+
+.badge-green {
+  background: rgba(74,222,128,0.12);
+  border: 1px solid rgba(74,222,128,0.3);
+  color: #4ADE80;
+}
+
+.badge-white {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-20), transparent);
+  border: none;
+  margin: 0;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.pf-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .pf-container { padding: 0 20px; }
+}
+
+/* ============================================================
+   MUI OVERRIDES — FORCE DARK
+   ============================================================ */
+
+.MuiPaper-root {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+}
+
+.MuiMenu-paper {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--gold-15) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8) !important;
+}
+
+.MuiMenuItem-root {
+  font-family: var(--font-sans) !important;
+  color: var(--text-primary) !important;
+  font-size: 14px !important;
+}
+.MuiMenuItem-root:hover {
+  background-color: var(--gold-10) !important;
+  color: var(--gold) !important;
+}
+.MuiMenuItem-root.Mui-selected {
+  background-color: var(--gold-15) !important;
+  color: var(--gold) !important;
+}
+
+.MuiTabs-indicator { background-color: var(--gold) !important; }
+.MuiTab-root { color: var(--text-secondary) !important; font-family: var(--font-sans) !important; }
+.MuiTab-root.Mui-selected { color: var(--gold) !important; }
+
+.MuiSlider-thumb { background-color: var(--gold) !important; }
+.MuiSlider-track { background-color: var(--gold) !important; border-color: var(--gold) !important; }
+.MuiSlider-rail  { background-color: var(--gold-20) !important; }
+
+.MuiCheckbox-root { color: var(--gold-30) !important; }
+.MuiCheckbox-root.Mui-checked { color: var(--gold) !important; }
+
+.MuiSwitch-switchBase.Mui-checked { color: var(--gold) !important; }
+.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track { background-color: var(--gold-50) !important; }
+
+.MuiDivider-root { border-color: var(--gold-10) !important; }
+
+.MuiOutlinedInput-root {
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border-radius: 10px !important;
+}
+.MuiOutlinedInput-notchedOutline { border-color: var(--gold-15) !important; }
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline { border-color: var(--gold-30) !important; }
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: var(--gold) !important; }
+.MuiInputBase-input::placeholder { color: var(--text-muted) !important; }
+.MuiInputLabel-root { color: var(--text-secondary) !important; font-family: var(--font-sans) !important; }
+.MuiInputLabel-root.Mui-focused { color: var(--gold) !important; }
+
+.MuiChip-root {
+  background-color: var(--gold-10) !important;
+  color: var(--gold) !important;
+  border-color: var(--gold-20) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.MuiPaginationItem-root {
+  color: var(--text-secondary) !important;
+  border-color: var(--gold-15) !important;
+  font-family: var(--font-sans) !important;
+}
+.MuiPaginationItem-root.Mui-selected {
+  background-color: var(--gold-15) !important;
+  color: var(--gold) !important;
+  border-color: var(--gold-30) !important;
+}
+
+.MuiSkeleton-root {
+  background-color: var(--bg-elevated) !important;
+}
+
+.MuiAccordion-root {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--gold-10) !important;
+}
+.MuiAccordionSummary-root { color: var(--text-primary) !important; }
+.MuiAccordionDetails-root { color: var(--text-secondary) !important; }
+
+.MuiDialog-paper {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--gold-15) !important;
+  border-radius: 20px !important;
+}
+
+.MuiBreadcrumbs-separator { color: var(--text-muted) !important; }
+
+/* ============================================================
+   WHITE & LIGHT BACKGROUND HIGH-CONTRAST TEXT GUARANTEE
+   Ensures whenever any element, container, card, or modal
+   has a white or light background, its text is always dark
+   and clearly visible.
+   ============================================================ */
+.bg-white,
+.pf-bg-white,
+.pf-card--white,
+.MuiPaper-root.bg-white,
+.light-theme,
+[data-theme="light"],
+[style*="background: #fff"],
+[style*="background:#fff"],
+[style*="background: #ffffff"],
+[style*="background:#ffffff"],
+[style*="background: white"],
+[style*="background:white"],
+[style*="background-color: #fff"],
+[style*="background-color:#fff"],
+[style*="background-color: #ffffff"],
+[style*="background-color:#ffffff"],
+[style*="background-color: white"],
+[style*="background-color:white"],
+[style*="background-color: rgb(255, 255, 255)"],
+[style*="background: rgb(255, 255, 255)"],
+[style*="background-color: rgba(255, 255, 255"],
+[style*="background: rgba(255, 255, 255"] {
+  color: #111827 !important;
+}
+
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.bg-white p, .bg-white span, .bg-white div, .bg-white a, .bg-white li, .bg-white label,
+.bg-white strong, .bg-white b, .bg-white .MuiTypography-root,
+.pf-bg-white h1, .pf-bg-white h2, .pf-bg-white h3, .pf-bg-white h4, .pf-bg-white h5, .pf-bg-white h6,
+.pf-bg-white p, .pf-bg-white span, .pf-bg-white div, .pf-bg-white a, .pf-bg-white li, .pf-bg-white label,
+.pf-bg-white strong, .pf-bg-white b, .pf-bg-white .MuiTypography-root,
+[style*="background: #fff"] h1, [style*="background: #fff"] h2, [style*="background: #fff"] h3,
+[style*="background: #fff"] p, [style*="background: #fff"] span, [style*="background: #fff"] div,
+[style*="background: #fff"] .MuiTypography-root,
+[style*="background: #ffffff"] h1, [style*="background: #ffffff"] h2, [style*="background: #ffffff"] h3,
+[style*="background: #ffffff"] p, [style*="background: #ffffff"] span, [style*="background: #ffffff"] div,
+[style*="background: #ffffff"] .MuiTypography-root,
+[style*="background-color: #fff"] h1, [style*="background-color: #fff"] h2, [style*="background-color: #fff"] h3,
+[style*="background-color: #fff"] p, [style*="background-color: #fff"] span, [style*="background-color: #fff"] div,
+[style*="background-color: #fff"] .MuiTypography-root,
+[style*="background-color: #ffffff"] h1, [style*="background-color: #ffffff"] h2, [style*="background-color: #ffffff"] h3,
+[style*="background-color: #ffffff"] p, [style*="background-color: #ffffff"] span, [style*="background-color: #ffffff"] div,
+[style*="background-color: #ffffff"] .MuiTypography-root,
+[style*="background-color: white"] h1, [style*="background-color: white"] h2, [style*="background-color: white"] h3,
+[style*="background-color: white"] p, [style*="background-color: white"] span, [style*="background-color: white"] div,
+[style*="background-color: white"] .MuiTypography-root,
+[style*="background: white"] h1, [style*="background: white"] h2, [style*="background: white"] h3,
+[style*="background: white"] p, [style*="background: white"] span, [style*="background: white"] div,
+[style*="background: white"] .MuiTypography-root {
+  color: #111827 !important;
+}
+
+.bg-white .text-muted, .pf-bg-white .text-muted,
+[style*="background: #fff"] .text-muted,
+[style*="background: #ffffff"] .text-muted,
+[style*="background-color: #ffffff"] .text-muted,
+[style*="background: white"] .text-muted,
+[style*="background-color: white"] .text-muted,
+.bg-white small, .pf-bg-white small {
+  color: #4B5563 !important;
+}

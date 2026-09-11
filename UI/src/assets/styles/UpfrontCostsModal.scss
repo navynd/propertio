@@ -1,7 +1,8 @@
 .upfront-costs-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,13 +10,14 @@
 }
 
 .upfront-costs-modal {
-    background: #fff;
+    background: #141414;
     width: 600px;
     max-width: calc(100vw - 24px);
     max-height: 90vh;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
 }
@@ -35,16 +37,23 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    border: 1px solid rgba(34, 34, 34, 0.10);
-    background: #fff;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
+    color: #C9A96E;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #C9A96E;
+        color: #0A0A0A;
+    }
 }
 
 .upfront-costs-modal__title {
     text-align: center;
-    font-family: Medium, sans-serif !important;
-    font-size: 20px !important;
+    font-family: "Playfair Display", serif !important;
+    font-size: 22px !important;
     font-weight: 700 !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
     margin: 0 !important;
     padding: 0px 48px 40px;
 }
@@ -61,24 +70,26 @@
 }
 
 .upfront-costs-modal__panel {
-    background: #F5F5F5;
+    background: #161616;
+    border: 1px solid rgba(201, 169, 110, 0.15);
     border-radius: 12px;
     padding: 50px;
 }
 
 .upfront-costs-modal__card {
-    background: #fff;
+    background: #1A1A1A;
+    border: 1px solid rgba(201, 169, 110, 0.15);
     border-radius: 10px;
     padding: 14px 4px 4px 4px;
 }
 
 .upfront-costs-modal__card--calc {
     padding: 0px;
-    background-color: #FFF;
+    background-color: #1A1A1A;
 }
 
 .upfront-costs-modal__list--calc {
-    background-color: #FFF;
+    background-color: #1A1A1A;
 }
 
 .upfront-costs-modal__card+.upfront-costs-modal__card {
@@ -94,7 +105,7 @@
     font-family: Medium, sans-serif !important;
     font-size: 20px !important;
     font-weight: 700 !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
     margin: 0 0 22px !important;
 }
 
@@ -113,7 +124,8 @@
 
 .upfront-costs-modal__row--pill1 {
     border-radius: 10px;
-    background-color: #FFF;
+    background-color: #1A1A1A;
+    border: 1px solid rgba(201, 169, 110, 0.15);
     padding: 20px 32px;
     margin-bottom: 10px;
 }
@@ -126,27 +138,27 @@
 
 .upfront-costs-modal__row--list {
     padding: 20px 30px;
-    background-color: #F5F5F5;
-    border-top: 1px solid rgba(34, 34, 34, 0.06);
+    background-color: #141414;
+    border-top: 1px solid rgba(201, 169, 110, 0.1);
 }
 
 .upfront-costs-modal__row--list-calc {
     padding: 20px 30px;
-    border-top: 1px solid rgba(34, 34, 34, 0.06);
+    border-top: 1px solid rgba(201, 169, 110, 0.1);
 }
 
 .upfront-costs-modal__row-label {
     font-family: Regular, sans-serif !important;
     font-size: 12px !important;
     font-weight: 400 !important;
-    color: #222 !important;
+    color: #A89880 !important;
 }
 
 .upfront-costs-modal__row-value {
     font-family: SemiBold, sans-serif !important;
     font-size: 12px !important;
     font-weight: 700 !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
     white-space: nowrap;
 }
 
@@ -159,15 +171,15 @@
     font-family: Regular, sans-serif !important;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #222 !important;
+    color: #A89880 !important;
     margin: 0 !important;
 }
 
 .upfront-costs-modal__total-value {
-    font-family: Medium, sans-serif !important;
+    font-family: "Playfair Display", serif !important;
     font-size: 30px !important;
-    font-weight: 500 !important;
-    color: #D4A373 !important;
+    font-weight: 700 !important;
+    color: #C9A96E !important;
     margin: 6px 0 0 !important;
 }
 

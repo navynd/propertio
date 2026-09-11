@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import {
-  PfOrangeLogoIcon,
+  HeaderLogoIcon,
   LoginGoogleIcon,
   PasswordEyeIcon,
   RightArrowRoundFillIcon,
@@ -23,7 +23,6 @@ import LoginImageSection from "./LoginImageSection";
 import { getAppleSignInPayload } from "../../services/appleIdentity";
 import {
   setAuthSession,
-  shouldCollectPhoneAndCountry,
   userLogin,
   userSocialLogin,
 } from "../../services/apiService";
@@ -32,11 +31,14 @@ import { getGoogleIdToken } from "../../services/googleIdentity";
 function Login() {
   const navigate = useNavigate();
   const location = useLocation();
+
   const [showPassword, setShowPassword] = useState(false);
   const [mobilenumberModalOpen, setMobilenumberModalOpen] = useState(false);
+
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -44,37 +46,39 @@ function Login() {
     setShowPassword((prev) => !prev);
   };
 
-  const handleBack = () => {
-    navigate("/");
-  };
-
   const handleNavigateToSignup = () => {
     navigate("/signup");
   };
 
   const handleNavigateToForgot = () => {
-    navigate("/forgotpassword");
+    navigate("/forgot");
+  };
+
+  const handleBack = () => {
+    navigate("/");
   };
 
   const handleLogin = async () => {
-    const id = identifier.trim();
-    if (!id || !password) return;
+    if (!identifier.trim() || !password) {
+      return;
+    }
 
     setIsLoggingIn(true);
     setErrorMessage(null);
 
     try {
-      const isEmail = id.includes("@");
       const response = await userLogin({
-        ...(isEmail ? { email: id } : { phoneNumber: id }),
+        identifier: identifier.trim(),
         password,
-        rememberMe,
       });
 
-      const tokens = response.data.tokens;
-      setAuthSession(tokens, response.data.user);
+      setAuthSession(
+        response.token,
+        response.user,
+        response.shouldCollectPhoneAndCountry
+      );
 
-      if (shouldCollectPhoneAndCountry(response.data.user)) {
+      if (response.shouldCollectPhoneAndCountry) {
         setMobilenumberModalOpen(true);
       } else {
         navigate("/?showLoginSuccess=true");
@@ -84,10 +88,12 @@ function Login() {
         response?: { data?: { message?: string; error?: string } };
         message?: string;
       };
+
       const apiMessage =
         maybeError.response?.data?.message ||
         maybeError.response?.data?.error ||
         maybeError.message;
+
       setErrorMessage(apiMessage || "Login failed");
     } finally {
       setIsLoggingIn(false);
@@ -97,6 +103,7 @@ function Login() {
   const handleSocialApiLogin = async (provider: "google" | "apple") => {
     setIsLoggingIn(true);
     setErrorMessage(null);
+
     try {
       const socialPayload =
         provider === "google"
@@ -105,13 +112,16 @@ function Login() {
 
       const response = await userSocialLogin({
         provider,
-        token: socialPayload.token,
-        ...(provider === "apple"
-          ? { user: socialPayload.user ?? {} }
-          : {}),
+        socialPayload,
       });
-      setAuthSession(response.data.tokens, response.data.user);
-      if (shouldCollectPhoneAndCountry(response.data.user)) {
+
+      setAuthSession(
+        response.token,
+        response.user,
+        response.shouldCollectPhoneAndCountry
+      );
+
+      if (response.shouldCollectPhoneAndCountry) {
         setMobilenumberModalOpen(true);
       } else {
         navigate("/?showLoginSuccess=true");
@@ -121,10 +131,12 @@ function Login() {
         response?: { data?: { message?: string; error?: string } };
         message?: string;
       };
+
       const apiMessage =
         maybeError.response?.data?.message ||
         maybeError.response?.data?.error ||
         maybeError.message;
+
       setErrorMessage(apiMessage || "Social login failed");
     } finally {
       setIsLoggingIn(false);
@@ -144,21 +156,26 @@ function Login() {
           type="button"
           className="pf-login__back"
           onClick={handleBack}
-          aria-label="Go back"
+          aria-label="Go back to home"
         >
-          <RightArrowRoundFillIcon height={50} width={123} />
+          <RightArrowRoundFillIcon height={18} width={18} />
           <span>Back</span>
         </button>
 
         <Box className="pf-login__scroll">
           <Box className="pf-login__card" component="section">
             <Box className="pf-login__logo" aria-label="Estatehub">
-              <PfOrangeLogoIcon />
+              <HeaderLogoIcon width={140} height={42} />
             </Box>
 
-            <Typography component="h1" className="pf-login__title">
-              Login your account
-            </Typography>
+            <div className="pf-login__headerWrap">
+              <Typography component="h1" className="pf-login__title">
+                Login to your account
+              </Typography>
+              <Typography className="pf-login__subtitle">
+                Welcome back. Enter your credentials to continue.
+              </Typography>
+            </div>
 
             <Box
               component="form"
@@ -212,30 +229,30 @@ function Login() {
                       icon={
                         <Box
                           sx={{
-                            width: 15,
-                            height: 15,
+                            width: 17,
+                            height: 17,
                             borderRadius: "5px",
-                            border: "1px solid rgba(34, 34, 34, 0.20)",
+                            border: "1px solid rgba(201, 169, 110, 0.4)",
+                            backgroundColor: "rgba(255, 255, 255, 0.04)",
                           }}
                         />
                       }
                       checkedIcon={
                         <Box
                           sx={{
-                            width: 15,
-                            height: 15,
+                            width: 17,
+                            height: 17,
                             borderRadius: "5px",
-                            backgroundColor: "#222222",
-                            border: "1px solid #222222",
+                            backgroundColor: "#C9A96E",
+                            border: "1px solid #C9A96E",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                           }}
                         >
-                          <CheckmarkIcon sx={{ fontSize: 12, color: "#fff" }} width={12} height={12} />
+                          <CheckmarkIcon sx={{ fontSize: 12, color: "#0A0A0A" }} width={12} height={12} />
                         </Box>
                       }
-                    // sx={{ padding: 0 }}
                     />
                   }
                 />

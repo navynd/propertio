@@ -1,6 +1,6 @@
 .pf-contact {
     padding-bottom: 48px;
-    background: #f5f5f5;
+    background: #0A0A0A;
 
     &__hero {
         position: relative;
@@ -82,11 +82,11 @@
 
     &__hero-title {
         font-size: 70px;
-        font-family: Medium, sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 700;
         margin: 0 0 12px;
         line-height: 1.1;
-        color: #fff;
+        color: #F5F0E8;
     }
 
     &__hero-subtitle {
@@ -94,7 +94,7 @@
         font-family: Medium, sans-serif;
         margin: 50px 0 0 0;
         opacity: 0.9;
-        color: #fff;
+        color: #A89880;
         font-weight: 500;
     }
 
@@ -105,9 +105,10 @@
     }
 
     &__card {
-        background: #fff;
+        background: #141414;
+        border: 1px solid rgba(201, 169, 110, 0.2);
         border-radius: 15px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
         overflow: hidden;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -123,9 +124,9 @@
 
     &__info-title {
         font-size: 40px;
-        font-family: Medium, sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 700;
-        color: #222;
+        color: #F5F0E8;
         margin: 0 0 20px;
         line-height: 1.2;
     }
@@ -134,7 +135,7 @@
         font-size: 17px;
         font-family: Regular, sans-serif;
         font-weight: 400;
-        color: #707070;
+        color: #A89880;
         margin: 0px;
     }
 
@@ -149,7 +150,7 @@
         font-size: 25px;
         font-weight: 700;
         font-family: Medium, sans-serif;
-        color: #222;
+        color: #A89880;
         display: flex;
         align-items: center;
         gap: 12px;
@@ -165,7 +166,7 @@
 
     &__social-link {
         display: inline-flex;
-        color: #222;
+        color: #A89880;
         transition: opacity 0.2s;
         width: 40px;
         height: 40px;
@@ -192,7 +193,8 @@
         width: 45px;
         height: 45px;
         border-radius: 10px;
-        background: #F5F5F5;
+        background: #1A1A1A;
+        border: 1px solid rgba(201, 169, 110, 0.2);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -204,7 +206,7 @@
 
         path,
         g {
-            fill: #222;
+            fill: #C9A96E;
         }
     }
 
@@ -213,7 +215,7 @@
         font-size: 14px;
         font-family: Regular, sans-serif;
         font-weight: 400;
-        color: #707070;
+        color: #A89880;
         margin-bottom: 4px;
     }
 
@@ -221,7 +223,7 @@
         font-size: 14px;
         font-family: Medium, sans-serif;
         font-weight: 700;
-        color: #222;
+        color: #F5F0E8;
         text-decoration: none;
     }
 
@@ -235,30 +237,32 @@
         font-size: 14px;
         font-weight: 700;
         font-family: Medium, sans-serif;
-        color: #222;
+        color: #C9A96E;
         border-radius: 10px;
-        border: 1px solid var(--Black, #222);
-        background: var(--White, #FFF);
+        border: 1px solid rgba(201, 169, 110, 0.3);
+        background: #1A1A1A;
         cursor: pointer;
-        transition: background 0.2s, border-color 0.2s;
+        transition: all 0.2s ease;
 
         &:hover {
-            background: #f5f5f5;
-            border-color: #b0b0b0;
+            background: #C9A96E;
+            color: #0A0A0A;
+            border-color: #C9A96E;
         }
     }
 
     &__form-wrap {
         padding: 50px;
-        background: #F5F5F5;
+        background: #161616;
+        border: 1px solid rgba(201, 169, 110, 0.15);
         border-radius: 15px;
     }
 
     &__form-title {
         font-size: 20px;
         font-weight: 700;
-        font-family: Medium, sans-serif;
-        color: #222;
+        font-family: "Playfair Display", serif;
+        color: #F5F0E8;
         margin: 0 0 40px;
         line-height: 1.2;
     }
@@ -279,7 +283,7 @@
         font-size: 14px;
         font-weight: 600;
         font-family: Regular, sans-serif;
-        color: #222;
+        color: #F5F0E8;
     }
 
     &__input,
@@ -290,12 +294,17 @@
         font-size: 13px;
         font-family: Medium, sans-serif !important;
         font-weight: 500;
-        color: #222;
+        color: #F5F0E8;
         border-radius: 10px;
-        border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-        background: var(--White, #FFF);
+        border: 1px solid rgba(201, 169, 110, 0.2);
+        background: #1A1A1A;
         outline: none;
-        transition: border-color 0.2s;
+        transition: border-color 0.2s, box-shadow 0.2s;
+
+        &:focus {
+            border-color: #C9A96E;
+            box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.2);
+        }
 
         &::placeholder {
             color: #707070;
@@ -325,16 +334,17 @@
         padding: 17px 20px;
         font-size: 14px;
         font-weight: 700;
-        color: #fff;
-        background: #D4A373;
+        color: #0A0A0A;
+        background: linear-gradient(135deg, #C9A96E 0%, #E4C98B 100%);
         border: none;
         border-radius: 10px;
         cursor: pointer;
         margin-top: 20px;
-        transition: background 0.2s;
+        transition: all 0.2s ease;
 
         &:hover {
-            background: #D4A373;
+            background: linear-gradient(135deg, #E4C98B 0%, #C9A96E 100%);
+            box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4);
         }
     }
 
@@ -347,9 +357,9 @@
     &__locations-title {
         text-align: center;
         font-size: 40px;
-        font-family: Medium, sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 700;
-        color: #222;
+        color: #F5F0E8;
         margin: 0 0 30px;
     }
 
@@ -371,17 +381,19 @@
         width: 44px;
         height: 44px;
         border-radius: 999px;
-        background: transparent;
-        border: none;
+        background: #1A1A1A;
+        border: 1px solid rgba(201, 169, 110, 0.3);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         z-index: 2;
-        color: #222;
+        color: #C9A96E;
+        transition: all 0.2s ease;
 
         &:hover {
-            background: #f5f5f5;
+            background: #C9A96E;
+            color: #0A0A0A;
         }
 
         &--left {
@@ -398,9 +410,10 @@
     }
 
     &__location-card {
-        background: #fff;
+        background: #141414;
+        border: 1px solid rgba(201, 169, 110, 0.2);
         border-radius: 12px;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
         // padding: 30px;
         // min-height: 220px;
         display: flex;
@@ -410,23 +423,21 @@
 
     &__location-top {
         padding: 30px 30px 25px 30px;
-        border-bottom: 1px solid rgba(34, 34, 34, 0.10);
+        border-bottom: 1px solid rgba(201, 169, 110, 0.15);
     }
-
-
 
     &__location-city {
         font-size: 16px;
         font-family: Medium, sans-serif;
         font-weight: 700;
-        color: #222;
+        color: #F5F0E8;
     }
 
     &__location-tag {
         font-size: 12px;
         font-family: Regular, sans-serif;
         font-weight: 400;
-        color: #D4A373;
+        color: #C9A96E;
         margin-top: 4px;
     }
 
@@ -453,7 +464,7 @@
         font-size: 14px;
         font-family: Regular, sans-serif;
         font-weight: 400;
-        color: #222;
+        color: #A89880;
         line-height: 1.4;
     }
 
@@ -464,16 +475,18 @@
         justify-content: center;
         padding: 17px 20px;
         border-radius: 10px;
-        border: 1px solid #222;
-        background: #fff;
+        border: 1px solid rgba(201, 169, 110, 0.3);
+        background: #1A1A1A;
         font-size: 14px;
         font-family: Medium, sans-serif;
         font-weight: 700;
-        color: #222;
+        color: #C9A96E;
         cursor: pointer;
+        transition: all 0.2s ease;
 
         &:hover {
-            background: #f5f5f5;
+            background: #C9A96E;
+            color: #0A0A0A;
         }
     }
 
@@ -484,8 +497,8 @@
         padding: 30px 30px 30px 30px;
         flex-wrap: wrap;
         border-radius: 15px;
-        border: 4px solid var(--White, #FFF);
-        background: var(--lightbg, #F5F5F5);
+        border: 1px solid rgba(201, 169, 110, 0.15);
+        background: #161616;
     }
 
     &__location-pill {
@@ -494,14 +507,19 @@
         height: 28px;
         padding: 0 12px;
         border-radius: 999px;
-        border: 1px solid rgba(34, 34, 34, 0.15);
-        background: #fff;
+        border: 1px solid rgba(201, 169, 110, 0.2);
+        background: #1A1A1A;
         font-size: 12px;
         font-family: Regular, sans-serif;
         font-weight: 400;
-        color: #222;
+        color: #F5F0E8;
         text-decoration: none;
         white-space: nowrap;
+
+        &:hover {
+            border-color: #C9A96E;
+            color: #C9A96E;
+        }
     }
 }
 
@@ -518,10 +536,14 @@
         gap: 8px;
         padding: 12px 14px;
         border-radius: 10px;
-        border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-        background: var(--White, #FFF);
+        border: 1px solid rgba(201, 169, 110, 0.2);
+        background: #1A1A1A;
         cursor: pointer;
         transition: border-color 0.2s;
+
+        &:hover {
+            border-color: #C9A96E;
+        }
     }
 
     .pf-contact__subject-dropdown-text {
@@ -535,7 +557,7 @@
         font-size: 13px;
         font-family: Medium, sans-serif;
         font-weight: 500;
-        color: #222;
+        color: #F5F0E8;
     }
 
     .pf-contact__subject-dropdown-menu {
@@ -548,7 +570,8 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background: #fff !important;
+        background: #141414 !important;
+        border: 1px solid rgba(201, 169, 110, 0.3);
         border-radius: 10px;
         padding: 10px;
         min-width: 200px;
@@ -565,24 +588,27 @@
     }
 
     .pf-contact__subject-dropdown-option {
-        padding: 5px;
+        padding: 8px 10px;
         font-size: 13px;
         font-family: Medium, sans-serif;
         font-weight: 500;
-        color: #222;
+        color: #F5F0E8;
         cursor: pointer;
-        background: #fff !important;
+        background: #141414 !important;
+        border-radius: 6px;
         border: none !important;
         text-align: left !important;
-
+        transition: all 0.15s ease;
 
         &:hover {
-            background: #f5f5f5;
+            background: #1A1A1A !important;
+            color: #C9A96E;
         }
     }
 
     .pf-contact__subject-dropdown-option.selected {
-        background: #f5f5f5;
+        background: rgba(201, 169, 110, 0.15) !important;
+        color: #C9A96E;
     }
 }
 

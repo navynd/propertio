@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Button, Divider, IconButton, Link, TextField, Typography } from "@mui/material";
 import {
-  PfOrangeLogoIcon,
+  HeaderLogoIcon,
   LoginGoogleIcon,
   PasswordEyeIcon,
   RightArrowRoundFillIcon,
@@ -98,13 +98,14 @@ function Signup() {
 
       const response = await userSocialLogin({
         provider,
-        token: socialPayload.token,
-        ...(provider === "apple"
-          ? { user: socialPayload.user ?? {} }
-          : {}),
+        socialPayload,
       });
-      setAuthSession(response.data.tokens, response.data.user);
-      if (shouldCollectPhoneAndCountry(response.data.user)) {
+      setAuthSession(
+        response.token,
+        response.user,
+        response.shouldCollectPhoneAndCountry
+      );
+      if (response.shouldCollectPhoneAndCountry) {
         setMobilenumberModalOpen(true);
       } else {
         navigate("/?showLoginSuccess=true");
@@ -124,13 +125,42 @@ function Signup() {
     }
   };
   const handleBack = () => {
+    navigate("/");
+  };
+
+  const handleNavigateToLogin = () => {
     navigate("/login");
   };
+
   const handleCloseMobilenumberModal = () => {
     setMobilenumberModalOpen(false);
   };
-  const handleNavigateToLogin = () => {
-    navigate("/login");
+
+  const handleCloseOtpModal = () => {
+    setOtpModalOpen(false);
+  };
+
+  const handleVerifyOtpSuccess = async () => {
+    try {
+      const response = await userLogin({
+        identifier: email.trim(),
+        password,
+      });
+
+      setAuthSession(
+        response.token,
+        response.user,
+        response.shouldCollectPhoneAndCountry
+      );
+
+      if (response.shouldCollectPhoneAndCountry) {
+        setMobilenumberModalOpen(true);
+      } else {
+        navigate("/?showAccountCreated=true");
+      }
+    } catch (err: unknown) {
+      navigate("/login");
+    }
   };
 
   return (
@@ -142,21 +172,26 @@ function Signup() {
           type="button"
           className="pf-login__back"
           onClick={handleBack}
-          aria-label="Go back"
+          aria-label="Back to home"
         >
-          <RightArrowRoundFillIcon height={50} width={123} />
+          <RightArrowRoundFillIcon height={18} width={18} />
           <span>Back</span>
         </button>
 
         <Box className="pf-login__scroll">
           <Box className="pf-login__card" component="section">
             <Box className="pf-login__logo" aria-label="Estatehub">
-              <PfOrangeLogoIcon />
+              <HeaderLogoIcon width={140} height={42} />
             </Box>
 
-            <Typography component="h1" className="pf-login__title">
-              Create your Account
-            </Typography>
+            <div className="pf-login__headerWrap">
+              <Typography component="h1" className="pf-login__title">
+                Create your account
+              </Typography>
+              <Typography className="pf-login__subtitle">
+                Join Estatehub to access exclusive luxury properties.
+              </Typography>
+            </div>
 
             <Box
               component="form"

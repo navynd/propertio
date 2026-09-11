@@ -49,7 +49,7 @@
 
         &__title {
             font-size: 70px;
-            font-family: Medium, sans-serif;
+            font-family: "Playfair Display", serif;
             font-weight: 700;
             color: #FFF;
             line-height: 1;
@@ -112,8 +112,9 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: white;
-        border: none;
+        background: #1A1A1A;
+        border: 1px solid rgba(201, 169, 110, 0.3);
+        color: #C9A96E;
         width: 36px;
         height: 36px;
         display: flex;
@@ -122,7 +123,13 @@
         border-radius: 50%;
         font-size: 18px;
         cursor: pointer;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #C9A96E;
+            color: #0A0A0A;
+        }
 
         &.left {
             left: 10px;
@@ -136,13 +143,16 @@
 
 .about-slider-title {
     padding: 17px 0;
-    background-color: #D4A373;
+    background: linear-gradient(135deg, #141414 0%, #1A1A1A 100%);
+    border-top: 1px solid rgba(201, 169, 110, 0.25);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.25);
 
     .about-slider-title__text {
         font-size: 25px;
-        font-family: Medium, sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 700;
-        color: #fff;
+        color: #C9A96E;
+        letter-spacing: 0.5px;
         line-height: 1.2;
         margin: 0;
         display: inline-block;
@@ -178,8 +188,9 @@
 }
 
 .success {
-    background: #000;
-    color: #fff;
+    background: #141414;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    color: #F5F0E8;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -199,8 +210,8 @@
     h2 {
         font-size: 70px;
         font-weight: 700;
-        font-family: Medium, sans-serif;
-        color: #FFF;
+        font-family: "Playfair Display", serif;
+        color: #F5F0E8;
         line-height: 1.08;
         margin: 0;
     }
@@ -315,7 +326,7 @@
     flex-shrink: 0;
     width: 10px;
     height: 10px;
-    background: #fff;
+    background: rgba(201, 169, 110, 0.4);
     border-radius: 50%;
     margin: 0 var(--success-dot-margin);
     z-index: 2;
@@ -323,7 +334,8 @@
 }
 
 .success-item.active .success-dot {
-    background: #D4A373;
+    background: #C9A96E;
+    box-shadow: 0 0 10px rgba(201, 169, 110, 0.6);
     width: 10px;
     height: 10px;
 }
@@ -548,19 +560,20 @@
     min-height: 48px;
     padding: 0 28px;
     border-radius: 8px;
-    background: #D4A373;
-    color: #fff !important;
+    background: linear-gradient(135deg, #C9A96E 0%, #E4C98B 100%);
+    color: #0A0A0A !important;
     font-family: Medium, sans-serif;
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: all 0.2s ease, transform 0.15s ease;
 
     &:hover {
-        background: #d6322d;
-        color: #fff !important;
+        background: linear-gradient(135deg, #E4C98B 0%, #C9A96E 100%);
+        color: #0A0A0A !important;
+        box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4);
     }
 
     &:active {
@@ -583,11 +596,11 @@
 
 .about-business__left h3 {
     margin: 0;
-    font-family: Medium, sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 700;
     font-size: 40px;
     line-height: 1.1;
-    color: #222;
+    color: #F5F0E8;
 }
 
 .about-business__right-texts {
@@ -596,7 +609,7 @@
     font-size: 17px;
     font-weight: 600;
     line-height: 1.65;
-    color: #222;
+    color: #A89880;
 }
 
 .about-business__right-text {
@@ -605,7 +618,7 @@
     font-size: 17px;
     font-weight: 400;
     line-height: 1.65;
-    color: #333;
+    color: #A89880;
 }
 
 .about-business__actions {
@@ -620,8 +633,8 @@
     height: 42px;
     padding: 0 18px;
     border-radius: 10px;
-    background: #D4A373;
-    color: #fff !important;
+    background: linear-gradient(135deg, #C9A96E 0%, #E4C98B 100%);
+    color: #0A0A0A !important;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -629,10 +642,17 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 700;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: linear-gradient(135deg, #E4C98B 0%, #C9A96E 100%);
+        color: #0A0A0A !important;
+        box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4);
+    }
 }
 
 .about-business__btn-link {
-    color: #222 !important;
+    color: #C9A96E !important;
     text-decoration: none;
     font-family: Medium, sans-serif;
     font-size: 14px;
@@ -650,7 +670,9 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-color: #222;
+    background-color: #1A1A1A;
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    color: #C9A96E;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -660,7 +682,7 @@
 
 .about-business__stats {
     margin-top: 80px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(201, 169, 110, 0.2);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -670,17 +692,17 @@
 }
 
 .about-business__stat+.about-business__stat {
-    border-left: 1px solid #ddd;
+    border-left: 1px solid rgba(201, 169, 110, 0.2);
     padding-left: 46px;
 }
 
 .about-business__stat h4 {
     margin: 0 0 28px;
-    font-family: Medium, sans-serif;
-    font-weight: 500;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
     font-size: 70px;
     line-height: 1;
-    color: #222;
+    color: #C9A96E;
 
     span {
         font-size: 0.62em;
@@ -694,7 +716,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.6;
-    color: #222;
+    color: #A89880;
 }
 
 @media (max-width: 991px) {

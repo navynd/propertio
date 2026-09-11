@@ -10,7 +10,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.2;
 }
 
@@ -29,7 +29,7 @@
     transition: box-shadow 0.2s ease;
 
     &--open {
-        background: var(--secondary, #1F3D51);
+        background: var(--secondary, #C9A96E);
         box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.15);
     }
 }
@@ -145,7 +145,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.25;
     flex: 1 1 200px;
     min-width: 0;
@@ -159,7 +159,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    color: #222;
+    color: #A89880;
     text-align: right;
 
     @media (max-width: 640px) {
@@ -317,7 +317,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.35;
 }
 
@@ -434,7 +434,7 @@
     font-family: Medium, sans-serif;
     font-size: 15px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.35;
 }
 
@@ -491,7 +491,7 @@
     font-family: Medium, sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #222;
+    color: #A89880;
 }
 
 .pf-communities-featured__footer {

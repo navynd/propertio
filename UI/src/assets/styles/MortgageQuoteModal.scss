@@ -1,7 +1,8 @@
 .mortgage-quote-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,14 +10,15 @@
 }
 
 .mortgage-quote-modal {
-    background: #fff;
+    background: #141414;
     width: 480px;
     max-height: 90vh;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
 }
 
 .mortgage-quote-modal__submit-loader {
@@ -28,7 +30,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.78);
+    background: rgba(10, 10, 10, 0.85);
     border-radius: 16px;
 }
 
@@ -36,7 +38,7 @@
     font-family: Medium, sans-serif !important;
     font-size: 13px !important;
     font-weight: 500 !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
     margin: 0 !important;
 }
 
@@ -55,8 +57,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-    background: var(--White, #FFF);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
+    color: #C9A96E;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #C9A96E;
+        color: #0A0A0A;
+    }
 }
 
 
@@ -75,10 +84,10 @@
 }
 
 .mortgage-quote-modal-title {
-    font-size: 20px !important;
-    font-family: Regular, sans-serif !important;
+    font-size: 22px !important;
+    font-family: "Playfair Display", serif !important;
     font-weight: 700 !important;
-    color: #222;
+    color: #F5F0E8 !important;
     text-align: center !important;
     margin-bottom: 20px !important;
 }
@@ -98,8 +107,9 @@
     padding: 0px 15px 0px 10px;
     height: 40px;
     border-radius: 999px;
-    background: #F2F2F2;
-    color: #222;
+    background: #1A1A1A;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    color: #F5F0E8;
     font-weight: 600 !important;
     font-family: Regular, sans-serif !important;
     font-size: 12px !important;
@@ -117,37 +127,46 @@
     font-size: 12px;
     font-weight: 500 !important;
     font-family: Medium, sans-serif;
-    background: #1D4ED8;
-    color: #fff;
+    background: #1A1A1A;
+    color: #C9A96E;
+    border: 1px solid #C9A96E;
 }
 
 .mortgage-quote-step--done {
-    background: #00A663;
-    color: #fff;
+    background: rgba(0, 166, 99, 0.2);
+    border-color: #00A663;
+    color: #00A663;
 
     .mortgage-quote-step__dot {
-        background: #FFF;
-        color: #00A663;
+        background: #00A663;
+        color: #FFF;
+        border-color: #00A663;
     }
 }
 
 .mortgage-quote-step--active {
+    background: rgba(201, 169, 110, 0.15);
+    border-color: #C9A96E;
+    color: #C9A96E;
+
     .mortgage-quote-step__dot {
-        background: #1F3D51;
+        background: #C9A96E;
+        color: #0A0A0A;
+        border-color: #C9A96E;
     }
 }
 
 .mortgage-quote-step--upcoming {
-    background: #fff;
-    color: #222;
-    border: 1px dashed var(--Black-3, rgba(34, 34, 34, 0.30));
-    opacity: 0.5;
+    background: #141414;
+    color: #707070;
+    border: 1px dashed rgba(201, 169, 110, 0.2);
+    opacity: 0.6;
     height: 38px;
 
     .mortgage-quote-step__dot {
-
-        background: var(--Black-1, rgba(34, 34, 34, 0.10));
-        color: #222;
+        background: #1A1A1A;
+        color: #707070;
+        border-color: #707070;
     }
 }
 
@@ -162,15 +181,11 @@
     font-family: Medium, sans-serif !important;
     font-weight: 600 !important;
     font-size: 14px !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
     margin: 0 0 10px 0 !important;
 }
 
-// .mortgage-quote-service__custom-select--buying {
-//     margin-bottom: 15px;
-// }
-
-/* Custom dropdown (same pattern as AgentandAgency "Service") */
+/* Custom dropdown */
 .mortgage-quote-service__custom-select {
     position: relative;
     width: 100%;
@@ -188,7 +203,7 @@
 
 .mortgage-quote-service__name.selected {
     font-weight: 400 !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
 }
 
 .mortgage-quote-service__select-btn {
@@ -200,8 +215,14 @@
     height: 44px;
     cursor: pointer;
     border-radius: 10px;
-    border: 1px solid rgba(34, 34, 34, 0.10);
-    background: #fff;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
+    color: #F5F0E8;
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: #C9A96E;
+    }
 }
 
 .mortgage-quote-service__dropdown {
@@ -209,9 +230,10 @@
     top: 110%;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: #141414;
+    border: 1px solid rgba(201, 169, 110, 0.3);
     border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
     z-index: 10;
     max-height: 200px;
     overflow-x: auto;
@@ -227,12 +249,19 @@
     padding: 10px 12px;
     font-size: 13px;
     font-family: Medium, sans-serif !important;
-    color: #222;
+    color: #F5F0E8;
     cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+        background: #1A1A1A;
+        color: #C9A96E;
+    }
 
     &.active {
-        background: #D4A373;
-        color: #FFF;
+        background: rgba(201, 169, 110, 0.15);
+        color: #C9A96E;
+        font-weight: 700;
     }
 }
 
@@ -251,7 +280,7 @@
     font-family: Medium, sans-serif !important;
     font-weight: 500 !important;
     font-size: 13px !important;
-    color: #1F3D51 !important;
+    color: #C9A96E !important;
     box-shadow: none !important;
 }
 
@@ -265,7 +294,9 @@
     .MuiOutlinedInput-root {
         border-radius: 10px !important;
         height: 44px;
-        background: #fff;
+        background: #161616;
+        border: 1px solid rgba(201, 169, 110, 0.2) !important;
+        color: #F5F0E8 !important;
     }
 }
 
@@ -274,6 +305,7 @@
         padding: 12px 14px !important;
         font-family: Regular, sans-serif !important;
         font-size: 13px !important;
+        color: #F5F0E8 !important;
     }
 }
 
@@ -281,25 +313,26 @@
     .MuiOutlinedInput-root {
         border-radius: 10px !important;
         height: 44px;
-        background: #fff !important;
-        border-radius: 10px !important;
-
+        background: #161616 !important;
+        border: 1px solid rgba(201, 169, 110, 0.2) !important;
+        color: #F5F0E8 !important;
     }
 
     .MuiOutlinedInput-notchedOutline {
-        border: 1px solid rgba(34, 34, 34, 0.10) !important;
+        border: none !important;
     }
 
     input {
         padding: 12px 14px !important;
         font-family: Regular, sans-serif !important;
         font-size: 13px !important;
+        color: #F5F0E8 !important;
     }
 
     .MuiInputAdornment-root {
         font-family: Regular, sans-serif;
         font-size: 12px;
-        color: rgba(34, 34, 34, 0.65);
+        color: #A89880;
         margin-right: 10px;
     }
 }
@@ -324,10 +357,15 @@
     gap: 10px;
     height: 44px;
     border-radius: 10px;
-    border: 1px solid rgba(34, 34, 34, 0.10);
-    background: #fff;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
     padding: 0 12px;
     cursor: pointer;
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: #C9A96E;
+    }
 }
 
 .mortgage-quote-country__value {
@@ -349,7 +387,7 @@
     font-family: Regular, sans-serif !important;
     font-size: 13px !important;
     font-weight: 700 !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -361,11 +399,11 @@
     left: 0;
     // width: 100%;
     width: 350px;
-    background: #fff;
-    border: 1px solid rgba(34, 34, 34, 0.1);
+    background: #141414;
+    border: 1px solid rgba(201, 169, 110, 0.3);
     border-radius: 10px;
     z-index: 12;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     padding: 14px;
 }
 
@@ -375,8 +413,9 @@
     gap: 10px;
     padding: 0 12px;
     border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    background: #1A1A1A;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .mortgage-quote-country__search-input {
@@ -387,9 +426,13 @@
     font-family: Regular, sans-serif !important;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #707070 !important;
+    color: #F5F0E8 !important;
     margin: 0 !important;
     background: transparent;
+
+    &::placeholder {
+        color: #707070;
+    }
 }
 
 .mortgage-quote-country__list {
@@ -413,9 +456,10 @@
     cursor: pointer;
     border-radius: 8px;
     padding: 0 8px;
+    transition: all 0.15s ease;
 
     &:hover {
-        background: rgba(212, 163, 115, 0.06);
+        background: rgba(201, 169, 110, 0.12);
     }
 }
 
@@ -438,7 +482,7 @@
     font-family: Regular, sans-serif !important;
     font-size: 14px !important;
     font-weight: 400 !important;
-    color: #222 !important;
+    color: #F5F0E8 !important;
 }
 
 .mortgage-quote-success {
@@ -474,21 +518,22 @@
 }
 
 .mortgage-quote-success__title {
-    font-family: Bold, sans-serif !important;
-    font-size: 20px !important;
-    color: #222 !important;
+    font-family: "Playfair Display", serif !important;
+    font-size: 22px !important;
+    font-weight: 700;
+    color: #F5F0E8 !important;
     margin: 0 !important;
 }
 
 .mortgage-quote-success__sub {
     font-family: Regular, sans-serif !important;
     font-size: 13px !important;
-    color: rgba(34, 34, 34, 0.7) !important;
+    color: #A89880 !important;
     margin: 0 !important;
 }
 
 .mortgage-quote-success__email {
-    color: #1F3D51;
+    color: #C9A96E;
     font-family: SemiBold, sans-serif;
 }
 
@@ -500,7 +545,8 @@
     gap: 30px;
     border-radius: 0 0 16px 16px;
     padding: 20px 0px 50px 0px;
-    background: #fff;
+    background: #141414;
+    border-top: 1px solid rgba(201, 169, 110, 0.15);
 }
 
 .mortgage-quote-result-btn {
@@ -510,8 +556,11 @@
     border-radius: 12px !important;
     font-family: SemiBold, sans-serif !important;
     font-size: 15px !important;
-    background: rgba(212, 163, 115, 1) !important;
-    box-shadow: none !important;
+    background: linear-gradient(135deg, #C9A96E 0%, #E4C98B 100%) !important;
+    color: #0A0A0A !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4) !important;
+    border: none !important;
     text-transform: none !important;
 }
 

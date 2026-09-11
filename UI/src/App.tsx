@@ -5,7 +5,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
+import "./index.css";
 import "./App.css";
+
 import { SystemSettingsProvider } from "./context/SystemSettingsContext";
 import Home from "./Pages/Home";
 import Login from "./Components/accountSection/Login";

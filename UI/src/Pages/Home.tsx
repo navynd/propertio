@@ -1507,20 +1507,16 @@ function Home() {
         <div className="pf-hero__shade" />
 
         <PFContainer className="pf-hero__content">
+          <div className="pf-hero__vertical-brand">Estatehub — Luxury Real Estate</div>
           <div className="pf-hero__badge">
             <span className="pf-hero__badge-dot" />
-            Exceptional Living Spaces
+            Exclusive Living Spaces
           </div>
-          <h1 className="pf-hero__title">Innovative Properties</h1>
+          <h1 className="pf-hero__title">
+            Where Luxury <span className="pf-hero__title-gold">Meets Home</span>
+          </h1>
           <p className="pf-hero__subtitle">
-            We provide the complete Service for sale and rent in United Arab
-            Emirates
-          </p>
-          <p className="pf-hero__lede">
-            Sed tincidunt erat porta nibh sodales, ac commodo eros luctus.
-            Quisque urna eros, iaculis eu congue consequat, placerat vitae nunc.
-            Praesent blandit quam cursus libero elementum, nec imperdiet enim
-            consequat.
+            Curated ultra-luxury residences, off-plan penthouses, and private estates across the United Arab Emirates.
           </p>
 
           <div className="pf-hero__actions">
@@ -1903,27 +1899,47 @@ function Home() {
               </div>
             </div>
           </div>
+
+          {/* Animated Stats Ticker */}
+          <div className="pf-hero__stats-ticker">
+            <div className="pf-hero__stat-item">
+              <span className="pf-hero__stat-number">2,847+</span>
+              <span className="pf-hero__stat-label">Exclusive Properties</span>
+            </div>
+            <span className="pf-hero__stat-separator" />
+            <div className="pf-hero__stat-item">
+              <span className="pf-hero__stat-number">180+</span>
+              <span className="pf-hero__stat-label">Verified Agents</span>
+            </div>
+            <span className="pf-hero__stat-separator" />
+            <div className="pf-hero__stat-item">
+              <span className="pf-hero__stat-number">12</span>
+              <span className="pf-hero__stat-label">Prime UAE Cities</span>
+            </div>
+            <span className="pf-hero__stat-separator" />
+            <div className="pf-hero__stat-item">
+              <span className="pf-hero__stat-number">$4.2B+</span>
+              <span className="pf-hero__stat-label">Transaction Volume</span>
+            </div>
+          </div>
         </PFContainer>
       </main>
 
       <section className="pf-section_about pf-about" aria-label="About">
         <PFContainer className="pf-about__container">
           <div className="pf-about__left">
+            <div className="pf-about__badge">The Estatehub Difference</div>
             <h2 className="pf-about__title">
-              Know more
+              Crafting Exceptional
               <br />
-              about us
+              <span className="pf-about__title-gold">Real Estate Journeys</span>
             </h2>
-            <GrayLogoIcon className="pf-about__logo" />
+            <div className="pf-about__accent-bar" />
           </div>
 
           <div className="pf-about__right">
             <p className="pf-about__text">
-              Donec eu sapien a turpis posuere sagittis vitae vel felis.
-              Phasellus varius libero arcu, in mollis ex eleifend ac. Nam eget
-              dolor velit nisi laoreet egestas. Praesent eu sollicitudin massa.
-              Proin id augue ligula. Nam condimentum volutpat finibus. Curabitur
-              eget mauris pharetra velit vehicula tincidunt in vel velit.
+              Estatehub is the UAE’s premier destination for bespoke real estate acquisition. From beachfront villas on the Palm Jumeirah to architectural marvels in Downtown Dubai, our private network unlocks unlisted opportunities for discerning investors and homeowners worldwide.
             </p>
             <div className="pf-about__actions">
               <button
@@ -1931,7 +1947,7 @@ function Home() {
                 className="pf-about__btn pf-about__btn--primary"
                 onClick={() => navigate("/about")}
               >
-                Know more
+                Learn More
               </button>
 
               <button
@@ -1939,7 +1955,7 @@ function Home() {
                 className="pf-about__btn pf-about__btn--ghost"
                 onClick={() => navigate("/findagentorcompany")}
               >
-                Find agents
+                Find Elite Agents
                 <RightArrowRoundFillIcon />
               </button>
             </div>
@@ -1948,7 +1964,7 @@ function Home() {
       </section>
 
       {/* slider section starts */}
-      <section className="">
+      <section className="pf-section pf-section--slider">
         <PFContainer className="pf-section_slider">
           <HomeSlider />
         </PFContainer>

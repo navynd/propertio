@@ -1,5 +1,5 @@
 .pf-location-details {
-    background: #f5f5f5;
+    background: #111111;
     min-height: 100vh;
     padding: 24px 0 60px;
 }
@@ -113,7 +113,7 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #222;
+    color: #A89880;
     cursor: pointer;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 
@@ -122,7 +122,7 @@
     }
 
     &:hover {
-        background: #fafafa;
+        background: #111111;
     }
 }
 
@@ -169,7 +169,7 @@
     font-family: Medium, sans-serif;
     font-size: 25px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.2;
 }
 
@@ -184,7 +184,7 @@
     font-family: Regular, sans-serif !important;
     font-size: 12px !important;
     font-weight: 400 !important;
-    color: #222 !important;
+    color: #A89880 !important;
 }
 
 .pf-location-details__availability-title {
@@ -192,7 +192,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
 }
 
 .pf-location-details__unit-list {
@@ -225,7 +225,7 @@
     font-family: Medium, sans-serif;
     font-size: 15px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
 }
 
 .pf-location-details__unit-count {
@@ -315,7 +315,7 @@
     font-family: Regular, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #222;
+    color: #A89880;
     line-height: 1.5;
     text-align: right;
 }
@@ -327,7 +327,7 @@
 }
 
 .pf-location-details__poi-card {
-    background: #f5f5f5;
+    background: #111111;
     border-radius: 15px;
     padding: 20px;
     display: flex;
@@ -366,14 +366,14 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #222;
+    color: #A89880;
 }
 
 .pf-location-details__poi-distance {
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #222;
+    color: #A89880;
     flex-shrink: 0;
 }
 
@@ -388,7 +388,7 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     cursor: pointer;
 }
 
@@ -420,12 +420,12 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     padding: 26px;
 }
 
 .pf-location-details__key-block {
-    background: #f5f5f5;
+    background: #111111;
     border-radius: 15px;
     padding: 20px 20px 0px 20px;
     margin-bottom: 6px;
@@ -588,7 +588,7 @@
     font-size: 13px !important;
     font-weight: 600 !important;
     font-family: Regular, sans-serif !important;
-    color: #222 !important;
+    color: #A89880 !important;
 }
 
 .pf-location-details__price-insights-filters .pf-agent-Service__name.selected {
@@ -612,7 +612,7 @@
     padding: 10px 14px;
     font-size: 13px;
     font-family: Regular, sans-serif !important;
-    color: #222;
+    color: #A89880;
     cursor: pointer;
 
     &.active {
@@ -664,7 +664,7 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
 }
 
 .pf-location-details__price-chart-inner {
@@ -686,7 +686,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
 }
 
 .pf-location-details__price-averages-list {
@@ -705,7 +705,7 @@
     border-bottom: 1px solid #ececec;
     font-family: Regular, sans-serif;
     font-size: 14px;
-    color: #222;
+    color: #A89880;
 
     &:first-child {
         padding-top: 0;
@@ -713,7 +713,7 @@
 }
 
 .pf-location-details__price-averages-label {
-    color: #222;
+    color: #A89880;
     font-family: Regular, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -722,7 +722,7 @@
 .pf-location-details__price-averages-value {
     font-family: Medium, sans-serif;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     text-align: right;
     white-space: nowrap;
 }
@@ -759,7 +759,7 @@
     align-items: center;
     gap: 8px;
     font-size: 12px;
-    color: #333;
+    color: #A89880;
     margin-top: 6px;
 
     &:first-of-type {

@@ -14,7 +14,7 @@
     font-size: 14px !important;
     font-weight: 700 !important;
     font-family: Regular, sans-serif !important;
-    color: #222 !important;
+    color: #A89880 !important;
 }
 
 .pf-agent-Service__select-btn {
@@ -53,7 +53,7 @@
     padding: 9px 10px;
     font-size: 13px;
     font-family: Medium, sans-serif !important;
-    color: #222;
+    color: #A89880;
     cursor: pointer;
 
     &.active {
@@ -97,7 +97,7 @@
     font-family: Medium, sans-serif;
     font-size: 40px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.15;
 }
 
@@ -219,7 +219,7 @@
     font-family: Regular, sans-serif;
     font-size: 15px;
     font-weight: 400;
-    color: #222;
+    color: #A89880;
     background: transparent;
     padding: 12px 8px;
 
@@ -340,7 +340,7 @@
     font-family: Regular, sans-serif;
     font-size: 13px;
     font-weight: 400;
-    color: #222;
+    color: #A89880;
     cursor: pointer;
     white-space: nowrap;
     position: relative;
@@ -362,12 +362,12 @@
     }
 
     &.is-active {
-        color: #1F3D51;
+        color: #C9A96E;
         font-weight: 600;
         font-family: Medium, sans-serif;
 
         &::after {
-            background: #1F3D51;
+            background: #C9A96E;
         }
     }
 }
@@ -399,7 +399,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
 }
 
 .pf-tower-compound__areas-panel-subtitle {
@@ -482,7 +482,7 @@
     right: 14px;
     z-index: 2;
     background: #fff;
-    color: #222;
+    color: #A89880;
     font-family: Medium, sans-serif;
     font-size: 13px;
     font-weight: 700;

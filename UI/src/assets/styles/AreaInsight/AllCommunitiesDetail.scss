@@ -188,7 +188,7 @@
     font-family: Regular, sans-serif;
     font-size: 13px;
     font-weight: 400;
-    color: #222;
+    color: #A89880;
     line-height: 1.2;
     cursor: pointer;
     white-space: nowrap;
@@ -199,15 +199,15 @@
     }
 
     &:focus-visible {
-        outline: 2px solid #1F3D51;
+        outline: 2px solid #C9A96E;
         outline-offset: 2px;
     }
 }
 
 .pf-communities-detail__tab--active {
-    color: #1F3D51;
+    color: #C9A96E;
     font-weight: 600;
-    border-bottom-color: #1F3D51;
+    border-bottom-color: #C9A96E;
 }
 
 @media (min-width: 1024px) {
@@ -242,7 +242,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.25;
 }
 
@@ -252,7 +252,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.65;
-    color: #222;
+    color: #A89880;
 
     &:last-of-type {
         margin-bottom: 0;
@@ -295,12 +295,12 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #1F3D51;
+    color: #C9A96E;
     cursor: pointer;
 
 
     &:focus-visible {
-        outline: 2px solid #1F3D51;
+        outline: 2px solid #C9A96E;
         outline-offset: 2px;
     }
 }
@@ -326,10 +326,10 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2;
-    color: #222;
+    color: #A89880;
 
     &::marker {
-        color: #222;
+        color: #A89880;
     }
 
     &:last-child {
@@ -415,7 +415,7 @@
     }
 
     &:focus-visible {
-        outline: 2px solid #1F3D51;
+        outline: 2px solid #C9A96E;
         outline-offset: 2px;
     }
 }
@@ -433,7 +433,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.3;
 }
 
@@ -457,7 +457,7 @@
     font-family: Regular, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #222;
+    color: #A89880;
     cursor: pointer;
     transition:
         background 0.15s ease,
@@ -470,13 +470,13 @@
 
     &--active {
         background: #222;
-        border-color: #222;
+        border-color: #A89880;
         color: #fff;
         font-weight: 500;
     }
 
     &:focus-visible {
-        outline: 2px solid #1F3D51;
+        outline: 2px solid #C9A96E;
         outline-offset: 2px;
     }
 }
@@ -487,7 +487,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.65;
-    color: #222;
+    color: #A89880;
 
     &:last-of-type {
         margin-bottom: 0;
@@ -521,13 +521,13 @@
 }
 
 .pf-communities-detail__read-more--dark {
-    color: #222;
+    color: #A89880;
     font-weight: 700;
     font-size: 14px;
     font-family: Medium, sans-serif;
 
     &:hover {
-        color: #222;
+        color: #A89880;
     }
 
     &:focus-visible {
@@ -548,7 +548,7 @@
     font-family: Medium, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #A89880;
     line-height: 1.25;
 }
 
@@ -571,7 +571,7 @@
     font-family: Regular, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #222;
+    color: #A89880;
     cursor: pointer;
     transition:
         background 0.15s ease,
@@ -580,12 +580,12 @@
 
     &--active {
         background: #222;
-        border-color: #222;
+        border-color: #A89880;
         color: #fff;
     }
 
     &:focus-visible {
-        outline: 2px solid #1F3D51;
+        outline: 2px solid #C9A96E;
         outline-offset: 2px;
     }
 }
@@ -615,7 +615,7 @@
     }
 
     &:focus-visible {
-        outline: 2px solid #1F3D51;
+        outline: 2px solid #C9A96E;
         outline-offset: 2px;
     }
 }

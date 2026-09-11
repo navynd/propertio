@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import {
-  PfOrangeLogoIcon,
+  HeaderLogoIcon,
   RightArrowRoundFillIcon,
 } from "../parts/icon";
 import { useNavigate } from "react-router-dom";
@@ -31,8 +31,8 @@ function ForgotPassword() {
     navigate("/login");
   };
 
-  const handleGetOtp = async (e?: React.FormEvent) => {
-    e?.preventDefault();
+  const handleGetOtp = async (e: React.FormEvent) => {
+    e.preventDefault();
     const emailTrimmed = email.trim();
     if (!emailTrimmed) return;
 
@@ -51,7 +51,7 @@ function ForgotPassword() {
         maybeError.response?.data?.message ||
         maybeError.response?.data?.error ||
         maybeError.message;
-      setErrorMessage(apiMessage || "Failed to send OTP");
+      setErrorMessage(apiMessage || "Failed to send OTP. Please try again.");
     } finally {
       setIsSendingOtp(false);
     }
@@ -70,9 +70,9 @@ function ForgotPassword() {
           type="button"
           className="pf-login__back"
           onClick={handleBack}
-          aria-label="Go back"
+          aria-label="Back to login"
         >
-          <RightArrowRoundFillIcon height={50} width={123} />
+          <RightArrowRoundFillIcon height={18} width={18} />
           <span>Back</span>
         </button>
 
@@ -87,12 +87,17 @@ function ForgotPassword() {
               </Box>
             )}
             <Box className="pf-login__logo" aria-label="Estatehub">
-              <PfOrangeLogoIcon />
+              <HeaderLogoIcon width={140} height={42} />
             </Box>
 
-            <Typography component="h1" className="pf-login__title">
-              Forgot password
-            </Typography>
+            <div className="pf-login__headerWrap">
+              <Typography component="h1" className="pf-login__title">
+                Forgot password
+              </Typography>
+              <Typography className="pf-login__subtitle">
+                Enter your registered email to receive a recovery code.
+              </Typography>
+            </div>
 
             <Box
               component="form"

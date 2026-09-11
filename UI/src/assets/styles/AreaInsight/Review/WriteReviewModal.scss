@@ -1,7 +1,8 @@
 .write-review-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +11,7 @@
 }
 
 .write-review-modal {
-    background: #fff;
+    background: #141414;
     width: 100%;
     max-width: 920px;
     max-height: 92vh;
@@ -18,7 +19,8 @@
     flex-direction: column;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
 }
 
 .write-review-modal-header {
@@ -37,12 +39,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    border: 1px solid rgba(34, 34, 34, 0.1);
-    background: #fff;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
+    color: #C9A96E;
     padding: 0;
+    transition: all 0.2s ease;
 
     &:hover {
-        background: #f9fafb;
+        background: #C9A96E;
+        color: #0A0A0A;
     }
 }
 
@@ -57,7 +62,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.15);
+        background: rgba(201, 169, 110, 0.3);
         border-radius: 3px;
     }
 
@@ -65,10 +70,10 @@
 }
 
 .write-review-modal-title {
-    font-size: 20px !important;
-    font-family: Medium, sans-serif !important;
+    font-size: 22px !important;
+    font-family: "Playfair Display", serif !important;
     font-weight: 700 !important;
-    color: #111 !important;
+    color: #F5F0E8 !important;
     text-align: center !important;
     margin: 0 0 22px !important;
     width: 100%;
@@ -79,26 +84,27 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
     gap: 20px;
-    background: #f3f4f6;
+    background: #161616;
+    border: 1px solid rgba(201, 169, 110, 0.15);
     border-radius: 14px;
     padding: 4px;
     margin-bottom: 20px;
 }
 
 .write-review-modal-ratings-card {
-    background: #fff;
+    background: #1A1A1A;
     border-radius: 15px;
     padding: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(201, 169, 110, 0.15);
     align-self: start;
 }
 
 .write-review-modal-ratings-heading {
     margin: 0 0 14px;
-    font-family: Medium, sans-serif;
+    font-family: "Playfair Display", serif;
     font-size: 16px;
     font-weight: 700;
-    color: #111;
+    color: #F5F0E8;
 }
 
 .write-review-modal-ratings-list {
@@ -113,7 +119,7 @@
     justify-content: space-between;
     gap: 12px;
     padding: 12px 0;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.1);
 
     &:first-child {
         padding-top: 0;
@@ -128,7 +134,7 @@
 .write-review-modal-rating-label {
     font-family: Regular, sans-serif;
     font-size: 13px;
-    color: #374151;
+    color: #F5F0E8;
     line-height: 1.35;
     flex: 1;
     min-width: 0;
@@ -163,7 +169,7 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #222;
+    color: #F5F0E8;
 
     &--sr {
         position: absolute;
@@ -182,7 +188,7 @@
     font-family: Medium, sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: #111;
+    color: #F5F0E8;
     margin-bottom: 2px;
 }
 
@@ -192,12 +198,12 @@
     box-sizing: border-box;
     padding: 10px 12px;
     border-radius: 10px;
-    border: 1px solid var(--Black-1, rgba(34, 34, 34, 0.10));
-    background: #fff;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    background: #1A1A1A;
     font-family: Regular, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #222;
+    color: #F5F0E8;
     outline: none;
     transition: border-color 0.15s ease;
 
@@ -209,7 +215,7 @@
     }
 
     &:focus {
-        border-color: rgba(212, 163, 115, 0.45);
+        border-color: #C9A96E;
     }
 }
 
@@ -225,7 +231,7 @@
     font-family: Regular, sans-serif;
     font-size: 12px;
     line-height: 1.5;
-    color: #6b7280;
+    color: #A89880;
     max-width: 560px;
     margin-left: auto;
     margin-right: auto;
@@ -245,7 +251,7 @@
 .write-review-modal-terms-text {
     font-family: Regular, sans-serif;
     font-size: 13px;
-    color: #374151;
+    color: #A89880;
     line-height: 1.4;
 }
 
@@ -257,7 +263,8 @@
     border-radius: 0 0 16px 16px;
     padding: 12px 28px 24px;
     flex-shrink: 0;
-    background: #fff;
+    background: #141414;
+    border-top: 1px solid rgba(201, 169, 110, 0.15);
 }
 
 .write-review-modal-result-btn {
@@ -268,9 +275,10 @@
     font-family: Medium, sans-serif !important;
     font-size: 15px !important;
     font-weight: 700 !important;
-    background: #D4A373 !important;
-    color: #fff !important;
-    box-shadow: none !important;
+    background: linear-gradient(135deg, #C9A96E 0%, #E4C98B 100%) !important;
+    color: #0A0A0A !important;
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4) !important;
+    border: none !important;
     text-transform: none !important;
 }
 
