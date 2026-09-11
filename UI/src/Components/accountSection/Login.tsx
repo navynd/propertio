@@ -23,6 +23,7 @@ import LoginImageSection from "./LoginImageSection";
 import { getAppleSignInPayload } from "../../services/appleIdentity";
 import {
   setAuthSession,
+  shouldCollectPhoneAndCountry,
   userLogin,
   userSocialLogin,
 } from "../../services/apiService";
@@ -59,7 +60,8 @@ function Login() {
   };
 
   const handleLogin = async () => {
-    if (!identifier.trim() || !password) {
+    const id = identifier.trim();
+    if (!id || !password) {
       return;
     }
 
@@ -67,18 +69,17 @@ function Login() {
     setErrorMessage(null);
 
     try {
+      const isEmail = id.includes("@");
       const response = await userLogin({
-        identifier: identifier.trim(),
+        ...(isEmail ? { email: id } : { phoneNumber: id }),
         password,
+        rememberMe,
       });
 
-      setAuthSession(
-        response.token,
-        response.user,
-        response.shouldCollectPhoneAndCountry
-      );
+      const tokens = response.data.tokens;
+      setAuthSession(tokens, response.data.user);
 
-      if (response.shouldCollectPhoneAndCountry) {
+      if (shouldCollectPhoneAndCountry(response.data.user)) {
         setMobilenumberModalOpen(true);
       } else {
         navigate("/?showLoginSuccess=true");
@@ -112,16 +113,15 @@ function Login() {
 
       const response = await userSocialLogin({
         provider,
-        socialPayload,
+        token: socialPayload.token,
+        ...(provider === "apple"
+          ? { user: (socialPayload as { user?: unknown }).user ?? {} }
+          : {}),
       });
 
-      setAuthSession(
-        response.token,
-        response.user,
-        response.shouldCollectPhoneAndCountry
-      );
+      setAuthSession(response.data.tokens, response.data.user);
 
-      if (response.shouldCollectPhoneAndCountry) {
+      if (shouldCollectPhoneAndCountry(response.data.user)) {
         setMobilenumberModalOpen(true);
       } else {
         navigate("/?showLoginSuccess=true");

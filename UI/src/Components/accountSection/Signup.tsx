@@ -98,14 +98,13 @@ function Signup() {
 
       const response = await userSocialLogin({
         provider,
-        socialPayload,
+        token: socialPayload.token,
+        ...(provider === "apple"
+          ? { user: (socialPayload as { user?: unknown }).user ?? {} }
+          : {}),
       });
-      setAuthSession(
-        response.token,
-        response.user,
-        response.shouldCollectPhoneAndCountry
-      );
-      if (response.shouldCollectPhoneAndCountry) {
+      setAuthSession(response.data.tokens, response.data.user);
+      if (shouldCollectPhoneAndCountry(response.data.user)) {
         setMobilenumberModalOpen(true);
       } else {
         navigate("/?showLoginSuccess=true");
@@ -143,17 +142,13 @@ function Signup() {
   const handleVerifyOtpSuccess = async () => {
     try {
       const response = await userLogin({
-        identifier: email.trim(),
+        email: email.trim(),
         password,
       });
 
-      setAuthSession(
-        response.token,
-        response.user,
-        response.shouldCollectPhoneAndCountry
-      );
+      setAuthSession(response.data.tokens, response.data.user);
 
-      if (response.shouldCollectPhoneAndCountry) {
+      if (shouldCollectPhoneAndCountry(response.data.user)) {
         setMobilenumberModalOpen(true);
       } else {
         navigate("/?showAccountCreated=true");
