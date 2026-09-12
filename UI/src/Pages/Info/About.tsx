@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import PFContainer from "../../Components/container/PFContainer";
 import "../../assets/styles/Info/About.scss";
 import { LeftArrowIcon, RightArrowIcon } from "../../Components/parts/icon";
@@ -197,21 +198,21 @@ const About: React.FC = () => {
               <p className="about-business__right-texts">{settings.businessParagraph1}</p>
               <p className="about-business__right-text">{settings.businessParagraph2}</p>
               <div className="about-business__actions">
-                <a
-                  href={settings.businessCtaPrimaryUrl || "/teams"}
+                <Link
+                  to={settings.businessCtaPrimaryUrl || "/teams"}
                   className="about-business__btn-primary"
                 >
                   {settings.businessCtaPrimaryLabel || "Meet our team"}
-                </a>
-                <a
-                  href={settings.businessCtaSecondaryUrl || "/searchlisting"}
+                </Link>
+                <Link
+                  to={settings.businessCtaSecondaryUrl || "/searchlisting"}
                   className="about-business__btn-link"
                 >
                   {settings.businessCtaSecondaryLabel || "Find properties"}{" "}
                   <span className="about-business__btn-link-icon">
                     <RightArrowIcon width={20} height={20} />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -235,12 +236,12 @@ const About: React.FC = () => {
               <h2 className="about-luxury-cta__title">{settings.ctaHeadline}</h2>
               <p className="about-luxury-cta__subtitle">{settings.ctaSubheadline}</p>
               <div className="about-luxury-cta__actions">
-                <a href={settings.ctaButtonUrl || "/searchlisting"} className="about-luxury-cta__btn">
+                <Link to={settings.ctaButtonUrl || "/searchlisting"} className="about-luxury-cta__btn">
                   {settings.ctaButtonLabel || "Discover Prime Properties"}
-                </a>
-                <a href="/teams" className="about-luxury-cta__link">
+                </Link>
+                <Link to="/teams" className="about-luxury-cta__link">
                   Consult Private Client Team
-                </a>
+                </Link>
               </div>
             </div>
           </div>
