@@ -201,7 +201,7 @@ function Developers() {
 
         <Box className="pf-developers__header">
           <h1 className="pf-developers__title">
-            Top Real Estate Developers in UAE
+            Top Real Estate Developers Worldwide
           </h1>
         </Box>
 

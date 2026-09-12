@@ -207,10 +207,10 @@ const InsightHub: React.FC = () => {
 
 
                             <p className="insight-hero__subtitle">
-                                Explore Estatehub&apos;s one‑stop HUB for comprehensive
-                                publications on UAE, Egypt, Qatar, Bahrain, and KSA real estate.
-                                Stay informed with the latest trends, market analysis, and expert
-                                insights in one convenient HUB.
+                                Explore Estatehub&apos;s premier HUB for comprehensive
+                                market reports and intelligence across top global destinations.
+                                Stay informed with the latest trends, macroeconomic analysis, and expert
+                                insights in one convenient hub.
                             </p>
                         </div>
                         {/*bgone section*/}

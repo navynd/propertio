@@ -357,9 +357,9 @@ function Home() {
   ];
   const popularSearches = useMemo(
     () => [
-      "Apartments under AED 100K",
-      "Villas with private pool",
-      "Nearby properties in your area",
+      "Luxury Waterfront Villas",
+      "Modern Penthouses",
+      "Prime Off-Plan Investments",
     ],
     []
   );
@@ -1516,7 +1516,7 @@ function Home() {
             Where Luxury <span className="pf-hero__title-gold">Meets Home</span>
           </h1>
           <p className="pf-hero__subtitle">
-            Curated ultra-luxury residences, off-plan penthouses, and private estates across the United Arab Emirates.
+            Curated ultra-luxury residences, off-plan penthouses, and private estates across top destinations worldwide.
           </p>
 
           <div className="pf-hero__actions">
@@ -1913,8 +1913,8 @@ function Home() {
             </div>
             <span className="pf-hero__stat-separator" />
             <div className="pf-hero__stat-item">
-              <span className="pf-hero__stat-number">12</span>
-              <span className="pf-hero__stat-label">Prime UAE Cities</span>
+              <span className="pf-hero__stat-number">50+</span>
+              <span className="pf-hero__stat-label">Prime Global Markets</span>
             </div>
             <span className="pf-hero__stat-separator" />
             <div className="pf-hero__stat-item">
@@ -1939,7 +1939,7 @@ function Home() {
 
           <div className="pf-about__right">
             <p className="pf-about__text">
-              Estatehub is the UAE’s premier destination for bespoke real estate acquisition. From beachfront villas on the Palm Jumeirah to architectural marvels in Downtown Dubai, our private network unlocks unlisted opportunities for discerning investors and homeowners worldwide.
+              Estatehub is the premier global destination for bespoke real estate acquisition. From beachfront villas in Dubai and penthouses in London to architectural marvels in New York and Paris, our private network unlocks unlisted opportunities for discerning investors and homeowners worldwide.
             </p>
             <div className="pf-about__actions">
               <button
@@ -1979,10 +1979,10 @@ function Home() {
           <div className="pf-new-projects">
             <div className="pf-new-projects__header">
               <Typography variant="h2" className="pf-new-projects__title">
-                Explore new projects in the UAE
+                Explore new projects worldwide
               </Typography>
               <Typography variant="body1" className="pf-new-projects__subtitle">
-                Discover the latest off-plan properties and be informed
+                Discover the latest off-plan properties and iconic global developments
               </Typography>
             </div>
 
@@ -2262,13 +2262,12 @@ function Home() {
               <div className="pf-new-projects__cta-bg"></div>
               <div className="pf-cta">
                 <h3 className="pf-cta__title">
-                  First time buyer
+                  Looking to invest
                   <br />
-                  in Dubai?
+                  internationally?
                 </h3>
                 <p className="pf-cta__desc">
-                  Register your interest and connect to approved developers in
-                  Dubai
+                  Register your interest and connect with premier approved developers worldwide
                 </p>
                 <button type="button" className="pf-cta__btn" onClick={() => navigate("/contact")}>
                   Get in touch
@@ -2281,11 +2280,11 @@ function Home() {
 
       <section
         className="pf-section pf-section--market"
-        aria-label="UAE Market"
+        aria-label="Global Markets"
       >
         <PFContainer className="pf-market">
           <Typography variant="h2" className="pf-market__title">
-            Explore the UAE market
+            Explore premier global markets
           </Typography>
           <Box className="pf-market__cards">
             <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
@@ -2298,27 +2297,35 @@ function Home() {
             </Box>
             <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
               <img
-                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1600&auto=format&fit=crop"
-                alt="Abu Dhabi"
+                src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1600&auto=format&fit=crop"
+                alt="London"
                 className="pf-market__cardImage"
               />
               <Typography className="pf-market__cardLabel">
-                Abu Dhabi
+                London
               </Typography>
             </Box>
             <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
               <img
-                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1600&auto=format&fit=crop"
-                alt="Sharjah"
+                src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1600&auto=format&fit=crop"
+                alt="New York"
                 className="pf-market__cardImage"
               />
-              <Typography className="pf-market__cardLabel">Sharjah</Typography>
+              <Typography className="pf-market__cardLabel">New York</Typography>
+            </Box>
+            <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1600&auto=format&fit=crop"
+                alt="Paris"
+                className="pf-market__cardImage"
+              />
+              <Typography className="pf-market__cardLabel">Paris</Typography>
             </Box>
           </Box>
           <Typography className="pf-market__description">
-            Dive deep into the UAE's real estate market with prices, transaction
-            histories and community insights to help you make an educated
-            decision.
+            Dive deep into global real estate markets with prices, transaction
+            histories, and community insights to help you make an educated
+            decision anywhere in the world.
           </Typography>
         </PFContainer>
       </section>

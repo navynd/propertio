@@ -39,7 +39,7 @@ function LoginImageSection() {
           </Typography>
 
           <Typography className="pf-login__brandDesc">
-            Access the UAE's finest private residences, off-plan penthouses, and premier investment portfolios.
+            Access the world's finest private residences, off-plan penthouses, and premier investment portfolios across top global destinations.
           </Typography>
 
           <div className="pf-login__stats">

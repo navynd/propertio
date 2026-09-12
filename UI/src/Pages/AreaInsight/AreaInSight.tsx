@@ -428,7 +428,7 @@ const AreaInSight: React.FC = () => {
                         <div className="pf-area-insight__titles">
                             <h1 className="pf-area-insight__title">Explore area insights</h1>
                             <p className="pf-area-insight__subtitle">
-                                Explore UAE property prices and insights to make informed decisions.
+                                Explore global property prices, market intelligence, and neighborhood insights.
                             </p>
                         </div>
                         <div className="pf-area-insight__location">

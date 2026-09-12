@@ -27,7 +27,7 @@ function CreateAlertModal({
   frequencyOptions,
   onCreate,
 }: CreateAlertModalProps) {
-  const [alertName, setAlertName] = useState(defaultAlertName || "Properties for Rent in UAE");
+  const [alertName, setAlertName] = useState(defaultAlertName || "Properties for Rent Worldwide");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const options = useMemo(() => {
     const list = Array.isArray(frequencyOptions) ? frequencyOptions : [];
@@ -79,7 +79,7 @@ function CreateAlertModal({
   /* 🔄 RESET VALUES WHEN OPEN */
   useEffect(() => {
     if (open) {
-      setAlertName(defaultAlertName || "Properties for Rent in UAE");
+      setAlertName(defaultAlertName || "Properties for Rent Worldwide");
       setFrequency(options[0]?.value || "daily");
       setShowFrequencyDropdown(false);
     }

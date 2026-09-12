@@ -37,7 +37,7 @@ const DEFAULT_SETTINGS: AboutPageSettings = {
   stat1Description:
     "Trust worthy for real estate business growth and individual property selling",
   stat2Value: "90%",
-  stat2Description: "Dubai properties listed here are verified and ready for you to own and use.",
+  stat2Description: "Global properties listed here are verified and ready for you to own and invest.",
   stat3Value: "10k+",
   stat3Description: "Real estate companies and Agents are registered here for there growth",
   successSectionTitle: "Our Success",

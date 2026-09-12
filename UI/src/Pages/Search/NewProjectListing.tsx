@@ -843,7 +843,7 @@ function NewProjectListing() {
 
   const fallbackBannerImages = [searchListing01, searchListing02, searchListing03];
   const fallbackBannerTitles = [
-    "Modern homes in UAE",
+    "Modern homes worldwide",
     "Furnished Homes",
     "Properties Nearby",
   ];
