@@ -451,46 +451,46 @@ const ProjectManagement = () => {
     };
 
     return (
-        <div className="px-4 pb-6 pt-4 sm:px-6 lg:px-8 flex flex-col gap-[20px]">
+        <div className="px-4 pb-8 pt-5 sm:px-6 lg:px-8 max-w-[1600px] mx-auto flex flex-col gap-6">
             {/* Header */}
             <DeveloperHeader
-                title="Project management"
+                title="Project Management"
                 showBack={false}
                 onBackClick={() => { }}
             />
 
-            <div className="rounded-[15px] bg-white  min-w-0">
+            <div className="rounded-[24px] bg-white border border-[#E2E8F0] shadow-sm min-w-0 overflow-hidden">
                 {/* Toolbar */}
-                <div className="md:p-[30px] p-[20px] flex flex-col gap-[16px] xl:flex-row xl:flex-wrap xl:items-center xl:justify-between">
-                    <div className="flex md:flex-row flex-col items-center gap-[10px]">
-                        {/* labtop Filter tabs */}
-                        <div className="hidden 2xl:flex flex-wrap items-center gap-[8px]">
+                <div className="p-6 md:p-7 flex flex-col gap-4 xl:flex-row xl:flex-wrap xl:items-center xl:justify-between border-b border-[#F1F5F9]">
+                    <div className="flex flex-wrap items-center gap-3">
+                        {/* Desktop Filter tabs */}
+                        <div className="hidden xl:flex items-center gap-1.5 p-1 bg-[#F1F5F9] rounded-full">
                             {filterTabs.map((label) => (
                                 <button
                                     key={label}
                                     type="button"
                                     onClick={() => handleFilterChange(label, "tabs")}
-                                    className={`shrink-0 rounded-full px-[15px] h-[33px] text-[12px] font-[SemiBold] transition-colors flex items-center justify-center cursor-pointer ${activeFilter === label
-                                        ? "bg-[#222] text-white"
-                                        : "bg-white text-[#222] border border-[rgba(34,34,34,0.10)]"
+                                    className={`shrink-0 rounded-full px-4 h-[32px] text-[12px] font-[SemiBold] transition-all flex items-center justify-center cursor-pointer ${activeFilter === label
+                                        ? "bg-[#0F172A] text-white shadow-sm"
+                                        : "text-[#64748B] hover:text-[#0F172A]"
                                         }`}
                                 >
                                     {label} ({tabCount(label)})
                                 </button>
                             ))}
                         </div>
-                        {/*big screen filter tabs dropdown*/}
-                        <div className="relative w-full sm:w-auto 2xl:hidden" ref={filterDropdownRef}>
+                        {/* Mobile / tablet filter dropdown */}
+                        <div className="relative w-full sm:w-auto xl:hidden" ref={filterDropdownRef}>
                             <button
                                 type="button"
                                 onClick={() => setIsFilterDropdownOpen((prev) => !prev)}
-                                className="w-full sm:w-auto h-[40px] rounded-[50px] border border-[rgba(34,34,34,0.10)] bg-white px-[14px] text-[12px] font-[SemiBold] text-[#222] inline-flex items-center justify-between gap-[8px] min-w-[150px] cursor-pointer"
+                                className="w-full sm:w-auto h-[38px] rounded-full border border-[#CBD5E1] bg-white px-4 text-[12px] font-[SemiBold] text-[#0F172A] inline-flex items-center justify-between gap-2 min-w-[160px] cursor-pointer"
                             >
                                 <span>{activeFilter} ({tabCount(activeFilter)})</span>
                                 <DownArrowIcon width={11} height={7} className={`transition-transform duration-200 ${isFilterDropdownOpen ? "rotate-180" : ""}`} />
                             </button>
                             {isFilterDropdownOpen && (
-                                <div className="absolute left-0 top-[44px] z-20 w-full min-w-[180px] bg-white border border-[#EAEAEA] rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] py-[8px] flex flex-col">
+                                <div className="absolute left-0 top-[44px] z-20 w-full min-w-[180px] bg-white border border-[#E2E8F0] rounded-[14px] shadow-lg py-1.5 flex flex-col">
                                     {filterTabs.map((label) => (
                                         <button
                                             key={`filter-${label}`}
@@ -499,7 +499,7 @@ const ProjectManagement = () => {
                                                 e.preventDefault();
                                                 handleFilterChange(label, "dropdown");
                                             }}
-                                            className={`px-[14px] py-[8px] text-left text-[12px] font-[SemiBold] hover:bg-[#F5F5F5] ${activeFilter === label ? "text-[#0832AE] bg-[#F5F5F5]" : "text-[#222]"}`}
+                                            className={`px-4 py-2 text-left text-[12px] font-[Medium] hover:bg-[#F8FAFC] transition-colors ${activeFilter === label ? "text-[#D4A373] font-[SemiBold] bg-[#FDFBF9]" : "text-[#334155]"}`}
                                         >
                                             {label} ({tabCount(label)})
                                         </button>
@@ -508,33 +508,33 @@ const ProjectManagement = () => {
                             )}
                         </div>
                         {/* Search input */}
-                        <div className="flex items-center gap-[10px] bg-[#F5F5F5] rounded-full px-[14px] h-[40px] sm:flex-1 w-full md:w-[240px] ">
-                            <SearchIcon className="text-[#707070] shrink-0" />
+                        <div className="flex items-center gap-2.5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-full px-4 h-[38px] w-full sm:w-[240px] focus-within:border-[#CBD5E1] transition-colors">
+                            <SearchIcon className="text-[#94A3B8] shrink-0 w-4 h-4" />
                             <input
                                 type="search"
-                                placeholder="Search here"
+                                placeholder="Search projects..."
                                 value={searchText}
                                 onChange={(e) => setSearchText(e.target.value)}
-                                className="w-full bg-transparent text-[13px] font-[Regular] text-[#222] placeholder:text-[#94A3B8] focus:outline-none"
+                                className="w-full bg-transparent text-[12px] font-[Medium] text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none"
                             />
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-[10px]">
+                    <div className="flex flex-wrap items-center gap-2.5">
                         {/* Sort by button */}
-                        <div className="flex items-center gap-[8px] shrink-0">
-                            <span className="text-[#222] text-[12px] font-[Regular] whitespace-nowrap">Sort by:</span>
+                        <div className="flex items-center gap-2 shrink-0">
+                            <span className="text-[#64748B] text-[12px] font-[Medium] whitespace-nowrap">Sort:</span>
                             <div className="relative" ref={sortDropdownRef}>
                                 <button
                                     type="button"
                                     onClick={() => setIsSortDropdownOpen(!isSortDropdownOpen)}
-                                    className="flex items-center justify-between gap-[8px] border border-[rgba(34,34,34,0.10)] bg-white rounded-full px-[14px] h-[33px] cursor-pointer min-w-[120px]"
+                                    className="flex items-center justify-between gap-2 border border-[#CBD5E1] bg-white rounded-full px-3.5 h-[34px] cursor-pointer min-w-[110px] hover:border-[#94A3B8] transition-colors"
                                 >
-                                    <span className="text-[#222] text-[12px] font-[SemiBold]">{selectedSort.name}</span>
-                                    <DownArrowIcon className={`transition-transform duration-200 ${isSortDropdownOpen ? "rotate-180" : ""}`} />
+                                    <span className="text-[#0F172A] text-[12px] font-[SemiBold]">{selectedSort.name}</span>
+                                    <DownArrowIcon className={`w-3 h-3 text-[#64748B] transition-transform duration-200 ${isSortDropdownOpen ? "rotate-180" : ""}`} />
                                 </button>
                                 {isSortDropdownOpen && (
-                                    <div className="absolute right-0 top-[38px] w-full min-w-[150px] bg-white border border-[#EAEAEA] rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] py-[8px] z-20 flex flex-col max-h-[200px] overflow-y-auto">
+                                    <div className="absolute right-0 top-[40px] w-full min-w-[140px] bg-white border border-[#E2E8F0] rounded-[14px] shadow-lg py-1.5 z-20 flex flex-col max-h-[200px] overflow-y-auto">
                                         {sortOptions.map((option) => (
                                             <button
                                                 key={option.value}
@@ -544,7 +544,7 @@ const ProjectManagement = () => {
                                                     setSelectedSort(option);
                                                     setIsSortDropdownOpen(false);
                                                 }}
-                                                className={`px-[16px] py-[10px] text-left text-[13px] font-[Medium] cursor-pointer hover:bg-[#F5F5F5] transition-colors ${selectedSort.value === option.value ? "text-[#3182CE] bg-[#F5F5F5]" : "text-[#222]"
+                                                className={`px-4 py-2 text-left text-[12px] font-[Medium] cursor-pointer hover:bg-[#F8FAFC] transition-colors ${selectedSort.value === option.value ? "text-[#D4A373] font-[SemiBold] bg-[#FDFBF9]" : "text-[#334155]"
                                                     }`}
                                             >
                                                 {option.name}
@@ -555,33 +555,35 @@ const ProjectManagement = () => {
                             </div>
                         </div>
                         {/* Delete button (bulk: unpublished list only) */}
-                        <button
-                            type="button"
-                            disabled={!canToolbarBulkDelete || isBulkDeleting}
-                            onClick={() => void handleBulkDelete()}
-                            className="flex items-center gap-[6px] px-[15px] h-[33px] rounded-full text-[12px] font-[SemiBold] text-[#222] bg-[#F5F5F5] disabled:opacity-50 disabled:cursor-not-allowed enabled:cursor-pointer enabled:hover:bg-[#EBEBEB] transition-colors"
-                        >
-                            <TrashIcon width={16} height={16} />
-                            {isBulkDeleting ? "Deleting…" : "Delete"}
-                        </button>
+                        {canToolbarBulkDelete && (
+                            <button
+                                type="button"
+                                disabled={!canToolbarBulkDelete || isBulkDeleting}
+                                onClick={() => void handleBulkDelete()}
+                                className="flex items-center gap-1.5 px-3.5 h-[34px] rounded-full text-[12px] font-[SemiBold] text-rose-600 bg-rose-50 border border-rose-200 hover:bg-rose-100 disabled:opacity-50 transition-colors cursor-pointer"
+                            >
+                                <TrashIcon width={14} height={14} />
+                                {isBulkDeleting ? "Deleting…" : "Delete"}
+                            </button>
+                        )}
                         {/* Add project button */}
                         <button
                             type="button"
                             onClick={() => {
                                 navigate("/developer/add-project");
                             }}
-                            className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373]  text-[#FFF] px-[15px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
+                            className="cursor-pointer inline-flex items-center justify-center gap-2 rounded-full bg-[#D4A373] hover:bg-[#C29060] text-white px-4 h-[36px] text-[12px] font-[Bold] shrink-0 shadow-md shadow-[#D4A373]/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
                         >
-                            <PlusIcon width={16} height={16} className="text-white" />
-                            Add project
+                            <PlusIcon width={14} height={14} className="text-white" />
+                            <span>Add project</span>
                         </button>
                     </div>
                 </div>
 
                 {/* Sub-tabs */}
                 {(activeFilter === "Unpublished" || activeFilter === "Active projects") && (
-                    <div className="pb-[30px]">
-                        <div className="md:p-[0px_30px] m-[0px_0px] border-b border-[rgba(34,34,34,0.10)] flex gap-[28px]">
+                    <div className="px-6 md:px-7 pt-2">
+                        <div className="border-b border-[#F1F5F9] flex gap-6">
                             {subTabs.map((tab) => {
                                 const active = activeSubTab === tab;
                                 return (
@@ -589,11 +591,11 @@ const ProjectManagement = () => {
                                         key={tab}
                                         type="button"
                                         onClick={() => handleSubTabChange(tab)}
-                                        className={`relative p-[20px_30px] text-[13px] font-[Regular] cursor-pointer transition-colors ${active ? "text-[#0832AE] font-[SemiBold]" : "text-[#222]"
+                                        className={`relative py-3.5 px-2 text-[13px] font-[SemiBold] cursor-pointer transition-colors ${active ? "text-[#0F172A]" : "text-[#94A3B8] hover:text-[#475569]"
                                             }`}
                                     >
                                         {tab}
-                                        {active && <span className="absolute left-0 right-0 bottom-0 h-[3px] rounded-t-full bg-[#0832AE]" />}
+                                        {active && <span className="absolute left-0 right-0 bottom-0 h-[2.5px] rounded-t-full bg-[#D4A373]" />}
                                     </button>
                                 );
                             })}

@@ -36,8 +36,8 @@ function DeveloperSidebar() {
     const location = useLocation();
     const isCheckoutRoute = location.pathname === "/user/checkout";
     const SidebarContent = ({ isMobile = false }: { isMobile?: boolean }) => (
-        <div className="flex flex-col h-full bg-[#F5F5F5] md:w-[350px] xl:w-[300px] lg:w-[280px] w-[320px] lg:p-[30px_0px_30px_30px]  p-[20px_20px_20px_20px] sidebar overflow-hidden">
-            <div className="mb-[40px] flex justify-between items-center w-full sidebar_logo">
+        <div className="flex flex-col h-full bg-[#FFFFFF] border-r border-[#EAECEF] w-[280px] p-[24px_20px] sidebar overflow-hidden shadow-[2px_0_12px_rgba(0,0,0,0.03)]">
+            <div className="mb-[36px] flex justify-between items-center w-full sidebar_logo px-2">
                 <Link
                     to="/developer/dashboard"
                     onClick={() => {
@@ -70,7 +70,9 @@ function DeveloperSidebar() {
                             to={item.path}
                             end
                             className={() =>
-                                `flex w-full gap-[10px] items-center justify-start rounded-[15px] p-[6px] transition hover:bg-[rgba(34,34,34,0.10)] focus:outline-none focus:border-none focus:shadow-none ${isItemActive ? "bg-[rgba(34,34,34,0.10)] " : "bg-transparent "
+                                `flex w-full gap-[12px] items-center justify-start rounded-[12px] p-[8px_12px] transition-all duration-200 group focus:outline-none ${isItemActive
+                                    ? "bg-[#0F172A] text-white shadow-sm"
+                                    : "bg-transparent text-[#475569] hover:bg-[#F1F5F9] hover:text-[#0F172A]"
                                 }`
                             }
                             onClick={() => {
@@ -78,24 +80,27 @@ function DeveloperSidebar() {
                             }}
                         >
                             <div
-                                className={`flex items-center justify-center w-[46px] h-[46px] rounded-[12px] ${isItemActive ? "bg-[#222]" : "bg-[#fff]"}`}
+                                className={`flex items-center justify-center w-[38px] h-[38px] rounded-[10px] transition-colors ${isItemActive ? "bg-[#1E293B]" : "bg-[#F8FAFC] group-hover:bg-[#E2E8F0]"}`}
                             >
                                 <item.icon
-                                    stroke={isItemActive ? "#fff" : "#707070"}
-                                    fill={isItemActive ? "#fff" : "#707070"}
+                                    stroke={isItemActive ? "#D4A373" : "#64748B"}
+                                    fill={isItemActive ? "#D4A373" : "#64748B"}
                                 />
                             </div>
-                            <p className="text-[14px] text-[#222] font-[Medium]">{item.label}</p>
+                            <p className={`text-[13px] font-[SemiBold] tracking-wide ${isItemActive ? "text-white" : "text-[#334155] group-hover:text-[#0F172A]"}`}>{item.label}</p>
+                            {isItemActive && (
+                                <div className="ml-auto w-1.5 h-4 rounded-full bg-[#D4A373]" />
+                            )}
                         </NavLink>
                     );
                 })}
             </aside>
-            <div className="pt-[20px] mt-auto border-t border-[rgba(34,34,34,0.10)]">
-                <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
-                    Copyright © 2025 estatehub.ae.
+            <div className="pt-[20px] mt-auto border-t border-[#F1F5F9] px-2">
+                <p className="text-[11px] leading-[1.5] text-[#94A3B8] font-[Medium]">
+                    Estatehub Partner Portal v2.4
                 </p>
-                <p className="text-[12px] leading-[1.5] text-[#707070] font-[Regular]">
-                    All rights reserved.
+                <p className="text-[11px] leading-[1.5] text-[#CBD5E1] font-[Regular]">
+                    © 2026 Estatehub Real Estate LLC.
                 </p>
             </div>
         </div>

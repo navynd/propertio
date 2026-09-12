@@ -326,10 +326,10 @@ function DeveloperIndex() {
 
   return (
     <>
-      <div className="flex min-h-screen bg-[#F5F5F5] lg:mt-0 mt-[70px]">
+      <div className="flex min-h-screen bg-[#F8FAFC] lg:mt-0 mt-[70px]">
         <DeveloperSidebar />
-        <div className="flex w-full flex-col lg:pl-[270px] xl:pl-[290px]">
-          <main className={`bg-[#F5F5F5] ${isNotificationHidden ? 'pt-[66px]' : ''} ${isToggleVisible ? 'pt-[120px]' : ''}`}>
+        <div className="flex w-full flex-col lg:pl-[280px]">
+          <main className={`bg-[#F8FAFC] ${isNotificationHidden ? 'pt-[66px]' : ''} ${isToggleVisible ? 'pt-[120px]' : ''}`}>
             <div className="">
               <Outlet />
             </div>

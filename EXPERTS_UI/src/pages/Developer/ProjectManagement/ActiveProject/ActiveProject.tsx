@@ -84,9 +84,9 @@ const ActiveProject = () => {
 
     return (
 
-        <div className="rounded-[15px] bg-white  min-w-0">
+        <div className="rounded-[20px] bg-white min-w-0">
             {/* Sub-tabs */}
-            <div className="md:p-[0px_30px] m-[0px_0px] border-b border-[rgba(34,34,34,0.10)] flex gap-[28px]">
+            <div className="px-6 border-b border-[#F1F5F9] flex gap-6">
                 {subTabs.map((tab) => {
                     const active = activeSubTab === tab;
                     return (
@@ -94,35 +94,35 @@ const ActiveProject = () => {
                             key={tab}
                             type="button"
                             onClick={() => setActiveSubTab(tab)}
-                            className={`relative p-[20px_30px] text-[13px] font-[Regular] transition-colors ${active ? "text-[#0832AE] font-[SemiBold]" : "text-[#222]"
+                            className={`relative py-3.5 px-2 text-[13px] font-[SemiBold] cursor-pointer transition-colors ${active ? "text-[#0F172A]" : "text-[#94A3B8] hover:text-[#475569]"
                                 }`}
                         >
                             {tab}
-                            {active && <span className="absolute left-0 right-0 bottom-0 h-[3px] rounded-t-full bg-[#0832AE]" />}
+                            {active && <span className="absolute left-0 right-0 bottom-0 h-[2.5px] rounded-t-full bg-[#D4A373]" />}
                         </button>
                     );
                 })}
             </div>
 
             {/* Table */}
-            <div className="md:p-[30px] p-[20px]">
-                <div className=" overflow-x-auto w-full scrollbar-hide">
-                    <div className="min-w-[1280px] rounded-[10px] border border-[rgba(34,34,34,0.10)] overflow-hidden bg-white">
-                        <div className="grid grid-cols-[40px_2.4fr_1.4fr_2fr_1.6fr_2fr_1.2fr] gap-2 items-center px-[14px] py-[12px] bg-[#F5F5F5] border-b border-[rgba(34,34,34,0.10)]">
+            <div className="p-6">
+                <div className="overflow-x-auto w-full scrollbar-hide">
+                    <div className="min-w-[1100px] rounded-[16px] border border-[#E2E8F0] overflow-hidden bg-white shadow-sm">
+                        <div className="grid grid-cols-[40px_2.4fr_1.4fr_2fr_1.6fr_2fr_1.2fr] gap-3 items-center px-4 py-3 bg-[#F8FAFC] border-b border-[#E2E8F0]">
                             <div className="flex justify-center">
                                 <input
                                     type="checkbox"
                                     checked={allVisibleSelected}
                                     onChange={toggleSelectAllVisible}
-                                    className="h-[15px] w-[15px] rounded border border-[rgba(34,34,34,0.20)] text-[#3182CE] accent-[#222] cursor-pointer"
+                                    className="h-4 w-4 rounded border-slate-300 text-[#D4A373] accent-[#D4A373] cursor-pointer"
                                 />
                             </div>
-                            <p className="text-[14px] font-[Bold] text-[#222]">Project Details</p>
-                            <p className="text-[14px] font-[Bold] text-[#222]">Project status</p>
-                            <p className="text-[14px] font-[Bold] text-[#222]">Project Announcement date</p>
-                            <p className="text-[14px] font-[Bold] text-[#222]">Progress status</p>
-                            <p className="text-[14px] font-[Bold] text-[#222]">Expected Completion date</p>
-                            <p className="text-[14px] font-[Bold] text-[#222]">Actions</p>
+                            <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Project Details</p>
+                            <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Status</p>
+                            <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Announced</p>
+                            <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Progress</p>
+                            <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Expected</p>
+                            <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Actions</p>
                         </div>
 
                         {paginatedRows.map((row, index) => (
