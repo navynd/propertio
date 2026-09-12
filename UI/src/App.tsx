@@ -42,14 +42,6 @@ import About from "./Pages/Info/About";
 import MortgageCal from "./Pages/Mortgage/MortgageCal";
 import Blog from "./Pages/Blog/Blog";
 import BlogDetail from "./Pages/Blog/BlogDetail";
-import RentBuyCal from "./Pages/RentVsBuy/RentBuyCal";
-import AreaInSight from "./Pages/AreaInsight/AreaInSight";
-import AllCommunities from "./Pages/AreaInsight/AllCommunities";
-import AllCommunitiesDetails from "./Pages/AreaInsight/AllCommunitiesDetails";
-import TowersAndCompounts from "./Pages/AreaInsight/TowersAndCompounts";
-import Transaction from "./Pages/AreaInsight/Transaction";
-import LocationDetails from "./Pages/AreaInsight/LocationDetails";
-import ReviewDetails from "./Pages/AreaInsight/ReviewCompounts/ReviewDetails";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import SiteMap from "./Pages/SiteMap";
 
@@ -121,15 +113,15 @@ function AppContent() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/blog-detail" element={<Navigate to="/blog" replace />} />
-          <Route path="/rentbuycal" element={<RentBuyCal />} />
           <Route path="/mortgagecal" element={<MortgageCal />} />
-          <Route path="/areainsight" element={<AreaInSight />} />
-          <Route path="/allcommunities" element={<AllCommunities />} />
-          <Route path="/allcommunitiesdetails" element={<AllCommunitiesDetails />} />
-          <Route path="/towersandcompounds" element={<TowersAndCompounts />} />
-          <Route path="/transaction" element={<Transaction />} />
-          <Route path="/locationdetails" element={<LocationDetails />} />
-          <Route path="/reviewdetails" element={<ReviewDetails />} />
+          <Route path="/rentbuycal" element={<Navigate to="/mortgagecal" replace />} />
+          <Route path="/areainsight" element={<Navigate to="/searchlisting" replace />} />
+          <Route path="/allcommunities" element={<Navigate to="/searchlisting" replace />} />
+          <Route path="/allcommunitiesdetails" element={<Navigate to="/searchlisting" replace />} />
+          <Route path="/towersandcompounds" element={<Navigate to="/searchlisting" replace />} />
+          <Route path="/transaction" element={<Navigate to="/searchlisting" replace />} />
+          <Route path="/locationdetails" element={<Navigate to="/searchlisting" replace />} />
+          <Route path="/reviewdetails" element={<Navigate to="/searchlisting" replace />} />
           <Route path="/account/*" element={<UserAccount />}>
             <Route index element={<Navigate to="myprofile" replace />} />
             <Route path="myprofile" element={<MyProfile />} />

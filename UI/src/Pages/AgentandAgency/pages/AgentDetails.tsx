@@ -1663,9 +1663,9 @@ function AgentDetails() {
                         <Button
                           className="pf-agent-details__expertise-cta"
                           disableRipple
-                          onClick={() => navigate('/areainsight')}
+                          onClick={() => navigate(`/searchlisting?destination=${encodeURIComponent(activeExpertise.name || '')}`)}
                         >
-                          Learn more
+                          Discover properties
                         </Button>
                       </Box>
                       <Divider className="pf-agent-details__expertise-divider" />

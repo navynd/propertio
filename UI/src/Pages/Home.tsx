@@ -1520,8 +1520,8 @@ function Home() {
           </p>
 
           <div className="pf-hero__actions">
-            <Button className="pf-btn pf-btn--primary" disableRipple onClick={() => navigate("/allcommunities")}>
-              Explore more
+            <Button className="pf-btn pf-btn--primary" disableRipple onClick={() => navigate("/searchlisting")}>
+              Explore properties
             </Button>
             <Button className="pf-btn pf-btn--ghost" disableRipple onClick={() => navigate("/contact")} >
               Contact us
@@ -2287,7 +2287,7 @@ function Home() {
             Explore premier global markets
           </Typography>
           <Box className="pf-market__cards">
-            <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
+            <Box className="pf-market__card" onClick={() => navigate("/searchlisting?destination=Dubai")}>
               <img
                 src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop"
                 alt="Dubai"
@@ -2295,7 +2295,7 @@ function Home() {
               />
               <Typography className="pf-market__cardLabel">Dubai</Typography>
             </Box>
-            <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
+            <Box className="pf-market__card" onClick={() => navigate("/searchlisting?destination=London")}>
               <img
                 src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1600&auto=format&fit=crop"
                 alt="London"
@@ -2305,7 +2305,7 @@ function Home() {
                 London
               </Typography>
             </Box>
-            <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
+            <Box className="pf-market__card" onClick={() => navigate("/searchlisting?destination=New%20York")}>
               <img
                 src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1600&auto=format&fit=crop"
                 alt="New York"
@@ -2313,7 +2313,7 @@ function Home() {
               />
               <Typography className="pf-market__cardLabel">New York</Typography>
             </Box>
-            <Box className="pf-market__card" onClick={() => navigate("/areainsight")}>
+            <Box className="pf-market__card" onClick={() => navigate("/searchlisting?destination=Paris")}>
               <img
                 src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1600&auto=format&fit=crop"
                 alt="Paris"

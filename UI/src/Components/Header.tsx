@@ -689,10 +689,10 @@ function Header({ exploreItems, searchProperties = [] }: HeaderProps) {
   const items: { label: string; href?: string }[] = (
     exploreItems ?? [
       { label: "Find Developers", href: "/finddevelopers" },
-      { label: "Neighborhood guides", href: "/allcommunities" },
-      { label: "Market trends", href: "/areainsight" },
-      { label: "Blogs & tips", href: "/blog" },
-      { label: "Price calculator", href: "/rentbuycal" },
+      { label: "New projects", href: "/newprojectlisting" },
+      { label: "Mortgage calculator", href: "/mortgagecal" },
+      { label: "Property blog", href: "/blog" },
+      { label: "Map search", href: "/mapview" },
     ]
   ).map((it) => (typeof it === "string" ? { label: it } : it));
 
