@@ -23,28 +23,28 @@ const recentReports: Report[] = [
     {
         id: 1,
         image: cardone,
-        title: "UAE Q1 2025, Market Watch Quarterly Residential Real Estate Insights",
+        title: "Global Q1 2025, Market Watch Quarterly Residential Real Estate Insights",
         date: "May 29, 2025",
         tag: "Quarterly Market Watch",
-        author: "John Doe",
+        author: "Estatehub Research",
         comments: '25 comments',
     },
     {
         id: 2,
         image: cardtwo,
-        title: "Dubai November 2024: The Official Sales Price Index",
+        title: "Global Prime Markets 2025: The Official Capital Growth Index",
         date: "May 29, 2025",
         tag: "Quarterly Market Watch",
-        author: "John Doe",
+        author: "Estatehub Research",
         comments: '25 comments',
     },
     {
         id: 3,
         image: cardthree,
-        title: "Dubai November 2024: The Official Rental Performance Index",
+        title: "International Rental Yields: The Official Performance Index",
         date: "May 29, 2025",
         tag: "Quarterly Market Watch",
-        author: "John Doe",
+        author: "Estatehub Research",
         comments: '25 comments',
     },
 ];
@@ -53,35 +53,35 @@ const featuredReports: Report[] = [
     {
         id: 101,
         image: cardtwo,
-        title: "UAE 2024 Annual Market Report",
+        title: "Global Real Estate 2024 Annual Market Report",
         date: "Jan 10, 2025",
         tag: "Annual Report",
-        author: "John Doe",
+        author: "Estatehub Research",
         comments: '25 comments',
     },
     {
         id: 102,
         image: cardthree,
-        title: "Dubai 2024 Mo'asher Highlights",
+        title: "Prime Global Cities Investment Performance & Trends",
         date: "Dec 15, 2024",
-        tag: "Mo'asher",
-        author: "John Doe",
+        tag: "Market Trends",
+        author: "Estatehub Research",
         comments: '25 comments',
     },
     {
         id: 103,
         image: cardone,
-        title: "Investor's Guide to UAE Real Estate 2024",
+        title: "Cross-Border Investor's Guide to Prime Global Real Estate",
         date: "Nov 01, 2024",
         tag: "Guides",
-        author: "John Doe",
+        author: "Estatehub Research",
         comments: '25 comments',
     },
 ];
 
 const InsightHub: React.FC = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [selectedCountry, setSelectedCountry] = useState("UAE");
+    const [selectedCountry, setSelectedCountry] = useState("Global");
 
     // Tabs: Recently added / Featured
     const [activeTab, setActiveTab] = useState<"recent" | "featured">("recent");
@@ -93,7 +93,7 @@ const InsightHub: React.FC = () => {
     const [selectedPeriodicity, setSelectedPeriodicity] = useState("Periodicity");
     const [selectedYear, setSelectedYear] = useState("Year");
 
-    const countries = ["UAE", "Egypt", "Qatar", "Bahrain", "KSA"];
+    const countries = ["Global", "Europe", "United Kingdom", "United States", "Middle East", "Asia"];
 
     const navigate = useNavigate();
 
@@ -222,11 +222,11 @@ const InsightHub: React.FC = () => {
                             />
                         </div>
                     </div>
-                    {/*uae section*/}
+                    {/* Highlight section */}
                     <div className="insight-hero__highlight">
                         <div className="insight-hero__pill">Latest</div>
                         <h2 className="insight-hero__highlight-title">
-                            UAE Q1 2025, Market Watch Quarterly <br></br> Residential Real Estate
+                            Global Q1 2025, Market Watch Quarterly <br></br> Residential Real Estate
                             Insights
                         </h2>
                         <p className="insight-hero__highlight-meta">

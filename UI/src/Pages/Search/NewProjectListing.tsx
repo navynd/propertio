@@ -180,7 +180,7 @@ function mapApiProjectToCardData(params: {
     logo: logo || undefined,
     title: project.projectName ?? "",
     location,
-    features: features.length ? features : [city || "UAE"],
+    features: features.length ? features : [city || "Prime Location"],
     launchPrice: (() => {
       const lp = project.launchPrice as any;
       const n =

@@ -443,7 +443,7 @@ function PropertyDrilldown() {
   const breadcrumbLocationLabel = (() => {
     const city = String((apiProperty as any)?.location?.city ?? "").trim();
     const country = String((apiProperty as any)?.location?.country ?? "").trim();
-    return city || country || "UAE";
+    return city || country || "Worldwide";
   })();
   const breadcrumbSubTitle1 = `Property for ${listingTransaction} in ${breadcrumbLocationLabel}`;
   const breadcrumbSubTitle2 =
@@ -680,7 +680,7 @@ function PropertyDrilldown() {
     : monthlyPaymentText;
 
   // (Replaced by `selectedResidencyStatus` master-driven tabs)
-  const [residencyTab] = useState("UAE national");
+  const [residencyTab] = useState("Citizen");
 
   // Amenities (API if available; otherwise fallback static list)
   const amenities =
@@ -2384,9 +2384,9 @@ function PropertyDrilldown() {
                                 {(residencyOptions.length
                                   ? residencyOptions
                                   : [
-                                    { name: "UAE National", value: "uae-national" as const },
-                                    { name: "UAE Resident", value: "uae-resident" as const },
-                                    { name: "Non-Resident", value: "non-resident" as const },
+                                    { name: "Citizen", value: "uae-national" as const },
+                                    { name: "Resident", value: "uae-resident" as const },
+                                    { name: "International Buyer", value: "non-resident" as const },
                                   ]
                                 ).map((opt) => (
                                   <Button

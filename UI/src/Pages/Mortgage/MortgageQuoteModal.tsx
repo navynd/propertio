@@ -65,9 +65,9 @@ function MortgageQuoteModal({
         { name: "Want to refinance", value: "refinance" },
     ];
     const fallbackResidency: QuoteOption[] = [
-        { name: "UAE National", value: "uae-national" },
-        { name: "UAE Resident", value: "uae-resident" },
-        { name: "Non-Resident", value: "non-resident" },
+        { name: "Citizen", value: "uae-national" },
+        { name: "Resident", value: "uae-resident" },
+        { name: "International Buyer", value: "non-resident" },
     ];
     const fallbackBuyingProcess: QuoteOption[] = [
         { name: "Found a property", value: "found-property" },
@@ -126,7 +126,7 @@ function MortgageQuoteModal({
     const showSalary = employmentStatus === "salaried";
     const selectedResidenceName =
         residencyOptions.find((item) => item.value === residenceStatus)?.name ||
-        "UAE Resident";
+        "Resident";
     const selectedBuyingProcessName =
         buyingProcessOptions.find((item) => item.value === buyingProcess)?.name ||
         "Found a property";

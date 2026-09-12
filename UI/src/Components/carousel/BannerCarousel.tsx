@@ -98,7 +98,7 @@ function BannerCarousel({
 
         <Box className="pf-search-listing__banner-content">
           <Typography variant="h1" className="pf-search-listing__banner-title">
-            {titles && titles[currentSlide] ? titles[currentSlide] : title || "Modern homes in UAE"}
+            {titles && titles[currentSlide] ? titles[currentSlide] : title || "Modern homes worldwide"}
           </Typography>
           <Button
             variant="outlined"

@@ -482,7 +482,7 @@ function NewProjectDrilldown() {
   const [loanAmount, setLoanAmount] = useState(56);
   const [loanPeriod, setLoanPeriod] = useState(10);
   const [interestRate, setInterestRate] = useState(3.75);
-  const [residencyTab, setResidencyTab] = useState("UAE national");
+  const [residencyTab, setResidencyTab] = useState("Citizen");
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isMailModalOpen, setIsMailModalOpen] = useState(false);
   const [isInquirySubmitting, setIsInquirySubmitting] = useState(false);
@@ -1338,7 +1338,7 @@ function NewProjectDrilldown() {
     const loc = apiProject?.location as { city?: string; country?: string } | undefined;
     const city = String(loc?.city ?? "").trim();
     const country = String(loc?.country ?? "").trim();
-    return city || country || "UAE";
+    return city || country || "Worldwide";
   })();
   const breadcrumbSubTitle1 = `New & Off-Plan Projects in ${breadcrumbLocationLabel}`;
   const locationLine = useMemo(() => {

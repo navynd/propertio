@@ -688,10 +688,10 @@ function Home() {
         projectId: id,
         city: String(project.location?.city ?? "").trim(),
         title,
-        location: locationLabel || "UAE",
+        location: locationLabel || "Prime Location",
         launchPrice,
         currency,
-        features: features.length ? features : ["UAE project"],
+        features: features.length ? features : ["Featured Project"],
         image: image || companyLogo1,
         logo: logo || undefined,
         tags: tags.length ? tags : undefined,
@@ -896,7 +896,7 @@ function Home() {
     const controller = new AbortController();
     setPrimeLocationLoading(true);
 
-    const listingName = String(selectedLt.name ?? "").trim() || "UAE";
+    const listingName = String(selectedLt.name ?? "").trim() || "Properties";
     const keyword = debouncedPrimeLocationSearch.trim();
     const kwPayload = keyword ? { keyword } : {};
 
@@ -915,7 +915,7 @@ function Home() {
         [property.location?.city, property.location?.zone, property.location?.building]
           .filter((part): part is string => Boolean(part && String(part).trim()))
           .join(", ") ||
-        "UAE";
+        "Prime Location";
       const currency = String(property.currency ?? "AED").trim() || "AED";
       const tx = resolveListingTransactionForProperty(property, "sale");
       const rentPricing = property.rentPricing ?? null;
@@ -994,7 +994,7 @@ function Home() {
       return {
         id,
         name: String(project.projectName ?? "").trim() || "Project",
-        location: locationLabel || "UAE",
+        location: locationLabel || "Prime Location",
         price,
         priceCaption: "Launch price",
         category: listingName,
@@ -2369,9 +2369,9 @@ function Home() {
       >
         <PFContainer >
           <Typography variant="h2" className="pf-prime-location__title">
-            Many properties in your prime
+            Explore properties in your
             <br />
-            location of UAE
+            desired prime location
           </Typography>
 
           <div className={primeLocationContainerClassName}>

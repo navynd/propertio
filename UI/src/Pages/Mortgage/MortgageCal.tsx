@@ -45,9 +45,9 @@ const MortgageCal: React.FC<MortgageCalProps> = ({
         name: string;
         value: MortgageResidencyStatus;
     }> = [
-            { name: "UAE National", value: "uae-national" },
-            { name: "UAE Resident", value: "uae-resident" },
-            { name: "Non-Resident", value: "non-resident" },
+            { name: "Citizen", value: "uae-national" },
+            { name: "Resident", value: "uae-resident" },
+            { name: "International Buyer", value: "non-resident" },
         ];
     const [residencyOptions, setResidencyOptions] = useState(fallbackResidencyOptions);
     const [residencyStatus, setResidencyStatus] = useState<MortgageResidencyStatus>(
