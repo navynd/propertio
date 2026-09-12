@@ -74,11 +74,12 @@ import AgencyNotification from "./pages/Agency/Notification/AgencyNotification";
 import AgentNotification from "./pages/Agent/Notification/AgentNotification";
 
 function App() {
+  const basename = window.location.pathname.startsWith("/expert") ? "/expert" : "";
 
   return (
     <>
       <div className="whole_app">
-        <BrowserRouter basename="/expert">
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route
               element={

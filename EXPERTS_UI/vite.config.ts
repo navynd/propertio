@@ -8,8 +8,8 @@ export default defineConfig({
     host: "::",
     port: 8080,
   },
-  base: "/expert/",
+  base: "/",
   build: {
-    outDir: "dist/expert",
+    outDir: "dist",
   },
 })
