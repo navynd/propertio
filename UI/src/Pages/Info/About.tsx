@@ -16,82 +16,91 @@ import {
   type AboutTimelineEntry,
 } from "../../services/aboutService";
 
-const DEFAULT_GALLERY = [top1, top2, top3, top4, top5, top6];
+const DEFAULT_GALLERY = [
+  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80", // Modern luxury villa
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80", // Prime architectural residence
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80", // Luxury penthouse & waterfront
+  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80", // Contemporary luxury interior
+  "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80", // Iconic skyline residence
+  "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80", // Luxury modern estate
+];
 
 const DEFAULT_SETTINGS: AboutPageSettings = {
-  heroEyebrow: "ABOUT US",
-  heroHeadline: "To motivate and inspire people to get living the life they deserve.",
+  heroEyebrow: "THE ESTATEHUB DISTINCTION",
+  heroHeadline: "Redefining Luxury Real Estate Across The World's Prime Markets.",
   heroSubheadline:
-    "When you look for a property, it's not just a better home you seek, it's a better future.",
-  bannerText: "Unlock your potential",
-  businessSectionTitle: "How can we help for your business?",
+    "From penthouses in Manhattan and private estates in Mayfair to waterfront sanctuaries in Dubai and Lake Como, Estatehub curates the world's most distinguished properties for discerning buyers and institutional investors.",
+  bannerText: "PRIME GLOBAL REAL ESTATE • VERIFIED BROKERAGE NETWORK • BESPOKE ADVISORY • INSTITUTIONAL OFF-PLAN",
+  businessSectionTitle: "Architecting the Future of Prime Property Discovery",
   businessParagraph1:
-    "Phasellus at urna sit amet lacus finibus auctor et posuere elit. In imperdiet dui eu neque elementum feugiat.",
+    "Estatehub stands as the premier international destination for verified luxury residential portfolios, off-plan developer developments, and private brokerage networks.",
   businessParagraph2:
-    "Donec massa dui, tincidunt eu auctor pretium, dignissim id elit. Donec fringilla arcu vel nisl feugiat viverra.",
+    "Combining proprietary market intelligence with an invitation-only network of top-tier brokers and developers, we provide high-net-worth investors and buyers with seamless cross-border property acquisition and advisory.",
   businessCtaPrimaryLabel: "Meet our team",
   businessCtaPrimaryUrl: "/teams",
-  businessCtaSecondaryLabel: "Find properties",
+  businessCtaSecondaryLabel: "Explore prime listings",
   businessCtaSecondaryUrl: "/searchlisting",
-  stat1Value: "100%",
+  stat1Value: "$14B+",
   stat1Description:
-    "Trust worthy for real estate business growth and individual property selling",
-  stat2Value: "90%",
-  stat2Description: "Global properties listed here are verified and ready for you to own and invest.",
-  stat3Value: "10k+",
-  stat3Description: "Real estate companies and Agents are registered here for there growth",
-  successSectionTitle: "Our Success",
-  ctaHeadline: "Ready to Invest or Move?",
+    "Prime property transaction and advisory volume facilitated across international markets",
+  stat2Value: "50+",
+  stat2Description:
+    "Tier-one global capital cities and ultra-luxury resort destinations represented worldwide",
+  stat3Value: "100%",
+  stat3Description:
+    "Verified agency representation with rigorous title and developer due diligence standards",
+  successSectionTitle: "Global Milestones",
+  ctaHeadline: "Elevate Your Property Portfolio",
   ctaSubheadline:
-    "Verified listings, trusted agents, and real opportunities — all in one place.",
-  ctaButtonLabel: "Discover Properties",
+    "Access vetted off-market residences, iconic penthouses, and global developments with Estatehub's trusted advisory network.",
+  ctaButtonLabel: "Discover Prime Properties",
   ctaButtonUrl: "/searchlisting",
 };
 
 const DEFAULT_TIMELINE: AboutTimelineEntry[] = [
   {
     id: "1",
-    month: "MAY",
-    day: "22",
+    month: "NOV",
+    day: "15",
     year: "2024",
-    title: "New milestone reached across the region",
-    description: "Estatehub surpasses record engagement and marketplace growth.",
+    title: "Global Intelligence & Valuation Engine Launch",
+    description: "Rolled out proprietary cross-border real estate valuation and yield analytics across 50+ tier-1 capital markets.",
     displayOrder: 1,
   },
   {
     id: "2",
-    month: "MAY",
-    day: "20",
+    month: "AUG",
+    day: "10",
     year: "2024",
-    title: "Announcing one of the largest investment rounds for a tech",
-    description: "Permira leads an investment of $525m, with participation from Blackstone Growth.",
+    title: "Private Client Advisory Network Established",
+    description: "Inaugurated dedicated bespoke representation for ultra-high-net-worth acquisitions in London, New York, and Dubai.",
     displayOrder: 2,
   },
   {
     id: "3",
-    month: "MAY",
-    day: "12",
+    month: "APR",
+    day: "28",
     year: "2024",
-    title: "Unveiling the first owned White Paper",
-    description: "PF Connect event in Dubai revealed first white paper.",
+    title: "Expansion into Prime European & US Metros",
+    description: "Integrated over 3,000 verified luxury residences across Manhattan, Paris, Mayfair, and Zurich.",
     displayOrder: 3,
   },
   {
     id: "4",
-    month: "MAY",
-    day: "05",
+    month: "JAN",
+    day: "14",
     year: "2024",
-    title: "Buyback of Shares from BECO Capital",
-    description: "Estatehub raised US$90 million debt financing.",
+    title: "Institutional Developer Partnership Tier",
+    description: "Partnered with premier global developers to provide direct off-plan VIP allocations and digital masterplans.",
     displayOrder: 4,
   },
   {
     id: "5",
-    month: "MAY",
-    day: "02",
-    year: "2024",
-    title: "Expanding product capabilities",
-    description: "New tools launched to help home-seekers make faster decisions.",
+    month: "OCT",
+    day: "01",
+    year: "2023",
+    title: "Founding of the Estatehub Global Marketplace",
+    description: "Pioneered the transparent, verified luxury property discovery platform connecting elite brokerages worldwide.",
     displayOrder: 5,
   },
 ];
@@ -257,7 +266,7 @@ const About: React.FC = () => {
     };
   }, [successItems.length]);
 
-  const heroBanner = resolveImage(settings.heroBannerImage, aboutbanner);
+  const heroBanner = settings.heroBannerImage?.trim() || "";
   const ctaBackground = resolveImage(settings.ctaBackgroundImage, aboutImage);
 
   const stats = [
@@ -268,10 +277,14 @@ const About: React.FC = () => {
 
   return (
     <div className="about-page">
-      <section className="about-hero" style={{ backgroundImage: `url(${heroBanner})` }}>
+      <section
+        className="about-hero"
+        style={heroBanner ? { backgroundImage: `url(${heroBanner})` } : undefined}
+      >
         <div className="about-hero__overlay">
           <div className="about-hero__content">
-            <p className="about-hero__eyebrow">{settings.heroEyebrow || "ABOUT US"}</p>
+            <span className="about-hero__eyebrow-badge">ESTATEHUB GLOBAL</span>
+            <p className="about-hero__eyebrow">{settings.heroEyebrow || "THE ESTATEHUB DISTINCTION"}</p>
 
             <h1 className="about-hero__title">
               {renderMultiline(settings.heroHeadline || DEFAULT_SETTINGS.heroHeadline || "")}
