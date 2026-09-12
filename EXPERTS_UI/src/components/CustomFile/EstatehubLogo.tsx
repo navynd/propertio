@@ -14,9 +14,9 @@ export function EstatehubLogo({
     ...props
 }: EstatehubLogoProps) {
     const isDark = variant === "dark";
-    const primaryColor = isDark ? "#1F3D51" : "#FFFFFF";
-    const accentColor = "#D4A373";
-    const subColor = isDark ? "#707070" : "rgba(255, 255, 255, 0.7)";
+    const primaryColor = isDark ? "#F5F0E8" : "#F5F0E8";
+    const accentColor = "#C9A96E";
+    const subColor = isDark ? "#C9A96E" : "rgba(201, 169, 110, 0.85)";
 
     return (
         <svg

@@ -38,32 +38,32 @@ const metricCardTemplates: MetricTemplate[] = [
     {
         title: "Total Projects",
         key: "totalProjects",
-        iconBg: "bg-gradient-to-br from-[#D4A373] to-[#B5835A] text-white shadow-md shadow-[#D4A373]/20",
-        cardBg: "linear-gradient(135deg, #FFFFFF 0%, #FBF9F7 100%)",
+        iconBg: "bg-gradient-to-br from-[#C9A96E] to-[#9B7B42] text-[#0A0A0A] shadow-md shadow-[#C9A96E]/20",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: TotalProjectIcon,
         navigateTo: "/developer/project-management?tab=active&subTab=all",
     },
     {
         title: "Total Ready Projects",
         key: "totalReadyProjects",
-        iconBg: "bg-gradient-to-br from-[#0284C7] to-[#0369A1] text-white shadow-md shadow-[#0284C7]/20",
-        cardBg: "linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 100%)",
+        iconBg: "bg-gradient-to-br from-[#38BDF8] to-[#0284C7] text-[#0A0A0A] shadow-md shadow-[#38BDF8]/20",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: TotalReadyIcon,
         navigateTo: "/developer/project-management?tab=active&subTab=new",
     },
     {
         title: "Off-plan Projects",
         key: "offPlanProjects",
-        iconBg: "bg-gradient-to-br from-[#F59E0B] to-[#D97706] text-white shadow-md shadow-[#F59E0B]/20",
-        cardBg: "linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 100%)",
+        iconBg: "bg-gradient-to-br from-[#F59E0B] to-[#B45309] text-[#0A0A0A] shadow-md shadow-[#F59E0B]/20",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: OffPlanProjectIcon,
         navigateTo: "/developer/project-management?tab=active&subTab=off-plan",
     },
     {
         title: "Total Revenue",
         key: "totalRevenue",
-        iconBg: "bg-gradient-to-br from-[#10B981] to-[#059669] text-white shadow-md shadow-[#10B981]/20",
-        cardBg: "linear-gradient(135deg, #FFFFFF 0%, #ECFDF5 100%)",
+        iconBg: "bg-gradient-to-br from-[#4ADE80] to-[#16A34A] text-[#0A0A0A] shadow-md shadow-[#4ADE80]/20",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: TotalRevenueIcon,
         isMoney: true,
         navigateTo: "/developer/revenue-management",
@@ -289,7 +289,7 @@ function Dashboard() {
                                             go();
                                         }
                                     }}
-                                    className="group flex flex-col justify-between rounded-[20px] p-5 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border border-[#E2E8F0] shadow-sm relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A373]"
+                                    className="group flex flex-col justify-between rounded-[20px] p-5 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl border border-[#2A2A2A] shadow-lg relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A96E]"
                                     style={{ background: card.cardBg }}
                                 >
                                     <div className="flex flex-col gap-4">
@@ -300,12 +300,12 @@ function Dashboard() {
                                                 >
                                                     <Icon width={14} height={14} />
                                                 </span>
-                                                <span className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">
+                                                <span className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">
                                                     {card.title}
                                                 </span>
                                             </div>
                                             <span
-                                                className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-[Bold] ${card.arrow === "up" ? "bg-emerald-100 text-emerald-700" : "bg-rose-100 text-rose-700"}`}
+                                                className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-[Bold] ${card.arrow === "up" ? "bg-[#4ADE80]/15 text-[#4ADE80] border border-[#4ADE80]/30" : "bg-[#F87171]/15 text-[#F87171] border border-[#F87171]/30"}`}
                                             >
                                                 {card.badgeText}
                                                 <span className="ml-1">{card.arrow === "up" ? "↑" : "↓"}</span>
@@ -313,13 +313,13 @@ function Dashboard() {
                                         </div>
 
                                         <div className="flex items-baseline justify-between mt-1">
-                                            <div className="text-[28px] sm:text-[32px] text-[#0F172A] font-[Bold] tracking-tight leading-none">
+                                            <div className="text-[28px] sm:text-[32px] text-[#F5F0E8] font-[Bold] tracking-tight leading-none">
                                                 {card.value}
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-[Medium] text-[#94A3B8] group-hover:text-[#D4A373] transition-colors">
+                                    <div className="mt-4 pt-3 border-t border-[#2A2A2A] flex items-center justify-between text-[11px] font-[Medium] text-[#A89880] group-hover:text-[#C9A96E] transition-colors">
                                         <span>View breakdown</span>
                                         <RightArrowIcon className="w-2.5 h-2.5 transform group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -332,25 +332,25 @@ function Dashboard() {
             {/* Project and Location based projects */}
             <div className="relative mt-6 grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_340px] gap-6">
                 {isDashboardLoading && (
-                    <div className="absolute inset-0 z-10 flex items-center justify-center rounded-[20px] bg-white/60 backdrop-blur-sm">
+                    <div className="absolute inset-0 z-10 flex items-center justify-center rounded-[20px] bg-[#0A0A0A]/70 backdrop-blur-sm">
                         <Loader size={60} margin={0} />
                     </div>
                 )}
                 {/* Projects Section */}
-                <div className="bg-white rounded-[24px] p-6 md:p-7 border border-[#E2E8F0] shadow-sm min-w-0">
+                <div className="bg-[#111111] rounded-[24px] p-6 md:p-7 border border-[#2A2A2A] shadow-xl min-w-0">
                     {/* Project header */}
                     <div className="flex flex-wrap gap-4 items-center justify-between mb-6">
                         <div>
-                            <h2 className="text-[#0F172A] font-[Bold] text-[20px] tracking-tight">Active Portfolio</h2>
-                            <p className="text-[#64748B] text-[12px] font-[Medium]">Track your live residential & commercial assets</p>
+                            <h2 className="text-[#F5F0E8] font-[Bold] text-[20px] tracking-tight">Active Portfolio</h2>
+                            <p className="text-[#A89880] text-[12px] font-[Medium]">Track your live residential & commercial assets</p>
                         </div>
                         <div className="flex flex-wrap items-center gap-3">
-                            <div className="flex items-center gap-1.5 p-1 bg-[#F1F5F9] rounded-full">
+                            <div className="flex items-center gap-1.5 p-1 bg-[#1A1A1A] border border-[#2A2A2A] rounded-full">
                                 <button
                                     onClick={() => setActiveTab("active")}
                                     className={`cursor-pointer flex items-center justify-center text-[12px] font-[SemiBold] px-4 h-[32px] rounded-full transition-all ${activeTab === "active"
-                                        ? "bg-[#0F172A] text-white shadow-sm"
-                                        : "text-[#64748B] hover:text-[#0F172A]"
+                                        ? "bg-[#C9A96E] text-[#0A0A0A] font-[Bold] shadow-md shadow-[#C9A96E]/20"
+                                        : "text-[#A89880] hover:text-[#F5F0E8]"
                                         }`}
                                 >
                                     Active ({activeTabCount})
@@ -358,27 +358,27 @@ function Dashboard() {
                                 <button
                                     onClick={() => setActiveTab("soldout")}
                                     className={`cursor-pointer flex items-center justify-center text-[12px] font-[SemiBold] px-4 h-[32px] rounded-full transition-all ${activeTab === "soldout"
-                                        ? "bg-[#0F172A] text-white shadow-sm"
-                                        : "text-[#64748B] hover:text-[#0F172A]"
+                                        ? "bg-[#C9A96E] text-[#0A0A0A] font-[Bold] shadow-md shadow-[#C9A96E]/20"
+                                        : "text-[#A89880] hover:text-[#F5F0E8]"
                                         }`}
                                 >
                                     Sold Out ({soldoutTabCount})
                                 </button>
                             </div>
-                            <div className="w-[1px] h-5 bg-slate-200 hidden sm:block"></div>
+                            <div className="w-[1px] h-5 bg-[#2A2A2A] hidden sm:block"></div>
                             <div className="flex items-center gap-2">
-                                <span className="text-[#64748B] text-[12px] font-[Medium]">Sort:</span>
+                                <span className="text-[#A89880] text-[12px] font-[Medium]">Sort:</span>
                                 <div className="relative" ref={sortDropdownRef}>
                                     <div
                                         onClick={() => setIsSortDropdownOpen(!isSortDropdownOpen)}
-                                        className="flex items-center justify-between gap-2 border border-[#CBD5E1] bg-white rounded-full px-3.5 h-[34px] cursor-pointer min-w-[110px] hover:border-[#94A3B8] transition-colors"
+                                        className="flex items-center justify-between gap-2 border border-[#2A2A2A] bg-[#171717] rounded-full px-3.5 h-[34px] cursor-pointer min-w-[110px] hover:border-[#C9A96E]/40 transition-colors"
                                     >
-                                        <span className="text-[#0F172A] text-[12px] font-[SemiBold]">{selectedSortLabel}</span>
-                                        <DownArrowIcon className={`w-3 h-3 text-[#64748B] transition-transform duration-200 ${isSortDropdownOpen ? 'rotate-180' : ''}`} />
+                                        <span className="text-[#F5F0E8] text-[12px] font-[SemiBold]">{selectedSortLabel}</span>
+                                        <DownArrowIcon className={`w-3 h-3 text-[#A89880] transition-transform duration-200 ${isSortDropdownOpen ? 'rotate-180' : ''}`} />
                                     </div>
 
                                     {isSortDropdownOpen && (
-                                        <div className="absolute right-0 top-[40px] w-full min-w-[140px] bg-white border border-[#E2E8F0] rounded-[14px] shadow-lg py-1.5 z-20 flex flex-col">
+                                        <div className="absolute right-0 top-[40px] w-full min-w-[140px] bg-[#171717] border border-[#2A2A2A] rounded-[14px] shadow-2xl py-1.5 z-20 flex flex-col">
                                             {sortOptions.map((option) => (
                                                 <div
                                                     key={option.value}
@@ -388,7 +388,7 @@ function Dashboard() {
                                                         setSelectedSort(option.value);
                                                         setIsSortDropdownOpen(false);
                                                     }}
-                                                    className={`px-4 py-2 text-[12px] font-[Medium] cursor-pointer hover:bg-[#F8FAFC] transition-colors ${selectedSort === option.value ? "text-[#D4A373] font-[SemiBold] bg-[#FDFBF9]" : "text-[#334155]"}`}
+                                                    className={`px-4 py-2 text-[12px] font-[Medium] cursor-pointer hover:bg-[#2A2A2A] transition-colors ${selectedSort === option.value ? "text-[#C9A96E] font-[SemiBold] bg-[#1F1F1F]" : "text-[#A89880]"}`}
                                                 >
                                                     {option.name}
                                                 </div>
@@ -402,52 +402,52 @@ function Dashboard() {
                     {/* Project table */}
                     <div className="overflow-x-auto w-full scrollbar-hide">
                         <div className="min-w-[760px]">
-                            <div className="rounded-[16px] border border-[#E2E8F0] overflow-hidden bg-white shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
-                                <div className="grid grid-cols-[1.5fr_1fr_1.2fr_1.2fr] px-4 py-3 gap-4 bg-[#F8FAFC] border-b border-[#E2E8F0]">
-                                    <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Project Details</p>
-                                    <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Status</p>
-                                    <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Progress</p>
-                                    <p className="text-[12px] font-[Bold] text-[#475569] uppercase tracking-wider">Completion</p>
+                            <div className="rounded-[16px] border border-[#2A2A2A] overflow-hidden bg-[#141414] shadow-md">
+                                <div className="grid grid-cols-[1.5fr_1fr_1.2fr_1.2fr] px-4 py-3 gap-4 bg-[#1A1A1A] border-b border-[#2A2A2A]">
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Project Details</p>
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Status</p>
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Progress</p>
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Completion</p>
                                 </div>
 
                                 {projectRows.map((row, index) => (
                                     <div
                                         key={row.projectId}
                                         onClick={() => navigate(`/developer/project-details?projectId=${row.projectId}`)}
-                                        className={`grid grid-cols-[1.5fr_1fr_1.2fr_1.2fr] px-4 py-3.5 gap-4 items-center cursor-pointer transition-colors hover:bg-[#F8FAFC] ${index !== projectRows.length - 1 ? "border-b border-[#F1F5F9]" : ""
+                                        className={`grid grid-cols-[1.5fr_1fr_1.2fr_1.2fr] px-4 py-3.5 gap-4 items-center cursor-pointer transition-colors hover:bg-[#1E1E1E] ${index !== projectRows.length - 1 ? "border-b border-[#222222]" : ""
                                             }`}
                                     >
                                         <div className="flex items-center gap-3 min-w-0">
                                             <div
-                                                className="w-[44px] h-[44px] rounded-[10px] bg-cover bg-center shrink-0 border border-[#E2E8F0] shadow-sm"
+                                                className="w-[44px] h-[44px] rounded-[10px] bg-cover bg-center shrink-0 border border-[#2A2A2A] shadow-sm"
                                                 style={{ backgroundImage: `url(${toProjectImageUrl(row.image)})` }}
                                             />
                                             <div className="min-w-0">
-                                                <p className="text-[13px] font-[Bold] text-[#0F172A] leading-snug truncate hover:text-[#D4A373] transition-colors">{row.projectName}</p>
-                                                <p className="text-[11px] text-[#64748B] leading-snug truncate mt-0.5">{[row.location?.city, row.location?.zone].filter(Boolean).join(", ") || "-"}</p>
+                                                <p className="text-[13px] font-[Bold] text-[#F5F0E8] leading-snug truncate hover:text-[#C9A96E] transition-colors">{row.projectName}</p>
+                                                <p className="text-[11px] text-[#A89880] leading-snug truncate mt-0.5">{[row.location?.city, row.location?.zone].filter(Boolean).join(", ") || "-"}</p>
                                             </div>
                                         </div>
 
                                         <div className="flex items-center">
                                             <span
                                                 className={`inline-flex items-center rounded-full px-3 py-1 text-[11px] font-[Bold] ${row.projectStatus === "ready"
-                                                    ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
-                                                    : "bg-amber-50 text-amber-700 border border-amber-200"
+                                                    ? "bg-[#4ADE80]/15 text-[#4ADE80] border border-[#4ADE80]/30"
+                                                    : "bg-[#C9A96E]/15 text-[#C9A96E] border border-[#C9A96E]/30"
                                                     }`}
                                             >
-                                                <span className={`w-1.5 h-1.5 rounded-full mr-1.5 ${row.projectStatus === "ready" ? "bg-emerald-500" : "bg-amber-500"}`} />
+                                                <span className={`w-1.5 h-1.5 rounded-full mr-1.5 ${row.projectStatus === "ready" ? "bg-[#4ADE80]" : "bg-[#C9A96E]"}`} />
                                                 {row.projectStatus === "ready" ? "Ready" : "Off-plan"}
                                             </span>
                                         </div>
 
                                         <div className="flex items-center">
-                                            <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[11px] font-[Medium] text-[#334155]">
+                                            <span className="inline-flex items-center rounded-full bg-[#1F1F1F] border border-[#2A2A2A] px-3 py-1 text-[11px] font-[Medium] text-[#D4C5B0]">
                                                 {row.progressStatus || "Scheduled"}
                                             </span>
                                         </div>
 
                                         <div className="flex items-center">
-                                            <p className="text-[12px] font-[Medium] text-[#475569]">{formatDate(row.expectedCompletionDate)}</p>
+                                            <p className="text-[12px] font-[Medium] text-[#A89880]">{formatDate(row.expectedCompletionDate)}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -462,7 +462,7 @@ function Dashboard() {
                         onClick={() =>
                             navigate("/developer/project-management?tab=active&subTab=all")
                         }
-                        className="mt-5 rounded-[12px] w-full h-[42px] bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-[#F1F5F9] text-[#0F172A] text-[13px] font-[SemiBold] cursor-pointer transition-all flex items-center justify-center gap-2 shadow-sm"
+                        className="mt-5 rounded-[12px] w-full h-[42px] bg-[#171717] border border-[#2A2A2A] hover:bg-[#222222] hover:border-[#C9A96E]/40 text-[#F5F0E8] text-[13px] font-[SemiBold] cursor-pointer transition-all flex items-center justify-center gap-2 shadow-sm"
                     >
                         <span>View all projects</span>
                         <RightArrowIcon className="w-2.5 h-2.5" />
@@ -470,11 +470,11 @@ function Dashboard() {
                 </div>
 
                 {/* Location based projects */}
-                <div className="rounded-[24px] bg-white p-6 md:p-7 border border-[#E2E8F0] shadow-sm min-w-0 flex flex-col justify-between">
+                <div className="rounded-[24px] bg-[#111111] p-6 md:p-7 border border-[#2A2A2A] shadow-xl min-w-0 flex flex-col justify-between">
                     <div>
                         <div className="mb-5">
-                            <h2 className="text-[#0F172A] font-[Bold] text-[20px] tracking-tight">Prime Zones</h2>
-                            <p className="text-[#64748B] text-[12px] font-[Medium]">Listings distributed by location</p>
+                            <h2 className="text-[#F5F0E8] font-[Bold] text-[20px] tracking-tight">Prime Zones</h2>
+                            <p className="text-[#A89880] text-[12px] font-[Medium]">Listings distributed by location</p>
                         </div>
 
                         <div className="flex flex-col gap-2.5 max-h-[460px] overflow-y-auto pr-1">
@@ -487,19 +487,19 @@ function Dashboard() {
                                             `/developer/project-management?tab=active&subTab=all&search=${encodeURIComponent(item.name)}`
                                         )
                                     }
-                                    className="group cursor-pointer w-full rounded-[14px] bg-[#F8FAFC] hover:bg-[#F1F5F9] border border-[#E2E8F0] p-3.5 flex items-center justify-between text-left transition-all duration-200 hover:border-[#CBD5E1] hover:shadow-sm"
+                                    className="group cursor-pointer w-full rounded-[14px] bg-[#171717] hover:bg-[#1E1E1E] border border-[#2A2A2A] p-3.5 flex items-center justify-between text-left transition-all duration-200 hover:border-[#C9A96E]/40 hover:shadow-md"
                                 >
                                     <div>
-                                        <p className="text-[13px] font-[Bold] text-[#0F172A] leading-snug group-hover:text-[#D4A373] transition-colors">{item.name}</p>
-                                        <p className="text-[11px] font-[Medium] text-[#64748B] mt-0.5">{item.listings} active {item.listings === 1 ? 'project' : 'projects'}</p>
+                                        <p className="text-[13px] font-[Bold] text-[#F5F0E8] leading-snug group-hover:text-[#C9A96E] transition-colors">{item.name}</p>
+                                        <p className="text-[11px] font-[Medium] text-[#A89880] mt-0.5">{item.listings} active {item.listings === 1 ? 'project' : 'projects'}</p>
                                     </div>
-                                    <div className="w-7 h-7 rounded-full bg-white border border-[#E2E8F0] flex items-center justify-center text-[#64748B] group-hover:text-[#0F172A] group-hover:border-[#CBD5E1] group-hover:translate-x-0.5 transition-all">
+                                    <div className="w-7 h-7 rounded-full bg-[#111111] border border-[#2A2A2A] flex items-center justify-center text-[#A89880] group-hover:text-[#C9A96E] group-hover:border-[#C9A96E]/40 group-hover:translate-x-0.5 transition-all">
                                         <RightArrowIcon className="w-2.5 h-2.5" />
                                     </div>
                                 </button>
                             ))}
                             {!locationRows.length && !isDashboardLoading && (
-                                <div className="px-4 py-8 text-center text-[13px] font-[Regular] text-[#94A3B8]">
+                                <div className="px-4 py-8 text-center text-[13px] font-[Regular] text-[#6B6259]">
                                     No location-based projects found.
                                 </div>
                             )}

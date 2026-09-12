@@ -1,23 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #1F3D51;
-  --primary-hover: #162b39;
-  --primary-color-alpha: rgba(31, 61, 81, 0.15);
-  --primary-hover-alpha: rgba(31, 61, 81, 0.05);
+  /* Main site Luxury Theme Tokens */
+  --bg-void: #060606;
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #111111;
+  --bg-surface: #171717;
+  --bg-elevated: #1F1F1F;
+  --bg-border: #2A2A2A;
 
-  --accent-color: #D4A373;
-  --accent-hover: #c49262;
-  --accent-alpha: rgba(212, 163, 115, 0.18);
+  --gold: #C9A96E;
+  --gold-light: #E4C98B;
+  --gold-dark: #9B7B42;
+  --gold-10: rgba(201, 169, 110, 0.10);
+  --gold-15: rgba(201, 169, 110, 0.15);
+  --gold-20: rgba(201, 169, 110, 0.20);
+  --gold-30: rgba(201, 169, 110, 0.30);
+  --gold-50: rgba(201, 169, 110, 0.50);
 
-  --bg-color: #F8F9FA;
-  --surface-color: #FFFFFF;
-  --text-main: #1E293B;
+  --text-primary: #F5F0E8;
+  --text-secondary: #A89880;
+  --text-muted: #6B6259;
+
+  --accent-color: #C9A96E;
+  --accent-hover: #E4C98B;
 }
 
 body {
-  background-color: var(--bg-color, #F8F9FA);
-  color: var(--text-main, #1E293B);
+  background-color: var(--bg-primary, #0A0A0A);
+  color: var(--text-primary, #F5F0E8);
 }
 
 /* Anti-gravity floating transitions & cards */

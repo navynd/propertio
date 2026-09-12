@@ -459,20 +459,20 @@ const ProjectManagement = () => {
                 onBackClick={() => { }}
             />
 
-            <div className="rounded-[24px] bg-white border border-[#E2E8F0] shadow-sm min-w-0 overflow-hidden">
+            <div className="rounded-[24px] bg-[#111111] border border-[#2A2A2A] shadow-xl min-w-0 overflow-hidden">
                 {/* Toolbar */}
-                <div className="p-6 md:p-7 flex flex-col gap-4 xl:flex-row xl:flex-wrap xl:items-center xl:justify-between border-b border-[#F1F5F9]">
+                <div className="p-6 md:p-7 flex flex-col gap-4 xl:flex-row xl:flex-wrap xl:items-center xl:justify-between border-b border-[#2A2A2A]">
                     <div className="flex flex-wrap items-center gap-3">
                         {/* Desktop Filter tabs */}
-                        <div className="hidden xl:flex items-center gap-1.5 p-1 bg-[#F1F5F9] rounded-full">
+                        <div className="hidden xl:flex items-center gap-1.5 p-1 bg-[#1A1A1A] border border-[#2A2A2A] rounded-full">
                             {filterTabs.map((label) => (
                                 <button
                                     key={label}
                                     type="button"
                                     onClick={() => handleFilterChange(label, "tabs")}
                                     className={`shrink-0 rounded-full px-4 h-[32px] text-[12px] font-[SemiBold] transition-all flex items-center justify-center cursor-pointer ${activeFilter === label
-                                        ? "bg-[#0F172A] text-white shadow-sm"
-                                        : "text-[#64748B] hover:text-[#0F172A]"
+                                        ? "bg-[#C9A96E] text-[#0A0A0A] font-[Bold] shadow-md shadow-[#C9A96E]/20"
+                                        : "text-[#A89880] hover:text-[#F5F0E8]"
                                         }`}
                                 >
                                     {label} ({tabCount(label)})
@@ -484,13 +484,13 @@ const ProjectManagement = () => {
                             <button
                                 type="button"
                                 onClick={() => setIsFilterDropdownOpen((prev) => !prev)}
-                                className="w-full sm:w-auto h-[38px] rounded-full border border-[#CBD5E1] bg-white px-4 text-[12px] font-[SemiBold] text-[#0F172A] inline-flex items-center justify-between gap-2 min-w-[160px] cursor-pointer"
+                                className="w-full sm:w-auto h-[38px] rounded-full border border-[#2A2A2A] bg-[#171717] px-4 text-[12px] font-[SemiBold] text-[#F5F0E8] inline-flex items-center justify-between gap-2 min-w-[160px] cursor-pointer"
                             >
                                 <span>{activeFilter} ({tabCount(activeFilter)})</span>
                                 <DownArrowIcon width={11} height={7} className={`transition-transform duration-200 ${isFilterDropdownOpen ? "rotate-180" : ""}`} />
                             </button>
                             {isFilterDropdownOpen && (
-                                <div className="absolute left-0 top-[44px] z-20 w-full min-w-[180px] bg-white border border-[#E2E8F0] rounded-[14px] shadow-lg py-1.5 flex flex-col">
+                                <div className="absolute left-0 top-[44px] z-20 w-full min-w-[180px] bg-[#171717] border border-[#2A2A2A] rounded-[14px] shadow-2xl py-1.5 flex flex-col">
                                     {filterTabs.map((label) => (
                                         <button
                                             key={`filter-${label}`}
@@ -499,7 +499,7 @@ const ProjectManagement = () => {
                                                 e.preventDefault();
                                                 handleFilterChange(label, "dropdown");
                                             }}
-                                            className={`px-4 py-2 text-left text-[12px] font-[Medium] hover:bg-[#F8FAFC] transition-colors ${activeFilter === label ? "text-[#D4A373] font-[SemiBold] bg-[#FDFBF9]" : "text-[#334155]"}`}
+                                            className={`px-4 py-2 text-left text-[12px] font-[Medium] hover:bg-[#2A2A2A] transition-colors ${activeFilter === label ? "text-[#C9A96E] font-[SemiBold] bg-[#1F1F1F]" : "text-[#A89880]"}`}
                                         >
                                             {label} ({tabCount(label)})
                                         </button>
@@ -508,14 +508,14 @@ const ProjectManagement = () => {
                             )}
                         </div>
                         {/* Search input */}
-                        <div className="flex items-center gap-2.5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-full px-4 h-[38px] w-full sm:w-[240px] focus-within:border-[#CBD5E1] transition-colors">
-                            <SearchIcon className="text-[#94A3B8] shrink-0 w-4 h-4" />
+                        <div className="flex items-center gap-2.5 bg-[#171717] border border-[#2A2A2A] rounded-full px-4 h-[38px] w-full sm:w-[240px] focus-within:border-[#C9A96E]/50 transition-colors">
+                            <SearchIcon className="text-[#A89880] shrink-0 w-4 h-4" />
                             <input
                                 type="search"
                                 placeholder="Search projects..."
                                 value={searchText}
                                 onChange={(e) => setSearchText(e.target.value)}
-                                className="w-full bg-transparent text-[12px] font-[Medium] text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none"
+                                className="w-full bg-transparent text-[12px] font-[Medium] text-[#F5F0E8] placeholder:text-[#6B6259] focus:outline-none"
                             />
                         </div>
                     </div>
@@ -523,18 +523,18 @@ const ProjectManagement = () => {
                     <div className="flex flex-wrap items-center gap-2.5">
                         {/* Sort by button */}
                         <div className="flex items-center gap-2 shrink-0">
-                            <span className="text-[#64748B] text-[12px] font-[Medium] whitespace-nowrap">Sort:</span>
+                            <span className="text-[#A89880] text-[12px] font-[Medium] whitespace-nowrap">Sort:</span>
                             <div className="relative" ref={sortDropdownRef}>
                                 <button
                                     type="button"
                                     onClick={() => setIsSortDropdownOpen(!isSortDropdownOpen)}
-                                    className="flex items-center justify-between gap-2 border border-[#CBD5E1] bg-white rounded-full px-3.5 h-[34px] cursor-pointer min-w-[110px] hover:border-[#94A3B8] transition-colors"
+                                    className="flex items-center justify-between gap-2 border border-[#2A2A2A] bg-[#171717] rounded-full px-3.5 h-[34px] cursor-pointer min-w-[110px] hover:border-[#C9A96E]/40 transition-colors"
                                 >
-                                    <span className="text-[#0F172A] text-[12px] font-[SemiBold]">{selectedSort.name}</span>
-                                    <DownArrowIcon className={`w-3 h-3 text-[#64748B] transition-transform duration-200 ${isSortDropdownOpen ? "rotate-180" : ""}`} />
+                                    <span className="text-[#F5F0E8] text-[12px] font-[SemiBold]">{selectedSort.name}</span>
+                                    <DownArrowIcon className={`w-3 h-3 text-[#A89880] transition-transform duration-200 ${isSortDropdownOpen ? "rotate-180" : ""}`} />
                                 </button>
                                 {isSortDropdownOpen && (
-                                    <div className="absolute right-0 top-[40px] w-full min-w-[140px] bg-white border border-[#E2E8F0] rounded-[14px] shadow-lg py-1.5 z-20 flex flex-col max-h-[200px] overflow-y-auto">
+                                    <div className="absolute right-0 top-[40px] w-full min-w-[140px] bg-[#171717] border border-[#2A2A2A] rounded-[14px] shadow-2xl py-1.5 z-20 flex flex-col max-h-[200px] overflow-y-auto">
                                         {sortOptions.map((option) => (
                                             <button
                                                 key={option.value}
@@ -544,7 +544,7 @@ const ProjectManagement = () => {
                                                     setSelectedSort(option);
                                                     setIsSortDropdownOpen(false);
                                                 }}
-                                                className={`px-4 py-2 text-left text-[12px] font-[Medium] cursor-pointer hover:bg-[#F8FAFC] transition-colors ${selectedSort.value === option.value ? "text-[#D4A373] font-[SemiBold] bg-[#FDFBF9]" : "text-[#334155]"
+                                                className={`px-4 py-2 text-left text-[12px] font-[Medium] cursor-pointer hover:bg-[#2A2A2A] transition-colors ${selectedSort.value === option.value ? "text-[#C9A96E] font-[SemiBold] bg-[#1F1F1F]" : "text-[#A89880]"
                                                     }`}
                                             >
                                                 {option.name}
@@ -560,7 +560,7 @@ const ProjectManagement = () => {
                                 type="button"
                                 disabled={!canToolbarBulkDelete || isBulkDeleting}
                                 onClick={() => void handleBulkDelete()}
-                                className="flex items-center gap-1.5 px-3.5 h-[34px] rounded-full text-[12px] font-[SemiBold] text-rose-600 bg-rose-50 border border-rose-200 hover:bg-rose-100 disabled:opacity-50 transition-colors cursor-pointer"
+                                className="flex items-center gap-1.5 px-3.5 h-[34px] rounded-full text-[12px] font-[SemiBold] text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 disabled:opacity-50 transition-colors cursor-pointer"
                             >
                                 <TrashIcon width={14} height={14} />
                                 {isBulkDeleting ? "Deleting…" : "Delete"}
@@ -572,9 +572,9 @@ const ProjectManagement = () => {
                             onClick={() => {
                                 navigate("/developer/add-project");
                             }}
-                            className="cursor-pointer inline-flex items-center justify-center gap-2 rounded-full bg-[#D4A373] hover:bg-[#C29060] text-white px-4 h-[36px] text-[12px] font-[Bold] shrink-0 shadow-md shadow-[#D4A373]/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                            className="cursor-pointer inline-flex items-center justify-center gap-2 rounded-full bg-[#C9A96E] hover:bg-[#E4C98B] text-[#0A0A0A] px-4 h-[36px] text-[12px] font-[Bold] shrink-0 shadow-md shadow-[#C9A96E]/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
                         >
-                            <PlusIcon width={14} height={14} className="text-white" />
+                            <PlusIcon width={14} height={14} className="text-[#0A0A0A]" />
                             <span>Add project</span>
                         </button>
                     </div>
