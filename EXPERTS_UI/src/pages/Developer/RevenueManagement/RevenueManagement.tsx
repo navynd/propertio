@@ -270,27 +270,27 @@ const RevenueManagement = () => {
             <button
                 type="button"
                 onClick={() => openDatePicker(type)}
-                className="cursor-pointer h-[33px] rounded-full border border-[rgba(34,34,34,0.10)] px-[12px] text-[12px] font-[SemiBold] text-[#222] inline-flex items-center gap-[6px]"
+                className="cursor-pointer h-[36px] rounded-full border border-[#2A2A2A] bg-[#171717] px-[14px] text-[12px] font-[SemiBold] text-[#F5F0E8] hover:border-[#C9A96E]/40 inline-flex items-center gap-[6px] transition-colors"
             >
                 {selectedDate ? formatDisplayDate(selectedDate) : type === "from" ? "From date" : "To date"}
             </button>
             {activeDatePicker === type && (
-                <div className={`absolute ${side}-0 top-[40px] z-9 h-[320px] w-[280px] rounded-[12px]  bg-white p-[20px] shadow-[0_8px_20px_rgba(0,0,0,0.12)]`}>
+                <div className={`absolute ${side}-0 top-[42px] z-20 h-[320px] w-[280px] rounded-[16px] bg-[#171717] border border-[#2A2A2A] p-[20px] shadow-2xl`}>
                     <div className="flex items-center justify-between mb-[16px]">
-                        <button type="button" onClick={() => shiftMonth(-1)} className="text-[16px] font-[SemiBold] text-[#222] px-[6px] rotate-180"><LeftArrowIcon width={14} height={14} /></button>
-                        <p className="text-[16px] font-[Bold] text-[#222]">{monthTitle(displayMonth)}</p>
-                        <button type="button" onClick={() => shiftMonth(1)} className="text-[16px] font-[SemiBold] text-[#222] px-[6px]"><RightArrowIcon width={14} height={14} /></button>
+                        <button type="button" onClick={() => shiftMonth(-1)} className="text-[16px] font-[SemiBold] text-[#A89880] hover:text-[#F5F0E8] px-[6px] rotate-180 transition-colors"><LeftArrowIcon width={14} height={14} /></button>
+                        <p className="text-[15px] font-[Bold] text-[#F5F0E8]">{monthTitle(displayMonth)}</p>
+                        <button type="button" onClick={() => shiftMonth(1)} className="text-[16px] font-[SemiBold] text-[#A89880] hover:text-[#F5F0E8] px-[6px] transition-colors"><RightArrowIcon width={14} height={14} /></button>
                     </div>
                     <div className="grid grid-cols-7 gap-y-[6px] text-center">
                         {weekDays.map((day, index) => (
-                            <span key={`${type}-day-${day}-${index}`} className="text-[13px] font-[SemiBold] text-[#222]">{day}</span>
+                            <span key={`${type}-day-${day}-${index}`} className="text-[12px] font-[SemiBold] text-[#A89880]">{day}</span>
                         ))}
                         {calendarCells.map((day, idx) => {
                             if (!day) {
                                 return (
                                     <span
                                         key={`${type}-blank-${idx}`}
-                                        className="h-[30px] w-[30px] mx-auto rounded-full border border-[rgba(34,34,34,0.10)] bg-[#FAFAFA]"
+                                        className="h-[30px] w-[30px] mx-auto rounded-full border border-transparent bg-[#111111]/50"
                                     />
                                 );
                             }
@@ -304,9 +304,9 @@ const RevenueManagement = () => {
                                     key={`${type}-${day}-${idx}`}
                                     type="button"
                                     onClick={() => selectDate(day)}
-                                    className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors ${isSelected
-                                        ? "bg-[#D4A373] text-white border-[#D4A373]"
-                                        : "text-[#707070] border-[rgba(34,34,34,0.10)] hover:bg-[#F2F2F2]"
+                                    className={`h-[30px] w-[30px] mx-auto rounded-full text-[12px] font-[SemiBold] border transition-colors cursor-pointer ${isSelected
+                                        ? "bg-[#C9A96E] text-[#0A0A0A] border-[#C9A96E] font-[Bold] shadow-sm"
+                                        : "text-[#A89880] border-transparent hover:border-[#2A2A2A] hover:bg-[#2A2A2A] hover:text-[#F5F0E8]"
                                         }`}
                                 >
                                     {day}
@@ -326,18 +326,18 @@ const RevenueManagement = () => {
                 {/* Header */}
                 <DeveloperHeader title="Revenue Management" showBack={false} onBackClick={() => { }} />
                 {/* Revenue Management */}
-                <div className="rounded-[15px] bg-white min-w-0 md:p-[30px] p-[20px] flex flex-col gap-[30px]">
+                <div className="rounded-[20px] bg-[#111111] border border-[#2A2A2A] shadow-xl min-w-0 md:p-[30px] p-[20px] flex flex-col gap-[24px]">
                     {/* Toolbar */}
                     <div className="flex items-center flex-wrap justify-between gap-[12px]">
                         {/* Search */}
-                        <div className="flex items-center gap-[10px] bg-[#F5F5F5] rounded-full px-[14px] h-[33px] w-full lg:max-w-[250px] 2xl:max-w-[300px]">
-                            <SearchIcon className="text-[#707070] shrink-0" />
+                        <div className="flex items-center gap-[10px] bg-[#171717] border border-[#2A2A2A] rounded-full px-[16px] h-[38px] w-full lg:max-w-[250px] 2xl:max-w-[300px] focus-within:border-[#C9A96E] transition-colors">
+                            <SearchIcon className="text-[#A89880] shrink-0" />
                             <input
                                 type="search"
                                 placeholder="Search here"
                                 value={searchText}
                                 onChange={(e) => setSearchText(e.target.value)}
-                                className="w-full bg-transparent text-[12px] font-[Regular] text-[#222] placeholder:text-[#707070] focus:outline-none"
+                                className="w-full bg-transparent text-[13px] font-[Regular] text-[#F5F0E8] placeholder:text-[#6B6259] focus:outline-none"
                             />
                         </div>
 
@@ -345,26 +345,26 @@ const RevenueManagement = () => {
                             {/* Date range from */}
                             {renderDatePicker("from", fromDate, "left", fromDateRef)}
                             {/* Date range to */}
-                            <span className="text-[12px] text-[#707070]">to</span>
+                            <span className="text-[12px] text-[#A89880]">to</span>
                             {renderDatePicker("to", toDate, "right", toDateRef)}
 
-                            <div className="w-[1px] h-[18px] bg-[rgba(34,34,34,0.10)] mx-[2px]" />
+                            <div className="w-[1px] h-[18px] bg-[#2A2A2A] mx-[2px]" />
 
                             {/* Sort by */}
                             <div className="flex items-center gap-[8px] shrink-0">
-                                <span className="text-[#222] text-[12px] font-[Regular] whitespace-nowrap">Sort by:</span>
+                                <span className="text-[#A89880] text-[12px] font-[Regular] whitespace-nowrap">Sort by:</span>
                                 <div className="relative" ref={sortDropdownRef}>
                                     <button
                                         type="button"
                                         onClick={() => setIsSortDropdownOpen(!isSortDropdownOpen)}
-                                        className="flex items-center justify-between gap-[8px] border border-[rgba(34,34,34,0.10)] bg-white rounded-full px-[12px] h-[33px] cursor-pointer min-w-[100px]"
+                                        className="flex items-center justify-between gap-[8px] border border-[#2A2A2A] bg-[#171717] rounded-full px-[14px] h-[36px] cursor-pointer min-w-[110px] text-[#F5F0E8] hover:border-[#C9A96E]/40 transition-colors"
                                     >
-                                        <span className="text-[#222] text-[12px] font-[SemiBold]">{selectedSort}</span>
+                                        <span className="text-[12px] font-[SemiBold]">{selectedSort}</span>
                                         <DownArrowIcon className={`transition-transform duration-200 ${isSortDropdownOpen ? "rotate-180" : ""}`} />
                                     </button>
 
                                     {isSortDropdownOpen && (
-                                        <div className="absolute right-0 top-[40px] w-full min-w-[130px] bg-white border border-[#EAEAEA] rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] py-[8px] z-20 flex flex-col">
+                                        <div className="absolute right-0 top-[42px] w-full min-w-[130px] bg-[#171717] border border-[#2A2A2A] rounded-[12px] shadow-2xl py-[6px] z-20 flex flex-col">
                                             {sortOptions.map((option) => (
                                                 <button
                                                     key={option}
@@ -374,7 +374,7 @@ const RevenueManagement = () => {
                                                         setSelectedSort(option);
                                                         setIsSortDropdownOpen(false);
                                                     }}
-                                                    className={`px-[12px] py-[8px] text-left text-[12px] font-[Medium] hover:bg-[#F5F5F5] ${selectedSort === option ? "text-[#0832AE] bg-[#F5F5F5]" : "text-[#222]"
+                                                    className={`px-[14px] py-[8px] text-left text-[12px] font-[Medium] hover:bg-[#2A2A2A] transition-colors cursor-pointer ${selectedSort === option ? "text-[#C9A96E] bg-[#2A2A2A]" : "text-[#F5F0E8]"
                                                         }`}
                                                 >
                                                     {option}
@@ -385,51 +385,40 @@ const RevenueManagement = () => {
                                 </div>
                             </div>
 
-                            {/* Delete button */}
-                            {/* <button
-                                type="button"
-                                disabled
-                                className="cursor-pointer opacity-50 flex items-center gap-[6px] px-[12px] h-[33px] rounded-full text-[12px] font-[SemiBold] text-[#222] bg-[#F5F5F5]"
-                            >
-                                <TrashIcon width={16} height={16} />
-                                Delete
-                            </button> */}
-
                             {/* Add Deal button */}
                             <button
                                 type="button"
                                 onClick={() => setIsAddDealModalOpen(true)}
-                                className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#D4A373] text-[#FFF] px-[14px] h-[33px] text-[12px] font-[SemiBold] shrink-0"
+                                className="cursor-pointer inline-flex items-center justify-center gap-[6px] rounded-full bg-[#C9A96E] hover:bg-[#E4C98B] text-[#0A0A0A] px-[16px] h-[36px] text-[12px] font-[Bold] shrink-0 transition-colors shadow-md"
                             >
-                                <PlusIcon width={16} height={16} />
+                                <PlusIcon width={14} height={14} />
                                 Add Deal
                             </button>
                         </div>
                     </div>
 
                     {/* Table */}
-
                     <div className="overflow-x-auto w-full scrollbar-hide relative">
                         {isLoading && (
-                            <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/70 rounded-[10px]">
-                                <Loader size={72} margin={0} />
+                            <div className="absolute inset-0 z-10 flex items-center justify-center bg-[#0A0A0A]/70 backdrop-blur-sm rounded-[16px]">
+                                <Loader size={60} margin={0} />
                             </div>
                         )}
-                        <div className="min-w-[1290px] rounded-[10px] border border-[rgba(34,34,34,0.10)] overflow-hidden bg-white">
-                            <div className="grid grid-cols-[40px_1.5fr_1.9fr_1.5fr_1.1fr_0.7fr] gap-[15px] items-center px-[14px] py-[12px] bg-[#F5F5F5] border-b border-[rgba(34,34,34,0.10)]">
+                        <div className="min-w-[1290px] rounded-[16px] border border-[#2A2A2A] overflow-hidden bg-[#111111]">
+                            <div className="grid grid-cols-[40px_1.5fr_1.9fr_1.5fr_1.1fr_0.7fr] gap-[15px] items-center px-[16px] py-[14px] bg-[#171717] border-b border-[#2A2A2A]">
                                 <div className="flex justify-center">
                                     <input
                                         type="checkbox"
                                         checked={allSelected}
                                         onChange={toggleSelectAll}
-                                        className="h-[15px] w-[15px] rounded border border-[rgba(34,34,34,0.20)] accent-[#222] cursor-pointer"
+                                        className="h-[15px] w-[15px] rounded border border-[#2A2A2A] bg-[#0A0A0A] accent-[#C9A96E] cursor-pointer"
                                     />
                                 </div>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Project details</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Agency name</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Deal closed date</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Deal amount</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Actions</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Project details</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Agency name</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Deal closed date</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Deal amount</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Actions</p>
                             </div>
 
                             {!isLoading && paginatedRows.length === 0 ? (
@@ -438,7 +427,7 @@ const RevenueManagement = () => {
                                 paginatedRows.map((row, index) => (
                                     <div
                                         key={row.id}
-                                        className={`grid grid-cols-[40px_1.5fr_1.9fr_1.5fr_1.1fr_0.7fr] gap-[15px] items-center px-[14px] py-[12px] ${index !== paginatedRows.length - 1 ? "border-b border-[rgba(34,34,34,0.08)]" : ""
+                                        className={`grid grid-cols-[40px_1.5fr_1.9fr_1.5fr_1.1fr_0.7fr] gap-[15px] items-center px-[16px] py-[14px] hover:bg-[#171717]/60 transition-colors ${index !== paginatedRows.length - 1 ? "border-b border-[#2A2A2A]" : ""
                                             }`}
                                     >
                                         <div className="flex justify-center">
@@ -446,18 +435,18 @@ const RevenueManagement = () => {
                                                 type="checkbox"
                                                 checked={selectedIds.has(row.id)}
                                                 onChange={() => toggleRow(row.id)}
-                                                className="h-[15px] w-[15px] rounded border border-[rgba(34,34,34,0.20)] accent-[#222] cursor-pointer"
+                                                className="h-[15px] w-[15px] rounded border border-[#2A2A2A] bg-[#0A0A0A] accent-[#C9A96E] cursor-pointer"
                                             />
                                         </div>
 
                                         <div className="flex items-center gap-[12px] min-w-0">
-                                            <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0">
+                                            <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0 border border-[#2A2A2A] bg-[#171717]">
                                                 <img src={row.imageUrl} alt="" className="w-full h-full object-cover" />
                                             </div>
                                             <div className="min-w-0">
-                                                <p className="text-[12px] font-[Bold] text-[#222] leading-[1.3] mb-[4px] truncate">{row.projectName}</p>
-                                                <p className="text-[12px] font-[Regular] text-[#707070] flex items-center gap-[5px] leading-[1.2]">
-                                                    <span className="inline-flex shrink-0">
+                                                <p className="text-[13px] font-[Bold] text-[#F5F0E8] leading-[1.3] mb-[4px] truncate">{row.projectName}</p>
+                                                <p className="text-[12px] font-[Regular] text-[#A89880] flex items-center gap-[5px] leading-[1.2]">
+                                                    <span className="inline-flex shrink-0 text-[#C9A96E]">
                                                         <LocationIcon width={11} height={15} />
                                                     </span>
                                                     <span className="truncate">{row.location}</span>
@@ -469,9 +458,9 @@ const RevenueManagement = () => {
                                             {row.agencies.map((agency) => (
                                                 <span
                                                     key={`${row.id}-${agency}`}
-                                                    className={`inline-flex items-center rounded-[4px] h-[20px] px-[7px] text-[12px] font-[SemiBold] ${agency.startsWith("+")
-                                                        ? "bg-transparent text-[#707070]"
-                                                        : "border border-[rgba(34,34,34,0.10)] text-[#222]"
+                                                    className={`inline-flex items-center rounded-[6px] h-[22px] px-[8px] text-[11px] font-[SemiBold] border ${agency.startsWith("+")
+                                                        ? "bg-transparent text-[#A89880] border-transparent"
+                                                        : "border-[#2A2A2A] bg-[#171717] text-[#F5F0E8]"
                                                         }`}
                                                 >
                                                     {agency}
@@ -479,19 +468,13 @@ const RevenueManagement = () => {
                                             ))}
                                         </div>
 
-                                        <p className="text-[12px] font-[Regular] text-[#222]">{row.closedDate}</p>
-                                        <p className="text-[12px] font-[Regular] text-[#222] whitespace-nowrap">{formatAmount(row.dealAmount, row.currency)}</p>
+                                        <p className="text-[12px] font-[Regular] text-[#F5F0E8]">{row.closedDate}</p>
+                                        <p className="text-[12px] font-[Bold] text-[#F5F0E8] whitespace-nowrap">{formatAmount(row.dealAmount, row.currency)}</p>
 
                                         <div className="flex items-center justify-start gap-[6px]">
-                                            <button onClick={() => navigate(`/developer/revenue-details?projectId=${encodeURIComponent(row.projectId)}`)} type="button" className="cursor-pointer p-[6px] rounded-[8px] hover:bg-[#F1F5F9]" aria-label="View">
-                                                <EyeDarkIcon width={20} height={20} />
+                                            <button onClick={() => navigate(`/developer/revenue-details?projectId=${encodeURIComponent(row.projectId)}`)} type="button" className="cursor-pointer p-[8px] rounded-[8px] bg-[#171717] hover:bg-[#2A2A2A] border border-[#2A2A2A] text-[#A89880] hover:text-[#C9A96E] transition-colors" aria-label="View">
+                                                <EyeDarkIcon width={18} height={18} />
                                             </button>
-                                            {/* <button type="button" className="cursor-pointer p-[6px] rounded-[8px] hover:bg-[#F1F5F9]" aria-label="Edit">
-                                            <EditIcon width={20} height={20} />
-                                        </button> */}
-                                            {/* <button type="button" className="cursor-pointer p-[6px] rounded-[8px] hover:bg-[#F1F5F9]" aria-label="Delete">
-                                            <TrashIcon width={20} height={20} />
-                                        </button> */}
                                         </div>
                                     </div>
                                 ))
@@ -499,9 +482,8 @@ const RevenueManagement = () => {
                         </div>
                     </div>
 
-
-                    {/* Pagenation */}
-                    <div className="px-[20px] md:px-[20px] pb-[20px]">
+                    {/* Pagination */}
+                    <div className="px-[20px] md:px-[20px] pb-[10px]">
                         <Pagenation
                             currentPage={pagination.page || currentPage}
                             totalItems={pagination.totalDeals}

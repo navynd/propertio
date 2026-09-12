@@ -51,70 +51,58 @@ const metricCardTemplates: MetricTemplate[] = [
     {
         key: "totalRevenueSalesAndRent",
         title: "Total revenues by sales & renting",
-        // iconBg: "bg-[#D4A373]",
-        iconBg: "bg-[#00C853]",
-        cardBg:
-            "linear-gradient(180deg,rgba(0, 166, 99, 0) 42.64%,rgba(0, 166, 99, 0.2) 100%), #ffffff",
+        iconBg: "bg-gradient-to-br from-[#4ADE80] to-[#16A34A] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon6,
         isMoney: true,
     },
     {
         key: "activeListings",
         title: "Active listings",
-        iconBg: "bg-[#D4A373]",
-        cardBg:
-            "linear-gradient(180deg,rgba(212, 163, 115, 0) 42.64%,rgba(212, 163, 115, 0.20) 100%), #ffffff",
+        iconBg: "bg-gradient-to-br from-[#C9A96E] to-[#9B7B42] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon1,
     },
     {
         key: "totalListings",
         title: "Total listings",
-        iconBg: "bg-[#0832AE]",
-        cardBg:
-            "linear-gradient(180deg,rgba(8, 50, 174, 0) 42.64%,rgba(8, 50, 174, 0.20) 100%), #ffffff",
+        iconBg: "bg-gradient-to-br from-[#38BDF8] to-[#0284C7] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: DashListingIcon,
     },
     {
         key: "totalRentProperties",
         title: "Total rent properties",
-        iconBg: "bg-[#FF46A2]",
-        cardBg:
-            "linear-gradient(180deg,rgba(255, 70, 162, 0) 42.64%,rgba(255, 70, 162, 0.20) 100%), #ffffff",
+        iconBg: "bg-gradient-to-br from-[#EC4899] to-[#BE185D] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon5,
-
     },
     {
         key: "totalSaleProperties",
         title: "Total sale properties",
-        iconBg: "bg-[#C7A335]",
-        cardBg:
-            "linear-gradient(180deg,rgba(199, 163, 53, 0) 42.64%,rgba(199, 163, 53, 0.20) 100%), #ffffff",
+        iconBg: "bg-gradient-to-br from-[#C7A335] to-[#A17C15] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon4,
     },
     {
         key: "totalInquiries",
         title: "Total number of inquiries",
-        iconBg: "bg-[#F28D6A]",
-        cardBg:
-            "linear-gradient(180deg,rgba(242, 141, 106, 0) 42.64%,rgba(242, 141, 106, 0.20) 100%), #ffffff",
+        iconBg: "bg-gradient-to-br from-[#FB923C] to-[#C2410C] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: QuestionMarkIcon,
-
     },
     {
         key: "newInquiries",
         title: "Total number of new inquiries",
-        iconBg: "bg-[#E80808]",
-        cardBg:
-            "linear-gradient(180deg, rgba(232, 8, 8, 0.00) 42.64%, var(--red, rgba(232, 8, 8, 0.20)) 100%), var(--White, #FFF)",
+        iconBg: "bg-gradient-to-br from-[#F87171] to-[#DC2626] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: InquireIcon,
-
     },
     {
         key: "dealsClosed",
         title: "Total deals closed (including sales & rent)",
-        iconBg: "bg-[#8E68E2]",
-        cardBg:
-            "linear-gradient(180deg, rgba(142, 104, 226, 0.00) 42.64%, rgba(142, 104, 226, 0.20) 100%), var(--White, #FFF)",
+        iconBg: "bg-gradient-to-br from-[#A855F7] to-[#7E22CE] text-[#0A0A0A]",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon7,
     },
 ];
@@ -400,7 +388,7 @@ function AgentDashboard() {
     return (
         <div className="px-4 pb-6 pt-4 sm:px-6 lg:px-8">
             {/* Content */}
-            <div className="p-[20px] h-auto rounded-[15px] gap-[20px] flex flex-col justify-between" style={{ backgroundImage: `url(${mainbg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', }}>
+            <div className="p-[20px] md:p-[28px] h-auto rounded-[24px] gap-[20px] flex flex-col justify-between shadow-2xl overflow-hidden border border-[#2A2A2A]" style={{ backgroundImage: `linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(23, 23, 23, 0.90) 100%), url(${mainbg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', }}>
                 <AgentHeader
                     variant="embedded"
                     title="Dashboard"
@@ -410,169 +398,77 @@ function AgentDashboard() {
                     verified={shellHeader.verified}
                     agentType={shellHeader.agentType}
                 />
-                <div className="relative md:mt-[80px]">
+                <div className="relative md:mt-[60px]">
                     {isDashboardLoading && (
-                        <div className="absolute inset-0 z-10 flex items-center justify-center rounded-[15px] bg-white/60">
-                            <Loader size={80} margin={0} />
+                        <div className="absolute inset-0 z-10 flex items-center justify-center rounded-[20px] bg-[#0A0A0A]/70 backdrop-blur-sm">
+                            <Loader size={60} margin={0} />
                         </div>
                     )}
-                    {/* <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                        {metricCards.map((card) => {
-                            const Icon = card.icon;
-                            return (
-                                <div
-                                    key={card.title}
-                                    className={`flex flex-col justify-between rounded-[15px] p-[20px_20px_0px_20px]`}
-                                    style={{
-                                        background: card.cardBg,
-                                    }}
-                                >
-                                    <div className="">
-                                        <div className="flex flex-col gap-2 justify-center">
-                                            <p className="mb-2 flex items-center gap-2 text-[12px] font-[Medium] text-[#222]">
-                                                <span
-                                                    className={`flex flex-shrink-0 h-6 w-6 items-center justify-center rounded-full ${card.iconBg}`}
-                                                >
-                                                    <Icon className="flex-shrink-0 h-3.5 w-3.5" width={12} height={12} />
-                                                </span>
-                                                {card.title}
-                                            </p>
-                                            <p className="text-[30px] text-[#222] font-semibold w-[180px] break-words leading-[1]">{card.value}</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="mt-3 flex justify-end">
-                                        <span
-                                            className={`inline-flex items-center min-w-[30px] rounded-[10px_10px_0px_0px] p-[6px_6px_2px_6px] text-[10px] font-[SemiBold] text-white ${card.badgeBg}`}
-                                        >
-                                            {card.badgeText}
-                                            {card.arrow === "up" ? (
-                                                <span className="ml-[4px]">▲</span>
-                                            ) : (
-                                                <span className="ml-[4px]">▼</span>
-                                            )}
-                                        </span>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div> */}
                     <div className="grid gap-[10px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         {metricCards.map((card) => {
                             const Icon = card.icon;
                             return (
                                 <div
                                     key={card.title}
-                                    className="flex flex-col justify-between rounded-[15px] p-[25px_25px_0px_25px]"
-                                    style={{ background: card.cardBg }}
+                                    className="flex flex-col justify-between rounded-[20px] p-[20px_20px_0px_20px] border border-[#2A2A2A] shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-2xl"
+                                    style={{
+                                        background: card.cardBg,
+                                    }}
                                 >
-                                    <div className="flex flex-col gap-[25px]">
-
-                                        {/* ✅ TITLE FIXED HEIGHT */}
-                                        <div className="flex items-center gap-2 text-[12px] font-[Medium] text-[#222] h-[30px]">
+                                    <div className="flex flex-col gap-[20px]">
+                                        <div className="flex items-center gap-2 text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider h-[30px]">
                                             <span
-                                                className={`flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full ${card.iconBg}`}
+                                                className={`flex flex-shrink-0 h-7 w-7 items-center justify-center rounded-lg shadow-sm ${card.iconBg}`}
                                             >
-                                                <Icon width={12} height={12} />
+                                                <Icon className="flex-shrink-0" width={13} height={13} />
                                             </span>
-                                            <span className="line-clamp-2">
-                                                {card.title}
-                                            </span>
+                                            <span className="line-clamp-2">{card.title}</span>
                                         </div>
-
-                                        {/* ✅ VALUE FIXED HEIGHT */}
-                                        <div className="mt-auto flex flex-col justify-end md:text-[28px] text-[20px] text-[#222] font-semibold leading-[1] md:w-[180px] lg:w-[150px] xl:w-[180px] w-full break-words h-[55px]">
-                                            {card.value}
-                                        </div>
-
+                                        <div className="md:text-[26px] text-[20px] text-[#F5F0E8] font-[Bold] w-full break-words leading-[1] h-[50px] flex items-end">{card.value}</div>
                                     </div>
-
-                                    {/* Badge */}
-                                    <div className="flex justify-end">
+                                    <div className="flex justify-end mt-2">
                                         <span
-                                            className={`inline-flex items-center min-w-[30px] rounded-[10px_10px_0px_0px] p-[6px_6px_2px_6px] text-[10px] font-[SemiBold] text-white ${card.badgeBg}`}
+                                            className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-[Bold] mb-3 ${card.arrow === "up" ? "bg-[#4ADE80]/15 text-[#4ADE80] border border-[#4ADE80]/30" : "bg-[#F87171]/15 text-[#F87171] border border-[#F87171]/30"}`}
                                         >
                                             {card.badgeText}
-                                            {card.arrow === "up" ? (
-                                                <span className="ml-[4px]">▲</span>
-                                            ) : (
-                                                <span className="ml-[4px]">▼</span>
-                                            )}
+                                            <span className="ml-[4px]">{card.arrow === "up" ? "▲" : "▼"}</span>
                                         </span>
                                     </div>
                                 </div>
                             );
                         })}
                     </div>
-                    {/* <div className="grid gap-[10px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                        {metricCards.map((card) => {
-                            const Icon = card.icon;
-                            return (
-                                <div
-                                    key={card.title}
-                                    className={`flex flex-col justify-between rounded-[15px] p-[25px_25px_0px_25px]`}
-                                    style={{
-                                        background: card.cardBg,
-                                    }}
-                                >
-                                    <div className="flex flex-col gap-[25px]">
-                                        <div className="flex items-center gap-2 text-[12px] font-[Medium] text-[#222]">
-                                            <span
-                                                className={`flex flex-shrink-0 h-6 w-6 items-center justify-center rounded-full ${card.iconBg}`}
-                                            >
-                                                <Icon className="flex-shrink-0" width={12} height={12} />
-                                            </span>
-                                            {card.title}
-                                        </div>
-                                        <div className="md:text-[30px] text-[20px] text-[#222] font-semibold md:w-[180px] lg:w-[150px] xl:w-[180px] w-full break-words leading-[1]">{card.value}</div>
-                                    </div>
-                                    <div className="flex justify-end">
-                                        <span
-                                            className={`inline-flex items-center min-w-[30px] rounded-[10px_10px_0px_0px] p-[6px_6px_2px_6px] text-[10px] font-[SemiBold] text-white ${card.badgeBg}`}
-                                        >
-                                            {card.badgeText}
-                                            {card.arrow === "up" ? (
-                                                <span className="ml-[4px]">▲</span>
-                                            ) : (
-                                                <span className="ml-[4px]">▼</span>
-                                            )}
-                                        </span>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div> */}
                 </div>
             </div>
             {/* Project and Location based projects */}
-            <div className="mt-[14px] grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_300px] gap-[14px]">
+            <div className="mt-[20px] grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_320px] gap-[20px]">
                 {/* Projects */}
-                <div className="bg-[#F5F5F5] rounded-[15px] md:p-[22px_30px_30px_30px] p-[20px] bg-[#fff] min-w-0 overflow-hidden">
+                <div className="rounded-[20px] md:p-[28px] p-[20px] bg-[#111111] border border-[#2A2A2A] shadow-xl min-w-0 overflow-hidden">
                     {/* Project header */}
-                    <div className="flex flex-wrap gap-4 items-center justify-between mb-[16px]">
-                        <h2 className="text-[#222] font-[Bold] text-[20px]">Listed properties</h2>
+                    <div className="flex flex-wrap gap-4 items-center justify-between mb-[20px]">
+                        <h2 className="text-[#F5F0E8] font-[Bold] text-[18px]">Listed properties</h2>
                         <div className="flex flex-wrap items-center gap-[16px]">
-                            <div className="hidden 2xl:flex items-center gap-[10px]">
+                            <div className="hidden 2xl:flex items-center gap-[8px]">
                                 {projectTabs.map((tab) => (
                                     <button
                                         key={tab.value}
                                         onClick={() => setActiveTab(tab.value)}
-                                        className={`cursor-pointer flex items-center justify-center text-[12px] font-[SemiBold] p-[0px_15px] h-[33px] rounded-full shrink-0 transition-colors ${activeTab === tab.value
-                                            ? "bg-[#222] text-[#fff]"
-                                            : "bg-[#fff] border border-[#EAEAEA] text-[#222] hover:bg-[#F5F5F5]"
+                                        className={`cursor-pointer flex items-center justify-center text-[12px] font-[SemiBold] px-[16px] h-[34px] rounded-full shrink-0 transition-all ${activeTab === tab.value
+                                            ? "bg-[#C9A96E] text-[#0A0A0A] font-[Bold] shadow-md"
+                                            : "bg-[#171717] border border-[#2A2A2A] text-[#A89880] hover:text-[#F5F0E8] hover:border-[#C9A96E]/40"
                                             }`}
                                     >
                                         {tab.label}
                                     </button>
                                 ))}
                             </div>
-                            {/* ✅ Dropdown (SM → XL) */}
+                            {/* Dropdown (SM → XL) */}
                             <div className="block 2xl:hidden relative" ref={sortDropdownRef}>
                                 <div
                                     onClick={() => setIsTabDropdownOpen(!isTabDropdownOpen)}
-                                    className="flex items-center justify-between gap-[8px] border border-[#EAEAEA] bg-white rounded-full px-[16px] h-[38px] cursor-pointer min-w-[120px]"
+                                    className="flex items-center justify-between gap-[8px] border border-[#2A2A2A] bg-[#171717] rounded-full px-[14px] h-[34px] cursor-pointer min-w-[120px] text-[#F5F0E8]"
                                 >
-                                    <span className="text-[#222] text-[13px] font-[Medium]">
+                                    <span className="text-[#F5F0E8] text-[12px] font-[SemiBold]">
                                         {projectTabs.find(t => t.value === activeTab)?.label || "All"}
                                     </span>
                                     <DownArrowIcon
@@ -582,7 +478,7 @@ function AgentDashboard() {
                                 </div>
 
                                 {isTabDropdownOpen && (
-                                    <div className="absolute left-0 top-[45px] w-full min-w-[150px] bg-white border border-[#EAEAEA] rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] py-[8px] z-10 flex flex-col max-h-[200px] overflow-y-auto scrollbar-hide">
+                                    <div className="absolute left-0 top-[42px] w-full min-w-[150px] max-h-[200px] overflow-y-auto scrollbar-hide bg-[#171717] border border-[#2A2A2A] rounded-[12px] shadow-2xl py-[6px] z-10 flex flex-col">
                                         {projectTabs.map((tab) => (
                                             <div
                                                 key={tab.value}
@@ -592,9 +488,9 @@ function AgentDashboard() {
                                                     setActiveTab(tab.value);
                                                     setIsTabDropdownOpen(false);
                                                 }}
-                                                className={`px-[16px] py-[10px] text-[13px] font-[Medium] cursor-pointer hover:bg-[#F5F5F5] ${activeTab === tab.value
-                                                    ? "text-[#00A663] bg-[#F5F5F5]"
-                                                    : "text-[#222]"
+                                                className={`px-[16px] py-[9px] text-[12px] font-[Medium] cursor-pointer hover:bg-[#2A2A2A] transition-colors ${activeTab === tab.value
+                                                    ? "text-[#C9A96E] bg-[#2A2A2A]"
+                                                    : "text-[#F5F0E8]"
                                                     }`}
                                             >
                                                 {tab.label}
@@ -603,20 +499,20 @@ function AgentDashboard() {
                                     </div>
                                 )}
                             </div>
-                            <div className="w-[1px] h-[20px] bg-gray-300 hidden sm:block shrink-0"></div>
+                            <div className="w-[1px] h-[20px] bg-[#2A2A2A] hidden sm:block shrink-0"></div>
                             <div className="flex items-center gap-[8px] shrink-0">
-                                <span className="text-[#707070] text-[13px] font-[Medium]">Sort by:</span>
+                                <span className="text-[#A89880] text-[12px] font-[Medium]">Sort by:</span>
                                 <div className="relative" ref={sortDropdownRef}>
                                     <div
                                         onClick={() => setIsSortDropdownOpen(!isSortDropdownOpen)}
-                                        className="flex items-center justify-between gap-[8px] border border-[#EAEAEA] bg-white rounded-full px-[16px] h-[38px] cursor-pointer min-w-[120px]"
+                                        className="flex items-center justify-between gap-[8px] border border-[#2A2A2A] bg-[#171717] rounded-full px-[14px] h-[34px] cursor-pointer min-w-[120px] text-[#F5F0E8] hover:border-[#C9A96E]/40 transition-colors"
                                     >
-                                        <span className="text-[#222] text-[13px] font-[Medium]">{selectedSortLabel}</span>
+                                        <span className="text-[#F5F0E8] text-[12px] font-[SemiBold]">{selectedSortLabel}</span>
                                         <DownArrowIcon className={`transition-transform duration-200 ${isSortDropdownOpen ? 'rotate-180' : ''}`} />
                                     </div>
 
                                     {isSortDropdownOpen && (
-                                        <div className="absolute right-0 top-[45px] w-full min-w-[150px] max-h-[200px] overflow-y-auto scrollbar-hide bg-white border border-[#EAEAEA] rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] py-[8px] z-10 flex flex-col">
+                                        <div className="absolute right-0 top-[42px] w-full min-w-[150px] max-h-[200px] overflow-y-auto scrollbar-hide bg-[#171717] border border-[#2A2A2A] rounded-[12px] shadow-2xl py-[6px] z-10 flex flex-col">
                                             {sortOptions.map((option) => (
                                                 <div
                                                     key={option.value}
@@ -626,7 +522,7 @@ function AgentDashboard() {
                                                         setSelectedSort(option.value);
                                                         setIsSortDropdownOpen(false);
                                                     }}
-                                                    className={`px-[16px] py-[10px] text-[13px] font-[Medium] cursor-pointer hover:bg-[#F5F5F5] transition-colors ${selectedSort === option.value ? "text-[#00A663] bg-[#F5F5F5]" : "text-[#222]"}`}
+                                                    className={`px-[16px] py-[9px] text-[12px] font-[Medium] cursor-pointer hover:bg-[#2A2A2A] transition-colors ${selectedSort === option.value ? "text-[#C9A96E] bg-[#2A2A2A]" : "text-[#F5F0E8]"}`}
                                                 >
                                                     {option.name}
                                                 </div>
@@ -640,63 +536,63 @@ function AgentDashboard() {
                     {/* Project table */}
                     <div className="overflow-x-auto w-full scrollbar-hide">
                         <div className="min-w-[890px]">
-                            <div className="rounded-[10px] border border-[rgba(34,34,34,0.08)] overflow-hidden bg-white">
-                                <div className="grid grid-cols-[2.3fr_1.4fr_1.2fr_1.4fr_1fr] px-[14px] py-[10px] bg-[#F5F5F5] border-b border-[rgba(34,34,34,0.08)]">
-                                    <p className="text-[14px] font-[SemiBold] text-[#222]">Property Details</p>
-                                    <p className="text-[14px] font-[SemiBold] text-[#222]">Property for</p>
-                                    <p className="text-[14px] font-[SemiBold] text-[#222]">Beds</p>
-                                    <p className="text-[14px] font-[SemiBold] text-[#222]">AED</p>
-                                    <p className="text-[14px] font-[SemiBold] text-[#222]">Status</p>
+                            <div className="rounded-[16px] border border-[#2A2A2A] overflow-hidden bg-[#111111]">
+                                <div className="grid grid-cols-[2.3fr_1.4fr_1.2fr_1.4fr_1fr] px-[16px] py-[14px] bg-[#171717] border-b border-[#2A2A2A]">
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Property Details</p>
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Property for</p>
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Beds</p>
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">AED</p>
+                                    <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Status</p>
                                 </div>
 
                                 {projectRows.map((row, index) => (
                                     <div
                                         key={row.propertyId}
-                                        className={`grid grid-cols-[2.3fr_1.4fr_1.2fr_1.4fr_1fr] px-[14px] py-[10px] ${index !== projectRows.length - 1 ? "border-b border-[rgba(34,34,34,0.08)]" : ""
+                                        className={`grid grid-cols-[2.3fr_1.4fr_1.2fr_1.4fr_1fr] px-[16px] py-[14px] hover:bg-[#171717]/60 transition-colors ${index !== projectRows.length - 1 ? "border-b border-[#2A2A2A]" : ""
                                             }`}
                                     >
-                                        <div className="flex items-center gap-[10px]">
-                                            <div className="w-[60px] h-[60px] rounded-[8px] bg-cover bg-center shrink-0">
+                                        <div className="flex items-center gap-[12px]">
+                                            <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0 border border-[#2A2A2A] bg-[#171717]">
                                                 <img src={toPropertyImageUrl(row.image)} alt="property" className="w-full h-full object-cover rounded-[8px]" />
                                             </div>
                                             <div>
-                                                <p className="text-[12px] font-[SemiBold] text-[#222] leading-[1.2] mb-[4px]">{row.title}</p>
-                                                <p className="text-[12px] text-[#707070] leading-[1.2]">{[row.location?.city, row.location?.zone].filter(Boolean).join(", ") || "-"}</p>
+                                                <p className="text-[13px] font-[Bold] text-[#F5F0E8] leading-[1.2] mb-[4px]">{row.title}</p>
+                                                <p className="text-[12px] text-[#A89880] leading-[1.2]">{[row.location?.city, row.location?.zone].filter(Boolean).join(", ") || "-"}</p>
                                             </div>
                                         </div>
 
                                         <div className="flex items-center">
                                             <span
-                                                className={`inline-flex items-center rounded-[6px] p-[6px_10px] text-[12px] font-[SemiBold] leading-none ${row.listingLabel === "Buy"
-                                                    ? "bg-[rgba(0,166,99,0.10)] text-[#00A663]" : row.listingLabel === "Rent"
-                                                        ? "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
+                                                className={`inline-flex items-center rounded-[6px] px-2.5 py-1 text-[11px] font-[SemiBold] leading-none border ${row.listingLabel === "Buy"
+                                                    ? "bg-[#4ADE80]/10 text-[#4ADE80] border-[#4ADE80]/30" : row.listingLabel === "Rent"
+                                                        ? "bg-[#C9A96E]/10 text-[#C9A96E] border-[#C9A96E]/30"
                                                         : row.listingLabel === "Commercial Buy"
-                                                            ? "bg-[rgba(255,70,162,0.10)] text-[#FF46A2]"
+                                                            ? "bg-[#EC4899]/10 text-[#EC4899] border-[#EC4899]/30"
                                                             : row.listingLabel === "Commercial Rent"
-                                                                ? "bg-[rgba(199,163,53,0.10)] text-[#C7A335]"
-                                                                : "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
+                                                                ? "bg-[#C7A335]/10 text-[#C7A335] border-[#C7A335]/30"
+                                                                : "bg-[#C9A96E]/10 text-[#C9A96E] border-[#C9A96E]/30"
                                                     }`}
                                             >
                                                 {row.listingLabel || "-"}
                                             </span>
                                         </div>
                                         <div className="flex items-center">
-                                            <p className="text-[12px] font-[Regular] text-[#222]">{formatNumber(row.beds ?? 0)}</p>
+                                            <p className="text-[12px] font-[Regular] text-[#F5F0E8]">{formatNumber(row.beds ?? 0)}</p>
                                         </div>
                                         <div className="flex items-center">
-                                            <p className="text-[12px] font-[Regular] text-[#222]">{formatMoney(row.price ?? 0, row.currency)}</p>
+                                            <p className="text-[12px] font-[Bold] text-[#F5F0E8]">{formatMoney(row.price ?? 0, row.currency)}</p>
                                         </div>
 
                                         <div className="flex items-center">
                                             <span
-                                                className={`inline-flex items-center rounded-[6px] p-[6px_10px] text-[12px] font-[SemiBold] leading-none ${row.status?.toLowerCase() === "active"
-                                                    ? "bg-[#00A663] text-[#FFF]" : row.status?.toLowerCase() === "sold"
-                                                        ? "border border-[rgba(34, 34, 34, 0.10)] text-[#222]"
+                                                className={`inline-flex items-center rounded-[6px] px-2.5 py-1 text-[11px] font-[SemiBold] leading-none border ${row.status?.toLowerCase() === "active"
+                                                    ? "bg-[#4ADE80]/10 text-[#4ADE80] border-[#4ADE80]/30" : row.status?.toLowerCase() === "sold"
+                                                        ? "border-[#2A2A2A] bg-[#171717] text-[#A89880]"
                                                         : row.status?.toLowerCase() === "inactive"
-                                                            ? "bg-[#E80808] text-[#FFF]"
+                                                            ? "bg-[#F87171]/10 text-[#F87171] border-[#F87171]/30"
                                                             : row.status?.toLowerCase() === "rented"
-                                                                ? "border border-[rgba(34, 34, 34, 0.10)] text-[#222]"
-                                                                : "bg-[rgba(255,70,162,0.10)] text-[#FF46A2]"
+                                                                ? "border-[#2A2A2A] bg-[#171717] text-[#A89880]"
+                                                                : "bg-[#EC4899]/10 text-[#EC4899] border-[#EC4899]/30"
                                                     }`}
                                             >
                                                 {row.status || "-"}
@@ -705,7 +601,7 @@ function AgentDashboard() {
                                     </div>
                                 ))}
                                 {!projectRows.length && !isDashboardLoading && (
-                                    <div className="px-[14px] py-[18px] text-[12px] text-[#707070]">
+                                    <div className="px-[16px] py-[28px] text-[13px] text-[#A89880] text-center">
                                         No properties found.
                                     </div>
                                 )}
@@ -715,17 +611,17 @@ function AgentDashboard() {
                     <button
                         type="button"
                         onClick={() => navigate("/agent/properties-management")}
-                        className="mt-[20px] rounded-[5px] w-full h-[37px] bg-[rgba(34,34,34,0.10)] text-[#222] text-[14px] font-[SemiBold] cursor-pointer"
+                        className="mt-[20px] rounded-[10px] w-full h-[40px] bg-[#171717] hover:bg-[#2A2A2A] border border-[#2A2A2A] text-[#F5F0E8] text-[13px] font-[Bold] cursor-pointer transition-colors"
                     >
                         View all
                     </button>
                 </div>
 
                 {/* New inquiries */}
-                <div className="rounded-[15px] bg-[#fff]  min-w-0">
-                    <h2 className="text-[#222] font-[Bold] text-[20px] md:p-[30px_30px_0px_30px] p-[20px]">New inquiries</h2>
+                <div className="rounded-[20px] bg-[#111111] border border-[#2A2A2A] shadow-xl min-w-0 p-[20px] flex flex-col">
+                    <h2 className="text-[#F5F0E8] font-[Bold] text-[18px] mb-[16px]">New inquiries</h2>
 
-                    <div className="max-h-[600px] overflow-y-auto pr-[0px] flex flex-col gap-[10px] ">
+                    <div className="max-h-[600px] overflow-y-auto pr-[0px] flex flex-col gap-[10px]">
                         {inquiryRows.map((item, index) => {
                             const contactStyle = inquiryContactStyles[item.contactType];
                             const ContactIcon = contactStyle.Icon;
@@ -735,48 +631,46 @@ function AgentDashboard() {
                                     key={item.inquiryId}
                                     type="button"
                                     onClick={() => navigateToPropertyLeadsFromInquiry(item)}
-                                    className={`cursor-pointer rounded-[14px] bg-[#fff] shadow-[0_6px_18px_0_#f1f1f1]  p-[20px_0px] m-[0px_20px] text-left
-                                          ${index === 0 ? "mt-[25px]" : ""} ${index === inquiryRows.length - 1 ? "mb-[5px]" : ""}`}
+                                    className="cursor-pointer rounded-[14px] bg-[#171717] hover:bg-[#2A2A2A] border border-[#2A2A2A] p-[16px] text-left transition-colors group"
                                 >
-                                    <div className="p-[0px_14px_14px_14px]">
-                                        <p className="text-[12px] font-[Bold] text-[#222] leading-[1.2] mb-[8px] w-[180px] flex-wrap">{item.property}</p>
-                                        <p className="text-[12px] font-[Regular] text-[#707070] flex items-center gap-[6px] leading-[1.2]">
-                                            <span className="inline-flex h-[14px] w-[14px] items-center justify-center">
+                                    <div className="mb-[12px]">
+                                        <p className="text-[14px] font-[Bold] text-[#F5F0E8] group-hover:text-[#C9A96E] leading-[1.2] mb-[6px] w-[180px] flex-wrap transition-colors">{item.property}</p>
+                                        <p className="text-[12px] font-[Regular] text-[#A89880] flex items-center gap-[6px] leading-[1.2]">
+                                            <span className="inline-flex h-[14px] w-[14px] items-center justify-center text-[#C9A96E]">
                                                 <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6 7.875C7.24264 7.875 8.25 6.86764 8.25 5.625C8.25 4.38236 7.24264 3.375 6 3.375C4.75736 3.375 3.75 4.38236 3.75 5.625C3.75 6.86764 4.75736 7.875 6 7.875Z" stroke="#9CA3AF" strokeWidth="1.1" />
-                                                    <path d="M10.5 5.625C10.5 9.17242 6.75 12.75 6 12.75C5.25 12.75 1.5 9.17242 1.5 5.625C1.5 3.13972 3.51472 1.125 6 1.125C8.48528 1.125 10.5 3.13972 10.5 5.625Z" stroke="#9CA3AF" strokeWidth="1.1" />
+                                                    <path d="M6 7.875C7.24264 7.875 8.25 6.86764 8.25 5.625C8.25 4.38236 7.24264 3.375 6 3.375C4.75736 3.375 3.75 4.38236 3.75 5.625C3.75 6.86764 4.75736 7.875 6 7.875Z" stroke="#C9A96E" strokeWidth="1.1" />
+                                                    <path d="M10.5 5.625C10.5 9.17242 6.75 12.75 6 12.75C5.25 12.75 1.5 9.17242 1.5 5.625C1.5 3.13972 3.51472 1.125 6 1.125C8.48528 1.125 10.5 3.13972 10.5 5.625Z" stroke="#C9A96E" strokeWidth="1.1" />
                                                 </svg>
                                             </span>
                                             {item.location}
                                         </p>
                                     </div>
 
-                                    <div className="h-[1px] w-full bg-[rgba(34,34,34,0.08)]" />
+                                    <div className="h-[1px] w-full bg-[#2A2A2A] my-2" />
 
-                                    <div className="p-[14px_14px_0px_14px] flex items-center justify-between gap-[10px]">
+                                    <div className="pt-2 flex items-center justify-between gap-[10px]">
                                         <div className="flex items-center gap-[10px] min-w-0">
                                             <span className={`h-[30px] w-[30px] rounded-[9px] flex items-center justify-center shrink-0 ${contactStyle.container}`}>
                                                 <ContactIcon width={16} height={16} />
                                             </span>
                                             <div className="min-w-0">
-                                                <p className="text-[12px] font-[Bold] text-[#222] leading-[1.2] mb-[4px] capitalize ">{item.name}</p>
-                                                <p className="text-[12px] font-[Regular] text-[#707070] leading-[1.2] truncate">{item.detail}</p>
+                                                <p className="text-[12px] font-[Bold] text-[#F5F0E8] leading-[1.2] mb-[2px] capitalize">{item.name}</p>
+                                                <p className="text-[12px] font-[Regular] text-[#A89880] leading-[1.2] truncate">{item.detail}</p>
                                             </div>
                                         </div>
-                                        <RightArrowIcon className="w-[8px] h-[12px] shrink-0" />
+                                        <RightArrowIcon className="w-[8px] h-[12px] shrink-0 text-[#A89880] group-hover:text-[#C9A96E] group-hover:translate-x-0.5 transition-all" />
                                     </div>
                                 </button>
                             );
                         })}
                         {!inquiryRows.length && !isDashboardLoading && (
-                            <div className="text-[12px] font-[Medium] text-[#707070] py-[8px] px-[8px]">No inquiries found.</div>
+                            <div className="text-[12px] font-[Medium] text-[#A89880] py-[12px] px-[8px] text-center">No inquiries found.</div>
                         )}
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 
 export default AgentDashboard;
-

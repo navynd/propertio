@@ -258,9 +258,9 @@ function Dashboard() {
         <div className="px-4 pb-8 pt-5 sm:px-6 lg:px-8 max-w-[1600px] mx-auto">
             {/* Hero Banner with Modern Curves and Overlay */}
             <div
-                className="p-6 md:p-8 rounded-[24px] gap-6 flex flex-col justify-between relative shadow-xl overflow-hidden border border-white/10"
+                className="p-6 md:p-8 rounded-[24px] gap-6 flex flex-col justify-between relative shadow-2xl overflow-hidden border border-[#2A2A2A]"
                 style={{
-                    backgroundImage: `linear-gradient(135deg, rgba(15, 23, 42, 0.90) 0%, rgba(30, 41, 59, 0.85) 100%), url(${mainbg})`,
+                    backgroundImage: `linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(23, 23, 23, 0.90) 100%), url(${mainbg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}

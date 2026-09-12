@@ -99,10 +99,10 @@ const getProjectTypeLabel = (projectType?: string, completionStatus?: string) =>
 };
 
 const statusPillClass = (tab: ProjectFilter, projectTypeLabel: string) => {
-    if (tab === "Soldout") return "bg-[#E80808] text-white";
-    if (projectTypeLabel === "New") return "bg-[rgba(0,166,99,0.10)] text-[#00A663]";
-    if (projectTypeLabel === "Off-plan") return "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]";
-    return "bg-[#F5F5F5] text-[#222]";
+    if (tab === "Soldout") return "bg-rose-500/15 text-rose-400 border border-rose-500/30";
+    if (projectTypeLabel === "New") return "bg-[#4ADE80]/15 text-[#4ADE80] border border-[#4ADE80]/30";
+    if (projectTypeLabel === "Off-plan") return "bg-[#C9A96E]/15 text-[#C9A96E] border border-[#C9A96E]/30";
+    return "bg-[#1F1F1F] text-[#F5F0E8] border border-[#2A2A2A]";
 };
 
 const extractProjectImgBase = (data: SupportedUrlsMasterData): string | null => {
@@ -583,7 +583,7 @@ const ProjectManagement = () => {
                 {/* Sub-tabs */}
                 {(activeFilter === "Unpublished" || activeFilter === "Active projects") && (
                     <div className="px-6 md:px-7 pt-2">
-                        <div className="border-b border-[#F1F5F9] flex gap-6">
+                        <div className="border-b border-[#2A2A2A] flex gap-6">
                             {subTabs.map((tab) => {
                                 const active = activeSubTab === tab;
                                 return (
@@ -591,11 +591,11 @@ const ProjectManagement = () => {
                                         key={tab}
                                         type="button"
                                         onClick={() => handleSubTabChange(tab)}
-                                        className={`relative py-3.5 px-2 text-[13px] font-[SemiBold] cursor-pointer transition-colors ${active ? "text-[#0F172A]" : "text-[#94A3B8] hover:text-[#475569]"
+                                        className={`relative py-3.5 px-2 text-[13px] font-[SemiBold] cursor-pointer transition-colors ${active ? "text-[#C9A96E]" : "text-[#A89880] hover:text-[#F5F0E8]"
                                             }`}
                                     >
                                         {tab}
-                                        {active && <span className="absolute left-0 right-0 bottom-0 h-[2.5px] rounded-t-full bg-[#D4A373]" />}
+                                        {active && <span className="absolute left-0 right-0 bottom-0 h-[2.5px] rounded-t-full bg-[#C9A96E]" />}
                                     </button>
                                 );
                             })}
@@ -607,7 +607,7 @@ const ProjectManagement = () => {
                     {activeFilter === "Drafts" ? (
                         <div className="relative">
                             {isProjectsLoading && (
-                                <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/70 rounded-[10px]">
+                                <div className="absolute inset-0 z-10 flex items-center justify-center bg-[#0A0A0A]/70 backdrop-blur-sm rounded-[10px]">
                                     <Loader size={72} margin={0} />
                                 </div>
                             )}
@@ -620,7 +620,7 @@ const ProjectManagement = () => {
                                 {visibleRows.map((project) => (
                                     <div
                                         key={project._id}
-                                        className="rounded-[15px] bg-[#F5F5F5] md:p-[30px] p-[20px] grid grid-cols-1 md:grid-cols-[auto_auto_auto] gap-[12px] items-center"
+                                        className="rounded-[15px] bg-[#171717] border border-[#2A2A2A] md:p-[30px] p-[20px] grid grid-cols-1 md:grid-cols-[auto_auto_auto] gap-[12px] items-center"
                                     >
                                         {(() => {
                                             const totalSteps = project.draftProgress?.totalSteps ?? 6;
@@ -639,21 +639,21 @@ const ProjectManagement = () => {
                                             return (
                                                 <>
                                                     <div>
-                                                        <p className="text-[14px] leading-[1.2] text-[#222] font-[Bold] mb-[7px]">
+                                                        <p className="text-[14px] leading-[1.2] text-[#F5F0E8] font-[Bold] mb-[7px]">
                                                             {project.projectName || "-"}
                                                         </p>
-                                                        <p className="text-[12px] leading-[1.2] text-[#707070] font-[Regular]">
+                                                        <p className="text-[12px] leading-[1.2] text-[#A89880] font-[Regular]">
                                                             Created on {formatDate(project.createdAt)}
                                                         </p>
                                                     </div>
 
                                                     <div className="min-w-0">
-                                                        <p className="text-[12px] leading-[1.2] text-[#222] font-[Regular] mb-[8px]">
+                                                        <p className="text-[12px] leading-[1.2] text-[#F5F0E8] font-[Regular] mb-[8px]">
                                                             {progressMessage}
                                                         </p>
-                                                        <div className="h-[6px] w-full rounded-full bg-[#C4C4C4] overflow-hidden">
+                                                        <div className="h-[6px] w-full rounded-full bg-[#2A2A2A] overflow-hidden">
                                                             <div
-                                                                className="h-full rounded-full bg-[#00A663]"
+                                                                className="h-full rounded-full bg-[#C9A96E]"
                                                                 style={{ width: `${progressPercentage}%` }}
                                                             />
                                                         </div>
@@ -662,7 +662,7 @@ const ProjectManagement = () => {
                                                     <div className="flex items-center justify-end gap-[8px]">
                                                         <button
                                                             type="button"
-                                                            className="p-[6px] rounded-[8px] hover:bg-[#EBEBEB] text-[#707070]"
+                                                            className="p-[6px] rounded-[8px] hover:bg-[#2A2A2A] text-[#A89880] hover:text-[#C9A96E] transition-colors"
                                                             aria-label="Edit draft"
                                                             onClick={() => navigate(`/developer/edit-project?projectId=${project._id}&mode=draft`)}
                                                         >
@@ -671,7 +671,7 @@ const ProjectManagement = () => {
                                                         <button
                                                             type="button"
                                                             disabled={deletingProjectId === project._id}
-                                                            className="p-[6px] rounded-[8px] hover:bg-[#EBEBEB] text-[#707070] disabled:opacity-50 disabled:cursor-not-allowed"
+                                                            className="p-[6px] rounded-[8px] hover:bg-rose-500/20 text-[#A89880] hover:text-rose-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                                                             aria-label="Delete draft"
                                                             onClick={() =>
                                                                 void handleDeleteOne(
@@ -693,28 +693,26 @@ const ProjectManagement = () => {
                     ) : (
                         <div className="overflow-x-auto w-full scrollbar-hide relative">
                             {isProjectsLoading && (
-                                <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/70 rounded-[10px]">
+                                <div className="absolute inset-0 z-10 flex items-center justify-center bg-[#0A0A0A]/70 backdrop-blur-sm rounded-[10px]">
                                     <Loader size={72} margin={0} />
                                 </div>
                             )}
-                            <div className="min-w-[1270px] rounded-[10px] border border-[rgba(34,34,34,0.10)] overflow-hidden bg-white">
-                                <div className="grid grid-cols-[40px_2.3fr_1.3fr_1.3fr_1.3fr_1.3fr_1.3fr] gap-2 items-center px-[14px] py-[12px] bg-[#F5F5F5] border-b border-[rgba(34,34,34,0.10)]">
+                            <div className="min-w-[1270px] rounded-[16px] border border-[#2A2A2A] overflow-hidden bg-[#111111]">
+                                <div className="grid grid-cols-[40px_2.3fr_1.3fr_1.3fr_1.3fr_1.3fr_1.3fr] gap-2 items-center px-[14px] py-[12px] bg-[#171717] border-b border-[#2A2A2A]">
                                     <div className="flex justify-center">
                                         <input
                                             type="checkbox"
                                             checked={allVisibleSelected}
                                             onChange={toggleSelectAllVisible}
-                                            className="h-[15px] w-[15px] rounded-[5px] border-[1px] border-[rgba(34,34,34,0.20)] opacity-50 cursor-pointer"
+                                            className="h-[15px] w-[15px] rounded-[5px] border border-[#2A2A2A] accent-[#C9A96E] cursor-pointer"
                                         />
                                     </div>
-                                    <p className="text-[14px] font-[Bold] text-[#222]">Project Details</p>
-                                    <p className="text-[14px] font-[Bold] text-[#222]">Project type</p>
-                                    <p className="text-[14px] font-[Bold] text-[#222]">Created date</p>
-                                    {/* <p className="text-[14px] font-[Bold] text-[#222]">Progress status</p>
-                                    <p className="text-[14px] font-[Bold] text-[#222]">Expected completion</p> */}
-                                    <p className="text-[14px] font-[Bold] text-[#222]">Available units</p>
-                                    <p className="text-[14px] font-[Bold] text-[#222]">Price</p>
-                                    <p className="text-[14px] font-[Bold] text-[#222]">Actions</p>
+                                    <p className="text-[13px] font-[Bold] text-[#A89880] uppercase tracking-wider">Project Details</p>
+                                    <p className="text-[13px] font-[Bold] text-[#A89880] uppercase tracking-wider">Project type</p>
+                                    <p className="text-[13px] font-[Bold] text-[#A89880] uppercase tracking-wider">Created date</p>
+                                    <p className="text-[13px] font-[Bold] text-[#A89880] uppercase tracking-wider">Available units</p>
+                                    <p className="text-[13px] font-[Bold] text-[#A89880] uppercase tracking-wider">Price</p>
+                                    <p className="text-[13px] font-[Bold] text-[#A89880] uppercase tracking-wider">Actions</p>
                                 </div>
 
                                 {!isProjectsLoading && visibleRows.length === 0 && (
@@ -733,7 +731,7 @@ const ProjectManagement = () => {
                                     return (
                                         <div
                                             key={project._id}
-                                            className={`grid grid-cols-[40px_2.3fr_1.3fr_1.3fr_1.3fr_1.3fr_1.3fr] gap-2 items-center px-[14px] py-[12px] ${index !== visibleRows.length - 1 ? "border-b border-[rgba(34,34,34,0.08)]" : ""
+                                            className={`grid grid-cols-[40px_2.3fr_1.3fr_1.3fr_1.3fr_1.3fr_1.3fr] gap-2 items-center px-[14px] py-[12px] hover:bg-[#171717]/60 transition-colors ${index !== visibleRows.length - 1 ? "border-b border-[#2A2A2A]" : ""
                                                 }`}
                                         >
                                             <div className="flex justify-center">
@@ -741,12 +739,12 @@ const ProjectManagement = () => {
                                                     type="checkbox"
                                                     checked={selectedIds.has(project._id)}
                                                     onChange={() => toggleRow(project._id)}
-                                                    className="h-[15px] w-[15px] rounded-[5px] border-[1px] border-[rgba(34,34,34,0.20)] cursor-pointer opacity-50"
+                                                    className="h-[15px] w-[15px] rounded-[5px] border border-[#2A2A2A] accent-[#C9A96E] cursor-pointer"
                                                 />
                                             </div>
 
                                             <div className="flex items-center gap-[12px] min-w-0">
-                                                <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0">
+                                                <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0 border border-[#2A2A2A] bg-[#171717]">
                                                     <img
                                                         src={toProjectImageUrl(project)}
                                                         alt={project.projectName || "Project"}
@@ -754,11 +752,11 @@ const ProjectManagement = () => {
                                                     />
                                                 </div>
                                                 <div className="min-w-0">
-                                                    <p className="text-[12px] font-[Bold] text-[#222] leading-[1.3] mb-[4px] truncate">
+                                                    <p className="text-[13px] font-[Bold] text-[#F5F0E8] leading-[1.3] mb-[4px] truncate">
                                                         {project.projectName || "-"}
                                                     </p>
-                                                    <p className="text-[12px] font-[Regular] text-[#707070] flex items-center gap-[5px] leading-[1.2]">
-                                                        <span className="inline-flex shrink-0">
+                                                    <p className="text-[12px] font-[Regular] text-[#A89880] flex items-center gap-[5px] leading-[1.2]">
+                                                        <span className="inline-flex shrink-0 text-[#C9A96E]">
                                                             <LocationIcon width={11} height={15} />
                                                         </span>
                                                         <span className="truncate">{locationLabel || "-"}</span>
@@ -768,31 +766,21 @@ const ProjectManagement = () => {
 
                                             <div className="flex">
                                                 <span
-                                                    className={`inline-flex items-center rounded-[5px] h-[21px] p-[6px_10px] text-[11px] font-[SemiBold] capitalize ${statusPillClass(activeFilter, projectTypeLabel)}`}
+                                                    className={`inline-flex items-center rounded-[6px] h-[22px] px-2.5 text-[11px] font-[SemiBold] capitalize ${statusPillClass(activeFilter, projectTypeLabel)}`}
                                                 >
                                                     {activeFilter === "Soldout" ? "Sold out" : projectTypeLabel}
                                                 </span>
                                             </div>
 
-                                            <p className="text-[12px] font-[Regular] text-[#222]">
+                                            <p className="text-[12px] font-[Regular] text-[#F5F0E8]">
                                                 {formatDate(project.createdAt)}
                                             </p>
 
-                                            {/* <div className="flex items-center">
-                                                <span className="inline-flex items-center rounded-[6px] border border-[rgba(34,34,34,0.10)] p-[6px_10px] text-[12px] font-[Medium] text-[#222] leading-none">
-                                                    {formatProgressStatus(project.progressStatus)}
-                                                </span>
-                                            </div>
-
-                                            <p className="text-[12px] font-[Regular] text-[#222]">
-                                                {formatDate(project.expectedCompletionDate)}
-                                            </p> */}
-
-                                            <p className="text-[12px] font-[Regular] text-[#222]">
+                                            <p className="text-[12px] font-[Regular] text-[#F5F0E8]">
                                                 {typeof project.availableUnits === "number" ? project.availableUnits : "-"}
                                             </p>
 
-                                            <p className="text-[12px] font-[Regular] text-[#222] whitespace-nowrap">
+                                            <p className="text-[12px] font-[Regular] text-[#F5F0E8] whitespace-nowrap">
                                                 {formatPrice(
                                                     project.launchPrice?.startingFrom,
                                                     project.launchPrice?.currency
@@ -803,7 +791,7 @@ const ProjectManagement = () => {
                                                 <button
                                                     onClick={() => navigate(resolveDetailsRoute(activeFilter, project._id))}
                                                     type="button"
-                                                    className="cursor-pointer p-[6px] rounded-[8px] text-[#707070]"
+                                                    className="cursor-pointer p-[6px] rounded-[8px] text-[#A89880] hover:text-[#C9A96E] hover:bg-[#171717] transition-colors"
                                                     aria-label="View"
                                                 >
                                                     <EyeDarkIcon width={20} height={20} />
@@ -815,14 +803,14 @@ const ProjectManagement = () => {
                                                             `/developer/assign-agencies?projectId=${encodeURIComponent(project._id)}`
                                                         )
                                                     }
-                                                    className="cursor-pointer p-[6px] rounded-[8px] text-[#707070]"
+                                                    className="cursor-pointer p-[6px] rounded-[8px] text-[#A89880] hover:text-[#C9A96E] hover:bg-[#171717] transition-colors"
                                                     aria-label="Team"
                                                 >
                                                     <MultiUserIcon width={20} height={20} />
                                                 </button>
                                                 <button
                                                     type="button"
-                                                    className="cursor-pointer p-[6px] rounded-[8px] text-[#707070]"
+                                                    className="cursor-pointer p-[6px] rounded-[8px] text-[#A89880] hover:text-[#C9A96E] hover:bg-[#171717] transition-colors"
                                                     aria-label="Edit"
                                                     onClick={() => navigate(`/developer/edit-project?projectId=${project._id}`)}
                                                 >
@@ -832,7 +820,7 @@ const ProjectManagement = () => {
                                                     <button
                                                         type="button"
                                                         disabled={deletingProjectId === project._id}
-                                                        className="cursor-pointer p-[6px] rounded-[8px] text-[#E53E3E] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#FEF2F2]"
+                                                        className="cursor-pointer p-[6px] rounded-[8px] text-rose-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-rose-500/20 transition-colors"
                                                         aria-label="Delete"
                                                         onClick={() =>
                                                             void handleDeleteOne(

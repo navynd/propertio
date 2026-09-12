@@ -145,7 +145,7 @@ function AgentIndex() {
 
     return (
         <AgentLayoutContext.Provider value={layoutValue}>
-            <div className="flex min-h-screen bg-[#F5F5F5] lg:mt-0 mt-[70px]">
+            <div className="flex min-h-screen bg-[#0A0A0A] lg:mt-0 mt-[70px]">
                 <Sidebar />
                 <div className="flex w-full min-w-0 flex-col lg:pl-[270px] xl:pl-[290px]">
                     {!isAgentDashboardRoute ? (
@@ -163,7 +163,7 @@ function AgentIndex() {
                         </div>
                     ) : null}
                     <main
-                        className={`min-w-0 flex-1 bg-[#F5F5F5] ${isNotificationHidden ? "pt-[66px]" : ""} ${isToggleVisible ? "pt-[120px]" : ""
+                        className={`min-w-0 flex-1 bg-[#0A0A0A] text-[#F5F0E8] ${isNotificationHidden ? "pt-[66px]" : ""} ${isToggleVisible ? "pt-[120px]" : ""
                             }`}
                     >
                         <div className="">

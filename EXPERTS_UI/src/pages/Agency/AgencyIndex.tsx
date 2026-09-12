@@ -215,10 +215,10 @@ function AgencyIndex() {
   return (
     <AgencyLayoutContext.Provider value={layoutValue}>
       <>
-      <div className="flex min-h-screen bg-[#F5F5F5] lg:mt-0 mt-[70px]">
+      <div className="flex min-h-screen bg-[#0A0A0A] lg:mt-0 mt-[70px]">
         <AgencySidebar />
         <div className="flex w-full flex-col lg:pl-[270px] xl:pl-[290px]">
-          <main className={`bg-[#F5F5F5] ${isNotificationHidden ? 'pt-[66px]' : ''} ${isToggleVisible ? 'pt-[120px]' : ''}`}>
+          <main className={`bg-[#0A0A0A] text-[#F5F0E8] ${isNotificationHidden ? 'pt-[66px]' : ''} ${isToggleVisible ? 'pt-[120px]' : ''}`}>
             <div className="">
               <Outlet />
             </div>
@@ -227,13 +227,13 @@ function AgencyIndex() {
       </div>
       {/*Bottom footer*/}
       {(isProjectAllocationAssignAgent || isProjectAllocationReviewAssign) && (
-        <div className="fixed bottom-0 left-0 w-full bg-white shadow-[0_6px_18px_0_rgba(0,0,0,0.15)] z-[200]">
+        <div className="fixed bottom-0 left-0 w-full bg-[#111111] border-t border-[#2A2A2A] shadow-[0_-6px_24px_rgba(0,0,0,0.5)] z-[200]">
           <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-[70px]">
 
             {/* Left */}
-            <div className="text-[18px] font-[Bold] text-[#707070]">
+            <div className="text-[16px] font-[Bold] text-[#A89880]">
               Project Name :{" "}
-              <span className="font-[Bold] text-[#222]">
+              <span className="font-[Bold] text-[#F5F0E8]">
                 {assignFooterCtx?.projectName?.trim() ||
                   assignFooterCtx?.projectId ||
                   "—"}
@@ -245,7 +245,7 @@ function AgencyIndex() {
               <button
                 type="button"
                 onClick={() => navigate(-1)}
-                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#222] text-[14px] font-[Bold] text-[#222]"
+                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#2A2A2A] bg-[#171717] hover:bg-[#2A2A2A] text-[14px] font-[Bold] text-[#F5F0E8] transition-colors"
               >
                 Cancel
               </button>
@@ -280,7 +280,7 @@ function AgencyIndex() {
                       },
                     });
                   }}
-                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold]"
+                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#C9A96E] hover:bg-[#E4C98B] text-[#0A0A0A] text-[14px] font-[Bold] transition-colors shadow-md"
                 >
                   Review assignment
                 </button>
@@ -322,7 +322,7 @@ function AgencyIndex() {
                       setFooterAllocating(false);
                     }
                   }}
-                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#C9A96E] hover:bg-[#E4C98B] text-[#0A0A0A] text-[14px] font-[Bold] disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-md"
                 >
                   {footerAllocating ? "Allocating…" : "Allocate to agents"}
                 </button>
@@ -332,13 +332,13 @@ function AgencyIndex() {
         </div>
       )}
       {(isProjectAllocationEditAssign) && (
-        <div className="fixed bottom-0 left-0 w-full bg-white shadow-[0_6px_18px_0_rgba(0,0,0,0.15)] z-[200]">
+        <div className="fixed bottom-0 left-0 w-full bg-[#111111] border-t border-[#2A2A2A] shadow-[0_-6px_24px_rgba(0,0,0,0.5)] z-[200]">
           <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-[70px]">
 
             {/* Left */}
-            <div className="text-[18px] font-[Bold] text-[#707070]">
+            <div className="text-[16px] font-[Bold] text-[#A89880]">
               Project Name :{" "}
-              <span className="font-[Bold] text-[#222]">
+              <span className="font-[Bold] text-[#F5F0E8]">
                 {editAssignProjectName || "—"}
               </span>
             </div>
@@ -348,7 +348,7 @@ function AgencyIndex() {
               <button
                 type="button"
                 onClick={() => navigate(-1)}
-                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#222] text-[14px] font-[Bold] text-[#222]"
+                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#2A2A2A] bg-[#171717] hover:bg-[#2A2A2A] text-[14px] font-[Bold] text-[#F5F0E8] transition-colors"
               >
                 Cancel
               </button>
@@ -394,7 +394,7 @@ function AgencyIndex() {
                     setFooterEditSaving(false);
                   }
                 }}
-                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-60 disabled:cursor-not-allowed"
+                className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#C9A96E] hover:bg-[#E4C98B] text-[#0A0A0A] text-[14px] font-[Bold] disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-md"
               >
                 {footerEditSaving ? "Saving…" : "Save Changes"}
               </button>

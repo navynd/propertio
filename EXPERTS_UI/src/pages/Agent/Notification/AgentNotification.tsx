@@ -327,16 +327,16 @@ const AgentNotification = () => {
     return (
         <>
             <div className="px-4 pb-6 pt-4 sm:px-6 lg:px-8 flex flex-col gap-[20px]">
-                <div className="rounded-[15px] bg-white min-w-0 md:p-[30px] p-[20px] flex flex-col gap-[30px]">
+                <div className="rounded-[20px] bg-[#111111] border border-[#2A2A2A] shadow-xl min-w-0 md:p-[30px] p-[20px] flex flex-col gap-[24px]">
                     <div className="flex items-center flex-wrap justify-between gap-[12px]">
-                        <div className="flex items-center gap-[10px] bg-[#F5F5F5] rounded-full px-[14px] h-[40px] w-full lg:max-w-[300px]">
-                            <SearchIcon className="text-[#707070] shrink-0" />
+                        <div className="flex items-center gap-[10px] bg-[#171717] border border-[#2A2A2A] rounded-full px-[16px] h-[40px] w-full lg:max-w-[320px] focus-within:border-[#C9A96E] transition-colors">
+                            <SearchIcon className="text-[#A89880] shrink-0" />
                             <input
                                 type="search"
                                 placeholder="Search here"
                                 value={searchInput}
                                 onChange={(e) => setSearchInput(e.target.value)}
-                                className="w-full bg-transparent text-[12px] font-[Regular] text-[#222] placeholder:text-[#707070] focus:outline-none"
+                                className="w-full bg-transparent text-[13px] font-[Regular] text-[#F5F0E8] placeholder:text-[#6B6259] focus:outline-none"
                             />
                         </div>
 
@@ -350,9 +350,9 @@ const AgentNotification = () => {
                                             setSelectedValue(tab.value);
                                             setCurrentPage(1);
                                         }}
-                                        className={`rounded-full px-[16px] h-[33px] text-[12px] font-[SemiBold] ${selectedValue === tab.value
-                                            ? "bg-[#222] text-white"
-                                            : "bg-white border border-[rgba(34,34,34,0.10)] text-[#222]"
+                                        className={`rounded-full px-[18px] h-[36px] text-[12px] font-[SemiBold] transition-all cursor-pointer ${selectedValue === tab.value
+                                            ? "bg-[#C9A96E] text-[#0A0A0A] font-[Bold] shadow-md"
+                                            : "bg-[#171717] border border-[#2A2A2A] text-[#A89880] hover:text-[#F5F0E8] hover:border-[#C9A96E]/40"
                                             }`}
                                     >
                                         {tab.name}
@@ -363,31 +363,31 @@ const AgentNotification = () => {
                     </div>
 
                     <div className="overflow-x-auto w-full scrollbar-hide">
-                        <div className="min-w-[1000px] rounded-[10px] border border-[rgba(34,34,34,0.10)] overflow-hidden bg-white">
-                            <div className="grid grid-cols-[40px_1.4fr_1fr_1.6fr_1fr_0.9fr_72px] gap-2 items-center px-[14px] py-[12px] bg-[#F5F5F5] border-b border-[rgba(34,34,34,0.10)]">
+                        <div className="min-w-[1000px] rounded-[16px] border border-[#2A2A2A] overflow-hidden bg-[#111111]">
+                            <div className="grid grid-cols-[40px_1.4fr_1fr_1.6fr_1fr_0.9fr_72px] gap-2 items-center px-[16px] py-[14px] bg-[#171717] border-b border-[#2A2A2A]">
                                 <div className="flex justify-center">
                                     <input
                                         type="checkbox"
                                         checked={allSelected}
                                         onChange={toggleSelectAll}
                                         disabled={notifications.length === 0}
-                                        className="h-[15px] w-[15px] rounded border border-[rgba(34,34,34,0.20)] accent-[#222] cursor-pointer disabled:opacity-40"
+                                        className="h-[15px] w-[15px] rounded border border-[#2A2A2A] bg-[#0A0A0A] accent-[#C9A96E] cursor-pointer disabled:opacity-40"
                                     />
                                 </div>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Project details</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Title</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Message</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Deal amount</p>
-                                <p className="text-[14px] font-[Bold] text-[#222]">Date</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Project details</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Title</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Message</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Deal amount</p>
+                                <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">Date</p>
                                 <span className="sr-only">Actions</span>
                             </div>
 
                             {!isLoading && notifications.length === 0 ? (
-                                <div className="px-[14px] py-[28px] text-center">
-                                    <p className="text-[14px] font-[SemiBold] text-[#222]">
+                                <div className="px-[14px] py-[36px] text-center">
+                                    <p className="text-[15px] font-[SemiBold] text-[#F5F0E8]">
                                         No notifications found
                                     </p>
-                                    <p className="mt-[6px] text-[13px] font-[Regular] text-[#707070]">
+                                    <p className="mt-[6px] text-[13px] font-[Regular] text-[#A89880]">
                                         {search.trim() || (selectedValue && selectedValue !== "all")
                                             ? "Try changing the date filter or search."
                                             : "You have no notifications yet."}
@@ -409,8 +409,8 @@ const AgentNotification = () => {
                                     return (
                                         <div
                                             key={row.id}
-                                            className={`grid grid-cols-[40px_1.4fr_1fr_1.6fr_1fr_0.9fr_48px] gap-2 items-center px-[14px] py-[12px] ${index !== notifications.length - 1
-                                                ? "border-b border-[rgba(34,34,34,0.08)]"
+                                            className={`grid grid-cols-[40px_1.4fr_1fr_1.6fr_1fr_0.9fr_48px] gap-2 items-center px-[16px] py-[14px] hover:bg-[#171717]/60 transition-colors ${index !== notifications.length - 1
+                                                ? "border-b border-[#2A2A2A]"
                                                 : ""
                                                 }`}
                                         >
@@ -419,12 +419,12 @@ const AgentNotification = () => {
                                                     type="checkbox"
                                                     checked={selectedIds.has(row.id)}
                                                     onChange={() => toggleRow(row.id)}
-                                                    className="h-[15px] w-[15px] rounded border border-[rgba(34,34,34,0.20)] accent-[#222] cursor-pointer"
+                                                    className="h-[15px] w-[15px] rounded border border-[#2A2A2A] bg-[#0A0A0A] accent-[#C9A96E] cursor-pointer"
                                                 />
                                             </div>
 
                                             <div className="flex items-center gap-[12px] min-w-0">
-                                                <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0 bg-[#F5F5F5]">
+                                                <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0 bg-[#171717] border border-[#2A2A2A]">
                                                     <img
                                                         src={imageUrl}
                                                         alt={displayName}
@@ -435,13 +435,13 @@ const AgentNotification = () => {
                                                     />
                                                 </div>
                                                 <div className="flex flex-col gap-[6px] min-w-0">
-                                                    <p className="text-[12px] font-[Bold] text-[#222] leading-[1.3] truncate">
+                                                    <p className="text-[13px] font-[Bold] text-[#F5F0E8] leading-[1.3] truncate">
                                                         {displayName}
                                                     </p>
                                                     <span
-                                                        className={`inline-flex w-fit items-center rounded-full px-[10px] h-[22px] text-[10px] font-[SemiBold] ${row.isRead
-                                                            ? "bg-[#E8F5E9] text-[#2E7D32]"
-                                                            : "bg-[#FFF3E0] text-[#E65100]"
+                                                        className={`inline-flex w-fit items-center rounded-full px-[10px] h-[22px] text-[10px] font-[SemiBold] border ${row.isRead
+                                                            ? "bg-[#4ADE80]/10 text-[#4ADE80] border-[#4ADE80]/30"
+                                                            : "bg-[#C9A96E]/10 text-[#C9A96E] border-[#C9A96E]/30"
                                                             }`}
                                                     >
                                                         {formatReadStatus(row.isRead)}
@@ -452,7 +452,7 @@ const AgentNotification = () => {
                                                 <HoverTooltip
                                                     content={row.title?.trim() || "--/--"}
                                                 >
-                                                    <p className="text-[12px] font-[Regular] text-[#222] truncate cursor-default">
+                                                    <p className="text-[12px] font-[Regular] text-[#F5F0E8] truncate cursor-default">
                                                         {row.title?.trim() || "--/--"}
                                                     </p>
                                                 </HoverTooltip>
@@ -461,22 +461,22 @@ const AgentNotification = () => {
                                                 <HoverTooltip
                                                     content={row.message?.trim() || "--/--"}
                                                 >
-                                                    <p className="text-[12px] font-[Regular] text-[#222] truncate cursor-default">
+                                                    <p className="text-[12px] font-[Regular] text-[#A89880] truncate cursor-default">
                                                         {row.message?.trim() || "--/--"}
                                                     </p>
                                                 </HoverTooltip>
                                             </div>
-                                            <p className="text-[12px] font-[Regular] text-[#222]">
+                                            <p className="text-[12px] font-[Regular] text-[#F5F0E8]">
                                                 {formatDealAmount(meta?.dealAmount, meta?.currency)}
                                             </p>
-                                            <p className="text-[12px] font-[Regular] text-[#222]">
+                                            <p className="text-[12px] font-[Regular] text-[#F5F0E8]">
                                                 {formatCreatedAt(row.createdAt)}
                                             </p>
-                                            <div className="flex items-center justify-center gap-[2px]">
+                                            <div className="flex items-center justify-center gap-[6px]">
                                                 <button
                                                     type="button"
                                                     onClick={() => handleView(row)}
-                                                    className="cursor-pointer p-[6px] rounded-[8px] hover:bg-[#F1F5F9]"
+                                                    className="cursor-pointer p-[6px] rounded-[8px] text-[#A89880] hover:text-[#C9A96E] hover:bg-[#171717] transition-colors"
                                                     aria-label="View"
                                                 >
                                                     <EyeDarkIcon width={20} height={20} />
@@ -485,7 +485,7 @@ const AgentNotification = () => {
                                                     type="button"
                                                     disabled={deletingId === row.id}
                                                     onClick={() => void handleDelete(row.id)}
-                                                    className="cursor-pointer p-[6px] rounded-[8px] hover:bg-[#F1F5F9] disabled:opacity-50"
+                                                    className="cursor-pointer p-[6px] rounded-[8px] text-rose-400 hover:bg-rose-500/20 transition-colors disabled:opacity-50"
                                                     aria-label="Delete"
                                                 >
                                                     <TrashIcon width={20} height={20} />

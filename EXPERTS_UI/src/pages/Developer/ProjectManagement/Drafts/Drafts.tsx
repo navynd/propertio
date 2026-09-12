@@ -77,29 +77,29 @@ const Drafts = () => {
     }, [currentPage, itemsPerPage]);
 
     return (
-        <div className="rounded-[15px] bg-white min-w-0">
+        <div className="rounded-[15px] bg-[#111111] border border-[#2A2A2A] min-w-0">
             <div className="md:p-[0px_30px_30px_30px] p-[0px_20px_20px_20px] flex flex-col gap-[15px]">
                 {paginatedRows.map((item) => {
                     const progressPercent = (item.completedSteps / item.totalSteps) * 100;
                     return (
                         <div
                             key={item.id}
-                            className="rounded-[15px] bg-[#F5F5F5] md:p-[30px] p-[20px] grid grid-cols-1 md:grid-cols-[auto_auto_auto] gap-[12px] items-center"
+                            className="rounded-[15px] bg-[#171717] border border-[#2A2A2A] md:p-[30px] p-[20px] grid grid-cols-1 md:grid-cols-[auto_auto_auto] gap-[12px] items-center"
                         >
                             <div>
-                                <p className="text-[14px] leading-[1.2] text-[#222] font-[Bold] mb-[7px]">{item.title}</p>
-                                <p className="text-[12px] leading-[1.2] text-[#707070] font-[Regular]">
+                                <p className="text-[14px] leading-[1.2] text-[#F5F0E8] font-[Bold] mb-[7px]">{item.title}</p>
+                                <p className="text-[12px] leading-[1.2] text-[#A89880] font-[Regular]">
                                     Created on {item.createdDate}
                                 </p>
                             </div>
 
                             <div className="min-w-0">
-                                <p className="text-[12px] leading-[1.2] text-[#222] font-[Regular] mb-[8px]">
+                                <p className="text-[12px] leading-[1.2] text-[#F5F0E8] font-[Regular] mb-[8px]">
                                     Remaining steps to complete : {item.completedSteps}/{item.totalSteps}
                                 </p>
-                                <div className="h-[6px] w-full rounded-full bg-[#C4C4C4] overflow-hidden">
+                                <div className="h-[6px] w-full rounded-full bg-[#2A2A2A] overflow-hidden">
                                     <div
-                                        className="h-full rounded-full bg-[#00A663]"
+                                        className="h-full rounded-full bg-[#C9A96E]"
                                         style={{ width: `${progressPercent}%` }}
                                     />
                                 </div>
@@ -108,14 +108,14 @@ const Drafts = () => {
                             <div className="flex items-center justify-end gap-[8px]">
                                 <button
                                     type="button"
-                                    className="p-[6px] rounded-[8px] hover:bg-[#EBEBEB] text-[#707070]"
+                                    className="p-[6px] rounded-[8px] hover:bg-[#2A2A2A] text-[#A89880] hover:text-[#C9A96E] transition-colors"
                                     aria-label={`Edit ${item.title}`}
                                 >
                                     <EditIcon width={20} height={20} />
                                 </button>
                                 <button
                                     type="button"
-                                    className="p-[6px] rounded-[8px] hover:bg-[#EBEBEB] text-[#707070]"
+                                    className="p-[6px] rounded-[8px] hover:bg-rose-500/20 text-[#A89880] hover:text-rose-400 transition-colors"
                                     aria-label={`Delete ${item.title}`}
                                 >
                                     <TrashIcon width={20} height={20} />

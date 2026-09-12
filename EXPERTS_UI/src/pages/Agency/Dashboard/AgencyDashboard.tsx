@@ -120,10 +120,9 @@ function AgencyDashboard() {
         value: stats.totalActiveListings.count,
         badgeText: `${stats.totalActiveListings.change}%`,
         arrow: stats.totalActiveListings.direction,
-        iconBg: "bg-[#D4A373]",
+        iconBg: "bg-gradient-to-br from-[#C9A96E] to-[#9B7B42] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(212, 163, 115, 0) 42.64%,rgba(212, 163, 115, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon1,
         navigateTo: "/agency/listings?listingScope=Active",
       },
@@ -132,10 +131,9 @@ function AgencyDashboard() {
         value: stats.totalAgents.count,
         badgeText: `${stats.totalAgents.change}%`,
         arrow: stats.totalAgents.direction,
-        iconBg: "bg-[#0832AE]",
+        iconBg: "bg-gradient-to-br from-[#38BDF8] to-[#0284C7] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(8, 50, 174, 0) 42.64%,rgba(8, 50, 174, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon2,
         navigateTo: "/agency/super-agent?sortBy=active",
       },
@@ -144,10 +142,9 @@ function AgencyDashboard() {
         value: stats.totalSuperAgents.count,
         badgeText: `${stats.totalSuperAgents.change}%`,
         arrow: stats.totalSuperAgents.direction,
-        iconBg: "bg-[#FF7A00]",
+        iconBg: "bg-gradient-to-br from-[#F59E0B] to-[#B45309] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(142, 104, 226, 0) 42.64%,rgba(142, 104, 226, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon3,
         navigateTo: "/agency/super-agent?tab=superagent&sortBy=active",
       },
@@ -156,10 +153,9 @@ function AgencyDashboard() {
         value: `${stats.totalRevenueBySales.amount} ${stats.totalRevenueBySales.currency}`,
         badgeText: `${stats.totalRevenueBySales.change}%`,
         arrow: stats.totalRevenueBySales.direction,
-        iconBg: "bg-[#00C853]",
+        iconBg: "bg-gradient-to-br from-[#4ADE80] to-[#16A34A] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(199, 163, 53, 0) 42.64%,rgba(199, 163, 53, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon4,
       },
       {
@@ -167,10 +163,9 @@ function AgencyDashboard() {
         value: `${stats.totalRevenueByRent.amount} ${stats.totalRevenueByRent.currency}`,
         badgeText: `${stats.totalRevenueByRent.change}%`,
         arrow: stats.totalRevenueByRent.direction,
-        iconBg: "bg-[#FF46A2]",
+        iconBg: "bg-gradient-to-br from-[#EC4899] to-[#BE185D] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(255, 70, 162, 0) 42.64%,rgba(255, 70, 162, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon5,
       },
       {
@@ -178,10 +173,9 @@ function AgencyDashboard() {
         value: `${stats.thisMonthRevenueSalesAndRent.amount} ${stats.thisMonthRevenueSalesAndRent.currency}`,
         badgeText: `${stats.thisMonthRevenueSalesAndRent.change}%`,
         arrow: stats.thisMonthRevenueSalesAndRent.direction,
-        iconBg: "bg-[#00C853]",
+        iconBg: "bg-gradient-to-br from-[#10B981] to-[#047857] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(0, 166, 99, 0) 42.64%,rgba(0, 166, 99, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon6,
       },
       {
@@ -189,10 +183,9 @@ function AgencyDashboard() {
         value: stats.totalLeads.count,
         badgeText: `${stats.totalLeads.change}%`,
         arrow: stats.totalLeads.direction,
-        iconBg: "bg-[#F28D6A]",
+        iconBg: "bg-gradient-to-br from-[#FB923C] to-[#C2410C] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(242, 141, 106, 0) 42.64%,rgba(242, 141, 106, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon7,
         navigateTo: "/agency/leads/property",
       },
@@ -201,10 +194,9 @@ function AgencyDashboard() {
         value: stats.thisMonthLeads.count,
         badgeText: `${stats.thisMonthLeads.change}%`,
         arrow: stats.thisMonthLeads.direction,
-        iconBg: "bg-[#E80808]",
+        iconBg: "bg-gradient-to-br from-[#F87171] to-[#DC2626] text-[#0A0A0A]",
         badgeBg: "bg-[#00A663]",
-        cardBg:
-          "linear-gradient(180deg,rgba(232, 8, 8, 0) 42.64%,rgba(232, 8, 8, 0.2) 100%), #ffffff",
+        cardBg: "linear-gradient(135deg, #171717 0%, #111111 100%)",
         icon: AgencyIcon8,
         navigateTo: `/agency/leads/property?${thisMonthDateRangeQuery()}`,
       },
@@ -339,9 +331,9 @@ function AgencyDashboard() {
     <div className="px-4 pb-6 pt-4 sm:px-6 lg:px-8">
       {/* Content */}
       <div
-        className="relative p-[20px]  h-auto rounded-[15px] gap-[20px] flex flex-col justify-between"
+        className="relative p-[20px] md:p-[28px] h-auto rounded-[24px] gap-[20px] flex flex-col justify-between shadow-2xl overflow-hidden border border-[#2A2A2A]"
         style={{
-          backgroundImage: `url(${mainbg})`,
+          backgroundImage: `linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(23, 23, 23, 0.90) 100%), url(${mainbg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -428,41 +420,37 @@ function AgencyDashboard() {
                       }
                     : undefined
                 }
-                className={`flex flex-col justify-between rounded-[15px] p-[25px_25px_0px_25px] ${go ? "cursor-pointer transition-opacity hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0832AE]/35" : ""}`}
+                className={`flex flex-col justify-between rounded-[20px] p-[20px_20px_0px_20px] border border-[#2A2A2A] shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-2xl ${go ? "cursor-pointer" : ""}`}
                 style={{ background: card.cardBg }}
               >
-                <div className="flex flex-col gap-[25px]">
+                <div className="flex flex-col gap-[20px]">
 
-                  {/* ✅ TITLE FIXED HEIGHT */}
-                  <div className="flex items-center gap-2 text-[12px] font-[Medium] text-[#222] h-[30px]">
+                  {/* TITLE */}
+                  <div className="flex items-center gap-2 text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider h-[30px]">
                     <span
-                      className={`flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full ${card.iconBg}`}
+                      className={`flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-lg shadow-sm ${card.iconBg}`}
                     >
-                      <Icon width={12} height={12} />
+                      <Icon width={13} height={13} />
                     </span>
                     <span className="line-clamp-2">
                       {card.title}
                     </span>
                   </div>
 
-                  {/* ✅ VALUE FIXED HEIGHT */}
-                  <div className="mt-auto flex flex-col justify-end md:text-[28px] text-[20px] text-[#222] font-semibold leading-[1] md:w-[180px] lg:w-[150px] xl:w-[180px] w-full break-words h-[55px]">
+                  {/* VALUE */}
+                  <div className="mt-auto flex flex-col justify-end md:text-[26px] text-[20px] text-[#F5F0E8] font-[Bold] leading-[1] w-full break-words h-[50px]">
                     {card.value}
                   </div>
 
                 </div>
 
                 {/* Badge */}
-                <div className="flex justify-end">
+                <div className="flex justify-end mt-2">
                   <span
-                    className={`inline-flex items-center min-w-[30px] rounded-[10px_10px_0px_0px] p-[6px_6px_2px_6px] text-[10px] font-[SemiBold] text-white ${card.badgeBg}`}
+                    className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-[Bold] mb-3 ${card.arrow === "up" ? "bg-[#4ADE80]/15 text-[#4ADE80] border border-[#4ADE80]/30" : "bg-[#F87171]/15 text-[#F87171] border border-[#F87171]/30"}`}
                   >
                     {card.badgeText}
-                    {card.arrow === "up" ? (
-                      <span className="ml-[4px]">▲</span>
-                    ) : (
-                      <span className="ml-[4px]">▼</span>
-                    )}
+                    <span className="ml-[4px]">{card.arrow === "up" ? "▲" : "▼"}</span>
                   </span>
                 </div>
               </div>
@@ -471,26 +459,26 @@ function AgencyDashboard() {
         </div>
       </div>
       {/* Project and Location based projects */}
-      <div className="relative mt-[14px] grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_300px] gap-[14px]">
+      <div className="relative mt-[20px] grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_320px] gap-[20px]">
         {loading && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-[15px] bg-white/60">
-            <Loader size={80} margin={0} />
+          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-[20px] bg-[#0A0A0A]/70 backdrop-blur-sm">
+            <Loader size={60} margin={0} />
           </div>
         )}
         {/* Projects */}
-        <div className="bg-[#F5F5F5] rounded-[15px] md:p-[30px] p-[20px] bg-[#fff] min-w-0 overflow-hidden">
+        <div className="rounded-[20px] md:p-[28px] p-[20px] bg-[#111111] border border-[#2A2A2A] shadow-xl min-w-0 overflow-hidden">
           {/* Project header */}
-          <div className="flex flex-wrap gap-4 items-center justify-between mb-[16px]">
-            <h2 className="text-[#222] font-[Bold] text-[20px]">Assigned projects</h2>
+          <div className="flex flex-wrap gap-4 items-center justify-between mb-[20px]">
+            <h2 className="text-[#F5F0E8] font-[Bold] text-[18px]">Assigned projects</h2>
             <div className="flex flex-wrap items-center gap-[16px] py-1">
-              <div className="2xl:flex hidden flex-wrap items-center gap-[10px]">
+              <div className="2xl:flex hidden flex-wrap items-center gap-[8px]">
                 {projectTabs.map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`cursor-pointer flex items-center justify-center text-[12px] font-[SemiBold] p-[0px_15px] h-[33px] rounded-full shrink-0 transition-colors ${activeTab === tab
-                      ? "bg-[#222] text-[#fff]"
-                      : "bg-[#fff] border border-[#EAEAEA] text-[#222] hover:bg-[#F5F5F5]"
+                    className={`cursor-pointer flex items-center justify-center text-[12px] font-[SemiBold] px-[16px] h-[34px] rounded-full shrink-0 transition-all ${activeTab === tab
+                      ? "bg-[#C9A96E] text-[#0A0A0A] font-[Bold] shadow-md"
+                      : "bg-[#171717] border border-[#2A2A2A] text-[#A89880] hover:text-[#F5F0E8] hover:border-[#C9A96E]/40"
                       }`}
                   >
                     {tab}
@@ -502,13 +490,13 @@ function AgencyDashboard() {
                 <button
                   type="button"
                   onClick={() => setIsProjectDropdownOpen((o) => !o)}
-                  className="cursor-pointer inline-flex items-center justify-between gap-[10px] rounded-full border border-[rgba(34,34,34,0.10)] bg-white px-[14px] h-[33px] text-[12px] font-[SemiBold] text-[#222] min-w-[100px]"
+                  className="cursor-pointer inline-flex items-center justify-between gap-[10px] rounded-full border border-[#2A2A2A] bg-[#171717] px-[14px] h-[34px] text-[12px] font-[SemiBold] text-[#F5F0E8] min-w-[100px]"
                 >
                   <span className="truncate">{activeTab}</span>
                   <DownArrowIcon width={10} height={6} />
                 </button>
                 {isProjectDropdownOpen && (
-                  <div className="absolute left-0 top-[40px] z-20 w-full bg-white border border-[rgba(34,34,34,0.10)] rounded-[12px] shadow-[0_6px_16px_rgba(0,0,0,0.12)] py-[6px] max-h-[200px] overflow-y-auto">
+                  <div className="absolute left-0 top-[40px] z-20 w-full bg-[#171717] border border-[#2A2A2A] rounded-[12px] shadow-2xl py-[6px] max-h-[200px] overflow-y-auto">
                     {projectTabs.map((label) => {
                       const active = activeTab === label;
                       return (
@@ -520,7 +508,7 @@ function AgencyDashboard() {
                             setActiveTab(label);
                             setIsProjectDropdownOpen(false);
                           }}
-                          className={`w-full px-[12px] py-[9px] text-left text-[12px] font-[Medium] hover:bg-[#F5F5F5] cursor-pointer ${active ? "text-[#0832AE]" : "text-[#222]"
+                          className={`w-full px-[12px] py-[9px] text-left text-[12px] font-[Medium] hover:bg-[#2A2A2A] cursor-pointer ${active ? "text-[#C9A96E] bg-[#2A2A2A]" : "text-[#F5F0E8]"
                             }`}
                         >
                           {label}
@@ -530,17 +518,17 @@ function AgencyDashboard() {
                   </div>
                 )}
               </div>
-              <div className="w-[1px] h-[20px] bg-gray-300 hidden sm:block shrink-0"></div>
+              <div className="w-[1px] h-[20px] bg-[#2A2A2A] hidden sm:block shrink-0"></div>
               <div className="flex items-center gap-[8px] shrink-0">
-                <span className="text-[#707070] text-[13px] font-[Medium]">
+                <span className="text-[#A89880] text-[12px] font-[Medium]">
                   Sort by:
                 </span>
                 <div className="relative" ref={sortDropdownRef}>
                   <div
                     onClick={() => setIsSortDropdownOpen(!isSortDropdownOpen)}
-                    className="flex items-center justify-between gap-[8px] border border-[#EAEAEA] bg-white rounded-full px-[16px] h-[33px] cursor-pointer min-w-[120px]"
+                    className="flex items-center justify-between gap-[8px] border border-[#2A2A2A] bg-[#171717] rounded-full px-[14px] h-[34px] cursor-pointer min-w-[120px] text-[#F5F0E8] hover:border-[#C9A96E]/40 transition-colors"
                   >
-                    <span className="text-[#222] text-[13px] font-[Medium]">
+                    <span className="text-[#F5F0E8] text-[12px] font-[SemiBold]">
                       {selectedSortLabel}
                     </span>
                     <DownArrowIcon
@@ -549,7 +537,7 @@ function AgencyDashboard() {
                   </div>
 
                   {isSortDropdownOpen && (
-                    <div className="absolute right-0 top-[45px] w-full min-w-[150px] bg-white border border-[#EAEAEA] rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] py-[8px] z-10 flex flex-col">
+                    <div className="absolute right-0 top-[42px] w-full min-w-[150px] bg-[#171717] border border-[#2A2A2A] rounded-[12px] shadow-2xl py-[6px] z-20 flex flex-col">
                       {sortOptions.map((option) => (
                         <div
                           key={option.value}
@@ -560,9 +548,9 @@ function AgencyDashboard() {
                             setSelectedSort(option.value);
                             setIsSortDropdownOpen(false);
                           }}
-                          className={`px-[16px] py-[10px] text-[13px] font-[Medium] cursor-pointer hover:bg-[#F5F5F5] transition-colors ${selectedSort === option.value
-                            ? "text-[#00A663] bg-[#F5F5F5]"
-                            : "text-[#222]"
+                          className={`px-[16px] py-[9px] text-[12px] font-[Medium] cursor-pointer hover:bg-[#2A2A2A] transition-colors ${selectedSort === option.value
+                            ? "text-[#C9A96E] bg-[#2A2A2A]"
+                            : "text-[#F5F0E8]"
                             }`}
                         >
                           {option.name}
@@ -576,22 +564,22 @@ function AgencyDashboard() {
           </div>
           {/* Project table */}
           <div className="overflow-x-auto w-full scrollbar-hide">
-            <div className="min-w-[1290px]">
-              <div className="rounded-[10px] border border-[rgba(34,34,34,0.08)] overflow-hidden bg-white">
-                <div className="grid grid-cols-[1.8fr_1.2fr_1.2fr_1.4fr_1.2fr] gap-[20px] px-[14px] py-[10px] bg-[#F5F5F5] border-b border-[rgba(34,34,34,0.08)]">
-                  <p className="text-[14px] font-[SemiBold] text-[#222]">
+            <div className="min-w-[1100px]">
+              <div className="rounded-[16px] border border-[#2A2A2A] overflow-hidden bg-[#111111]">
+                <div className="grid grid-cols-[1.8fr_1.2fr_1.2fr_1.4fr_1.2fr] gap-[20px] px-[16px] py-[14px] bg-[#171717] border-b border-[#2A2A2A]">
+                  <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">
                     Property Details
                   </p>
-                  <p className="text-[14px] font-[SemiBold] text-[#222]">
+                  <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">
                     Project status
                   </p>
-                  <p className="text-[14px] font-[SemiBold] text-[#222]">
+                  <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">
                     Announced date
                   </p>
-                  <p className="text-[14px] font-[SemiBold] text-[#222]">
+                  <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">
                     Progress status
                   </p>
-                  <p className="text-[14px] font-[SemiBold] text-[#222]">
+                  <p className="text-[12px] font-[Bold] text-[#A89880] uppercase tracking-wider">
                     Expected finish date
                   </p>
                 </div>
@@ -599,13 +587,13 @@ function AgencyDashboard() {
                 {projectRows.map((row, index) => (
                   <div
                     key={row.id}
-                    className={`grid grid-cols-[1.8fr_1.2fr_1.2fr_1.4fr_1.2fr] gap-[20px] px-[14px] py-[10px] ${index !== projectRows.length - 1
-                      ? "border-b border-[rgba(34,34,34,0.08)]"
+                    className={`grid grid-cols-[1.8fr_1.2fr_1.2fr_1.4fr_1.2fr] gap-[20px] px-[16px] py-[14px] hover:bg-[#171717]/60 transition-colors ${index !== projectRows.length - 1
+                      ? "border-b border-[#2A2A2A]"
                       : ""
                       }`}
                   >
-                    <div className="flex items-center gap-[10px]">
-                      <div className="w-[60px] h-[60px] rounded-[8px] bg-cover bg-center shrink-0">
+                    <div className="flex items-center gap-[12px]">
+                      <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden shrink-0 border border-[#2A2A2A] bg-[#171717]">
                         <img
                           src={toProjectImageUrl(row.image)}
                           alt="home"
@@ -613,10 +601,10 @@ function AgencyDashboard() {
                         />
                       </div>
                       <div>
-                        <p className="text-[12px] font-[SemiBold] text-[#222] leading-[1.2] mb-[4px]">
+                        <p className="text-[13px] font-[Bold] text-[#F5F0E8] leading-[1.2] mb-[4px]">
                           {row.name}
                         </p>
-                        <p className="text-[12px] text-[#707070] leading-[1.2]">
+                        <p className="text-[12px] text-[#A89880] leading-[1.2]">
                           {row.location}
                         </p>
                       </div>
@@ -624,34 +612,34 @@ function AgencyDashboard() {
 
                     <div className="flex items-center">
                       <span
-                        className={`inline-flex items-center rounded-[6px] p-[6px_10px] text-[12px] font-[Medium] leading-none ${row.projectStatus === "Off-plan"
-                          ? "bg-[rgba(212, 163, 115,0.10)] text-[#D4A373]"
-                          : "bg-[rgba(0,166,99,0.10)] text-[#00A663]"
+                        className={`inline-flex items-center rounded-[6px] px-2.5 py-1 text-[11px] font-[SemiBold] leading-none border ${row.projectStatus === "Off-plan"
+                          ? "bg-[#C9A96E]/10 text-[#C9A96E] border-[#C9A96E]/30"
+                          : "bg-[#4ADE80]/10 text-[#4ADE80] border-[#4ADE80]/30"
                           }`}
                       >
                         {row.projectStatus}
                       </span>
                     </div>
                     <div className="flex items-center">
-                      <p className="text-[12px] font-[Regular] text-[#222]">
+                      <p className="text-[12px] font-[Regular] text-[#F5F0E8]">
                         {row.announcedDate}
                       </p>
                     </div>
                     <div className="flex items-center">
-                      <span className="inline-flex items-center rounded-[6px] border border-[rgba(34,34,34,0.10)] p-[6px_10px] text-[12px] font-[Medium] text-[#222] leading-none">
+                      <span className="inline-flex items-center rounded-[6px] border border-[#2A2A2A] bg-[#171717] px-2.5 py-1 text-[12px] font-[Medium] text-[#F5F0E8] leading-none">
                         {row.progress}
                       </span>
                     </div>
 
                     <div className="flex items-center">
-                      <p className="text-[12px] font-[Regular] text-[#222]">
+                      <p className="text-[12px] font-[Regular] text-[#F5F0E8]">
                         {row.expectedFinishDate}
                       </p>
                     </div>
                   </div>
                 ))}
                 {!projectRows.length && !loading && (
-                  <div className="px-[14px] py-[18px] text-[12px] text-[#707070]">
+                  <div className="px-[16px] py-[28px] text-[13px] text-[#A89880] text-center">
                     No projects found.
                   </div>
                 )}
@@ -661,19 +649,19 @@ function AgencyDashboard() {
           <button
             type="button"
             onClick={() => navigate("/agency/allocation/project")}
-            className="mt-[20px] rounded-[5px] w-full h-[37px] bg-[rgba(34,34,34,0.10)] text-[#222] text-[14px] font-[SemiBold] cursor-pointer hover:bg-[rgba(34,34,34,0.14)] transition-colors"
+            className="mt-[20px] rounded-[10px] w-full h-[40px] bg-[#171717] hover:bg-[#2A2A2A] border border-[#2A2A2A] text-[#F5F0E8] text-[13px] font-[Bold] cursor-pointer transition-colors"
           >
             View all
           </button>
         </div>
 
         {/* Location based projects */}
-        <div className="rounded-[15px] bg-[#fff]  min-w-0">
-          <h2 className="text-[#222] font-[Bold] text-[20px] md:p-[30px_30px_20px_30px] p-[20px]">
+        <div className="rounded-[20px] bg-[#111111] border border-[#2A2A2A] shadow-xl min-w-0 p-[20px] flex flex-col">
+          <h2 className="text-[#F5F0E8] font-[Bold] text-[18px] mb-[16px]">
             Location based projects
           </h2>
           <div>
-            <div className="max-h-[480px] overflow-y-auto  pr-[0px] flex flex-col gap-[8px] ">
+            <div className="max-h-[480px] overflow-y-auto pr-[0px] flex flex-col gap-[8px]">
               {locationRows.map((item, index) => (
                 <button
                   key={`${item.name}-${index}`}
@@ -683,18 +671,17 @@ function AgencyDashboard() {
                       `/agency/allocation/project?search=${encodeURIComponent(item.name)}`,
                     )
                   }
-                  className={`cursor-pointer rounded-[12px] bg-white shadow-[0_6px_18px_0_#f1f1f1]  p-[20px] m-[0px_20px] flex items-center justify-between text-left hover:bg-[#fafafa] transition-colors
-                    ${index === 0 ? "mt-[5px]" : ""} ${index === locationRows.length - 1 ? "mb-[5px]" : ""}`}
+                  className="cursor-pointer rounded-[14px] bg-[#171717] hover:bg-[#2A2A2A] border border-[#2A2A2A] p-[16px] flex items-center justify-between text-left transition-colors group"
                 >
                   <div>
-                    <p className="text-[15px] font-[SemiBold] text-[#222] leading-[1.2] mb-[3px] w-[190px] truncate">
+                    <p className="text-[14px] font-[SemiBold] text-[#F5F0E8] group-hover:text-[#C9A96E] leading-[1.2] mb-[4px] w-[180px] truncate transition-colors">
                       {item.name}
                     </p>
-                    <p className="text-[12px] font-[Regular] text-[#707070]">
+                    <p className="text-[12px] font-[Regular] text-[#A89880]">
                       {item.listings} listings
                     </p>
                   </div>
-                  <RightArrowIcon className="w-[8px] h-[12px]" />
+                  <RightArrowIcon className="w-[8px] h-[12px] text-[#A89880] group-hover:text-[#C9A96E] group-hover:translate-x-0.5 transition-all" />
                 </button>
               ))}
             </div>
@@ -707,3 +694,4 @@ function AgencyDashboard() {
 }
 
 export default AgencyDashboard;
+

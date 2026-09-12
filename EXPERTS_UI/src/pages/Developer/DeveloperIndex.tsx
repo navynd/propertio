@@ -338,21 +338,21 @@ function DeveloperIndex() {
       </div>
       {/*Bottom footer*/}
       {(isAssignAgencies || isReviewAssignment) && (
-        <div className="fixed bottom-0 left-0 w-full bg-white shadow-[0_6px_18px_0_rgba(0,0,0,0.15)] z-[200]">
+        <div className="fixed bottom-0 left-0 w-full bg-[#111111] border-t border-[#2A2A2A] shadow-[0_-6px_24px_rgba(0,0,0,0.5)] z-[200]">
           <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-[70px]">
 
             {/* Left */}
-            <div className="text-[18px] font-[Bold] text-[#707070]">
-              Project Name : <span className="font-[Bold] text-[#222]">{footerProjectName}</span>
+            <div className="text-[16px] font-[Bold] text-[#A89880]">
+              Project Name : <span className="font-[Bold] text-[#F5F0E8]">{footerProjectName}</span>
             </div>
 
             {/* Right */}
             <div className="flex items-center gap-3">
-              <button onClick={() => navigate("/developer/project-management")} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#222] text-[14px] font-[Bold] text-[#222]">
+              <button onClick={() => navigate("/developer/project-management")} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#2A2A2A] bg-[#171717] hover:bg-[#2A2A2A] text-[14px] font-[Bold] text-[#F5F0E8] transition-colors">
                 Cancel
               </button>
 
-              <button onClick={handleBulkAssignFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-70">
+              <button onClick={handleBulkAssignFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#C9A96E] hover:bg-[#E4C98B] text-[#0A0A0A] text-[14px] font-[Bold] disabled:opacity-50 transition-colors shadow-md">
                 {isAssignAgencies ? "Review assignment" : "Publish"}
               </button>
             </div>
@@ -360,21 +360,21 @@ function DeveloperIndex() {
         </div>
       )}
       {(isUnitsAssign || isUnitsEditAssign) && (
-        <div className="fixed bottom-0 left-0 w-full bg-white shadow-[0_6px_18px_0_rgba(0,0,0,0.15)] z-[200]">
+        <div className="fixed bottom-0 left-0 w-full bg-[#111111] border-t border-[#2A2A2A] shadow-[0_-6px_24px_rgba(0,0,0,0.5)] z-[200]">
           <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-[70px]">
 
             {/* Left */}
-            <div className="text-[18px] font-[Bold] text-[#707070]">
-              Project Name : <span className="font-[Bold] text-[#222]">{footerProjectName}</span>
+            <div className="text-[16px] font-[Bold] text-[#A89880]">
+              Project Name : <span className="font-[Bold] text-[#F5F0E8]">{footerProjectName}</span>
             </div>
 
             {/* Right */}
             <div className="flex items-center gap-3">
-              <button onClick={() => navigate("/developer/project-management")} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#222] text-[14px] font-[Bold] text-[#222]">
+              <button onClick={() => navigate("/developer/project-management")} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] border border-[#2A2A2A] bg-[#171717] hover:bg-[#2A2A2A] text-[14px] font-[Bold] text-[#F5F0E8] transition-colors">
                 Cancel
               </button>
 
-              <button onClick={handleUnitsFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#D4A373] text-white text-[14px] font-[Bold] disabled:opacity-70">
+              <button onClick={handleUnitsFooterAction} disabled={isSubmittingAssign} className="cursor-pointer px-[20px] h-[44px] rounded-[10px] bg-[#C9A96E] hover:bg-[#E4C98B] text-[#0A0A0A] text-[14px] font-[Bold] disabled:opacity-50 transition-colors shadow-md">
                 {isUnitsAssign ? "Review assignment" : "Save changes"}
               </button>
             </div>

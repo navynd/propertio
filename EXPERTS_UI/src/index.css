@@ -31,6 +31,80 @@ body {
   color: var(--text-primary, #F5F0E8);
 }
 
+/* Global Dark Luxury Overrides for all subpage containers & components */
+.bg-white {
+  background-color: #111111 !important;
+  border-color: #2A2A2A !important;
+}
+
+.bg-\[\#F5F5F5\],
+.bg-\[\#f5f5f5\] {
+  background-color: #171717 !important;
+}
+
+.bg-\[\#FAFAFA\],
+.bg-\[\#fafafa\],
+.bg-gray-50 {
+  background-color: #141414 !important;
+}
+
+.border-\[rgba\(34\,34\,34\,0\.10\)\],
+.border-\[rgba\(34\,34\,34\,0\.08\)\],
+.border-\[rgba\(34\,34\,34\,0\.20\)\],
+.border-\[\#E2E8F0\],
+.border-\[\#e2e8f0\],
+.border-\[\#F1F5F9\],
+.border-\[\#E5E7EB\],
+.border-gray-200,
+.border-gray-300 {
+  border-color: #2A2A2A !important;
+}
+
+.text-\[\#222\],
+.text-\[\#222222\],
+.text-\[\#0F172A\],
+.text-\[\#1E293B\],
+.text-gray-900,
+.text-gray-800 {
+  color: #F5F0E8 !important;
+}
+
+.text-\[\#707070\],
+.text-\[\#64748B\],
+.text-\[\#94A3B8\],
+.text-gray-500,
+.text-gray-600 {
+  color: #A89880 !important;
+}
+
+.text-\[\#0832AE\],
+.text-\[\#3182CE\],
+.text-\[\#2B6CB0\] {
+  color: #C9A96E !important;
+}
+
+.bg-\[\#0832AE\],
+.bg-\[\#002B49\] {
+  background-color: #C9A96E !important;
+  color: #0A0A0A !important;
+}
+
+/* Custom scrollbars for dark mode */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A96E;
+}
+
 /* Anti-gravity floating transitions & cards */
 .floating-card,
 .card,
@@ -41,19 +115,20 @@ button {
 
 .floating-card:hover,
 .card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 16px 32px -8px rgba(31, 61, 81, 0.16) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5) !important;
 }
 
 .btn-accent,
 .cta-btn {
-  background-color: var(--accent-color, #D4A373) !important;
-  color: #ffffff !important;
+  background-color: var(--accent-color, #C9A96E) !important;
+  color: #0A0A0A !important;
 }
 
 .btn-accent:hover,
 .cta-btn:hover {
-  background-color: var(--accent-hover, #c49262) !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px -4px rgba(212, 163, 115, 0.4);
+  background-color: var(--accent-hover, #E4C98B) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(201, 169, 110, 0.4);
 }
+
