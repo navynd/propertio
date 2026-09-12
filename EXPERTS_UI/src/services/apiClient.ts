@@ -1,7 +1,11 @@
 import { authStorage } from "./authStorage";
 import type { ApiEnvelope } from "../types/auth";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "https://propertio-apiservices.onrender.com/api";
+const rawBaseUrl = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL =
+  rawBaseUrl && !rawBaseUrl.includes("propertio.com")
+    ? rawBaseUrl.replace(/\/$/, "")
+    : "https://propertio-apiservices.onrender.com/api";
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
