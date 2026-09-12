@@ -1,19 +1,10 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import PFContainer from "../../Components/container/PFContainer";
-import aboutbanner from "../../assets/img/aboutbanner.jpg";
-import top1 from "../../assets/img/abouttop1.png";
-import top2 from "../../assets/img/abouttop2.png";
-import top3 from "../../assets/img/abouttop3.png";
-import top4 from "../../assets/img/abouttop1.png";
-import top5 from "../../assets/img/abouttop2.png";
-import top6 from "../../assets/img/abouttop3.png";
-import aboutImage from "../../assets/img/aboutimage.png";
 import "../../assets/styles/Info/About.scss";
 import { LeftArrowIcon, RightArrowIcon } from "../../Components/parts/icon";
 import {
   aboutService,
   type AboutPageSettings,
-  type AboutTimelineEntry,
 } from "../../services/aboutService";
 
 const DEFAULT_GALLERY = [
@@ -57,59 +48,6 @@ const DEFAULT_SETTINGS: AboutPageSettings = {
   ctaButtonUrl: "/searchlisting",
 };
 
-const DEFAULT_TIMELINE: AboutTimelineEntry[] = [
-  {
-    id: "1",
-    month: "NOV",
-    day: "15",
-    year: "2024",
-    title: "Global Intelligence & Valuation Engine Launch",
-    description: "Rolled out proprietary cross-border real estate valuation and yield analytics across 50+ tier-1 capital markets.",
-    displayOrder: 1,
-  },
-  {
-    id: "2",
-    month: "AUG",
-    day: "10",
-    year: "2024",
-    title: "Private Client Advisory Network Established",
-    description: "Inaugurated dedicated bespoke representation for ultra-high-net-worth acquisitions in London, New York, and Dubai.",
-    displayOrder: 2,
-  },
-  {
-    id: "3",
-    month: "APR",
-    day: "28",
-    year: "2024",
-    title: "Expansion into Prime European & US Metros",
-    description: "Integrated over 3,000 verified luxury residences across Manhattan, Paris, Mayfair, and Zurich.",
-    displayOrder: 3,
-  },
-  {
-    id: "4",
-    month: "JAN",
-    day: "14",
-    year: "2024",
-    title: "Institutional Developer Partnership Tier",
-    description: "Partnered with premier global developers to provide direct off-plan VIP allocations and digital masterplans.",
-    displayOrder: 4,
-  },
-  {
-    id: "5",
-    month: "OCT",
-    day: "01",
-    year: "2023",
-    title: "Founding of the Estatehub Global Marketplace",
-    description: "Pioneered the transparent, verified luxury property discovery platform connecting elite brokerages worldwide.",
-    displayOrder: 5,
-  },
-];
-
-const resolveImage = (url: string | undefined, fallback: string) => {
-  const trimmed = String(url || "").trim();
-  return trimmed || fallback;
-};
-
 const renderStatValue = (value: string) => {
   const percentMatch = value.match(/^(.+?)(%)$/);
   if (percentMatch) {
@@ -131,24 +69,9 @@ const renderMultiline = (text: string) =>
     </React.Fragment>
   ));
 
-const renderSuccessTitle = (title: string) => {
-  const parts = title.trim().split(/\s+/);
-  if (parts.length <= 1) return title;
-  return (
-    <>
-      {parts[0]}
-      <br />
-      {parts.slice(1).join(" ")}
-    </>
-  );
-};
-
 const About: React.FC = () => {
   const [settings, setSettings] = useState<AboutPageSettings>(DEFAULT_SETTINGS);
-  const [timeline, setTimeline] = useState<AboutTimelineEntry[]>(DEFAULT_TIMELINE);
   const [start, setStart] = useState(0);
-  const successRightRef = useRef<HTMLDivElement | null>(null);
-  const wheelLockRef = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -157,9 +80,6 @@ const About: React.FC = () => {
         const data = await aboutService.getAbout();
         if (cancelled) return;
         setSettings({ ...DEFAULT_SETTINGS, ...data.settings });
-        if (data.timeline?.length) {
-          setTimeline(data.timeline);
-        }
       } catch {
         // Keep defaults when API is unavailable.
       }
@@ -189,32 +109,6 @@ const About: React.FC = () => {
     return DEFAULT_GALLERY;
   }, [settings.heroGalleryImages]);
 
-  const successItems = useMemo(
-    () =>
-      timeline.map((item) => ({
-        month: item.month,
-        day: item.day,
-        year: item.year,
-        title: item.title,
-        desc: item.description,
-      })),
-    [timeline]
-  );
-
-  const [successIdxs, setSuccessIdxs] = useState<[number, number, number]>([1, 2, 3]);
-
-  useEffect(() => {
-    if (successItems.length >= 4) {
-      setSuccessIdxs([1, 2, 3]);
-    } else if (successItems.length === 3) {
-      setSuccessIdxs([0, 1, 2]);
-    } else if (successItems.length === 2) {
-      setSuccessIdxs([0, 1, 1]);
-    } else if (successItems.length === 1) {
-      setSuccessIdxs([0, 0, 0]);
-    }
-  }, [successItems.length]);
-
   const visible = sliderImages.slice(start, start + 3);
 
   const bannerMarquee = useMemo(() => {
@@ -234,40 +128,7 @@ const About: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    const el = successRightRef.current;
-    if (!el || successItems.length < 2) return;
-
-    const onWheel = (e: WheelEvent) => {
-      e.preventDefault();
-
-      if (wheelLockRef.current) return;
-      wheelLockRef.current = true;
-      window.setTimeout(() => {
-        wheelLockRef.current = false;
-      }, 180);
-
-      const isWheelUp = e.deltaY < 0;
-
-      setSuccessIdxs(([top, center, bottom]) => {
-        if (isWheelUp) {
-          if (bottom >= successItems.length - 1) return [top, center, bottom];
-          return [top + 1, center + 1, bottom + 1];
-        }
-
-        if (top <= 0) return [top, center, bottom];
-        return [top - 1, center - 1, bottom - 1];
-      });
-    };
-
-    el.addEventListener("wheel", onWheel, { passive: false });
-    return () => {
-      el.removeEventListener("wheel", onWheel as EventListener);
-    };
-  }, [successItems.length]);
-
   const heroBanner = settings.heroBannerImage?.trim() || "";
-  const ctaBackground = resolveImage(settings.ctaBackgroundImage, aboutImage);
 
   const stats = [
     { value: settings.stat1Value || "", description: settings.stat1Description || "" },
@@ -366,77 +227,24 @@ const About: React.FC = () => {
         </section>
       </PFContainer>
 
-      <div className="about-container">
-        <div className="about-success">
-          <PFContainer>
-            <section className="success">
-              <div className="success__left">
-                <h2>{renderSuccessTitle(settings.successSectionTitle || "Our Success")}</h2>
+      <div className="about-cta-section">
+        <PFContainer>
+          <div className="about-luxury-cta">
+            <div className="about-luxury-cta__content">
+              <span className="about-luxury-cta__badge">EXCLUSIVE ADVISORY</span>
+              <h2 className="about-luxury-cta__title">{settings.ctaHeadline}</h2>
+              <p className="about-luxury-cta__subtitle">{settings.ctaSubheadline}</p>
+              <div className="about-luxury-cta__actions">
+                <a href={settings.ctaButtonUrl || "/searchlisting"} className="about-luxury-cta__btn">
+                  {settings.ctaButtonLabel || "Discover Prime Properties"}
+                </a>
+                <a href="/teams" className="about-luxury-cta__link">
+                  Consult Private Client Team
+                </a>
               </div>
-
-              <div
-                className="success__right"
-                ref={successRightRef}
-                tabIndex={0}
-                aria-label="Our Success timeline (scroll to navigate)"
-              >
-                <div className="success__line" />
-
-                <div className="success-items">
-                  {successIdxs.map((idx, pos) => {
-                    const item = successItems[idx];
-                    if (!item) return null;
-
-                    const isActive = pos === 1;
-
-                    return (
-                      <div key={`${idx}-${pos}`} className={`success-item ${isActive ? "active" : ""}`}>
-                        <div className="success-date">
-                          <span className={`success-date__month ${isActive ? "active" : ""}`}>
-                            {item.month}
-                          </span>
-                          <span className={`success-date__day ${isActive ? "active" : ""}`}>
-                            {item.day}
-                          </span>
-                          <span className={`success-date__year ${isActive ? "active" : ""}`}>
-                            {item.year}
-                          </span>
-                        </div>
-
-                        <div className="success-dot" />
-
-                        <div className="success-content">
-                          <h4>{item.title}</h4>
-                          <p>{item.desc}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </section>
-          </PFContainer>
-        </div>
-
-        <div className="about-cta-container">
-          <section className="about-cta" aria-labelledby="about-cta-heading">
-            <div
-              className="about-cta__bg"
-              style={{ backgroundImage: `url(${ctaBackground})` }}
-              aria-hidden
-            />
-            <div className="about-cta__gradient" aria-hidden />
-            <div className="about-cta__inner">
-              <h2 id="about-cta-heading" className="about-cta__title">
-                {settings.ctaHeadline}
-              </h2>
-              <p className="about-cta__subtitle">{settings.ctaSubheadline}</p>
-              <a href={settings.ctaButtonUrl || "/searchlisting"} className="about-cta__btn">
-                {settings.ctaButtonLabel || "Discover Properties"}
-              </a>
             </div>
-          </section>
-        </div>
+          </div>
+        </PFContainer>
       </div>
     </div>
   );
