@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import logoimg from "../../assets/img/logo.png";
+import { EstatehubLogo } from "../../components/CustomFile/EstatehubLogo";
 import { EyeIcon, DownArrowIcon, SearchIcon, UploadIcon, VerifiedIcon } from "../../components/CustomFile/icons";
 import type { Country } from "../../data/countries";
 import { countries } from "../../data/countries";
@@ -426,7 +426,7 @@ const AgencyProfile = () => {
     return (
         <div className="min-h-screen bg-[#F5F5F5] flex flex-col items-center pt-[40px] pb-[30px] px-[20px] font-['Outfit',sans-serif]">
             <div className="mb-[40px]">
-                <img src={logoimg} alt="Estatehub Providers" className="h-[40px]" />
+                <EstatehubLogo width="160" height="40" subtitle="AGENCY REGISTRATION" />
             </div>
 
             <div className="relative w-full max-w-[1200px] bg-white rounded-[15px] p-[4px] flex flex-col md:flex-row">

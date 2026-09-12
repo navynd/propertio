@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation, matchPath } from "react-router-dom";
 import { Dialog, DialogContent, DialogOverlay } from "../Ui/Dialog";
 import { HamburgerMenuIcon, Cross2Icon } from "@radix-ui/react-icons";
 import { DashboardIcon, AgentIcon, AllocationIcon, AllocationWhiteIcon, ListingIcon, LeadsIcon, LeadsWhiteIcon, SubscriptionIcon, ProfileIcon, LogoutIcon, DownArrowIcon } from '../CustomFile/icons'
-import logo from '../../assets/img/logo.png'
+import { EstatehubLogo } from "../CustomFile/EstatehubLogo";
 
 type NavItem = {
     icon: typeof DashboardIcon;
@@ -74,7 +74,7 @@ function AgentSidebar() {
                         }
                     }}
                 >
-                    <img src={logo} alt="img" className="w-[100px]" />
+                    <EstatehubLogo width="155" height="38" subtitle="AGENT" />
                 </Link>
                 {isMobile && (
                     <button
@@ -202,7 +202,7 @@ function AgentSidebar() {
             {/* Mobile Hamburger Menu */}
             <div className={`lg:hidden fixed top-0 left-0 right-0 bg-[#fff] p-[14px_16px] z-[10] flex items-center justify-between border-b border-[rgba(0,0,0,0.1)] ${isCheckoutRoute ? "border-none" : ""}`}>
                 <Link to="/agent/dashboard">
-                    <img src={logo} alt="img" className="w-[100px]" />
+                    <EstatehubLogo width="135" height="34" subtitle="AGENT" />
                 </Link>
                 <Dialog open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
                     <button

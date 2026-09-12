@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { CancelIcon } from "../../components/CustomFile/icons";
-import logo from "../../assets/img/logo.png";
+import { EstatehubLogo } from "../../components/CustomFile/EstatehubLogo";
 import Loader from "../../components/Loader/loader";
 
 interface PasswordOtpModalProps {
@@ -82,7 +82,9 @@ const PasswordOtpModal: React.FC<PasswordOtpModalProps> = ({
 
                 <div className="md:p-[0px_50px_60px_50px] p-[0px_20px_30px_20px]">
                     <div className="flex flex-col items-center text-center">
-                        <img src={logo} alt="Estatehub Providers" className="w-[138px] mb-[31px]" />
+                        <div className="mb-[31px]">
+                            <EstatehubLogo width="160" height="40" subtitle="VERIFICATION" />
+                        </div>
 
                         <h3 className="font-[Bold] text-[#222] text-[20px] leading-[1.1] mb-[8px]">
                             Enter the OTP we send to your email

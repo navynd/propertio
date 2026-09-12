@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation, matchPath } from "react-router-dom";
 import { Dialog, DialogContent, DialogOverlay } from "../Ui/Dialog";
 import { HamburgerMenuIcon, Cross2Icon } from "@radix-ui/react-icons";
 import { DashboardIcon, ProjectIcon, RevenueIcon, ProfileIcon, LogoutIcon, NotificationIcon } from '../CustomFile/icons'
-import logo from '../../assets/img/logo.png'
+import { EstatehubLogo } from "../CustomFile/EstatehubLogo";
 
 type NavItem = {
     icon: typeof DashboardIcon;
@@ -46,7 +46,7 @@ function DeveloperSidebar() {
                         }
                     }}
                 >
-                    <img src={logo} alt="img" className="w-[100px]" />
+                    <EstatehubLogo width="155" height="38" subtitle="DEVELOPER" />
                 </Link>
                 {isMobile && (
                     <button
@@ -106,7 +106,7 @@ function DeveloperSidebar() {
             {/* Mobile Hamburger Menu */}
             <div className={`lg:hidden fixed top-0 left-0 right-0 bg-[#fff] p-[14px_16px] z-[10] flex items-center justify-between border-b border-[rgba(0,0,0,0.1)] ${isCheckoutRoute ? "border-none" : ""}`}>
                 <Link to="/developer/dashboard">
-                    <img src={logo} alt="img" className="w-[100px]" />
+                    <EstatehubLogo width="135" height="34" subtitle="DEVELOPER" />
                 </Link>
                 <Dialog open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
                     <button
