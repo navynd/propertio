@@ -186,11 +186,11 @@ function Login() {
             </div>
 
             {/* Right Form Card */}
-            <div className="flex-[6] h-full bg-[#FFFFFF] lg:bg-[#F9F9F8] p-6 sm:p-10 md:p-14 overflow-y-auto scrollbar-hide flex flex-col justify-between">
+            <div className="flex-[6] h-full bg-[#0A0A0A] p-6 sm:p-10 md:p-14 overflow-y-auto scrollbar-hide flex flex-col justify-between">
                 {/* Top bar with Official Estatehub Monogram */}
                 <div className="flex items-center justify-between mb-8 w-full max-w-[480px] mx-auto">
                     <div className="flex items-center">
-                        <EstatehubLogo width="175" height="42" subtitle="PARTNER PORTAL" />
+                        <EstatehubLogo width="175" height="42" subtitle="PARTNER PORTAL" variant="dark" />
                     </div>
 
                     {showForgotPassword && !showChangePassword && (
@@ -206,10 +206,10 @@ function Login() {
                                 setOtpError(null);
                                 setResetError(null);
                             }}
-                            className="flex items-center gap-2 text-[#1F3D51] hover:text-[#D4A373] transition-colors group"
+                            className="flex items-center gap-2 text-[#A89880] hover:text-[#C9A96E] transition-colors group cursor-pointer"
                         >
-                            <div className="bg-[#1F3D51] group-hover:bg-[#D4A373] rounded-full w-[26px] h-[26px] flex items-center justify-center transition-colors">
-                                <BackIcon className="w-[10px] h-[10px] text-white" />
+                            <div className="bg-[#171717] border border-[#2A2A2A] group-hover:border-[#C9A96E]/50 rounded-full w-[26px] h-[26px] flex items-center justify-center transition-colors">
+                                <BackIcon className="w-[10px] h-[10px] text-[#A89880] group-hover:text-[#C9A96E]" />
                             </div>
                             <span className="font-[Bold] text-[13px]">Back to login</span>
                         </button>
@@ -218,11 +218,11 @@ function Login() {
 
                 {/* Center Card */}
                 <div className="flex items-center justify-center my-auto w-full">
-                    <div className="w-full max-w-[440px] bg-white lg:p-10 lg:rounded-[24px] lg:shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:border lg:border-[#ECECEB]">
+                    <div className="w-full max-w-[440px] bg-[#141414] lg:p-10 p-6 rounded-[24px] shadow-[0_16px_50px_rgba(0,0,0,0.6)] border border-[#2A2A2A]">
                         <div className="relative">
                             {isLoggingIn && (
-                                <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/85 backdrop-blur-[2px] rounded-[20px]">
-                                    <Loader size={60} margin={0} />
+                                <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-sm rounded-[24px]">
+                                    <Loader size={72} margin={0} />
                                 </div>
                             )}
 
@@ -230,13 +230,13 @@ function Login() {
                             {!showForgotPassword && (
                                 <>
                                     <div className="flex flex-col items-start mb-7">
-                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F3D51]/5 border border-[#1F3D51]/10 text-[#1F3D51] text-[11px] font-[Bold] tracking-wider uppercase mb-3">
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C9A96E]/10 border border-[#C9A96E]/20 text-[#C9A96E] text-[11px] font-[Bold] tracking-wider uppercase mb-3">
                                             <span>Secure Authentication</span>
                                         </div>
-                                        <h2 className="font-[Bold] text-[#1F3D51] text-[28px] tracking-tight mb-1">
+                                        <h2 className="font-[Bold] text-[#F5F0E8] text-[28px] tracking-tight mb-1">
                                             Sign in to Portal
                                         </h2>
-                                        <p className="font-[Regular] text-[#707070] text-[14px]">
+                                        <p className="font-[Regular] text-[#A89880] text-[14px]">
                                             Welcome back. Enter your verified credentials to continue.
                                         </p>
                                     </div>
@@ -248,7 +248,7 @@ function Login() {
                                     >
                                         {/* Email */}
                                         <div className="flex flex-col gap-1.5">
-                                            <label htmlFor="login-email" className="text-[12px] font-[Bold] text-[#1F3D51] uppercase tracking-wider">
+                                            <label htmlFor="login-email" className="text-[12px] font-[Bold] text-[#C9A96E] uppercase tracking-wider">
                                                 Email Address
                                             </label>
                                             <input
@@ -257,14 +257,14 @@ function Login() {
                                                 value={email}
                                                 onChange={(event) => setEmail(event.target.value)}
                                                 autoComplete="email"
-                                                className="border-[#E4E4E2] border bg-[#FBFBFA] focus:bg-white rounded-[12px] p-[16px_16px] text-[14px] font-[Regular] text-[#1F3D51] outline-none transition-all focus:border-[#D4A373] focus:ring-2 focus:ring-[#D4A373]/15 placeholder:text-[#A0A0A0] w-full"
+                                                className="border-[#2A2A2A] border bg-[#1A1A1A] focus:bg-[#202020] rounded-[12px] p-[16px_16px] text-[14px] font-[Regular] text-[#F5F0E8] outline-none transition-all focus:border-[#C9A96E] focus:ring-2 focus:ring-[#C9A96E]/15 placeholder:text-[#6B6259] w-full"
                                                 placeholder="partner@estatehub.com"
                                             />
                                         </div>
 
                                         {/* Password */}
                                         <div className="flex flex-col gap-1.5">
-                                            <label htmlFor="login-password" className="text-[12px] font-[Bold] text-[#1F3D51] uppercase tracking-wider">
+                                            <label htmlFor="login-password" className="text-[12px] font-[Bold] text-[#C9A96E] uppercase tracking-wider">
                                                 Password
                                             </label>
                                             <div className="relative">
@@ -275,12 +275,12 @@ function Login() {
                                                     onChange={(event) => setPassword(event.target.value)}
                                                     placeholder="••••••••••••"
                                                     autoComplete="current-password"
-                                                    className="w-full border border-[#E4E4E2] bg-[#FBFBFA] focus:bg-white rounded-[12px] p-[16px_16px] text-[14px] font-[Medium] text-[#1F3D51] outline-none transition-all focus:border-[#D4A373] focus:ring-2 focus:ring-[#D4A373]/15 placeholder:text-[#A0A0A0]"
+                                                    className="w-full border border-[#2A2A2A] bg-[#1A1A1A] focus:bg-[#202020] rounded-[12px] p-[16px_16px] text-[14px] font-[Medium] text-[#F5F0E8] outline-none transition-all focus:border-[#C9A96E] focus:ring-2 focus:ring-[#C9A96E]/15 placeholder:text-[#6B6259]"
                                                 />
                                                 <button
                                                     type="button"
                                                     onClick={() => setShowPasswordText(!showPasswordText)}
-                                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[#707070] hover:text-[#1F3D51] focus:outline-none cursor-pointer"
+                                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[#A89880] hover:text-[#C9A96E] focus:outline-none cursor-pointer transition-colors"
                                                 >
                                                     {showPasswordText ? <EyeIcon width={18} height={18} /> : <EyeCloseIcon width={18} height={18} />}
                                                 </button>
@@ -294,15 +294,15 @@ function Login() {
                                                     id="remember"
                                                     checked={rememberMe}
                                                     onCheckedChange={(value) => setRememberMe(value === true)}
-                                                    className="flex h-[16px] w-[16px] items-center justify-center rounded-[4px] border border-[#CCCCCC] bg-[#FBFBFA] text-white data-[state=checked]:bg-[#D4A373] data-[state=checked]:border-[#D4A373] cursor-pointer transition-colors"
+                                                    className="flex h-[16px] w-[16px] items-center justify-center rounded-[4px] border border-[#2A2A2A] bg-[#1A1A1A] text-black data-[state=checked]:bg-[#C9A96E] data-[state=checked]:border-[#C9A96E] cursor-pointer transition-colors"
                                                 >
                                                     <CheckboxIndicator>
-                                                        <TickIcon className="mt-[-1px]" />
+                                                        <TickIcon className="mt-[-1px] text-black" />
                                                     </CheckboxIndicator>
                                                 </Checkbox>
                                                 <label
                                                     htmlFor="remember"
-                                                    className="cursor-pointer font-[Medium] text-[13px] text-[#4A4A4A] select-none"
+                                                    className="cursor-pointer font-[Medium] text-[13px] text-[#A89880] select-none hover:text-[#F5F0E8] transition-colors"
                                                 >
                                                     Remember me
                                                 </label>
@@ -314,7 +314,7 @@ function Login() {
                                                     setShowForgotPassword(true);
                                                     setShowChangePassword(false);
                                                 }}
-                                                className="cursor-pointer font-[Bold] text-[13px] text-[#D4A373] hover:text-[#B68453] transition-colors"
+                                                className="cursor-pointer font-[Bold] text-[13px] text-[#C9A96E] hover:text-[#E4C98B] transition-colors"
                                             >
                                                 Forgot password?
                                             </button>
@@ -324,21 +324,21 @@ function Login() {
                                         <button
                                             type="submit"
                                             disabled={isLoggingIn}
-                                            className="cursor-pointer bg-[#1F3D51] hover:bg-[#152B39] active:scale-[0.99] w-full text-[14px] font-[Bold] tracking-wide text-white py-4 px-6 rounded-[12px] shadow-sm transition-all disabled:opacity-60 mt-2"
+                                            className="cursor-pointer bg-[#C9A96E] hover:bg-[#E4C98B] active:scale-[0.99] w-full text-[14px] font-[Bold] tracking-wide text-[#0A0A0A] py-4 px-6 rounded-[12px] shadow-lg shadow-[#C9A96E]/20 transition-all disabled:opacity-60 mt-2"
                                         >
                                             {isLoggingIn ? "Authenticating..." : "Sign in to Dashboard"}
                                         </button>
 
                                         {loginError && (
-                                            <div className="p-3 bg-red-50 border border-red-200 rounded-[10px]">
-                                                <p className="text-[12px] font-[Medium] text-red-600 text-center">{loginError}</p>
+                                            <div className="p-3 bg-rose-500/10 border border-rose-500/30 rounded-[10px]">
+                                                <p className="text-[12px] font-[Medium] text-rose-400 text-center">{loginError}</p>
                                             </div>
                                         )}
                                     </form>
 
-                                    <div className="pt-5 border-t border-[#F0F0EE] text-center">
-                                        <p className="text-[12px] font-[Regular] text-[#707070] leading-relaxed">
-                                            <strong className="font-[Bold] text-[#1F3D51]">Authorized Access Only:</strong> Dedicated gateway for registered Developers, Agencies, and Certified Agents.
+                                    <div className="pt-5 border-t border-[#2A2A2A] text-center">
+                                        <p className="text-[12px] font-[Regular] text-[#A89880] leading-relaxed">
+                                            <strong className="font-[Bold] text-[#F5F0E8]">Authorized Access Only:</strong> Dedicated gateway for registered Developers, Agencies, and Certified Agents.
                                         </p>
                                     </div>
                                 </>
