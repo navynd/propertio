@@ -23,9 +23,13 @@ const AllCommunities: React.FC = () => {
 
     const locationOptions = useMemo(
         () => [
+            { label: "All Destinations", value: "All" },
             { label: "Dubai", value: "Dubai" },
+            { label: "London", value: "London" },
+            { label: "New York", value: "New York" },
+            { label: "Paris", value: "Paris" },
             { label: "Abu Dhabi", value: "Abu Dhabi" },
-            { label: "Sharjah", value: "Sharjah" },
+            { label: "Miami", value: "Miami" },
         ],
         []
     );
@@ -33,14 +37,22 @@ const AllCommunities: React.FC = () => {
     const [sortOpen, setSortOpen] = useState(false);
     const [locationOpen, setLocationOpen] = useState(false);
     const [sortValue, setSortValue] = useState<string>("featured");
-    const [locationValue, setLocationValue] = useState<string>("Dubai");
+    const [locationValue, setLocationValue] = useState<string>("All");
     const [isReadMoreOpen, setIsReadMoreOpen] = useState(false);
     const [activeCategory, setActiveCategory] = useState<string>("Popular");
     const [activeRecentSearch, setActiveRecentSearch] = useState<string | null>(null);
+    const [searchQuery, setSearchQuery] = useState<string>("");
     const [communityCurrentPage, setCommunityCurrentPage] = useState<number>(1);
 
     const recentSearches = useMemo(
-        () => ["Aenean vel", "Nulla egestas", "Felis", "Praesent sit amet"],
+        () => [
+            "Palm Jumeirah",
+            "Mayfair London",
+            "Tribeca NYC",
+            "Downtown Dubai",
+            "Le Marais Paris",
+            "South Beach Miami",
+        ],
         []
     );
 
@@ -80,103 +92,127 @@ const AllCommunities: React.FC = () => {
     const selectedSortLabel =
         sortOptions.find((o) => o.value === sortValue)?.label ?? "Featured";
     const selectedLocationLabel =
-        locationOptions.find((o) => o.value === locationValue)?.label ?? "Dubai";
+        locationOptions.find((o) => o.value === locationValue)?.label ?? "All Destinations";
 
-    const communityCards = useMemo(
+    const allCommunityCards = useMemo(
         () => [
             {
                 id: "palm-jumeirah",
                 title: "Palm Jumeirah",
+                city: "Dubai",
+                category: "Luxury",
                 description:
-                    "Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi. Curabitur malesuada dui sit ass...",
-                ratingValue: 4.8,
-                ratingText: "4.8/5",
-                reviewsText: "based on 28 reviews",
-                pricesDropdownLabel: "Prices for Apartments",
-                forSale: "8,500,000 AED",
-                forRent: "195,000 AED/year",
-                noteText: "* Based on listing prices last 3 months.",
+                    "Iconic waterfront living featuring world-class private beachfront villas, five-star resorts, and panoramic Arabian Gulf skyline views.",
+                ratingValue: 4.9,
+                ratingText: "4.9/5",
+                reviewsText: "based on 142 reviews",
+                pricesDropdownLabel: "Prices for Apartments & Villas",
+                forSale: "AED 8,500,000",
+                forRent: "AED 210,000/year",
+                noteText: "* Based on verified market listings across top brokerages.",
                 image: cardImage,
-                savedCount: 25,
+                savedCount: 128,
             },
             {
-                id: "palm-jumeirah-2",
-                title: "Palm Jumeirah",
+                id: "mayfair-london",
+                title: "Mayfair",
+                city: "London",
+                category: "Luxury",
                 description:
-                    "Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi. Cura bitur malesuada dui sit ass...",
+                    "London's most prestigious heritage district, renowned for Georgian garden squares, Michelin-starred culinary dining, and elite embassies.",
+                ratingValue: 4.9,
+                ratingText: "4.9/5",
+                reviewsText: "based on 96 reviews",
+                pricesDropdownLabel: "Prices for Prime Residences",
+                forSale: "£4,250,000",
+                forRent: "£9,800/month",
+                noteText: "* Prime Central London registry market data.",
+                image: cardImage2,
+                savedCount: 94,
+            },
+            {
+                id: "tribeca-new-york",
+                title: "Tribeca & SoHo",
+                city: "New York",
+                category: "Popular",
+                description:
+                    "Manhattan's premier historic cobblestone district with iconic cast-iron architecture, designer boutiques, and luxury loft penthouses.",
                 ratingValue: 4.8,
                 ratingText: "4.8/5",
-                reviewsText: "based on 28 reviews",
-                pricesDropdownLabel: "Prices for Apartments",
-                forSale: "8,500,000 AED",
-                forRent: "195,000 AED/year",
-                noteText: "* Based on listing prices last 3 months.",
-                image: cardImage2,
-                savedCount: 25,
+                reviewsText: "based on 118 reviews",
+                pricesDropdownLabel: "Prices for Designer Condos",
+                forSale: "$5,600,000",
+                forRent: "$14,500/month",
+                noteText: "* NYC Real Estate Board verified quarterly benchmark.",
+                image: cardImage,
+                savedCount: 87,
             },
             {
-                id: "palm-jumeirah-3",
-                title: "Palm Jumeirah",
+                id: "downtown-dubai",
+                title: "Downtown Dubai",
+                city: "Dubai",
+                category: "Popular",
                 description:
-                    "Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi. Curabitur malesuada dui sit ass...",
+                    "The vibrant epicenter of Dubai, home to the Burj Khalifa, the Dubai Mall, and breathtaking fountain views surrounded by luxury towers.",
+                ratingValue: 4.8,
+                ratingText: "4.8/5",
+                reviewsText: "based on 210 reviews",
+                pricesDropdownLabel: "Prices for High-Rise Apartments",
+                forSale: "AED 3,400,000",
+                forRent: "AED 160,000/year",
+                noteText: "* Based on DLD verified transactions.",
+                image: cardImage2,
+                savedCount: 156,
+            },
+            {
+                id: "le-marais-paris",
+                title: "Le Marais & 8th Arrondissement",
+                city: "Paris",
+                category: "Luxury",
+                description:
+                    "Haussmannian elegance steeped in rich Parisian culture, historic art galleries, serene courtyards, and world-class haute couture.",
+                ratingValue: 4.9,
+                ratingText: "4.9/5",
+                reviewsText: "based on 84 reviews",
+                pricesDropdownLabel: "Prices for Haussmannian Apartments",
+                forSale: "€3,900,000",
+                forRent: "€8,200/month",
+                noteText: "* Notaires de France prime residential data.",
+                image: cardImage,
+                savedCount: 79,
+            },
+            {
+                id: "south-beach-miami",
+                title: "South Beach & Brickell",
+                city: "Miami",
+                category: "Lifestyle & Demographics",
+                description:
+                    "Sunny oceanfront luxury paired with Miami's vibrant international financial center, tropical modern penthouses, and marina access.",
                 ratingValue: 4.7,
                 ratingText: "4.7/5",
-                reviewsText: "based on 21 reviews",
-                pricesDropdownLabel: "Prices for Apartments",
-                forSale: "8,200,000 AED",
-                forRent: "185,000 AED/year",
-                noteText: "* Based on listing prices last 3 months.",
-                image: cardImage,
-                savedCount: 18,
-            },
-            {
-                id: "palm-jumeirah-4",
-                title: "Palm Jumeirah",
-                description:
-                    "Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi. Cura bitur malesuada dui sit ass...",
-                ratingValue: 4.6,
-                ratingText: "4.6/5",
-                reviewsText: "based on 19 reviews",
-                pricesDropdownLabel: "Prices for Apartments",
-                forSale: "7,900,000 AED",
-                forRent: "175,000 AED/year",
-                noteText: "* Based on listing prices last 3 months.",
+                reviewsText: "based on 73 reviews",
+                pricesDropdownLabel: "Prices for Waterfront Condos",
+                forSale: "$2,800,000",
+                forRent: "$7,500/month",
+                noteText: "* South Florida MLS verified benchmark.",
                 image: cardImage2,
-                savedCount: 12,
-            },
-            {
-                id: "palm-jumeirah-5",
-                title: "Palm Jumeirah",
-                description:
-                    "Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi. Curabitur malesuada dui sit ass...",
-                ratingValue: 4.8,
-                ratingText: "4.8/5",
-                reviewsText: "based on 28 reviews",
-                pricesDropdownLabel: "Prices for Apartments",
-                forSale: "8,500,000 AED",
-                forRent: "195,000 AED/year",
-                noteText: "* Based on listing prices last 3 months.",
-                image: cardImage,
-                savedCount: 25,
-            },
-            {
-                id: "palm-jumeirah-6",
-                title: "Palm Jumeirah",
-                description:
-                    "Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi. Cura bitur malesuada dui sit ass...",
-                ratingValue: 4.5,
-                ratingText: "4.5/5",
-                reviewsText: "based on 16 reviews",
-                pricesDropdownLabel: "Prices for Apartments",
-                forSale: "7,600,000 AED",
-                forRent: "160,000 AED/year",
-                noteText: "* Based on listing prices last 3 months.",
-                image: cardImage2,
-                savedCount: 9,
+                savedCount: 65,
             },
         ],
         [cardImage, cardImage2]
     );
+
+    const communityCards = useMemo(() => {
+        return allCommunityCards.filter((card) => {
+            const matchesCity = locationValue === "All" || card.city.toLowerCase() === locationValue.toLowerCase();
+            const matchesSearch =
+                !searchQuery ||
+                card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                card.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                card.description.toLowerCase().includes(searchQuery.toLowerCase());
+            return matchesCity && matchesSearch;
+        });
+    }, [allCommunityCards, locationValue, searchQuery]);
 
     const COMMUNITY_PAGE_SIZE = 2;
     const communityTotalPages = Math.max(
@@ -195,7 +231,7 @@ const AllCommunities: React.FC = () => {
                     <BreadcrumbsComponentSecondLevel
                         breadcrumbTitle="Home"
                         breadcrumbSubTitle1="Area Insights"
-                        breadcrumbSubTitle2="Area Insights"
+                        breadcrumbSubTitle2="Global Communities"
                         breadcrumbLinkTitleTo="/"
                         breadcrumbLinkSubTitle1To="/areainsight"
                     />
@@ -205,8 +241,10 @@ const AllCommunities: React.FC = () => {
                     <main className="pf-all-communities__main">
                         <div className="pf-all-communities__title-container">
                             <h1 className="pf-all-communities__title">
-                                Best Areas to Live in<br></br>
-                                <span className="pf-all-communities__city">Dubai</span>
+                                Prime Neighborhoods to Live in<br></br>
+                                <span className="pf-all-communities__city">
+                                    {locationValue === "All" ? "Top Global Destinations" : locationValue}
+                                </span>
                             </h1>
                             <div className="pf-all-communities__title-row">
                                 <div className="pf-all-communities__title-label">Sort by :</div>
@@ -263,27 +301,20 @@ const AllCommunities: React.FC = () => {
 
 
                         <p className="pf-all-communities__subtitle">
-                            Dubai is home to people from different backgrounds and thus, it offers
-                            diverse neighborhoods to suit the various tastes and needs of its residents.
+                            Discover the most coveted residential communities, historic districts, and iconic waterfront enclaves across the world&apos;s leading capital cities.
                         </p>
 
                         <p className="pf-all-communities__body">
-                            From glittering skyscrapers to spacious villas and beachfront communities,
-                            there are plenty of nice places to live in Dubai. Here, you&apos;ll find a mix
-                            of luxury and comfort tailored for everyone. Families, couples and working
-                            professionals can all find a home in Dubai that suits their lifestyle preferences.
+                            From glittering skyscrapers and beachfront villas to historic brownstones and Haussmannian residences, our curated global community guides give you deep insights into neighborhood lifestyles, pricing trends, top schools, and transit links.
                         </p>
 
                         <div className="pf-all-communities__body-container">
                             <p className="pf-all-communities__body">
-                                The city&apos;s infrastructure makes commuting easy with excellent public transportation
-                                options available. Moreover, numerous dining, entertainment, and shopping venues cater
-                                to an array of interests, ensuring there&apos;s always something exciting around the corner.
+                                Each destination is evaluated with real-time transactional registry benchmarks, helping discerning international buyers, expatriates, and investors make informed property decisions with absolute confidence.
                             </p>
                             {isReadMoreOpen && (
                                 <p className="pf-all-communities__body">
-                                    Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi.
-                                    Cura bitur malesuada dui sit ass...
+                                    Explore average rental yields, capital growth records, community amenities, and bespoke architectural developments with verified local brokerage representation.
                                 </p>
                             )}
                         </div>
@@ -370,19 +401,25 @@ const AllCommunities: React.FC = () => {
                                             <button
                                                 type="button"
                                                 className="pf-all-communities__discover-btn"
+                                                onClick={() => navigate(`/searchlisting?destination=${encodeURIComponent(c.city)}`)}
                                             >
                                                 Discover properties
                                             </button>
                                             <button
                                                 type="button"
                                                 className="pf-all-communities__learn-btn"
+                                                onClick={() => navigate(`/allcommunitiesdetails`)}
                                             >
                                                 Learn more
                                             </button>
                                         </div>
                                     </div>
 
-                                    <div className="pf-all-communities__community-image-wrap" onClick={() => navigate(`/allcommunitiesdetails`)}>
+                                    <div
+                                        className="pf-all-communities__community-image-wrap"
+                                        onClick={() => navigate(`/allcommunitiesdetails`)}
+                                        style={{ cursor: "pointer" }}
+                                    >
                                         <img
                                             src={c.image}
                                             alt={c.title}
@@ -470,26 +507,36 @@ const AllCommunities: React.FC = () => {
                             <input
                                 type="text"
                                 className="pf-all-communities__search-input"
-                                placeholder="Search for community"
+                                placeholder="Search for community or city"
+                                value={searchQuery}
+                                onChange={(e) => {
+                                    setSearchQuery(e.target.value);
+                                    setCommunityCurrentPage(1);
+                                }}
                             />
                         </div>
 
                         {/* Recent searches */}
                         <div className="pf-all-communities__block">
-                            <div className="pf-all-communities__block-title">Recent searches</div>
+                            <div className="pf-all-communities__block-title">Popular searches</div>
                             <div className="pf-all-communities__chips">
                                 {recentSearches.map((t) => {
-                                    const isActive = activeRecentSearch === t;
+                                    const isActive = activeRecentSearch === t || searchQuery === t;
                                     return (
                                         <button
                                             key={t}
                                             type="button"
                                             className={`pf-all-communities__chip ${isActive ? "is-active" : ""}`}
-                                            onClick={() =>
-                                                setActiveRecentSearch((prev) =>
-                                                    prev === t ? null : t
-                                                )
-                                            }
+                                            onClick={() => {
+                                                if (searchQuery === t) {
+                                                    setSearchQuery("");
+                                                    setActiveRecentSearch(null);
+                                                } else {
+                                                    setSearchQuery(t);
+                                                    setActiveRecentSearch(t);
+                                                }
+                                                setCommunityCurrentPage(1);
+                                            }}
                                         >
                                             {t}
                                         </button>

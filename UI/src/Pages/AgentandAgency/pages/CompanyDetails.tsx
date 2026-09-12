@@ -179,7 +179,7 @@ function mapAgencyProfileToCompanyView(
 }
 
 const defaultAboutText =
-  "Quisque sapien tellus, tincidunt id libero at, elementum pharetra mi. Curabitur malesuada dui sit amet erat sagittis molestie. Nulla porta cursus eleifend. Donec dui urna, dictum eu tristique in, facilisis quis sem. In faucibus pretium nulla, nec lobortis lectus porta sed. Maecenas et facilisis justo. Proin scelerisque lectus non iaculis ultrices. Vestibulum in magna sit amet dolor laoreet laoreet. Fusce posuere massa at elit sagittis congue. Nunc ullamcorper vel sem porttitor mattis. Nam sed aliquam neque. Pellentesque feugiat molestie feugiat. Quisque sagittis, dolor eu viverra facilisis, dolor ipsum tincidunt justo, bibendum laoreet risus massa sit amet eros.";
+  "A premier luxury real estate brokerage dedicated to delivering exceptional advisory, acquisition, and portfolio management services across the world's most sought-after prime property markets. Our international team of advisors provides unmatched market intelligence, bespoke marketing, and discretion for discerning clients worldwide.";
 
 const propertyCategoryOptions = ["Buy", "Rent", "Projects"];
 const propertySortOptions = ["Featured", "Newest", "Low to High"];

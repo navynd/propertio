@@ -2678,9 +2678,7 @@ function Home() {
           </div>
 
           <Typography className="pf-prime-location__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            vestibulum cursus eros vel dictum. Donec varius leo ac tellus
-            lobortis luctus.
+            Explore world-renowned districts and vibrant global hubs. From waterfront residences in Dubai to historic avenues in London and New York, find the perfect neighborhood for your lifestyle.
           </Typography>
         </PFContainer>
       </section>
