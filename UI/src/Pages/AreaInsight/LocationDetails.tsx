@@ -63,10 +63,10 @@ const LocationDetails: React.FC = () => {
                         breadcrumbLinkTitleTo="/"
                         breadcrumbSubTitle1="Area Insights"
                         breadcrumbLinkSubTitle1To="/areainsight"
-                        breadcrumbSubTitle2="Area Insights"
-                        breadcrumbLinkSubTitle2To="/areainsight"
-                        breadcrumbSubTitle3="Palm Jumeirah"
-                        breadcrumbLinkSubTitle3To="/allcommunities"
+                        breadcrumbSubTitle2="Global Communities"
+                        breadcrumbLinkSubTitle2To="/allcommunities"
+                        breadcrumbSubTitle3="Prime Residences"
+                        breadcrumbLinkSubTitle3To="/towersandcompounds"
                         breadcrumbSubTitle4={LOCATION_NAME}
                     />
                 </div>

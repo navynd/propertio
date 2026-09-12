@@ -1855,13 +1855,13 @@ function DeveloperDetails() {
 
           <Box className="pf-developer-details__info-section">
             <Typography className="pf-developer-details__info-heading">
-              {developerName}&apos;s ongoing projects in Dubai
+              {developerName}&apos;s Ongoing Developments
             </Typography>
             <Typography className="pf-developer-details__info-text">
-              Each Emaar property has its own unique design aesthetic, providing
-              an aspirational lifestyle within a thriving community, supported
-              by Emaar&apos;s community management team. Discover luxurious
-              Emaar Communities and properties in Dubai.
+              Each {developerName} development showcases a unique design aesthetic, delivering
+              an aspirational lifestyle within master-planned prime communities supported
+              by dedicated property management teams. Discover luxurious
+              {developerName} residences and master developments across top global markets.
             </Typography>
           </Box>
 
@@ -1873,56 +1873,32 @@ function DeveloperDetails() {
             <Box className="pf-developer-details__faq">
               <Box className="pf-developer-details__faq-item">
                 <Typography className="pf-developer-details__faq-question">
-                  Who is Emaar Properties?
+                  Who is {developerName}?
                 </Typography>
                 <Typography className="pf-developer-details__faq-answer">
-                  Emaar Properties is a real estate development company based in
-                  Dubai. The company is known for selling properties that are
-                  not yet constructed, also known as &apos;off-plan&apos;
-                  properties. Emaar was founded in 1997 and has since grown to
-                  become one of the largest real estate developers in the Middle
-                  East, with operations in several countries around the world.
+                  {developerName} is an internationally recognized premier real estate developer.
+                  The company is renowned for landmark architectural masterpieces, signature residential
+                  communities, and high-yield off-plan opportunities for discerning global homeowners and investors.
                 </Typography>
               </Box>
 
               <Box className="pf-developer-details__faq-item">
                 <Typography className="pf-developer-details__faq-question">
-                  What are some of Emaar Properties&apos; major projects?
+                  What makes {developerName}&apos;s portfolio unique?
                 </Typography>
                 <Typography className="pf-developer-details__faq-answer">
-                  Emaar Properties has developed some of the most iconic and
-                  ambitious projects in Dubai, including the Burj Khalifa (the
-                  tallest building in the world), The Dubai Mall (one of the
-                  largest shopping centers in the world), Downtown Dubai (one of
-                  Dubai&apos;s most iconic neighborhoods) and Dubai Marina (a
-                  luxurious waterfront development).
+                  {developerName} creates iconic, sustainable, and award-winning developments featuring
+                  panoramic waterfront locations, world-class resort amenities, Michelin-grade dining, and high capital appreciation.
                 </Typography>
               </Box>
 
               <Box className="pf-developer-details__faq-item">
                 <Typography className="pf-developer-details__faq-question">
-                  What are some of Emaar&apos;s new projects in Dubai?
+                  What are the flexible payment plans offered?
                 </Typography>
                 <Typography className="pf-developer-details__faq-answer">
-                  Emaar has developed several notable projects in Dubai in
-                  recent years. Some of these include Dubai Hills Estate, a
-                  2,700-acre master-planned community with residential,
-                  commercial, and retail components; Dubai Creek Harbour, a
-                  waterfront development that will include the world&apos;s
-                  tallest tower; and The Dubai Mall Zabeel, a new addition to
-                  the Dubai Mall complex that features high-end retail and
-                  entertainment offerings. Emaar is also developing other
-                  properties and projects in Dubai and other countries.
-                </Typography>
-              </Box>
-
-              <Box className="pf-developer-details__faq-item">
-                <Typography className="pf-developer-details__faq-question">
-                  What are some of Emaar&apos;s Off-Plan Projects?
-                </Typography>
-                <Typography className="pf-developer-details__faq-answer">
-                  Emaar's off-plan properties in Dubai are wide and varied.
-                  These include:
+                  Most off-plan developments feature investor-friendly construction-linked payment plans,
+                  favorable post-handover options, and strong projected rental yields across global investment portfolios.
                 </Typography>
               </Box>
               <Box className="pf-developer-details__faq-item">

@@ -31,9 +31,9 @@ import CommunitiesPrice from "./CommunitiesComponent/CommunitiesPrice";
 const AREA_NAME = "Palm Jumeirah";
 
 const HERO_TAGS = [
-    "One of the most luxurious areas in Dubai",
-    "Beachfront",
-    "Family-Friendly",
+    "World-Renowned Luxury Enclave",
+    "Waterfront Living",
+    "High-Yield Global Investment",
 ] as const;
 
 const GALLERY_IMAGES = [com1, com2, com3, com4, com5];

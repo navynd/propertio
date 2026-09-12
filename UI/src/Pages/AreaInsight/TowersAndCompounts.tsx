@@ -397,16 +397,19 @@ const Alldata: TowerTabGroup[] = [
 const TowersAndCompounts: React.FC = () => {
     const locationOptions = useMemo(
         () => [
+            { label: "All Destinations", value: "All" },
+            { label: "London", value: "London" },
+            { label: "New York", value: "New York" },
+            { label: "Paris", value: "Paris" },
             { label: "Dubai", value: "Dubai" },
-            { label: "Abu Dhabi", value: "Abu Dhabi" },
-            { label: "Sharjah", value: "Sharjah" },
+            { label: "Miami", value: "Miami" },
         ],
         []
     );
     const sectionGroups = useMemo(() => Alldata.slice(0, 6), []);
 
     const [locationOpen, setLocationOpen] = useState(false);
-    const [locationValue, setLocationValue] = useState<string>("Dubai");
+    const [locationValue, setLocationValue] = useState<string>("All");
     const [searchQuery, setSearchQuery] = useState("");
     const [activeGroupId, setActiveGroupId] = useState<number>(sectionGroups[0]?.id ?? 1);
     const [isTabsFixed, setIsTabsFixed] = useState(false);
@@ -503,7 +506,7 @@ const TowersAndCompounts: React.FC = () => {
                         <BreadcrumbsComponentSecondLevel
                             breadcrumbTitle="Home"
                             breadcrumbSubTitle1="Area Insights"
-                            breadcrumbSubTitle2="Explore Dubai"
+                            breadcrumbSubTitle2="Global Residences"
                             breadcrumbLinkTitleTo="/"
                             breadcrumbLinkSubTitle1To="/areainsight"
                         />
@@ -512,10 +515,10 @@ const TowersAndCompounts: React.FC = () => {
                     <header className="pf-tower-compound__header">
                         <div className="pf-tower-compound__header-text">
                             <h1 className="pf-tower-compound__title">
-                                Residential areas in Dubai
+                                {locationValue === "All" ? "Prestigious Residences & Towers Worldwide" : `Residential areas in ${locationValue}`}
                             </h1>
                             <p className="pf-tower-compound__subtitle">
-                                Discover historical prices, reviews, and so much more.
+                                Discover historical prices, reviews, and prime community data.
                             </p>
                         </div>
                         <div className="pf-tower-compound__header-location">

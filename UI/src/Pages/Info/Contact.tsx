@@ -23,9 +23,9 @@ const DEFAULT_SETTINGS: ContactPageSettings = {
   heroSubtitle: "Send us a message, give us a call, or better still visit us.",
   sectionTitle: "Let's get in touch",
   sectionSubtext: "Contact if you have any queries",
-  email: "info@estatehub.ae",
-  phone: "+971 4 558 0000",
-  officeAddress: "Media City, Shatha Tower, 1506, Dubai, UAE",
+  email: "contact@estatehub.com",
+  phone: "+1 (800) 558-0000",
+  officeAddress: "Prime Global Headquarters, One Berkeley Square, London & Fifth Avenue, New York",
   mapUrl: "https://maps.google.com",
 };
 

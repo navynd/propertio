@@ -29,7 +29,7 @@ import aboutTop4 from "../../assets/img/abouttop1.png";
 import { useGoogleMapsLoader } from "../../context/GoogleMapsLoaderContext";
 import { useNavigate } from "react-router-dom";
 
-const LOCATIONS = ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"] as const;
+const LOCATIONS = ["All Destinations", "London", "New York", "Paris", "Dubai", "Miami", "Singapore"] as const;
 
 const INSIGHT_TABS = [
     "Features",
@@ -107,14 +107,14 @@ function ExternalLinkIcon() {
 
 const AreaInSight: React.FC = () => {
     const navigate = useNavigate();
-    const [location, setLocation] = useState<string>("Dubai");
+    const [location, setLocation] = useState<string>("All Destinations");
     const [locationOpen, setLocationOpen] = useState(false);
     const locationDropdownRef = useRef<HTMLDivElement>(null);
     const [activeInsightTab, setActiveInsightTab] = useState<InsightTab>("Features");
     const [priceMapMode, setPriceMapMode] = useState<"For rent" | "For sale">("For rent");
     const { isLoaded: isGoogleMapsLoaded } = useGoogleMapsLoader();
 
-    const heroTitle = useMemo(() => `${location} Insights`, [location]);
+    const heroTitle = useMemo(() => `${location === "All Destinations" ? "Global Market" : location} Insights`, [location]);
 
     const communityPills = useMemo(
         () => [
@@ -130,17 +130,17 @@ const AreaInSight: React.FC = () => {
         []
     );
     const [activeCommunityPill, setActiveCommunityPill] = useState<string>(
-        "Green Areas"
+        "Luxury"
     );
 
     const popularCommunities = useMemo(
         () => [
-            { title: "Burj Khalifa", ratingText: "5/5", ratingValue: 5, image: com1 },
-            { title: "Burj Khalifa", ratingText: "5/5", ratingValue: 5, image: com2 },
-            { title: "Burj Khalifa", ratingText: "5/5", ratingValue: 5, image: com3 },
-            { title: "Burj Khalifa", ratingText: "4/5", ratingValue: 4, image: com4 },
-            { title: "Burj Khalifa", ratingText: "1/5", ratingValue: 1, image: com5 },
-            { title: "Burj Khalifa", ratingText: "5/5", ratingValue: 5, image: com6 },
+            { title: "Mayfair, London", ratingText: "4.9/5", ratingValue: 4.9, image: com1 },
+            { title: "Palm Jumeirah, Dubai", ratingText: "4.9/5", ratingValue: 4.9, image: com2 },
+            { title: "Tribeca, New York", ratingText: "4.8/5", ratingValue: 4.8, image: com3 },
+            { title: "8th Arrondissement, Paris", ratingText: "4.9/5", ratingValue: 4.9, image: com4 },
+            { title: "South Beach, Miami", ratingText: "4.7/5", ratingValue: 4.7, image: com5 },
+            { title: "Marina Bay, Singapore", ratingText: "4.8/5", ratingValue: 4.8, image: com6 },
         ],
         []
     );
@@ -244,46 +244,46 @@ const AreaInSight: React.FC = () => {
     const topBuildings = useMemo(
         () => [
             {
-                title: "Burj Khalifa",
-                ratingValue: 4.8,
-                ratingText: "4.8/5 based on 28 reviews",
+                title: "One Hyde Park",
+                ratingValue: 4.9,
+                ratingText: "4.9/5 based on 42 reviews",
                 image: aboutTop1,
-                locationBadge: "Downtown",
+                locationBadge: "London",
             },
             {
-                title: "Burj Khalifa",
+                title: "432 Park Avenue",
                 ratingValue: 4.8,
-                ratingText: "4.8/5 based on 28 reviews",
+                ratingText: "4.8/5 based on 38 reviews",
                 image: aboutTop2,
-                locationBadge: "Downtown",
+                locationBadge: "New York",
             },
             {
-                title: "Burj Khalifa",
-                ratingValue: 4.8,
-                ratingText: "4.8/5 based on 28 reviews",
+                title: "Burj Khalifa Residences",
+                ratingValue: 4.9,
+                ratingText: "4.9/5 based on 65 reviews",
                 image: aboutTop3,
-                locationBadge: "Downtown",
+                locationBadge: "Dubai",
             },
             {
-                title: "Burj Khalifa",
+                title: "Tour Odéon",
                 ratingValue: 4.8,
-                ratingText: "4.8/5 based on 28 reviews",
+                ratingText: "4.8/5 based on 29 reviews",
                 image: aboutTop2,
-                locationBadge: "Downtown",
+                locationBadge: "Monaco",
             },
             {
-                title: "Burj Khalifa",
+                title: "111 West 57th Street",
                 ratingValue: 4.8,
-                ratingText: "4.8/5 based on 28 reviews",
+                ratingText: "4.8/5 based on 31 reviews",
                 image: aboutTop1,
-                locationBadge: "Downtown",
+                locationBadge: "New York",
             },
             {
-                title: "Burj Khalifa",
+                title: "The Marq on Paterson Hill",
                 ratingValue: 4.8,
-                ratingText: "4.8/5 based on 28 reviews",
+                ratingText: "4.8/5 based on 24 reviews",
                 image: aboutTop2,
-                locationBadge: "Downtown",
+                locationBadge: "Singapore",
             },
         ],
         []
@@ -622,27 +622,27 @@ const AreaInSight: React.FC = () => {
                             </div>
 
                             <aside className="pf-area-insight__price-map-right">
-                                <div className="pf-area-insight__price-map-title">Dubai's price map</div>
+                                <div className="pf-area-insight__price-map-title">{location === "All Destinations" ? "Global Market Price Overview" : `${location}'s price map`}</div>
                                 <div className="pf-area-insight__price-map-stats">
                                     <div className="pf-area-insight__price-row">
                                         <div className="pf-area-insight__price-label">Highest</div>
-                                        <div className="pf-area-insight__price-value">400,000 AED/year</div>
+                                        <div className="pf-area-insight__price-value">$120,000 / year</div>
                                         <img src={upIcon} alt="" className="pf-area-insight__price-arrow" />
                                     </div>
                                     <div className="pf-area-insight__price-row">
                                         <div className="pf-area-insight__price-label">Average</div>
-                                        <div className="pf-area-insight__price-value">88,000 AED/year</div>
+                                        <div className="pf-area-insight__price-value">$45,000 / year</div>
                                         <img src={sideIcon} alt="" className="pf-area-insight__price-arrow" />
                                     </div>
                                     <div className="pf-area-insight__price-row">
                                         <div className="pf-area-insight__price-label">Lowest</div>
-                                        <div className="pf-area-insight__price-value">31,000 AED/year</div>
+                                        <div className="pf-area-insight__price-value">$18,000 / year</div>
                                         <img src={downIcon} alt="" className="pf-area-insight__price-arrow" />
                                     </div>
                                 </div>
 
                                 <div className="pf-area-insight__price-map-note">
-                                    * The data displayed is based on listing price last 3 months.
+                                    * The data displayed is based on verified listing prices across prime global markets.
                                 </div>
                             </aside>
                         </div>
@@ -767,7 +767,7 @@ const AreaInSight: React.FC = () => {
                                 See top buildings &amp; sub-communities
                             </Typography>
                             <Typography component="p" className="pf-area-insight__top-buildings-desc">
-                                People love these, and so will you! Explore the best areas in Dubai.
+                                Discover prestigious towers and master-planned sub-communities across prime global destinations.
                             </Typography>
                         </div>
 
